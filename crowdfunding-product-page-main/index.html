@@ -14,9 +14,9 @@
   </head>
   <body>
     <nav class="nav">
-      <div class="container">
-        <img src="images/logo.svg" alt="crowdfund logo">
-        <img src="images/icon-hamburger.svg" alt="open navigation menu">
+      <div class="container nav-container">
+        <img src="images/logo.svg" alt="crowdfund logo" class="nav__logo">
+        <img src="images/icon-hamburger.svg" alt="open navigation menu" class="nav_hamburger">
         <ul class="navbar">
           <li class="navbar__item"><a href="#" class="navbar__link">About</a></li>
           <li class="navbar__item">
@@ -29,26 +29,29 @@
       </div>
     </nav>
     <main>
-      
+      <div class="container">
+        
         <section class="card">
-          <img src="images/logo-mastercraft.svg" alt="Mastercraft logo">
+          <div class="card__logo-container"><img src="images/logo-mastercraft.svg" alt="Mastercraft logo" class="card__logo"></div>
           <h1 class="card__title">Mastercraft Bamboo Monitor Riser</h1>
           <p class="card__text">
             A beautiful & handcrafted monitor stand to reduce neck and eye
             strain.
           </p>
 
-          <a href="#" class="card__button">Back this project</a>
-          <a href="#" class="bookmark__button">Bookmark</a>
+          <div class="mobile-row">
+            <a href="#" class="card__button">Back this project</a>
+            <a href="#" class="bookmark__button"><img src="images/icon-bookmark.svg" alt="bookmark"></a>
+          </div>
         </section>
         <section class="card card--stats">
-          <p class="card__number">$89,914</p>
-          <p class="card__text">of $100,000 backed</p>
-          <p class="card__number">5,007</p>
-          <p class="card__text">total backers</p>
-          <p class="card__number">56</p>
-          <p class="card__text">days left</p>
-          <input type="range" name="" id="" />
+          <p class="card__number centered">$89,914</p>
+          <p class="card__text centered">of $100,000 backed</p>
+          <p class="card__number centered">5,007</p>
+          <p class="card__text centered">total backers</p>
+          <p class="card__number centered">56</p>
+          <p class="card__text centered">days left</p>
+           <div class="card__progress-bar-container"><div class="card__progress-bar"></div></div>
         </section>
 
         <section class="card card--about">

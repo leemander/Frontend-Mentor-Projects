@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+:root {
+  --moderateCyan: hsl(176, 50%, 47%);
+  --darkCyan: hsl(176, 72%, 28%);
+  --darkGray: hsl(0, 0%, 48%);
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(images/image-hero-mobile.jpg);
+  background-color: #fafafa;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-family: "Comissioner", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.mobile-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centered {
+  text-align: center;
+}
+
+.nav-container {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: none;
+}
+
+.card {
+  padding: 3em 1em;
+  background: white;
+  border-radius: 10px;
+}
+
+.card:first-of-type {
+  margin-top: 12em;
+  position: relative;
+  text-align: center;
+}
+
+.card + .card {
+  margin-top: 1em;
+}
+
+.card__logo-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: -2em;
+  transform: translateX(-50%);
+}
+
+.title {
+  font-weight: 700;
+}
+
+.card__text {
+  color: var(--darkGray);
+  font-weight: 500;
+}
+
+.card__button {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  background-color: var(--moderateCyan);
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 1.2em 4em;
+  border-radius: 10em;
+}
+
+.card__number {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card__number + .centered {
+  margin-top: -1.5em;
+}
+
+.card__progress-bar-container {
+  height: 1em;
+  width: 100%;
+  background-color: #fafafa;
+  border-radius: 10px;
+}
+
+.card__progress-bar {
+  border-radius: 10px;
+  height: 1em;
+  width: 80%;
+  background: var(--moderateCyan);
+}
+
+.modal {
+  display: none;
+}
