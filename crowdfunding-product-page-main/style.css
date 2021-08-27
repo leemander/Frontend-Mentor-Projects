@@ -14,7 +14,6 @@
 body {
   margin: 0;
   padding: 0;
-
   font-family: "Commissioner", sans-serif;
 }
 
@@ -56,10 +55,6 @@ img {
   justify-content: space-between;
 }
 
-.navbar {
-  display: none;
-}
-
 .mobile-nav-menu-container {
   position: absolute;
   top: 5em;
@@ -86,7 +81,7 @@ img {
 }
 
 .main {
-  border: 1px solid red;
+  overflow: auto;
   position: relative;
   background: url(images/image-hero-mobile.jpg);
   background-color: #fafafa;
@@ -103,7 +98,7 @@ img {
 
 .card:first-of-type {
   position: relative;
-  margin-top: 18em;
+  margin-top: 17em;
   text-align: center;
 }
 
