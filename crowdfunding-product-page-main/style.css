@@ -14,16 +14,16 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(images/image-hero-mobile.jpg);
-  background-color: #fafafa;
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
+
   font-family: "Commissioner", sans-serif;
 }
 
 img {
   max-width: 100%;
+}
+
+.hide {
+  display: none;
 }
 
 .container {
@@ -42,6 +42,13 @@ img {
   text-align: center;
 }
 
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 .nav-container {
   margin-top: 1em;
   display: flex;
@@ -53,6 +60,41 @@ img {
   display: none;
 }
 
+.mobile-nav-menu-container {
+  position: absolute;
+  top: 5em;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.mobile-nav-menu__item {
+  list-style: none;
+  padding-left: 1em;
+  padding-block: 1.5em;
+  font-weight: 700;
+}
+
+.mobile-nav-menu__item + .mobile-nav-menu__item {
+  border-top: hsl(0, 0%, 90%) 1px solid;
+}
+
+.mobile-nav-menu__link {
+  color: black;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.main {
+  border: 1px solid red;
+  position: relative;
+  background: url(images/image-hero-mobile.jpg);
+  background-color: #fafafa;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
 .card {
   padding: 3em 1em;
   background: white;
@@ -60,8 +102,8 @@ img {
 }
 
 .card:first-of-type {
-  margin-top: 12em;
   position: relative;
+  margin-top: 18em;
   text-align: center;
 }
 
