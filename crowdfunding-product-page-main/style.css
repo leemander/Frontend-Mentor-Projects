@@ -19,7 +19,7 @@ body {
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
-  font-family: "Comissioner", sans-serif;
+  font-family: "Commissioner", sans-serif;
 }
 
 img {
@@ -85,10 +85,14 @@ img {
 
 .card__text {
   color: var(--darkGray);
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 0.8;
 }
 
 .card__button {
+  display: block;
   font-size: 1rem;
   font-weight: 700;
   color: white;
@@ -96,11 +100,16 @@ img {
   background-color: var(--moderateCyan);
   width: fit-content;
   width: -moz-fit-content;
-  padding: 1.2em 4em;
+  padding: 1.2em 3em;
   border-radius: 10em;
 }
 
+.button--sold-out {
+  background-color: var(--darkGray);
+}
+
 .card__number {
+  color: black;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -121,6 +130,26 @@ img {
   height: 1em;
   width: 80%;
   background: var(--moderateCyan);
+}
+
+.card--about__pledge-div {
+  border-radius: 10px;
+  border: hsl(0, 0%, 80%) 1px solid;
+  padding: 1em 1.5em 2em 1.5em;
+  margin-top: 2em;
+}
+
+.card--about__pledge-div .title {
+  font-size: 1.1rem;
+}
+
+.pledge-div__subheading {
+  color: var(--moderateCyan);
+  font-size: 1rem;
+}
+
+.div--sold-out {
+  opacity: 0.5;
 }
 
 .modal {
