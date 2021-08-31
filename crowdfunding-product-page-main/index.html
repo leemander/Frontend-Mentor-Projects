@@ -19,13 +19,13 @@
         <img
           src="images/icon-hamburger.svg"
           alt="open navigation menu"
-          class="nav_hamburger"
+          class="nav__hamburger"
           id="hamburger"
         />
         <img
           src="images/icon-close-menu.svg"
           alt="close navigation menu"
-          class="nav_hamburger hide"
+          class="nav__hamburger hide"
           id="close-menu"
         />
         <ul class="navbar hide">
@@ -150,6 +150,7 @@
               src="images/icon-close-modal.svg"
               alt="close"
               id="close-selection-modal"
+              class="modal__close"
             />
           </div>
           <p class="card__text">
@@ -158,7 +159,12 @@
           </p>
           <div class="pledge-div">
             <div class="pledge__input-container">
-              <input type="radio" name="no-reward" id="no-reward" />
+              <input
+                type="radio"
+                name="no-reward"
+                id="no-reward"
+                class="pledge__radio"
+              />
               <label class="title pledge__label" for="no-reward">
                 Pledge with no reward
               </label>
@@ -190,7 +196,7 @@
                 type="radio"
                 name="bamboo"
                 id="bamboo"
-                class="pledge__input"
+                class="pledge__radio"
               /><label class="title pledge__label" for="bamboo">
                 Bamboo Stand<br />
                 <span class="pledge-div__subheading">Pledge $25 or more</span>
@@ -224,7 +230,7 @@
                 type="radio"
                 name="black"
                 id="black"
-                class="pledge__input"
+                class="pledge__radio"
               /><label class="title pledge__label" for="black">
                 Black Edition Stand <br />
                 <span class="pledge-div__subheading">Pledge $75 or more</span>
@@ -258,7 +264,7 @@
                 type="radio"
                 name="mahogany"
                 id="mahogany"
-                class="pledge__input"
+                class="pledge__radio"
               /><label class="title pledge__label" for="mahogany">
                 Mahogany Special Edition<br />
                 <span class="pledge-div__subheading">Pledge $200 or more</span>
@@ -292,7 +298,7 @@
       <!-- Selection modal end -->
       <!-- Success modal start -->
       <div class="container modal-container hide">
-        <div class="card modal modal--success centered">
+        <div class="card modal modal--success centered" id="success-modal">
           <img
             src="images/icon-check.svg"
             alt="checkmark"
@@ -304,7 +310,9 @@
             Monitor Riser worldwide. You will get an email once our campaign is
             completed.
           </p>
-          <a href="#" class="card__button success__button">Got it!</a>
+          <a href="#" class="card__button success__button" id="success-button"
+            >Got it!</a
+          >
         </div>
       </div>
     </aside>

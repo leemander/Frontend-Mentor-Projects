@@ -56,6 +56,10 @@ img {
   justify-content: space-between;
 }
 
+.nav__hamburger:hover {
+  cursor: pointer;
+}
+
 .mobile-nav-menu-container {
   position: absolute;
   top: 5em;
@@ -140,7 +144,18 @@ img {
   border-radius: 10em;
 }
 
+.card__button:hover,
+.card__button:focus {
+  background-color: var(--darkCyan);
+}
+
 .button--sold-out {
+  background-color: var(--darkGray);
+}
+
+.button--sold-out:focus,
+.button--sold-out:hover {
+  cursor: default;
   background-color: var(--darkGray);
 }
 
@@ -170,9 +185,13 @@ img {
 
 .pledge-div {
   border-radius: 10px;
-  border: hsl(0, 0%, 80%) 1px solid;
+  border: hsl(0, 0%, 80%) 2px solid;
   padding: 1em 1.5em 2em 1.5em;
   margin-top: 2em;
+}
+
+.pledge-div--selected {
+  border-color: var(--moderateCyan);
 }
 
 .card--about__pledge-div .title {
@@ -206,9 +225,21 @@ aside .card {
   justify-content: space-between;
 }
 
+.modal__close:hover {
+  cursor: pointer;
+}
+
 .pledge__input-container {
   display: flex;
   align-items: center;
+}
+
+.pledge__radio:hover {
+  cursor: pointer;
+}
+
+.div--sold-out .pledge__radio:hover {
+  cursor: default;
 }
 
 .pledge__label {
