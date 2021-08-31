@@ -12,6 +12,8 @@
 }
 
 body {
+  background-color: #fafafa;
+
   margin: 0;
   padding: 0;
   font-family: "Commissioner", sans-serif;
@@ -84,7 +86,6 @@ img {
   overflow: auto;
   position: relative;
   background: url(images/image-hero-mobile.jpg);
-  background-color: #fafafa;
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
@@ -99,7 +100,6 @@ img {
 .card:first-of-type {
   position: relative;
   margin-top: 17em;
-  text-align: center;
 }
 
 .card + .card {
@@ -123,7 +123,7 @@ img {
 .card__text {
   color: var(--darkGray);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.5;
   opacity: 0.8;
 }
@@ -169,7 +169,7 @@ img {
   background: var(--moderateCyan);
 }
 
-.card--about__pledge-div {
+.pledge-div {
   border-radius: 10px;
   border: hsl(0, 0%, 80%) 1px solid;
   padding: 1em 1.5em 2em 1.5em;
@@ -189,6 +189,52 @@ img {
   opacity: 0.5;
 }
 
-.modal {
-  display: none;
+.pledge__input-container {
+  display: flex;
+  align-items: center;
+}
+
+.pledge__label {
+  margin-left: 1em;
+  line-height: 1.5;
+}
+
+.pledge-div__enter {
+  position: relative;
+  margin-left: -1.5em;
+  width: calc(100% + 3em);
+  border-top: hsl(0, 0%, 80%) 1px solid;
+}
+
+.enter__input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.enter__number-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border: hsl(0, 0%, 80%) 1px solid;
+  border-radius: 10em;
+}
+
+.enter__input {
+  width: 45px;
+  font-size: 1.25rem;
+  text-align: right;
+  margin-top: 2.5px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+
+.enter__button {
+  width: 50%;
+}
+
+.success__button {
+  margin: 0 auto;
 }
