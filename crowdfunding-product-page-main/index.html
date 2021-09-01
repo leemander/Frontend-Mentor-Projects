@@ -111,7 +111,9 @@
               special Backer member list.
             </p>
             <p class="card__text"><span class="card__number">101</span> left</p>
-            <a href="#" class="card__button">Select Reward</a>
+            <a href="#" class="card__button" id="bamboo-button"
+              >Select Reward</a
+            >
           </div>
           <div class="pledge-div">
             <h2 class="title">Black Edition Stand</h2>
@@ -122,7 +124,7 @@
               included.
             </p>
             <p class="card__text"><span class="card__number">64</span> left</p>
-            <a href="#" class="card__button">Select Reward</a>
+            <a href="#" class="card__button" id="black-button">Select Reward</a>
           </div>
           <div class="pledge-div div--sold-out">
             <h2 class="title">Mahogany Special Edition</h2>
@@ -141,7 +143,6 @@
 
     <aside>
       <!-- Selection modal start -->
-
       <div class="modal-container container hide" id="selection-modal">
         <div class="card modal modal--selection">
           <div class="modal-header">
@@ -162,7 +163,7 @@
               <input
                 type="radio"
                 name="no-reward"
-                id="no-reward"
+                id="no-reward-radio"
                 class="pledge__radio"
               />
               <label class="title pledge__label" for="no-reward">
@@ -174,7 +175,7 @@
               project. As a backer, you will be signed up to receive product
               updates via email.
             </p>
-            <div class="pledge-div__enter hide" id="pledge-div-1">
+            <div class="pledge-div__enter hide" id="pledge-div-no-reward">
               <h2 class="card__text centered">Enter your pledge</h2>
               <div class="enter__input-container">
                 <div class="enter__number-container">
@@ -195,7 +196,7 @@
               <input
                 type="radio"
                 name="bamboo"
-                id="bamboo"
+                id="bamboo-radio"
                 class="pledge__radio"
               /><label class="title pledge__label" for="bamboo">
                 Bamboo Stand<br />
@@ -208,7 +209,7 @@
               special Backer member list.
             </p>
             <p class="card__text"><span class="card__number">101</span> left</p>
-            <div class="pledge-div__enter hide">
+            <div class="pledge-div__enter hide" id="pledge-div-bamboo">
               <h2 class="card__text centered">Enter your pledge</h2>
               <div class="enter__input-container">
                 <div class="enter__number-container">
@@ -229,7 +230,7 @@
               <input
                 type="radio"
                 name="black"
-                id="black"
+                id="black-radio"
                 class="pledge__radio"
               /><label class="title pledge__label" for="black">
                 Black Edition Stand <br />
@@ -242,7 +243,7 @@
               included.
             </p>
             <p class="card__text"><span class="card__number">64</span> left</p>
-            <div class="pledge-div__enter hide">
+            <div class="pledge-div__enter hide" id="pledge-div-black">
               <h2 class="card__text centered">Enter your pledge</h2>
               <div class="enter__input-container">
                 <div class="enter__number-container">
@@ -263,7 +264,7 @@
               <input
                 type="radio"
                 name="mahogany"
-                id="mahogany"
+                id="mahogany-radio"
                 class="pledge__radio"
               /><label class="title pledge__label" for="mahogany">
                 Mahogany Special Edition<br />
@@ -277,7 +278,7 @@
               included.
             </p>
             <p class="card__text"><span class="card__number">0</span> left</p>
-            <div class="pledge-div__enter hide">
+            <div class="pledge-div__enter hide" id="pledge-div-mahogany">
               <h2 class="card__text centered">Enter your pledge</h2>
               <div class="enter__input-container">
                 <div class="enter__number-container">
@@ -296,9 +297,10 @@
         </div>
       </div>
       <!-- Selection modal end -->
+
       <!-- Success modal start -->
-      <div class="container modal-container hide">
-        <div class="card modal modal--success centered" id="success-modal">
+      <div class="container modal-container">
+        <div class="card modal modal--success centered hide" id="success-modal">
           <img
             src="images/icon-check.svg"
             alt="checkmark"

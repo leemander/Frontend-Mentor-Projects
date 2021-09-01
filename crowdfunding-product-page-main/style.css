@@ -283,6 +283,14 @@ aside .card {
   width: 50%;
 }
 
+.modal--success {
+  z-index: 10;
+}
+
+.success__img {
+  margin-top: 1em;
+}
+
 .success__button {
   margin: 0 auto;
 }
