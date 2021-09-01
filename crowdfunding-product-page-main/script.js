@@ -1,3 +1,5 @@
+/* DOM elements */
+
 const main = document.getElementById("main");
 const hamburger = document.getElementById("hamburger");
 const closeMenu = document.getElementById("close-menu");
