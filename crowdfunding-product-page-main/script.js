@@ -6,6 +6,7 @@ const closeMenu = document.getElementById("close-menu");
 const mobileMenu = document.getElementById("mobile-menu");
 
 const backThisButton = document.getElementById("back-button");
+const bookmarkButton = document.getElementById("bookmark-button");
 const bambooButton = document.getElementById("bamboo-button");
 const blackButton = document.getElementById("black-button");
 
@@ -35,6 +36,18 @@ const successButton = document.getElementById("success-button");
 const changeMenuButton = (button1, button2) => {
   button1.classList.toggle("hide");
   button2.classList.toggle("hide");
+};
+
+const toggleBookmarked = () => {
+  if (!bookmarkButton.classList.contains("button--bookmarked")) {
+    bookmarkButton.innerHTML =
+      '<img src="images/icon-bookmark.svg" alt="bookmark"/><span class="padding">Bookmarked</span>';
+  } else {
+    bookmarkButton.innerHTML =
+      '<img src="images/icon-bookmark.svg" alt="bookmark"/><span class="padding">Bookmark</span>';
+  }
+  console.log(bookmarkButton);
+  bookmarkButton.classList.toggle("button--bookmarked");
 };
 
 const showHideModal = (modal) => {
@@ -83,6 +96,10 @@ closeMenu.addEventListener("click", () => {
 
 backThisButton.addEventListener("click", () => {
   showHideModal(selectionModal);
+});
+
+bookmarkButton.addEventListener("click", () => {
+  toggleBookmarked();
 });
 
 bambooButton.addEventListener("click", () => {

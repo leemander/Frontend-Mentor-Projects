@@ -354,12 +354,35 @@ aside .card {
   }
 
   .card__button--bookmark {
-    background-color: var(--darkGray);
+    background-color: #fafafa;
+    color: hsl(0, 0%, 48%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0;
     padding-right: 1em;
+  }
+
+  .card__button--bookmark:hover,
+  .card__button--bookmark:focus {
+    background-color: #fafafa !important;
+    opacity: 0.5;
+  }
+
+  .button--bookmarked {
+    background-color: #fafafa;
+    color: var(--darkCyan);
+  }
+
+  .button--bookmarked:hover,
+  .button--bookmarked:focus {
+    background-color: #fafafa !important;
+    opacity: 0.5;
+  }
+
+  .button--bookmarked img {
+    filter: invert(36%) sepia(7%) saturate(5791%) hue-rotate(130deg)
+      brightness(100%) contrast(84%);
   }
 
   .card__button--bookmark:hover,
