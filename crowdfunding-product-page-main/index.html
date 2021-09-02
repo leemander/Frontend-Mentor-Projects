@@ -74,18 +74,34 @@
             <a href="#" class="card__button" id="back-button"
               >Back this project</a
             >
-            <a href="#" class="bookmark__button"
-              ><img src="images/icon-bookmark.svg" alt="bookmark"
-            /></a>
+
+            <a href="#" class="mobile-only"
+              ><img src="images/icon-bookmark.svg" alt="bookmark" />
+            </a>
+
+            <span class="desktop-only">
+              <a href="#" class="card__button card__button--bookmark"
+                ><img src="images/icon-bookmark.svg" alt="bookmark" />
+                <span class="padding">Bookmark</span>
+              </a>
+            </span>
           </div>
         </section>
         <section class="card card--stats">
-          <p class="card__number centered">$89,914</p>
-          <p class="card__text centered">of $100,000 backed</p>
-          <p class="card__number centered">5,007</p>
-          <p class="card__text centered">total backers</p>
-          <p class="card__number centered">56</p>
-          <p class="card__text centered">days left</p>
+          <div class="row">
+            <div class="stat">
+              <p class="card__number centered">$89,914</p>
+              <p class="card__text centered">of $100,000 backed</p>
+            </div>
+            <div class="stat">
+              <p class="card__number centered">5,007</p>
+              <p class="card__text centered">total backers</p>
+            </div>
+            <div class="stat">
+              <p class="card__number centered">56</p>
+              <p class="card__text centered">days left</p>
+            </div>
+          </div>
           <div class="card__progress-bar-container">
             <div class="card__progress-bar"></div>
           </div>
@@ -103,39 +119,59 @@
             be stored under the stand.
           </p>
           <div class="pledge-div">
-            <h2 class="title">Bamboo Stand</h2>
-            <h3 class="pledge-div__subheading">Pledge $25 or more</h3>
+            <div class="row">
+              <h2 class="title">Bamboo Stand</h2>
+              <h3 class="pledge-div__subheading">Pledge $25 or more</h3>
+            </div>
             <p class="card__text">
               You get an ergonomic stand made of natural bamboo. You've helped
               us launch our promotional campaign, and you’ll be added to a
               special Backer member list.
             </p>
-            <p class="card__text"><span class="card__number">101</span> left</p>
-            <a href="#" class="card__button" id="bamboo-button"
-              >Select Reward</a
-            >
+            <div class="row">
+              <p class="card__text">
+                <span class="card__number">101</span> left
+              </p>
+              <a href="#" class="card__button" id="bamboo-button"
+                >Select Reward</a
+              >
+            </div>
           </div>
           <div class="pledge-div">
-            <h2 class="title">Black Edition Stand</h2>
-            <h3 class="pledge-div__subheading">Pledge $75 or more</h3>
+            <div class="row">
+              <h2 class="title">Black Edition Stand</h2>
+              <h3 class="pledge-div__subheading">Pledge $75 or more</h3>
+            </div>
             <p class="card__text">
               You get a Black Special Edition computer stand and a personal
               thank you. You’ll be added to our Backer member list. Shipping is
               included.
             </p>
-            <p class="card__text"><span class="card__number">64</span> left</p>
-            <a href="#" class="card__button" id="black-button">Select Reward</a>
+            <div class="row">
+              <p class="card__text">
+                <span class="card__number">64</span> left
+              </p>
+              <a href="#" class="card__button" id="black-button"
+                >Select Reward</a
+              >
+            </div>
           </div>
           <div class="pledge-div div--sold-out">
-            <h2 class="title">Mahogany Special Edition</h2>
-            <h3 class="pledge-div__subheading">Pledge $200 or more</h3>
+            <div class="row">
+              <h2 class="title">Mahogany Special Edition</h2>
+              <h3 class="pledge-div__subheading">Pledge $200 or more</h3>
+            </div>
             <p class="card__text">
               You get two Special Edition Mahogany stands, a Backer T-Shirt, and
               a personal thank you. You’ll be added to our Backer member list.
               Shipping is included.
             </p>
-            <p class="card__text"><span class="card__number">0</span> left</p>
-            <a href="#" class="card__button button--sold-out">Select Reward</a>
+            <div class="row">
+              <p class="card__text"><span class="card__number">0</span> left</p>
+              <a href="#" class="card__button button--sold-out"
+                >Select Reward</a
+              >
+            </div>
           </div>
         </section>
       </div>
@@ -198,17 +234,27 @@
                 name="bamboo"
                 id="bamboo-radio"
                 class="pledge__radio"
-              /><label class="title pledge__label" for="bamboo">
-                Bamboo Stand<br />
-                <span class="pledge-div__subheading">Pledge $25 or more</span>
-              </label>
+              />
+              <div class="row">
+                <label class="title pledge__label" for="bamboo">
+                  Bamboo Stand<br class="mobile-only" />
+                  <span class="pledge-div__subheading padding"
+                    >Pledge $25 or more</span
+                  >
+                </label>
+                <p class="card__text desktop-only">
+                  <span class="card__number">101</span> left
+                </p>
+              </div>
             </div>
             <p class="card__text">
               You get an ergonomic stand made of natural bamboo. You've helped
               us launch our promotional campaign, and you’ll be added to a
               special Backer member list.
             </p>
-            <p class="card__text"><span class="card__number">101</span> left</p>
+            <p class="card__text mobile-only">
+              <span class="card__number">101</span> left
+            </p>
             <div class="pledge-div__enter hide" id="pledge-div-bamboo">
               <h2 class="card__text centered">Enter your pledge</h2>
               <div class="enter__input-container">
@@ -232,17 +278,27 @@
                 name="black"
                 id="black-radio"
                 class="pledge__radio"
-              /><label class="title pledge__label" for="black">
-                Black Edition Stand <br />
-                <span class="pledge-div__subheading">Pledge $75 or more</span>
-              </label>
+              />
+              <div class="row">
+                <label class="title pledge__label" for="black">
+                  Black Edition Stand <br class="mobile-only" />
+                  <span class="pledge-div__subheading padding"
+                    >Pledge $75 or more</span
+                  >
+                </label>
+                <p class="card__text desktop-only">
+                  <span class="card__number">64</span> left
+                </p>
+              </div>
             </div>
             <p class="card__text">
               You get a Black Special Edition computer stand and a personal
               thank you. You’ll be added to our Backer member list. Shipping is
               included.
             </p>
-            <p class="card__text"><span class="card__number">64</span> left</p>
+            <p class="card__text mobile-only">
+              <span class="card__number">64</span> left
+            </p>
             <div class="pledge-div__enter hide" id="pledge-div-black">
               <h2 class="card__text centered">Enter your pledge</h2>
               <div class="enter__input-container">
@@ -266,10 +322,18 @@
                 name="mahogany"
                 id="mahogany-radio"
                 class="pledge__radio"
-              /><label class="title pledge__label" for="mahogany">
-                Mahogany Special Edition<br />
-                <span class="pledge-div__subheading">Pledge $200 or more</span>
-              </label>
+              />
+              <div class="row">
+                <label class="title pledge__label" for="mahogany">
+                  Mahogany Special Edition<br class="mobile-only" />
+                  <span class="pledge-div__subheading padding"
+                    >Pledge $200 or more</span
+                  >
+                </label>
+                <p class="card__text desktop-only">
+                  <span class="card__number">0</span> left
+                </p>
+              </div>
             </div>
             <p class="card__text">
               Mahogany Special Edition Pledge $200 or more You get two Special
@@ -277,7 +341,9 @@
               you. You’ll be added to our Backer member list. Shipping is
               included.
             </p>
-            <p class="card__text"><span class="card__number">0</span> left</p>
+            <p class="card__text mobile-only">
+              <span class="card__number">0</span> left
+            </p>
             <div class="pledge-div__enter hide" id="pledge-div-mahogany">
               <h2 class="card__text centered">Enter your pledge</h2>
               <div class="enter__input-container">

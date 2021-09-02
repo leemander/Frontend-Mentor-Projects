@@ -42,6 +42,10 @@ img {
   text-align: center;
 }
 
+.desktop-only {
+  display: none;
+}
+
 .nav {
   position: absolute;
   top: 0;
@@ -132,16 +136,17 @@ img {
 }
 
 .card__button {
+  background-color: var(--moderateCyan);
+  border-radius: 10em;
+  color: white;
   display: block;
   font-size: 1rem;
   font-weight: 700;
-  color: white;
-  text-decoration: none;
-  background-color: var(--moderateCyan);
-  width: fit-content;
-  width: -moz-fit-content;
   padding: 1.2em 3em;
-  border-radius: 10em;
+  text-align: center;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .card__button:hover,
@@ -243,7 +248,6 @@ aside .card {
 }
 
 .pledge__label {
-  margin-left: 1em;
   line-height: 1.5;
 }
 
@@ -293,4 +297,52 @@ aside .card {
 
 .success__button {
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .main {
+    background-image: url(images/image-hero-desktop.jpg);
+    background-size: 100%;
+  }
+
+  .main .card:first-of-type {
+    position: relative;
+    margin-top: 28em;
+  }
+
+  .card__button--bookmark {
+    background-color: var(--darkGray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    padding-right: 1em;
+  }
+
+  .padding {
+    padding-inline: 1em;
+  }
+
+  .stat {
+    width: 100%;
+  }
 }
