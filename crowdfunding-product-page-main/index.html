@@ -19,7 +19,7 @@
         <img
           src="images/icon-hamburger.svg"
           alt="open navigation menu"
-          class="nav__hamburger"
+          class="nav__hamburger mobile-only"
           id="hamburger"
         />
         <img
@@ -28,17 +28,19 @@
           class="nav__hamburger hide"
           id="close-menu"
         />
-        <ul class="navbar hide">
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">About</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Discover</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Get Started</a>
-          </li>
-        </ul>
+        <span class="desktop-only">
+          <ul class="navbar">
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">About</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">Discover</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">Get Started</a>
+            </li>
+          </ul>
+        </span>
       </div>
       <div class="container">
         <div class="mobile-nav-menu-container container hide" id="mobile-menu">
@@ -212,18 +214,20 @@
               updates via email.
             </p>
             <div class="pledge-div__enter hide" id="pledge-div-no-reward">
-              <h2 class="card__text centered">Enter your pledge</h2>
-              <div class="enter__input-container">
-                <div class="enter__number-container">
-                  <p class="card__text">$</p>
-                  <input
-                    type="number"
-                    id="pledge1"
-                    placeholder="1"
-                    class="enter__input"
-                  />
+              <div class="row enter-row">
+                <h2 class="card__text centered">Enter your pledge</h2>
+                <div class="enter__input-container">
+                  <div class="enter__number-container">
+                    <p class="card__text">$</p>
+                    <input
+                      type="number"
+                      id="pledge1"
+                      placeholder="1"
+                      class="enter__input"
+                    />
+                  </div>
+                  <a href="#" class="card__button enter__button">Continue</a>
                 </div>
-                <a href="#" class="card__button enter__button">Continue</a>
               </div>
             </div>
           </div>
@@ -256,18 +260,20 @@
               <span class="card__number">101</span> left
             </p>
             <div class="pledge-div__enter hide" id="pledge-div-bamboo">
-              <h2 class="card__text centered">Enter your pledge</h2>
-              <div class="enter__input-container">
-                <div class="enter__number-container">
-                  <p class="card__text">$</p>
-                  <input
-                    type="number"
-                    id="pledge2"
-                    placeholder="25"
-                    class="enter__input"
-                  />
+              <div class="row enter-row">
+                <h2 class="card__text centered">Enter your pledge</h2>
+                <div class="enter__input-container">
+                  <div class="enter__number-container">
+                    <p class="card__text">$</p>
+                    <input
+                      type="number"
+                      id="pledge2"
+                      placeholder="25"
+                      class="enter__input"
+                    />
+                  </div>
+                  <a href="#" class="card__button enter__button">Continue</a>
                 </div>
-                <a href="#" class="card__button enter__button">Continue</a>
               </div>
             </div>
           </div>
@@ -300,18 +306,20 @@
               <span class="card__number">64</span> left
             </p>
             <div class="pledge-div__enter hide" id="pledge-div-black">
-              <h2 class="card__text centered">Enter your pledge</h2>
-              <div class="enter__input-container">
-                <div class="enter__number-container">
-                  <p class="card__text">$</p>
-                  <input
-                    type="number"
-                    id="pledge3"
-                    placeholder="75"
-                    class="enter__input"
-                  />
+              <div class="row enter-row">
+                <h2 class="card__text centered">Enter your pledge</h2>
+                <div class="enter__input-container">
+                  <div class="enter__number-container">
+                    <p class="card__text">$</p>
+                    <input
+                      type="number"
+                      id="pledge3"
+                      placeholder="75"
+                      class="enter__input"
+                    />
+                  </div>
+                  <a href="#" class="card__button enter__button">Continue</a>
                 </div>
-                <a href="#" class="card__button enter__button">Continue</a>
               </div>
             </div>
           </div>
