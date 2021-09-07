@@ -15,10 +15,10 @@ Users should be able to:
 
 # Screenshot
 
-![](crowdfunding-product-page-main\desktop.png)
-![](crowdfunding-product-page-main\desktop-modal.png)
-![](crowdfunding-product-page-main\mobile.png)
-![](crowdfunding-product-page-main\mobile.modal.png)
+![](./desktop.png)
+![](./desktop-modal.png)
+![](./mobile.png)
+![](./mobile.modal.png)
 
 # Links
 
