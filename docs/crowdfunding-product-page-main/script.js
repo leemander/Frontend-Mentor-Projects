@@ -96,7 +96,6 @@ const updateStats = (pledge) => {
   let oldFunds = funds.innerHTML.substring(1).split("");
   oldFunds.splice(oldFunds.indexOf(","), 1);
   oldFunds = Number(oldFunds.join(""));
-  console.log(oldFunds);
 
   let newFunds = oldFunds + Number(pledge.value);
   let newFundsInt = newFunds;
@@ -111,10 +110,15 @@ const updateStats = (pledge) => {
   for (let i = 0; i < newFunds.length; i++) {
     finalFunds += newFunds[i];
   }
-  console.log(finalFunds);
   funds.innerHTML = finalFunds;
 
-  backers.innerHTML = "5,008";
+  let newBackersCount = backers.innerHTML.split("");
+  newBackersCount.splice(newBackersCount.indexOf(","), 1);
+  newBackersCount = Number(newBackersCount.join("")) + 1;
+  newBackersCount = newBackersCount.toString().split("");
+  newBackersCount.splice(1, 0, ",");
+  newBackersCount = newBackersCount.join("");
+  backers.innerHTML = newBackersCount;
 
   if (newFundsInt / 1000 > 100) {
     progressBar.style.width = "100%";

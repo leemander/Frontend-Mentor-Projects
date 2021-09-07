@@ -87,6 +87,11 @@ img {
   border-radius: 10px;
 }
 
+.mobile-nav-menu {
+  padding: 0;
+  margin: 0;
+}
+
 .mobile-nav-menu__item {
   list-style: none;
   padding-left: 1em;
@@ -236,7 +241,7 @@ img {
 }
 
 aside .card {
-  padding-top: 0;
+  padding: 2em;
 }
 
 .modal-header {
