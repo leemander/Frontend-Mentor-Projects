@@ -18,7 +18,7 @@ Users should be able to:
 ![](./desktop.png)
 ![](./desktop-modal.png)
 ![](./mobile.png)
-![](./mobile.modal.png)
+![](./mobile-modal.png)
 
 # Links
 
