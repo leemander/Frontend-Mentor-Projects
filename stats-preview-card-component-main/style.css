@@ -117,3 +117,45 @@ img {
   color: white;
   margin-bottom: 0.1em;
 }
+
+@media (min-width: 1000px) {
+  .card {
+    max-width: 1440px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "content img";
+  }
+
+  .card__content {
+    padding: 3em 4em;
+    text-align: left;
+  }
+
+  .card__title {
+    font-size: 2.5rem;
+  }
+
+  .card__text {
+    font-size: 1.2rem;
+  }
+
+  .card__stats {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card__stat {
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  .card__stat:first-of-type {
+    margin-top: 0;
+  }
+
+  .card__stat + .card__stat {
+    margin-bottom: 0;
+  }
+}
