@@ -15,8 +15,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/stats-preview-card-component-main](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/stats-preview-card-component-main)
+- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/stats-preview-card-component-main/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/stats-preview-card-component-main/)
 
 ## My process
 
