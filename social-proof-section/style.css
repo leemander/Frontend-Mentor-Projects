@@ -115,3 +115,13 @@ img {
   opacity: 0.9;
   line-height: 1.5;
 }
+
+@media (min-width: 1000px) {
+  .main {
+    max-width: 1400px;
+    max-height: 100vh;
+    background-image: url(images/bg-pattern-top-desktop.svg),
+      url(images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+  }
+}
