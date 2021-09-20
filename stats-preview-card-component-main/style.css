@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-background);
+  color: white;
+  font-size: 15px;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.card {
+  max-height: 90vh;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 3fr 7fr;
+  grid-template-areas:
+    "img"
+    "content";
+  margin: 0 auto;
+  max-width: 350px;
+  width: 90%;
+}
+
+.card__img {
+  content: "";
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-size: cover;
+  background-color: var(--accent);
+  background-image: url(images/image-header-mobile.jpg);
+  background-blend-mode: multiply;
+  grid-area: img;
+}
+
+.card__content {
+  padding: 1em;
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "text"
+    "stats"
+    "stats";
+}
+
+.card__title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.65rem;
+  letter-spacing: 1px;
+  grid-area: title;
+}
+
+.card__text {
+  font-family: "Inter", sans-serif;
+  color: var(--paragraph);
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1rem;
+  grid-area: text;
+}
+
+.card__stats {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  grid-area: stats;
+}
+
+.card__stat {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  color: var(--stat-headings);
+}
+
+.card__stat:first-of-type {
+  margin-top: 2.5em;
+}
+
+.card__stat + .card__stat {
+  margin-bottom: 2em;
+}
+
+.card__stat-heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.1em;
+}
