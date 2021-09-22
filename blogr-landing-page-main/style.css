@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --lightRed: hsl(356, 100%, 66%);
+  --veryLightRed: hsl(355, 100%, 74%);
+  --veryDarkBlue: hsl(208, 49%, 24%);
+  --grayishBlue: hsl(240, 2%, 79%);
+  --darkGrayishBlue: hsl(207, 13%, 34%);
+  --darkBlackBlue: hsl(240, 10%, 16%);
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  color: hsl(240, 10%, 16%);
+  background-color: lightgray;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2,
+h3 {
+  color: hsl(208, 49%, 24%);
+}
+
+.container {
+  width: 90%;
+  max-width: 370px;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0.2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  background-image: url(images/bg-pattern-intro.svg),
+    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-size: 300%, cover;
+  background-position: top -260px left -270px, center;
+  background-repeat: no-repeat;
+  padding: 7em 2em 5em 2em;
+  text-align: center;
+  color: white;
+  border-bottom-left-radius: 25%;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 2.1rem;
+}
+
+.hero__subheading {
+  margin: 0.5em 0 1em 0;
+  font-size: 1.1rem;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 0.6em 1em;
+  border-radius: 10em;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.button--solid {
+  background-color: white;
+  color: hsl(353, 100%, 62%);
+}
+
+.button + .button {
+  margin-left: 1em;
+}
+
+.section {
+  padding-block: 2em;
+}
+
+.heading {
+  padding: 4em 1em 2em 1em;
+}
+
+.section__img {
+  margin-block: 1em;
+}
+
+.section__header {
+  padding-inline: 2em;
+  font-size: 1.5rem;
+}
+
+.section__text {
+  padding-inline: 2em;
+}
+
+.section--bg-blue {
+  background-image: url(images/bg-pattern-circles.svg),
+    linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-repeat: no-repeat;
+  background-size: 175%, cover;
+  background-position: top 175% left 45%;
+  color: white;
+  padding: 7em 2em 5em 2em;
+  margin-top: 18em;
+  border-bottom-left-radius: 25%;
+  border-top-right-radius: 25%;
+  position: relative;
+}
+
+.section--bg-blue > .section__img {
+  position: absolute;
+  top: -50%;
+  left: 0;
+}
+
+.section--bg-blue > .section__header {
+  color: white;
+}
+
+.footer {
+  background-color: hsl(240, 10%, 16%);
+  color: white;
+  padding-block: 2em;
+  border-top-right-radius: 8em;
+}
+
+.footer__logo {
+  padding-block: 1em;
+}
+
+.footer__ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__li:first-of-type {
+  padding-block: 1.5em;
+}
+
+.footer__li + .footer__li {
+  margin-top: 1em;
+}
+
+.footer__li a {
+  text-decoration: none;
+  color: hsl(240, 2%, 79%);
+}
