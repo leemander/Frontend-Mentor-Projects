@@ -28,7 +28,7 @@ h3 {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 375px;
   margin: 0 auto;
   background-color: white;
@@ -127,7 +127,7 @@ h3 {
 
 .section--bg-blue > .section__img {
   position: absolute;
-  top: -50%;
+  top: -17em;
   left: 0;
 }
 
