@@ -28,8 +28,8 @@ h3 {
 }
 
 .container {
-  width: 90%;
-  max-width: 370px;
+  width: 100%;
+  max-width: 375px;
   margin: 0 auto;
   background-color: white;
   position: relative;
