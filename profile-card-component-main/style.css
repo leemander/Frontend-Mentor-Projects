@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --darkGrayishBlue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: var(--darkCyan);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: 50%, 50%;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.card {
+  background: white;
+  width: 90%;
+  max-width: 375px;
+  font-family: "Kumbh Sans", sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border-radius: 20px;
+}
+
+.card__header img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card__user {
+  position: relative;
+}
+
+.user__img {
+  background: white;
+  border-radius: 50%;
+  left: 50%;
+  padding: 0.5em;
+  position: absolute;
+  top: -4em;
+  transform: translateX(-50%);
+}
+
+.card__user {
+  padding-block: 0 1.5em;
+}
+
+.user__info {
+  align-items: center;
+  display: grid;
+  grid-template-rows: 3em 1em;
+  padding-top: 3em;
+}
+
+.user__name {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.user__age {
+  display: inline-block;
+  margin-left: 1em;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 59%);
+}
+
+.user__location {
+  color: hsl(0, 0%, 59%);
+}
+
+.card__socials {
+  border-top: var(--darkGray) 1px solid;
+}
+
+.socials__ul {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  list-style: none;
+  padding-inline: 1em;
+}
+
+.socials__li p {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: hsl(227, 10%, 46%);
+  font-weight: 400;
+}
+
+.socials__number {
+  letter-spacing: 0;
+  color: black;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+@media (min-width: 1000px) {
+  .card {
+    max-width: 500px;
+  }
+}
