@@ -49,6 +49,7 @@ img {
 
 h1 {
   color: var(--clr-neutral-dark);
+  font-size: var(--fs-l);
 }
 
 .toggle-container {
@@ -69,11 +70,16 @@ h1 {
   );
   border-radius: 15px;
   content: "";
+  cursor: pointer;
   display: flex;
   height: 1.75em;
   justify-content: start;
   padding: 3px;
   width: 3.25em;
+}
+
+.toggle:hover {
+  opacity: 0.5;
 }
 
 .toggle__circle {
@@ -155,10 +161,11 @@ h1 {
     hsl(236, 72%, 79%),
     hsl(237, 63%, 64%)
   );
+  border-radius: 10px;
+  border: 2px solid transparent;
+  color: white;
   cursor: pointer;
   display: block;
-  border-radius: 10px;
-  color: white;
   font-size: var(--fs-s);
   letter-spacing: 1px;
   padding-block: 1em;
@@ -166,10 +173,24 @@ h1 {
   text-transform: uppercase;
 }
 
+.card__button:hover,
+.card__button:focus {
+  --clr: hsl(237, 63%, 64%);
+  background-color: transparent;
+  background-image: none;
+  border-color: var(--clr);
+  color: var(--clr);
+}
+
 .card__button--middle {
   background-image: none;
   background-color: white;
   color: hsl(237, 63%, 64%);
+}
+
+.card__button--middle:hover,
+.card__button--middle:focus {
+  --clr: white;
 }
 
 @media (min-width: 1000px) {
@@ -181,10 +202,10 @@ h1 {
   }
 
   .main {
-    max-width: 100%;
-    min-height: 100vh;
     background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
     background-position: top right, bottom left;
+    max-width: 100%;
+    min-height: 100vh;
   }
 
   .container {
@@ -192,21 +213,22 @@ h1 {
   }
 
   .toggle-container {
-    padding-top: 1em;
-    width: fit-content;
-    width: -moz-fit-content;
     gap: 2em;
+    padding-top: 1em;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .row {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
   }
 
   .card {
     margin-top: 0 !important;
     padding: 3em;
+    width: 100%;
   }
 
   .card--middle {
