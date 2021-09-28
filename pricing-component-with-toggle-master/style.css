@@ -113,8 +113,8 @@ h1 {
 }
 
 .card__price::first-letter {
-  font-size: 1.75rem;
-  vertical-align: 5px;
+  font-size: 2rem;
+  vertical-align: 0.25em;
 }
 
 .card__price--monthly {
