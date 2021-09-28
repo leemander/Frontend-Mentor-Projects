@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --clr-primary-gradient: linear-gradient(
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  --clr-neutral-v-light: hsl(240, 78%, 98%);
+  --clr-neutral-light: hsl(234, 14%, 74%);
+  --clr-neutral-dark: hsl(233, 13%, 49%);
+  --clr-neutral-v-dark: hsl(232, 13%, 33%);
+  --fs-s: 0.9rem;
+  --fs-m: 1rem;
+  --fs-l: 2rem;
+  --fs-xl: 4rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  background-color: #f7f7ff;
+  background-image: url(images/bg-top.svg);
+  background-position: right -190px top -25px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  max-width: 375px;
+  padding-block: 3em;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 325px;
+}
+
+h1 {
+  color: var(--clr-neutral-dark);
+}
+
+.toggle-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding-bottom: 3em;
+  width: 75%;
+}
+
+.toggle {
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border-radius: 15px;
+  content: "";
+  display: flex;
+  height: 1.75em;
+  justify-content: start;
+  padding: 3px;
+  width: 3.25em;
+}
+
+.toggle__circle {
+  background-color: white;
+  border-radius: 50%;
+  content: "";
+  height: 1.25em;
+  width: 1.25em;
+}
+
+.label {
+  color: var(--clr-neutral-light);
+  cursor: pointer;
+  font-size: var(--fs-s);
+}
+
+.radio {
+  display: none;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 3em 2em;
+}
+
+.card__title {
+  color: var(--clr-neutral-dark);
+  font-size: var(--fs-m);
+}
+
+.card__price {
+  color: var(--clr-neutral-v-dark);
+  font-size: var(--fs-xl);
+  margin-block: 0;
+  position: relative;
+}
+
+.card__price::first-letter {
+  font-size: 1.75rem;
+  vertical-align: 5px;
+}
+
+.card__price--monthly {
+  display: none;
+}
+
+.card__feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.card__feature {
+  border-bottom: var(--clr-neutral-light) 1px solid;
+  color: var(--clr-neutral-dark);
+  font-size: var(--fs-s);
+  padding-block: 1em;
+}
+
+.card__feature:first-of-type {
+  border-block: var(--clr-neutral-light) 1px solid;
+}
+
+.card + .card {
+  margin-top: 2em;
+}
+
+.card--middle {
+  background-image: var(--clr-primary-gradient);
+}
+
+.card--middle * {
+  color: white;
+}
+
+.card__button {
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  color: white;
+  font-size: var(--fs-s);
+  letter-spacing: 1px;
+  padding-block: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card__button--middle {
+  background-image: none;
+  background-color: white;
+  color: hsl(237, 63%, 64%);
+}
