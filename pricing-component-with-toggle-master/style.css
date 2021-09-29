@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 :root {
-  --clr-primary-gradient: linear-gradient(
-    hsl(236, 72%, 79%),
-    hsl(237, 63%, 64%)
-  );
+  --clr-primary-gradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
   --clr-neutral-v-light: hsl(240, 78%, 98%);
   --clr-neutral-light: hsl(234, 14%, 74%);
   --clr-neutral-dark: hsl(233, 13%, 49%);
   --clr-neutral-v-dark: hsl(232, 13%, 33%);
+
   --fs-s: 0.9rem;
   --fs-m: 1rem;
   --fs-l: 2rem;
@@ -63,11 +61,7 @@ h1 {
 
 .toggle {
   align-items: center;
-  background-image: linear-gradient(
-    to right,
-    hsl(236, 72%, 79%),
-    hsl(237, 63%, 64%)
-  );
+  background-image: linear-gradient(to right, var(--clr-primary-gradient));
   border-radius: 15px;
   content: "";
   cursor: pointer;
@@ -148,7 +142,7 @@ h1 {
 }
 
 .card--middle {
-  background-image: var(--clr-primary-gradient);
+  background-image: linear-gradient(var(--clr-primary-gradient));
 }
 
 .card--middle * {
@@ -156,11 +150,7 @@ h1 {
 }
 
 .card__button {
-  background-image: linear-gradient(
-    to right,
-    hsl(236, 72%, 79%),
-    hsl(237, 63%, 64%)
-  );
+  background-image: linear-gradient(to right, var(--clr-primary-gradient));
   border-radius: 10px;
   border: 2px solid transparent;
   color: white;
