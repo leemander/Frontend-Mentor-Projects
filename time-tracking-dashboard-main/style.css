@@ -55,7 +55,7 @@ body {
 }
 
 .card {
-  background-color: var(--clr-ntr-dark-blue);
+  background-color: transparent;
   border-radius: 1em;
   position: relative;
   width: 100%;
@@ -102,6 +102,11 @@ body {
   text-decoration: none;
 }
 
+.view-change__link:hover,
+.view-change__link:focus {
+  color: white;
+}
+
 .view-change__link--selected {
   color: white;
 }
@@ -114,6 +119,10 @@ body {
   content: "";
   height: 3em;
 }
+
+/* .card__info:hover {
+  background-color: var(--clr-ntr-desat-blue);
+} */
 
 .card:nth-of-type(2) .card__banner {
   background-color: var(--clr-primary-work);
@@ -143,8 +152,8 @@ body {
 
 .card__info {
   background-color: var(--clr-ntr-dark-blue);
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
+  border-radius: 1em;
+
   padding: 2em 1em;
   position: relative;
   top: -10px;
@@ -160,6 +169,11 @@ body {
 .card__title {
   font-size: var(--fs-m);
   font-weight: 500;
+}
+
+.card__ellipsis:hover {
+  cursor: pointer;
+  filter: grayscale(100%);
 }
 
 .times {
