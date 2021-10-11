@@ -32,10 +32,13 @@ img {
 }
 
 body {
+  align-items: center;
   background-color: var(--clr-ntr-v-dark-blue);
-  font-family: "Rubik", sans-serif;
-  min-height: 100vh;
   color: white;
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
@@ -70,8 +73,9 @@ body {
 .user__img {
   border-radius: 50%;
   border: 2px solid white;
-  height: 75px;
-  width: 75px;
+  --img-size: 50px;
+  height: var(--img-size);
+  width: var(--img-size);
 }
 
 .user__title {
@@ -103,12 +107,12 @@ body {
 }
 
 .card__banner {
-  content: "";
-  height: 2.5em;
-  background-repeat: no-repeat;
   background-position: 90%;
+  background-repeat: no-repeat;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+  content: "";
+  height: 3em;
 }
 
 .card:nth-of-type(2) .card__banner {
@@ -141,9 +145,9 @@ body {
   background-color: var(--clr-ntr-dark-blue);
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+  padding: 2em 1em;
   position: relative;
   top: -10px;
-  padding: 2em 1em;
 }
 
 .card__header,
@@ -163,8 +167,8 @@ body {
 }
 
 .times--selected {
-  margin-top: 1em;
   display: flex;
+  margin-top: 1em;
 }
 
 .times__current {
@@ -177,4 +181,51 @@ body {
   font-size: var(--fs-s);
   font-weight: 300;
   color: var(--clr-ntr-pale-blue);
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --fs-l: 2.2rem;
+    --fs-m: 1.125rem;
+    --fs-s: 0.85rem;
+    --fs-xl: 2.4rem;
+  }
+  .container {
+    max-width: 1000px;
+  }
+
+  .app {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .card--user {
+    grid-row: span 2;
+  }
+
+  .card--user__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2.5em 0 5em 2em;
+  }
+
+  .user__img {
+    --img-size: 75px;
+  }
+
+  .user__view-change {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 3em 0 2em 2em;
+  }
+
+  .times--selected {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 1em;
+  }
 }
