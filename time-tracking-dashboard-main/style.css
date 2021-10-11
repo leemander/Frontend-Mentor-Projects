@@ -61,6 +61,11 @@ body {
   width: 100%;
 }
 
+.card--user {
+  background-color: var(--clr-ntr-dark-blue);
+  max-height: 98%;
+}
+
 .card--user__header {
   align-items: center;
   background-color: var(--clr-primary-user);
@@ -120,9 +125,9 @@ body {
   height: 3em;
 }
 
-/* .card__info:hover {
+.card__info:hover {
   background-color: var(--clr-ntr-desat-blue);
-} */
+}
 
 .card:nth-of-type(2) .card__banner {
   background-color: var(--clr-primary-work);
@@ -233,7 +238,7 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 1em;
-    padding: 3em 0 2em 2em;
+    padding: 3em 0 0 2em;
   }
 
   .times--selected {
