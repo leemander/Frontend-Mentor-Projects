@@ -1,0 +1,37 @@
+:root {
+  --clr-primary-exercise: hsl(145, 58%, 55%);
+  --clr-primary-play: hsl(195, 74%, 62%);
+  --clr-primary-self: hsl(43, 84%, 65%);
+  --clr-primary-social: hsl(264, 64%, 52%);
+  --clr-primary-study: hsl(348, 100%, 68%);
+  --clr-primary-user: hsl(246, 80%, 60%);
+  --clr-primary-work: hsl(15, 100%, 70%);
+
+  --clr-ntr-dark-blue: hsl(235, 46%, 20%);
+  --clr-ntr-desat-blue: hsl(235, 45%, 61%);
+  --clr-ntr-pale-blue: hsl(236, 100%, 87%);
+  --clr-ntr-v-dark-blue: hsl(226, 43%, 10%);
+
+  --fs-l: 1.25rem;
+  --fs-m: 1.125rem;
+  --fs-s: 1rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 375px;
+  width: 90%;
+}
