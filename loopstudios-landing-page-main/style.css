@@ -312,7 +312,13 @@ img {
     max-width: 1200px;
   }
 
+  .mobile-only {
+    display: none;
+  }
+
   .header {
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.25);
     background-image: url(images/desktop/image-hero.jpg);
     background-position: center;
   }
@@ -360,7 +366,7 @@ img {
     font-weight: 300;
     left: 5%;
     letter-spacing: 3px;
-    padding: 0.5em;
+    padding: 0.75em;
     position: inherit;
     right: 5%;
     text-align: left;
