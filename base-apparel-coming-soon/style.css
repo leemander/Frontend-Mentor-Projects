@@ -69,6 +69,7 @@ body {
   margin: 0 auto;
   max-width: 337.5px;
   text-align: center;
+  padding-bottom: 3em;
 }
 
 .main__info {
@@ -115,6 +116,7 @@ body {
   color: var(--clr-primary-desat);
   font-family: "Josefin Sans", sans-serif;
   font-size: var(--fs-body);
+  width: 70%;
 }
 
 .form__input:focus {
@@ -130,18 +132,25 @@ body {
   background-image: linear-gradient(135deg, white, var(--clr-primary-soft));
   color: #fff;
   cursor: pointer;
+  box-shadow: 0 20px 20px rgba(175, 0, 0, 0.5);
+}
+
+.form__button:hover {
+  background-image: linear-gradient(135deg, #ebc9c9, #ebc9c9);
 }
 
 .main__error-msg {
   margin-top: 1em;
   text-align: center;
   color: var(--clr-primary-soft);
+  font-size: var(--fs-error);
 }
 
 @media (min-width: 1200px) {
   :root {
     --fs-title: 5rem;
     --fs-body: 1.5rem;
+    --fs-error: 1.25rem;
   }
   body {
     display: grid;

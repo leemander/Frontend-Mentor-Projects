@@ -30,22 +30,28 @@
             and our launch deals.
           </p>
         </section>
-        <form action="submit" class="main__form">
+        <form class="main__form" id="form">
           <input
             type="email"
             class="form__input"
             placeholder="Email Address"
+            id="input"
+            autocomplete="off"
           /><img
             src="images/icon-error.svg"
             alt="error"
             class="input__error-img hide"
+            id="error-icon"
           />
-          <button class="form__button" type="submit">
+          <button class="form__button" id="button">
             <img src="images/icon-arrow.svg" alt="submit" />
           </button>
         </form>
-        <p class="main__error-msg hide">Please enter a valid email address.</p>
+        <p class="main__error-msg hide" id="error">
+          Please enter a valid email address.
+        </p>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
