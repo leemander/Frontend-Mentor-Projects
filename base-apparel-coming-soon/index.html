@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="images/logo.svg" alt="Base Apparel" class="header__logo" />
+    </header>
+    <main class="main">
+      <div class="main__hero-container">
+        <img
+          src="images/hero-mobile.jpg"
+          alt="well dressed woman"
+          class="hero__img"
+        />
+      </div>
+      <section class="main__info">
+        <h1 class="info__title">We're coming soon</h1>
+        <p class="info__body">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+      </section>
+      <form action="submit" class="main__form">
+        <input
+          type="email"
+          class="form__input"
+          placeholder="Email Address"
+        /><img
+          src="images/icon-error.svg"
+          alt="error"
+          class="input__error-img hide"
+        />
+        <button class="form__button" type="submit"></button>
+        <p class="form__error-msg hide">Please enter a valid email address.</p>
+      </form>
+    </main>
+  </body>
+</html>
