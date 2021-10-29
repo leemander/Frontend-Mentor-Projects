@@ -13,6 +13,7 @@
     />
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">
@@ -26,27 +27,31 @@
           class="hero__img"
         />
       </div>
-      <section class="main__info">
-        <h1 class="info__title">We're coming soon</h1>
-        <p class="info__body">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-      </section>
-      <form action="submit" class="main__form">
-        <input
-          type="email"
-          class="form__input"
-          placeholder="Email Address"
-        /><img
-          src="images/icon-error.svg"
-          alt="error"
-          class="input__error-img hide"
-        />
-        <button class="form__button" type="submit"></button>
-        <p class="form__error-msg hide">Please enter a valid email address.</p>
-      </form>
+      <div class="main__container">
+        <section class="main__info">
+          <h1 class="info__title">We're coming soon</h1>
+          <p class="info__body">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </section>
+        <form action="submit" class="main__form">
+          <input
+            type="email"
+            class="form__input"
+            placeholder="Email Address"
+          /><img
+            src="images/icon-error.svg"
+            alt="error"
+            class="input__error-img hide"
+          />
+          <button class="form__button" type="submit">
+            <img src="images/icon-arrow.svg" alt="submit" />
+          </button>
+        </form>
+        <p class="main__error-msg hide">Please enter a valid email address.</p>
+      </div>
     </main>
   </body>
 </html>

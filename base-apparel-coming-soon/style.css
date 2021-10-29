@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --clr-primary-desat: hsl(0, 36%, 70%);
+  --clr-primary-soft: hsl(0, 93%, 68%);
+  --clr-neutral: hsl(0, 6%, 24%);
+  --grad-1: linear-gradient(135deg, hsl(0%, 0%, 100%), hsl(0%, 100%, 98%));
+  --grad-2: linear-gradient(hsl(0%, 80%, 86%), hsl(0%, 75%, 74%));
+
+  --fs-body: 1rem;
+  --fs-title: 3rem;
+  --fs-error: 0.8rem;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--clr-primary-desat);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--clr-primary-desat);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--clr-primary-desat);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.header {
+  padding: 2em;
+  width: 100%;
+}
+
+.header__logo {
+  width: 35%;
+}
+
+.main__hero-container {
+  width: 100%;
+}
+.hero__img {
+  width: 100%;
+}
+.main__container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 337.5px;
+}
+
+.main__info {
+  padding: 3em 0;
+}
+
+.info__title {
+  font-size: var(--fs-title);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: var(--clr-neutral);
+}
+
+.info__title::first-line {
+  color: var(--clr-primary-desat);
+  font-weight: 300;
+}
+
+.info__body {
+  margin-top: 1em;
+  color: var(--clr-primary-desat);
+  text-align: center;
+  line-height: 1.5;
+  font-size: var(--fs-body);
+}
+
+.main__form {
+  border: 1px solid var(--clr-primary-desat);
+  border-radius: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.main__form--error {
+  border-color: var(--clr-primary-soft);
+}
+
+.form__input {
+  padding: 0.8em 2em;
+  border: none;
+  background-color: transparent;
+  color: var(--clr-primary-desat);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: var(--fs-body);
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__button {
+  display: block;
+  border-radius: 10em;
+  width: 20%;
+  padding: 1em;
+  border: none;
+  background-image: linear-gradient(135deg, white, var(--clr-primary-soft));
+  color: #fff;
+  cursor: pointer;
+}
+
+.main__error-msg {
+  margin-top: 1em;
+  text-align: center;
+  color: var(--clr-primary-soft);
+}
