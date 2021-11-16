@@ -104,16 +104,23 @@ aside {
 }
 
 .section.section--hero {
-  background-image: linear-gradient(hsl(217, 28%, 15%), hsl(218, 28%, 13%));
+  background-image: linear-gradient(
+    hsl(217, 28%, 15%) 70%,
+    hsl(218, 28%, 13%) 70%
+  );
   width: 100%;
   max-width: 100%;
+  padding: 0;
 }
 
 .hero-container {
-  margin: 0 auto;
-  max-width: 375px;
   width: 95%;
-  padding: 1em;
+  max-width: 375px;
+  margin: 0 auto;
+  background-image: url("images/bg-curvy-mobile.svg");
+  background-position: top 70% center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .section__img {
