@@ -137,6 +137,7 @@
       </section>
       <section class="section section--quotes">
         <article class="quotes__quote">
+          <img src="images/bg-quotes.png" alt="quotes" class="quotes__mark" />
           <p class="section__body quote__body">
             Fylo has improved our team productivity by an order of magnitude.
             Since making the switch our team has become a well-oiled
@@ -203,10 +204,10 @@
           class="early-access__input"
           placeholder="email@example.com"
         />
-        <small class="early-access__error"
+        <small class="early-access__error" id="error"
           >Please enter a valid email address.</small
         >
-        <button class="section__button early-access__button">
+        <button class="section__button early-access__button" id="button">
           Get Started For Free
         </button>
       </form>
@@ -285,5 +286,13 @@
         </nav>
       </div>
     </footer>
+    <script>
+      const button = document.getElementById("button");
+      const error = document.getElementById("error");
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        error.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>

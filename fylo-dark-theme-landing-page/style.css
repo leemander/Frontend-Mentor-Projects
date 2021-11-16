@@ -96,6 +96,7 @@ aside {
 .header__nav-link:focus-visible {
   opacity: 1;
   outline: none;
+  text-decoration: underline;
 }
 
 .main {
@@ -142,6 +143,7 @@ aside {
   border-radius: 100em;
   border: 0;
   color: var(--clr-body);
+  cursor: pointer;
   display: block;
   font-family: inherit;
   font-size: var(--fs-m);
@@ -149,6 +151,12 @@ aside {
   margin: 1em auto;
   padding: 1.1em 0;
   width: 90%;
+}
+
+.section__button:hover,
+.section__button:focus-visible {
+  background-image: none;
+  background-color: var(--clr-cyan);
 }
 
 .points__point {
@@ -167,11 +175,25 @@ aside {
 
 .section__link-container {
   padding-bottom: 5px;
+  cursor: pointer;
   align-items: center;
   width: 47.5%;
   border-bottom: 1px solid var(--clr-cyan);
   display: flex;
   justify-content: space-between;
+}
+
+.section__link-container:hover {
+  border-color: var(--clr-body);
+}
+
+.section__link-container:hover .section__link {
+  color: var(--clr-body);
+}
+
+.section__link-container:hover .link__img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(8deg)
+    brightness(107%) contrast(101%);
 }
 
 .section__link {
@@ -194,6 +216,14 @@ aside {
 
 .quotes__quote:first-of-type {
   margin-top: 4em;
+  position: relative;
+}
+
+.quotes__mark {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 30px;
 }
 
 .quotes__quote + .quotes__quote {
@@ -262,6 +292,10 @@ aside {
   visibility: hidden;
 }
 
+.show {
+  visibility: visible;
+}
+
 .footer {
   background-color: var(--clr-bg-footer);
 }
@@ -320,7 +354,7 @@ aside {
 }
 
 .footer__socials {
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 .footer__socials-list {
