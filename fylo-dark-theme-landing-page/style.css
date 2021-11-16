@@ -200,10 +200,6 @@ aside {
   margin-top: 2em;
 }
 
-.quotes__quote:last-of-type {
-  margin-bottom: 4em;
-}
-
 .quote__body {
   text-align: left;
   font-size: var(--fs-s);
@@ -239,7 +235,7 @@ aside {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   padding: 1em;
   position: relative;
-  top: 5em;
+  top: 10em;
 }
 
 .early-access__label {
@@ -277,7 +273,7 @@ aside {
   gap: 5em;
   margin: 0 auto;
   max-width: 375px;
-  padding: 9em 1em 1em 1em;
+  padding: 15em 1em 1em 1em;
   width: 95%;
   min-height: 100vh;
 }
