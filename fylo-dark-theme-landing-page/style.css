@@ -10,8 +10,8 @@
   --clr-error: hsl(0, 100%, 63%);
   --clr-body: hsl(0, 0%, 100%);
 
-  --fs-xl: 1.5rem;
-  --fs-l: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-l: 1.2rem;
   --fs-m: 0.875rem;
   --fs-s: 0.75rem;
   --fs-xs: 0.5rem;
@@ -399,7 +399,7 @@ aside {
 
 @media (min-width: 1000px) {
   :root {
-    --fs-xl: 2rem;
+    --fs-xl: 2.2rem;
     --fs-l: 1.5rem;
     --fs-m: 1.25rem;
     --fs-s: 1rem;
@@ -434,6 +434,10 @@ aside {
     background-position: top 85% center;
   }
 
+  .section--hero .section__title {
+    line-height: 1.5;
+  }
+
   .hero__img {
     display: block;
     margin: 0 auto;
@@ -453,6 +457,7 @@ aside {
   }
 
   .section--points {
+    max-width: 1000px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -472,9 +477,10 @@ aside {
 
   .section--productive .section__title {
     text-align: left;
-    width: 50%;
+    width: 75%;
     letter-spacing: 1px;
     line-height: 1.5;
+    font-size: var(--fs-xl);
   }
 
   .section--quotes {
@@ -511,6 +517,11 @@ aside {
   .early-access {
     padding-bottom: 3em;
     max-width: 900px;
+  }
+
+  .early-access .section__body {
+    padding-inline: 5em;
+    font-size: var(--fs-s);
   }
 
   .early-access__form {
