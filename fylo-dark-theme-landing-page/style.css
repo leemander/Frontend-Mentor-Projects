@@ -217,7 +217,7 @@ aside {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   margin-inline: auto;
-  padding: 1em;
+  padding: 3em 1em 1em 1em;
   width: 90%;
 }
 
@@ -308,10 +308,6 @@ aside {
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 5em;
   margin: 0 auto;
   max-width: 375px;
   padding: 15em 1em 1em 1em;
@@ -321,13 +317,24 @@ aside {
 
 .footer__logo {
   width: 60%;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5em;
 }
 
 .footer__contact {
   align-items: center;
   display: flex;
   gap: 1em;
+}
+
+.col {
+  margin-top: 1em;
 }
 
 .footer__contact + .footer__contact {
@@ -388,4 +395,126 @@ aside {
 .footer__socials-link:focus-visible {
   color: var(--clr-cyan);
   outline: none;
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --fs-xl: 2rem;
+    --fs-l: 1.5rem;
+    --fs-m: 1.1rem;
+    --fs-s: 0.9rem;
+    --fs-xs: 0.75rem;
+  }
+
+  section {
+    max-width: 1200px;
+  }
+
+  .header-container,
+  .footer-container {
+    max-width: 1300px;
+  }
+
+  .header__logo,
+  .footer__logo {
+    max-width: 150px;
+  }
+
+  .section.section--hero {
+    background-image: linear-gradient(
+      hsl(217, 28%, 15%) 80%,
+      hsl(218, 28%, 13%) 80%
+    );
+  }
+
+  .hero-container {
+    max-width: 700px;
+    background-image: url("images/bg-curvy-desktop.svg");
+    background-size: 100%;
+    background-position: top 85% center;
+  }
+
+  .hero__img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .section__button {
+    max-width: 200px;
+  }
+
+  .section--points {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .points__point {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .section--productive {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+  }
+
+  .section--quotes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .quotes__mark {
+    z-index: -10;
+    top: -30px;
+    left: -5px;
+    width: 50px;
+  }
+
+  .quotes__quote {
+    margin-top: 3em !important;
+    width: 30%;
+  }
+
+  .early-access {
+    padding-bottom: 3em;
+    max-width: 900px;
+  }
+
+  .early-access__form {
+    display: flex;
+    position: relative;
+    width: 80%;
+    gap: 2em;
+    margin: 1em auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .early-access__error {
+    position: absolute;
+    top: 100%;
+    left: 4%;
+  }
+
+  .early-access__input,
+  .section__button.early-access__button {
+    margin: 0;
+  }
+
+  .footer-container {
+    min-height: 50vh;
+    padding-bottom: 5em;
+  }
+
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .footer__socials {
+    margin: 0;
+  }
 }
