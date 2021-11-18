@@ -105,8 +105,8 @@ aside {
 
 .section.section--hero {
   background-image: linear-gradient(
-    hsl(217, 28%, 15%) 70%,
-    hsl(218, 28%, 13%) 70%
+    hsl(217, 28%, 15%) 60%,
+    hsl(218, 28%, 13%) 60%
   );
   width: 100%;
   max-width: 100%;
@@ -118,8 +118,8 @@ aside {
   max-width: 375px;
   margin: 0 auto;
   background-image: url("images/bg-curvy-mobile.svg");
-  background-position: top 70% center;
   background-size: 100%;
+  background-position: top 58% center;
   background-repeat: no-repeat;
 }
 
@@ -421,17 +421,16 @@ aside {
   }
 
   .section.section--hero {
-    background-image: linear-gradient(
-      hsl(217, 28%, 15%) 80%,
-      hsl(218, 28%, 13%) 80%
-    );
+    background-color: hsl(217, 28%, 15%);
+
+    background-image: url("images/bg-curvy-desktop.svg");
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
   }
 
   .hero-container {
     max-width: 700px;
-    background-image: url("images/bg-curvy-desktop.svg");
-    background-size: 100%;
-    background-position: top 85% center;
   }
 
   .section--hero .section__title {
