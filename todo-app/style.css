@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  --clr-pr-blue: hsl(220, 98%, 61%);
+  --clr-gr-1: hsl(192, 100%, 67%);
+  --clr-gr-2: hsl(280, 87%, 65%);
+
+  /* light mode colours */
+  --clr-l-v-lght-gry: hsl(0, 0%, 98%);
+  --clr-l-v-lght-gry-bl: hsl(236, 33%, 92%);
+  --clr-l-lght-gry-bl: hsl(233, 11%, 84%);
+  --clr-l-drk-gry-bl: hsl(236, 9%, 61%);
+  --clr-l-v-drk-gry-bl: hsl(235, 19%, 35%);
+
+  /* dark mode colours */
+  --clr-d-v-drk-bl: hsl(235, 21%, 11%);
+  --clr-d-v-drk-dst-bl: hsl(235, 24%, 19%);
+  --clr-d-l-gry-bl: hsl(234, 39%, 85%);
+  --clr-d-l-gry-bl-h: hsl(236, 33%, 92%);
+  --clr-d-d-gry-bl: hsl(234, 11%, 52%);
+  --clr-d-v-d-gry-bl-1: hsl(233, 14%, 35%);
+  --clr-d-v-d-gry-bl-2: hsl(237, 14%, 26%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-d-v-drk-bl);
+  background-image: url("images/bg-mobile-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: var(--clr-d-l-gry-bl);
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-d-l-gry-bl);
+}
+
+.app {
+  padding: 3em 1em;
+  position: relative;
+}
+
+.app__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 2em;
+}
+
+.header__title {
+  letter-spacing: 10px;
+  font-size: 1.75rem;
+}
+
+.header__light-switch img {
+  width: 80%;
+}
+
+.app__main div {
+  background-color: var(--clr-d-v-drk-dst-bl);
+}
+
+.main__circle {
+  content: "";
+  width: 25px;
+  aspect-ratio: 1;
+  background-color: transparent !important;
+  border: 1px solid var(--clr-d-v-d-gry-bl-1);
+  border-radius: 50%;
+}
+
+.main__new {
+  align-items: center;
+  padding: 0.75em;
+  display: flex;
+  gap: 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.main__input {
+  background-color: transparent;
+  border: none;
+  font-family: "Joesfin Sans", sans-serif;
+  font-weight: 700;
+  padding-block: 0.5em;
+}
