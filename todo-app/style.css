@@ -48,12 +48,12 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: var(--clr-d-v-d-gry-bl-1);
+  color: var(--clr-d-d-gry-bl);
   font-family: "Josefin Sans", sans-serif;
 }
 
 .app {
-  padding: 3em 1em;
+  padding: 3em 1.5em;
   position: relative;
 }
 
@@ -135,7 +135,7 @@ button {
   margin-bottom: 2em;
   padding: 1.5em;
   font-size: 0.8rem;
-  color: var(--clr-d-v-d-gry-bl-1);
+  color: var(--clr-d-d-gry-bl);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -160,6 +160,6 @@ button {
 
 .app__footer {
   text-align: center;
-  color: var(--clr-d-v-d-gry-bl-1);
+  color: var(--clr-d-d-gry-bl);
   font-weight: 700;
 }
