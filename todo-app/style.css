@@ -105,6 +105,7 @@ button {
 .main__input {
   background-color: transparent;
   border: none;
+  color: var(--clr-d-l-gry-bl);
   font-family: "Joesfin Sans", sans-serif;
   font-weight: 700;
   padding-block: 0.5em;
@@ -128,6 +129,10 @@ button {
 .main__task-name {
   margin-right: auto;
   font-size: 0.8rem;
+}
+
+.main__task-name--completed {
+  text-decoration: line-through;
 }
 
 .main__list-footer {
