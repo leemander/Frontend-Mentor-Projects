@@ -48,7 +48,8 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: var(--clr-d-l-gry-bl);
+  color: var(--clr-d-v-d-gry-bl-1);
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .app {
@@ -81,14 +82,18 @@ button {
   content: "";
   width: 25px;
   aspect-ratio: 1;
-  background-color: transparent !important;
+  background-color: transparent;
   border: 1px solid var(--clr-d-v-d-gry-bl-1);
   border-radius: 50%;
 }
 
+.main__circle--selected {
+  background-image: linear-gradient(120deg, var(--clr-gr-1), var(--clr-gr-2));
+}
+
 .main__new {
   align-items: center;
-  padding: 0.75em;
+  padding: 1em;
   display: flex;
   gap: 1em;
   border-radius: 5px;
@@ -101,4 +106,60 @@ button {
   font-family: "Joesfin Sans", sans-serif;
   font-weight: 700;
   padding-block: 0.5em;
+}
+
+.main__list-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  background-color: var(--clr-d-v-drk-dst-bl);
+  padding: 1em;
+  border-bottom: 1px solid var(--clr-d-v-d-gry-bl-1);
+}
+
+.main__list-item:first-of-type {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.main__task-name {
+  margin-right: auto;
+  font-size: 0.8rem;
+}
+
+.main__list-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding: 1.5em;
+  font-size: 0.8rem;
+  color: var(--clr-d-v-d-gry-bl-1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.main__filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 3em;
+}
+
+.main__filter button {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.main__filter__selected {
+  color: var(--clr-pr-blue);
+}
+
+.app__footer {
+  text-align: center;
+  color: var(--clr-d-v-d-gry-bl-1);
+  font-weight: 700;
 }
