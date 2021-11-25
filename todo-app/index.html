@@ -15,6 +15,60 @@
     <title>Todo app | Frontend Mentor</title>
   </head>
   <body>
+    <main class="app">
+      <header class="app__header">
+        <h1 class="header__logo">TODO</h1>
+        <button class="header__light-switch" id="light-switch">
+          <img src="images/icon-sun.svg" alt="toggle light mode" />
+        </button>
+        <main class="app__main">
+          <div class="main__new">
+            <div class="main__circle"></div>
+            <input
+              type="text"
+              class="main__input"
+              id="new-task"
+              placeholder="Create a new todo..."
+            />
+          </div>
+          <ul class="main__list" id="list">
+            <li class="main__list-item">
+              <div class="main__circle"></div>
+              <p class="main__task-name">Write markup</p>
+              <img
+                src="images/icon-cross.svg"
+                alt="delete todo"
+                class="main__cross"
+              />
+            </li>
+          </ul>
+            <li class="main__list-item">
+              <div class="main__circle--selected">
+                <img src="images/icon-check.svg" alt="selected">
+              </div>
+              <p class="main__task-name">Begin mobile styling</p>
+              <img
+                src="images/icon-cross.svg"
+                alt="delete todo"
+                class="main__cross"
+              />
+            </li>
+          </ul>
+          <div class="main__list-footer">
+            <p id="remaining">5 items left</p>
+            <button id="clear">Clear Completed</button>
+          </div>
+          <div class="main__filter">
+            <button id="filter-all">All</button>
+            <button id="filter-active">Active</button>
+            <button id="filter-completed">Completed</button>
+          </div>
+        </main>
+        <footer class="app__footer">
+          <small>Drag and drop to reorder list</small>
+        </footer>
+      </header>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
