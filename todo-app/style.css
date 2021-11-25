@@ -55,6 +55,8 @@ button {
 .app {
   padding: 3em 1.5em;
   position: relative;
+  max-width: 375px;
+  margin: 0 auto;
 }
 
 .app__header {
