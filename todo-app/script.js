@@ -65,3 +65,14 @@ function deleteTodo(item) {
   list.splice(item.parentNode.dataset.index, 1);
   updateList();
 }
+
+function clearCompleted() {
+  list.forEach((item) => {
+    if (item.completed == true) {
+      list.splice(list.indexOf(item), 1);
+    }
+    updateList();
+  });
+}
+
+clearBtn.addEventListener("click", clearCompleted);
