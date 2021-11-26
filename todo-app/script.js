@@ -16,16 +16,22 @@ const list = [
 updateList();
 
 function updateList() {
+  //clear list element
+  while (listEl.firstChild) {
+    listEl.removeChild(listEl.firstChild);
+  }
   let remainingCount = list.length;
-  list.forEach((task) => {
+  //replace list element with current list array contents
+  list.forEach((task, index) => {
     if (task.completed == true) {
       remainingCount--;
     }
     let item = document.createElement("li");
+    item.setAttribute("data-index", index);
     item.classList.add("main__list-item");
     item.innerHTML = `
         ${checkCompleted(task)}
-        <button class="main__delete" onclick="deleteTodo()">
+        <button class="main__delete" onclick="deleteTodo(this)">
             <img
                 src="images/icon-cross.svg"
                 alt="delete todo"
@@ -34,8 +40,11 @@ function updateList() {
         </button>
     `;
     listEl.appendChild(item);
+    index++;
   });
-  remainingTasks.innerHTML = remainingCount + " items left";
+  remainingCount == 1
+    ? (remainingTasks.innerHTML = remainingCount + " item left")
+    : (remainingTasks.innerHTML = remainingCount + " items left");
 }
 
 function checkCompleted(task) {
@@ -50,4 +59,9 @@ function checkCompleted(task) {
         <button class="main__circle"></button>
         <p class="main__task-name">${task.title}</p>
         `;
+}
+
+function deleteTodo(item) {
+  list.splice(item.parentNode.dataset.index, 1);
+  updateList();
 }
