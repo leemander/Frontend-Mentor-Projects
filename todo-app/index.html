@@ -26,7 +26,7 @@
 
       <main class="app__main">
         <div class="main__new">
-          <button class="main__circle"></button>
+          <div class="main__circle"></div>
           <input
             type="text"
             class="main__input"
@@ -34,90 +34,7 @@
             placeholder="Create a new todo..."
           />
         </div>
-        <ul class="main__list" id="list">
-          <li class="main__list-item">
-            <button class="main__circle"></button>
-            <p class="main__task-name">Write markup</p>
-            <button class="main__delete">
-              <img
-                src="images/icon-cross.svg"
-                alt="delete todo"
-                class="main__cross"
-              />
-            </button>
-          </li>
-          <li class="main__list-item">
-            <button class="main__circle"></button>
-            <p class="main__task-name">Write markup</p>
-            <button class="main__delete">
-              <img
-                src="images/icon-cross.svg"
-                alt="delete todo"
-                class="main__cross"
-              />
-            </button>
-          </li>
-          <li class="main__list-item">
-            <button class="main__circle main__circle--selected">
-              <img src="images/icon-check.svg" alt="" />
-            </button>
-            <p class="main__task-name main__task-name--completed">
-              Write markup
-            </p>
-            <button class="main__delete">
-              <img
-                src="images/icon-cross.svg"
-                alt="delete todo"
-                class="main__cross"
-              />
-            </button>
-          </li>
-          <li class="main__list-item">
-            <button class="main__circle main__circle--selected">
-              <img src="images/icon-check.svg" alt="" />
-            </button>
-            <p class="main__task-name main__task-name--completed">
-              Write markup
-            </p>
-            <button class="main__delete">
-              <img
-                src="images/icon-cross.svg"
-                alt="delete todo"
-                class="main__cross"
-              />
-            </button>
-          </li>
-          <li class="main__list-item">
-            <button class="main__circle main__circle--selected">
-              <img src="images/icon-check.svg" alt="" />
-            </button>
-            <p class="main__task-name main__task-name--completed">
-              Write markup
-            </p>
-            <button class="main__delete">
-              <img
-                src="images/icon-cross.svg"
-                alt="delete todo"
-                class="main__cross"
-              />
-            </button>
-          </li>
-          <li class="main__list-item">
-            <button class="main__circle main__circle--selected">
-              <img src="images/icon-check.svg" alt="" />
-            </button>
-            <p class="main__task-name main__task-name--completed">
-              Write markup
-            </p>
-            <button class="main__delete">
-              <img
-                src="images/icon-cross.svg"
-                alt="delete todo"
-                class="main__cross"
-              />
-            </button>
-          </li>
-        </ul>
+        <ul class="main__list" id="list"></ul>
         <div class="main__list-footer">
           <p id="remaining">5 items left</p>
           <button id="clear">Clear Completed</button>

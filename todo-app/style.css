@@ -89,7 +89,7 @@ button {
   border-radius: 50%;
 }
 
-.main__circle--selected {
+.main__circle--completed {
   background-image: linear-gradient(120deg, var(--clr-gr-1), var(--clr-gr-2));
 }
 
