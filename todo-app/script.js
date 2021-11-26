@@ -109,6 +109,13 @@ function filterHandler(filter) {
   filter.classList.add("main__filter__selected");
 }
 
+function addTodo() {
+  const newTitle = newTodo.value.trim();
+  list.push({ completed: false, title: newTitle });
+  updateList();
+  newTodo.value = "";
+}
+
 clearBtn.addEventListener("click", clearCompleted);
 
 showAll.addEventListener("click", () => {
@@ -119,4 +126,10 @@ showActive.addEventListener("click", () => {
 });
 showCompleted.addEventListener("click", () => {
   filterHandler(showCompleted);
+});
+
+newTodo.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    addTodo();
+  }
 });
