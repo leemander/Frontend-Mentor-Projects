@@ -7,7 +7,7 @@ const showAll = document.getElementById("filter-all");
 const showActive = document.getElementById("filter-active");
 const showCompleted = document.getElementById("filter-completed");
 
-const list = [
+let list = [
   { completed: false, title: "Buy turkey" },
   { completed: false, title: "Make stuffing" },
   { completed: true, title: "Buy booze" },
@@ -50,13 +50,13 @@ function updateList() {
 function checkCompleted(task) {
   return task.completed == true
     ? ` 
-        <button class="main__circle main__circle--completed">
+        <button class="main__circle main__circle--completed" onclick="toggleCompleted(this)">
             <img src="images/icon-check.svg" alt="completed" />
         </button>
         <p class="main__task-name main__task-name--completed">${task.title}</p>
     `
     : `
-        <button class="main__circle"></button>
+        <button class="main__circle" onclick="toggleCompleted(this)"></button>
         <p class="main__task-name">${task.title}</p>
         `;
 }
@@ -67,12 +67,17 @@ function deleteTodo(item) {
 }
 
 function clearCompleted() {
+  //array to hold indexes of completed tasks
+  const arr = [];
+  //loops through list and adds completed tasks to arr
   list.forEach((item) => {
-    if (item.completed == true) {
-      list.splice(list.indexOf(item), 1);
+    if (item.completed == false) {
+      arr.push(list[list.indexOf(item)]);
     }
-    updateList();
   });
+  //replaces list with arr
+  list = arr;
+  updateList();
 }
 
 function filterList(filter) {
@@ -114,6 +119,16 @@ function addTodo() {
   list.push({ completed: false, title: newTitle });
   updateList();
   newTodo.value = "";
+}
+
+function toggleCompleted(button) {
+  const task = button.parentNode;
+  if (list[task.dataset.index].completed == true) {
+    list[task.dataset.index].completed = false;
+  } else {
+    list[task.dataset.index].completed = true;
+  }
+  updateList();
 }
 
 clearBtn.addEventListener("click", clearCompleted);
