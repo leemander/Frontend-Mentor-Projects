@@ -6,6 +6,11 @@ const clearBtn = document.getElementById("clear");
 const showAll = document.getElementById("filter-all");
 const showActive = document.getElementById("filter-active");
 const showCompleted = document.getElementById("filter-completed");
+const showAllDesktop = document.getElementById("filter-all-desktop");
+const showActiveDesktop = document.getElementById("filter-active-desktop");
+const showCompletedDesktop = document.getElementById(
+  "filter-completed-desktop"
+);
 
 let list = [
   { completed: false, title: "Buy turkey" },
@@ -144,6 +149,15 @@ showActive.addEventListener("click", () => {
   filterHandler(showActive);
 });
 showCompleted.addEventListener("click", () => {
+  filterHandler(showCompleted);
+});
+showAllDesktop.addEventListener("click", () => {
+  filterHandler(showAll);
+});
+showActiveDesktop.addEventListener("click", () => {
+  filterHandler(showActive);
+});
+showCompletedDesktop.addEventListener("click", () => {
   filterHandler(showCompleted);
 });
 
