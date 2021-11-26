@@ -75,4 +75,37 @@ function clearCompleted() {
   });
 }
 
+function filterList(filter) {
+  const listItems = document.querySelectorAll(".main__list-item");
+  if (filter == "all") {
+    updateList();
+  } else if (filter == "active") {
+    listItems.forEach((item) => {
+      if (item.querySelector(".main__circle--completed")) {
+        item.style.display = "none";
+      } else {
+        item.style.display = "flex";
+      }
+    });
+  } else if (filter == "completed") {
+    listItems.forEach((item) => {
+      if (!item.querySelector(".main__circle--completed")) {
+        item.style.display = "none";
+      } else {
+        item.style.display = "flex";
+      }
+    });
+  }
+}
+
 clearBtn.addEventListener("click", clearCompleted);
+
+showAll.addEventListener("click", () => {
+  filterList("all");
+});
+showActive.addEventListener("click", () => {
+  filterList("active");
+});
+showCompleted.addEventListener("click", () => {
+  filterList("completed");
+});
