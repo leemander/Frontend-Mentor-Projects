@@ -26,7 +26,7 @@
 
       <main class="app__main">
         <div class="main__new">
-          <div class="main__circle"></div>
+          <div class="main__circle new"></div>
           <input
             type="text"
             class="main__input"
@@ -37,17 +37,22 @@
         <ul class="main__list" id="list"></ul>
         <div class="main__list-footer">
           <p id="remaining">5 items left</p>
+          <div class="main__filter desktop-only">
+            <button id="filter-all" class="main__filter__selected">All</button>
+            <button id="filter-active">Active</button>
+            <button id="filter-completed">Completed</button>
+          </div>
           <button id="clear">Clear Completed</button>
         </div>
-        <div class="main__filter">
+        <div class="main__filter mobile-only">
           <button id="filter-all" class="main__filter__selected">All</button>
           <button id="filter-active">Active</button>
           <button id="filter-completed">Completed</button>
         </div>
       </main>
-      <footer class="app__footer">
+      <!-- <footer class="app__footer">
         <small>Drag and drop to reorder list</small>
-      </footer>
+      </footer> -->
     </main>
     <script src="script.js"></script>
   </body>

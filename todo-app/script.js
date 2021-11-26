@@ -50,13 +50,17 @@ function updateList() {
 function checkCompleted(task) {
   return task.completed == true
     ? ` 
-        <button class="main__circle main__circle--completed" onclick="toggleCompleted(this)">
-            <img src="images/icon-check.svg" alt="completed" />
-        </button>
+        <div class="main__circle__outer">
+            <button class="main__circle main__circle--completed" onclick="toggleCompleted(this)">
+                <img src="images/icon-check.svg" alt="completed" />
+            </button>
+        </div>
         <p class="main__task-name main__task-name--completed">${task.title}</p>
     `
-    : `
-        <button class="main__circle" onclick="toggleCompleted(this)"></button>
+    : ` 
+        <div class="main__circle__outer">
+            <button class="main__circle" onclick="toggleCompleted(this)"></button>
+        </div>
         <p class="main__task-name">${task.title}</p>
         `;
 }
@@ -122,7 +126,7 @@ function addTodo() {
 }
 
 function toggleCompleted(button) {
-  const task = button.parentNode;
+  const task = button.parentNode.parentNode;
   if (list[task.dataset.index].completed == true) {
     list[task.dataset.index].completed = false;
   } else {
