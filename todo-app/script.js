@@ -77,9 +77,9 @@ function clearCompleted() {
 
 function filterList(filter) {
   const listItems = document.querySelectorAll(".main__list-item");
-  if (filter == "all") {
+  if (filter == showAll) {
     updateList();
-  } else if (filter == "active") {
+  } else if (filter == showActive) {
     listItems.forEach((item) => {
       if (item.querySelector(".main__circle--completed")) {
         item.style.display = "none";
@@ -87,7 +87,7 @@ function filterList(filter) {
         item.style.display = "flex";
       }
     });
-  } else if (filter == "completed") {
+  } else if (filter == showCompleted) {
     listItems.forEach((item) => {
       if (!item.querySelector(".main__circle--completed")) {
         item.style.display = "none";
@@ -98,14 +98,25 @@ function filterList(filter) {
   }
 }
 
+function filterHandler(filter) {
+  filterList(filter);
+  document
+    .querySelector(".main__filter")
+    .querySelectorAll("button")
+    .forEach((filter) => {
+      filter.classList.remove("main__filter__selected");
+    });
+  filter.classList.add("main__filter__selected");
+}
+
 clearBtn.addEventListener("click", clearCompleted);
 
 showAll.addEventListener("click", () => {
-  filterList("all");
+  filterHandler(showAll);
 });
 showActive.addEventListener("click", () => {
-  filterList("active");
+  filterHandler(showActive);
 });
 showCompleted.addEventListener("click", () => {
-  filterList("completed");
+  filterHandler(showCompleted);
 });
