@@ -38,18 +38,39 @@
         <div class="main__list-footer">
           <p id="remaining">5 items left</p>
           <div class="main__filter desktop-only">
-            <button id="filter-all-desktop" class="main__filter__selected">
+            <button
+              id="filter-all-desktop"
+              class="main__filter__selected"
+              onclick="filterBtnHandler(this)"
+            >
               All
             </button>
-            <button id="filter-active-desktop">Active</button>
-            <button id="filter-completed-desktop">Completed</button>
+            <button id="filter-active-desktop" onclick="filterBtnHandler(this)">
+              Active
+            </button>
+            <button
+              id="filter-completed-desktop"
+              onclick="filterBtnHandler(this)"
+            >
+              Completed
+            </button>
           </div>
           <button id="clear">Clear Completed</button>
         </div>
         <div class="main__filter mobile-only">
-          <button id="filter-all" class="main__filter__selected">All</button>
-          <button id="filter-active">Active</button>
-          <button id="filter-completed">Completed</button>
+          <button
+            id="filter-all"
+            class="main__filter__selected"
+            onclick="filterBtnHandler(this)"
+          >
+            All
+          </button>
+          <button id="filter-active" onclick="filterBtnHandler(this)">
+            Active
+          </button>
+          <button id="filter-completed" onclick="filterBtnHandler(this)">
+            Completed
+          </button>
         </div>
       </main>
       <!-- <footer class="app__footer">

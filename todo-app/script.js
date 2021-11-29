@@ -112,15 +112,11 @@ function filterList(filter) {
   }
 }
 
-function filterHandler(filter) {
-  filterList(filter);
-  document
-    .querySelector(".main__filter")
-    .querySelectorAll("button")
-    .forEach((filter) => {
-      filter.classList.remove("main__filter__selected");
-    });
-  filter.classList.add("main__filter__selected");
+function filterBtnHandler(button) {
+  document.querySelectorAll("button").forEach((el) => {
+    el.classList.remove("main__filter__selected");
+  });
+  button.classList.add("main__filter__selected");
 }
 
 function addTodo() {
@@ -143,22 +139,22 @@ function toggleCompleted(button) {
 clearBtn.addEventListener("click", clearCompleted);
 
 showAll.addEventListener("click", () => {
-  filterHandler(showAll);
+  filterList(showAll);
 });
 showActive.addEventListener("click", () => {
-  filterHandler(showActive);
+  filterList(showActive);
 });
 showCompleted.addEventListener("click", () => {
-  filterHandler(showCompleted);
+  filterList(showCompleted);
 });
 showAllDesktop.addEventListener("click", () => {
-  filterHandler(showAll);
+  filterList(showAll);
 });
 showActiveDesktop.addEventListener("click", () => {
-  filterHandler(showActive);
+  filterList(showActive);
 });
 showCompletedDesktop.addEventListener("click", () => {
-  filterHandler(showCompleted);
+  filterList(showCompleted);
 });
 
 newTodo.addEventListener("keydown", (e) => {
