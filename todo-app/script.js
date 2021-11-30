@@ -33,7 +33,7 @@ function updateList() {
     }
     let item = document.createElement("li");
     item.setAttribute("data-index", index);
-    item.classList.add("main__list-item");
+    item.classList.add("main__list-item", "main__list-item--light");
     item.innerHTML = `
         ${checkCompleted(task)}
         <button class="main__delete" onclick="deleteTodo(this)">
@@ -64,7 +64,7 @@ function checkCompleted(task) {
     `
     : ` 
         <div class="main__circle__outer">
-            <button class="main__circle" onclick="toggleCompleted(this)"></button>
+            <button class="main__circle main__circle--light" onclick="toggleCompleted(this)"></button>
         </div>
         <p class="main__task-name">${task.title}</p>
         `;

@@ -91,7 +91,6 @@ button {
   border-radius: 50%;
   border: 1px solid var(--clr-d-v-d-gry-bl-1);
   content: "";
-
   width: 25px;
 }
 
@@ -228,9 +227,44 @@ button {
   font-weight: 700;
 }
 
+/* light mode variations */
+
+.body--light {
+  background-image: url("images/bg-mobile-light.jpg");
+  background-color: var(--clr-l-v-lght-gry);
+  color: var(--clr-l-v-drk-gry-bl);
+}
+
+.main__new--light,
+.main__list-item--light,
+.main__circle--light,
+.main__list-footer--light,
+.main__filter--light {
+  background-color: #fff !important;
+}
+
+.main__circle--light {
+  border: 1px var(--clr-l-v-lght-gry-bl) solid !important;
+}
+
+.main__list-item--light {
+  border-color: var(--clr-l-v-lght-gry);
+}
+
+.main__list-footer--light button:hover,
+.main__list-footer button:focus-visible,
+.main__filter--light button:hover,
+.main__filter--light button:focus-visible {
+  color: var(--clr-l-v-drk-gry-bl);
+}
+
 @media (min-width: 600px) {
   body {
     background-image: url(images/bg-desktop-dark.jpg);
+  }
+
+  .body--light {
+    background-image: url(images/bg-desktop-light.jpg);
   }
 }
 

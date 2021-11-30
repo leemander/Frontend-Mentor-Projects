@@ -15,7 +15,7 @@
     <title>Todo app | Frontend Mentor</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="body--light">
     <main class="app">
       <header class="app__header">
         <h1 class="header__title">TODO</h1>
@@ -25,8 +25,8 @@
       </header>
 
       <main class="app__main">
-        <div class="main__new">
-          <div class="main__circle new"></div>
+        <div class="main__new main__new--light">
+          <div class="main__circle main__circle--light new"></div>
           <input
             type="text"
             class="main__input"
@@ -35,9 +35,9 @@
           />
         </div>
         <ul class="main__list" id="list"></ul>
-        <div class="main__list-footer">
+        <div class="main__list-footer main__list-footer--light">
           <p id="remaining">5 items left</p>
-          <div class="main__filter desktop-only">
+          <div class="main__filter main__filter--light desktop-only">
             <button
               id="filter-all-desktop"
               class="main__filter__selected"
@@ -57,7 +57,7 @@
           </div>
           <button id="clear">Clear Completed</button>
         </div>
-        <div class="main__filter mobile-only">
+        <div class="main__filter mobile-only main__filter--light">
           <button
             id="filter-all"
             class="main__filter__selected"
