@@ -102,6 +102,11 @@ button {
   transform: translate(-50%, -50%);
 }
 
+.main__circle:not(.new):focus .main__circle__outer {
+  border: 0;
+  background-image: linear-gradient(120deg, var(--clr-gr-1), var(--clr-gr-2));
+}
+
 .main__circle__outer {
   aspect-ratio: 1;
   border-radius: 50%;
@@ -131,11 +136,17 @@ button {
 
 .main__input {
   background-color: transparent;
-  border: none;
+  border: 0;
   color: var(--clr-d-l-gry-bl);
-  font-family: "Joesfin Sans", sans-serif;
-  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
   padding-block: 0.5em;
+  width: 100%;
+}
+
+.main__input:focus-visible {
+  outline: 0;
+  caret-color: var(--clr-pr-blue);
 }
 
 .main__list-item {
@@ -171,12 +182,17 @@ button {
   font-size: 0.8rem;
   color: var(--clr-d-d-gry-bl);
   border-bottom-left-radius: 5px;
-
   border-bottom-right-radius: 5px;
 }
 
-.main__list-footer > button {
+.main__list-footer button {
   text-align: end;
+}
+
+.main__list-footer button:hover,
+.main__list-footer button:focus-visible {
+  color: #fff;
+  outline: 0;
 }
 
 .main__list-footer > * {
@@ -194,8 +210,12 @@ button {
 }
 
 .main__filter button {
-  font-weight: 700;
   font-size: 1rem;
+}
+
+.main__filter button:hover,
+.main__filter button:focus-visible {
+  color: #fff;
 }
 
 .main__filter__selected {
