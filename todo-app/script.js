@@ -12,11 +12,20 @@ const showCompletedDesktop = document.getElementById(
   "filter-completed-desktop"
 );
 
+//elements to change style of during light mode toggle
+
+const body = document.getElementById("body");
+const newDiv = document.getElementById("new");
+const footer = document.getElementById("footer");
+const filters = document.querySelectorAll(".main__filter");
+
 let list = [
   { completed: false, title: "Buy turkey" },
   { completed: false, title: "Make stuffing" },
   { completed: true, title: "Buy booze" },
 ];
+
+let darkModeActive = false;
 
 updateList();
 
@@ -33,7 +42,9 @@ function updateList() {
     }
     let item = document.createElement("li");
     item.setAttribute("data-index", index);
-    item.classList.add("main__list-item", "main__list-item--light");
+    darkModeActive == false
+      ? item.classList.add("main__list-item", "main__list-item--light")
+      : item.classList.add("main__list-item");
     item.innerHTML = `
         ${checkCompleted(task)}
         <button class="main__delete" onclick="deleteTodo(this)">
@@ -53,21 +64,39 @@ function updateList() {
 }
 
 function checkCompleted(task) {
-  return task.completed == true
-    ? ` 
+  if (darkModeActive == false) {
+    return task.completed == true
+      ? ` 
         <div class="main__circle__outer">
-            <button class="main__circle main__circle--completed" onclick="toggleCompleted(this)">
+            <button class="main__circle main__circle--light main__circle--completed" onclick="toggleCompleted(this)">
                 <img src="images/icon-check.svg" alt="completed" />
             </button>
         </div>
         <p class="main__task-name main__task-name--completed">${task.title}</p>
     `
-    : ` 
+      : ` 
         <div class="main__circle__outer">
             <button class="main__circle main__circle--light" onclick="toggleCompleted(this)"></button>
         </div>
         <p class="main__task-name">${task.title}</p>
         `;
+  } else {
+    return task.completed == true
+      ? ` 
+      <div class="main__circle__outer">
+          <button class="main__circle main__circle--completed" onclick="toggleCompleted(this)">
+              <img src="images/icon-check.svg" alt="completed" />
+          </button>
+      </div>
+      <p class="main__task-name main__task-name--completed">${task.title}</p>
+  `
+      : ` 
+      <div class="main__circle__outer">
+          <button class="main__circle" onclick="toggleCompleted(this)"></button>
+      </div>
+      <p class="main__task-name">${task.title}</p>
+      `;
+  }
 }
 
 function deleteTodo(item) {
@@ -136,6 +165,34 @@ function toggleCompleted(button) {
   updateList();
 }
 
+function toggleDarkMode() {
+  const circles = document.querySelectorAll(".main__circle");
+  const listItems = document.querySelectorAll(".main__list-item");
+  body.classList.toggle("body--light");
+  newDiv.classList.toggle("main__new--light");
+  newTodo.classList.toggle("main__input--light");
+  footer.classList.toggle("main__list-footer--light");
+  circles.forEach((el) => {
+    el.classList.toggle("main__circle--light");
+  });
+  listItems.forEach((el) => {
+    el.classList.toggle("main__list-item--light");
+  });
+  filters.forEach((el) => {
+    el.classList.toggle("main__filter--light");
+  });
+
+  if (darkModeActive == false) {
+    lightSwitch.innerHTML =
+      '<img src="images/icon-sun.svg" alt="toggle light mode" />';
+    darkModeActive = true;
+  } else {
+    lightSwitch.innerHTML =
+      '<img src="images/icon-moon.svg" alt="toggle dark mode" />';
+    darkModeActive = false;
+  }
+}
+
 clearBtn.addEventListener("click", clearCompleted);
 
 showAll.addEventListener("click", () => {
@@ -162,3 +219,5 @@ newTodo.addEventListener("keydown", (e) => {
     addTodo();
   }
 });
+
+lightSwitch.addEventListener("click", toggleDarkMode);

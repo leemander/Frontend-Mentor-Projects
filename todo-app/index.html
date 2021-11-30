@@ -15,27 +15,27 @@
     <title>Todo app | Frontend Mentor</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="body--light">
+  <body class="body--light" id="body">
     <main class="app">
       <header class="app__header">
         <h1 class="header__title">TODO</h1>
         <button class="header__light-switch" id="light-switch">
-          <img src="images/icon-sun.svg" alt="toggle light mode" />
+          <img src="images/icon-moon.svg" alt="toggle dark mode" />
         </button>
       </header>
 
       <main class="app__main">
-        <div class="main__new main__new--light">
+        <div class="main__new main__new--light" id="new">
           <div class="main__circle main__circle--light new"></div>
           <input
             type="text"
-            class="main__input"
+            class="main__input main__input--light"
             id="new-task"
             placeholder="Create a new todo..."
           />
         </div>
         <ul class="main__list" id="list"></ul>
-        <div class="main__list-footer main__list-footer--light">
+        <div class="main__list-footer main__list-footer--light" id="footer">
           <p id="remaining">5 items left</p>
           <div class="main__filter main__filter--light desktop-only">
             <button

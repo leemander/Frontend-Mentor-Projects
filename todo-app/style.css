@@ -247,12 +247,16 @@ button {
   border: 1px var(--clr-l-v-lght-gry-bl) solid !important;
 }
 
+.main__input--light {
+  color: var(--clr-l-v-drk-gry-bl);
+}
+
 .main__list-item--light {
   border-color: var(--clr-l-v-lght-gry);
 }
 
 .main__list-footer--light button:hover,
-.main__list-footer button:focus-visible,
+.main__list-footer--light button:focus-visible,
 .main__filter--light button:hover,
 .main__filter--light button:focus-visible {
   color: var(--clr-l-v-drk-gry-bl);
