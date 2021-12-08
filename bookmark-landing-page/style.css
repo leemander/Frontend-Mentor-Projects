@@ -26,7 +26,7 @@ a {
 body {
   font-family: "Rubik", sans-serif;
   color: var(--clr-body);
-  font-size: clamp(0.9rem, --fs-body, 1.3rem);
+  font-size: var(--fs-body);
   text-align: center;
   font-weight: 400;
 }
@@ -34,22 +34,6 @@ body {
 button {
   cursor: pointer;
   border: 0;
-}
-
-h1 {
-  font-size: clamp(1.3rem, var(--fs-xl), 2rem);
-}
-
-h1,
-h2,
-h3 {
-  color: var(--clr-title);
-  font-weight: 500;
-}
-
-h2,
-h3 {
-  font-size: clamp(1.1rem, var(--fs-title), 1.5rem);
 }
 
 img {
@@ -65,29 +49,30 @@ ul {
   display: none;
 }
 
+.container {
+  max-width: 370px;
+  margin: 0 auto;
+}
+
 .header {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-bottom: 2em;
-  padding-block: 2em;
+  padding: 2em 1em;
 }
 
 .header__hamburger {
   background-color: transparent;
 }
 
-.section--hero {
-  min-height: 90vh;
-}
-
 .section__img-container {
   position: relative;
-  margin-bottom: 5em;
+  margin: 0 auto 3em auto;
 }
 
 .section__img-container img {
-  margin: 0 auto;
+  width: 90%;
 }
 
 .bg-shape {
@@ -96,23 +81,35 @@ ul {
   content: "";
   height: 75%;
   position: absolute;
-  width: 82%;
+  width: 90%;
   z-index: -10;
 }
 
 .bg-shape--right {
   border-top-left-radius: 10em;
   border-bottom-left-radius: 10em;
-  right: 0;
+  right: -2em;
+}
+
+.section__title,
+.section__body {
+  margin-block: 1em;
+  padding-inline: 1em;
 }
 
 .section__title {
-  margin-block: 1em;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--clr-title);
 }
 
 .section__body {
-  line-height: 1.5em;
-  margin-block: 1em;
+  line-height: 1.5;
+}
+
+.section__title--hero {
+  font-size: 1.75rem;
 }
 
 .section__button {
@@ -131,9 +128,13 @@ ul {
 
 .section__button--variant {
   background-color: #fafafa;
-  color: var(--clr-body);
+  color: var(--clr-title);
 }
 
 .section__button + .section__button {
   margin-left: 1em;
+}
+
+.section--features {
+  padding-top: 6em;
 }
