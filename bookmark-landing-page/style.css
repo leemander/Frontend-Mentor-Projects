@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+:root {
+  --clr-red: hsl(0, 94%, 66%);
+  --clr-blue: hsl(231, 69%, 60%);
+  --clr-body: hsl(229, 8%, 60%);
+  --clr-title: hsl(229, 31%, 21%);
+
+  --fs-body: 1.125rem;
+  --fs-title: 1.3rem;
+  --fs-xl: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: var(--clr-body);
+  font-size: clamp(0.9rem, --fs-body, 1.3rem);
+  text-align: center;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+h1 {
+  font-size: clamp(1.3rem, var(--fs-xl), 2rem);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-title);
+  font-weight: 500;
+}
+
+h2,
+h3 {
+  font-size: clamp(1.1rem, var(--fs-title), 1.5rem);
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sr-only {
+  display: none;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding-block: 2em;
+}
+
+.header__hamburger {
+  background-color: transparent;
+}
+
+.section--hero {
+  min-height: 90vh;
+}
+
+.section__img-container {
+  position: relative;
+  margin-bottom: 5em;
+}
+
+.section__img-container img {
+  margin: 0 auto;
+}
+
+.bg-shape {
+  background-color: var(--clr-blue);
+  bottom: 0;
+  content: "";
+  height: 75%;
+  position: absolute;
+  width: 82%;
+  z-index: -10;
+}
+
+.bg-shape--right {
+  border-top-left-radius: 10em;
+  border-bottom-left-radius: 10em;
+  right: 0;
+}
+
+.section__title {
+  margin-block: 1em;
+}
+
+.section__body {
+  line-height: 1.5em;
+  margin-block: 1em;
+}
+
+.section__button {
+  background-color: var(--clr-blue);
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-block: 1em;
+  padding: 1em 1.2em;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.section__button--variant {
+  background-color: #fafafa;
+  color: var(--clr-body);
+}
+
+.section__button + .section__button {
+  margin-left: 1em;
+}
