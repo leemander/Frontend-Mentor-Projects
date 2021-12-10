@@ -125,6 +125,7 @@ ul {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   color: #fff;
   display: inline-block;
+  font-family: "Rubik", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
   margin-block: 1em;
@@ -282,4 +283,55 @@ ul {
 
 .section--faqs .section__button {
   margin-bottom: 6em;
+}
+
+.section--contact {
+  background-color: var(--clr-blue);
+  color: #fff;
+  padding-block: 3em 1em;
+}
+
+.section__pre-title {
+  letter-spacing: 5px;
+  font-size: calc(var(--fs-body) - 6px);
+  margin-bottom: 0;
+}
+
+.section--contact > .section__title {
+  margin-top: 0.5em;
+  color: #fff;
+  font-weight: 400;
+}
+
+.section__input {
+  font-family: "Rubik", sans-serif;
+  width: 80%;
+  padding: 1em;
+}
+
+.section__button--contact {
+  background-color: var(--clr-red);
+  width: 80%;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: var(--clr-title);
+  color: #fff;
+  padding-block: 2em;
+}
+
+.footer__nav-list {
+  font-size: var(--fs-body);
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-block: 2em;
+  opacity: 0.9;
+}
+.footer__nav-list li + li {
+  margin-top: 2em;
+}
+
+.footer__social-link + .footer__social-link {
+  margin-left: 2em;
 }
