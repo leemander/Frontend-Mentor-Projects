@@ -245,6 +245,8 @@ ul {
   align-items: center;
   display: flex;
   padding-block: 1em;
+  cursor: pointer;
+  user-select: none;
 }
 
 .faqs__q {
@@ -259,8 +261,23 @@ ul {
   width: 5%;
 }
 
+.faqs__arrow--up {
+  content: url("images/icon-arrow-up.svg");
+  transform: rotate(180deg);
+}
+
 .faqs__a {
+  color: var(--clr-title);
   display: none;
+  font-size: calc(var(--fs-body) - 2px);
+  line-height: 1.75;
+  margin-block: 1em;
+  opacity: 0.9;
+  text-align: left;
+}
+
+.faqs__a--selected {
+  display: block;
 }
 
 .section--faqs .section__button {
