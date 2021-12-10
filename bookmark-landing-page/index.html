@@ -123,8 +123,8 @@
       <section class="section section--download">
         <h2 class="section__title">Download the extension</h2>
         <p class="section__body">
-          We’ve got more browsers in the pipeline. Please do let us know if
-          you’ve got a favourite you’d like us to prioritize.
+          We've got more browsers in the pipeline. Please do let us know if
+          you've got a favourite you'd like us to prioritize.
         </p>
         <div class="download__cards-container">
           <article class="download__card">
@@ -160,7 +160,9 @@
         </p>
         <article class="section__faqs">
           <div class="faqs__header" id="q1">
-            <h3 class="faqs__q">What is Bookmark?</h3>
+            <a href="#">
+              <h3 class="faqs__q">What is Bookmark?</h3>
+            </a>
             <img
               src="images/icon-arrow.svg"
               class="faqs__arrow"
@@ -174,7 +176,9 @@
           </p>
           <hr />
           <div class="faqs__header" id="q2">
-            <h3 class="faqs__q">How can I request a new browser?</h3>
+            <a href="#">
+              <h3 class="faqs__q">How can I request a new browser?</h3>
+            </a>
             <img
               src="images/icon-arrow.svg"
               class="faqs__arrow faqs__arrow--up"
@@ -191,7 +195,9 @@
           </p>
           <hr />
           <div class="faqs__header" id="q3">
-            <h3 class="faqs__q">Is there a mobile app?</h3>
+            <a href="#">
+              <h3 class="faqs__q">Is there a mobile app?</h3>
+            </a>
             <img
               src="images/icon-arrow.svg"
               class="faqs__arrow"
@@ -206,7 +212,9 @@
           </p>
           <hr />
           <div class="faqs__header" id="q4">
-            <h3 class="faqs__q">What about other Chromium browsers?</h3>
+            <a href="#">
+              <h3 class="faqs__q">What about other Chromium browsers?</h3>
+            </a>
             <img
               src="images/icon-arrow.svg"
               class="faqs__arrow"
@@ -225,11 +233,16 @@
       <section class="section section--contact">
         <p class="section__pre-title">35,000+ ALREADY JOINED</p>
         <h2 class="section__title">Stay up-to-date with what we're doing</h2>
-        <input
-          type="text"
-          class="section__input"
-          placeholder="Enter your email address"
-        />
+        <div class="section__input-container">
+          <input
+            type="text"
+            class="section__input"
+            placeholder="Enter your email address"
+          />
+          <small class="section__error-msg"
+            >Whoops, make sure it's an email</small
+          >
+        </div>
         <button class="section__button section__button--contact">
           Contact Us
         </button>
@@ -261,6 +274,7 @@
         /></a>
       </footer>
     </div>
+
     <!--Mobile menu-->
 
     <aside class="mobile-menu" id="mobile-menu">

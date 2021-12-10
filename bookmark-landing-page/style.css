@@ -120,10 +120,13 @@ ul {
 }
 
 .section__button {
-  background-color: var(--clr-blue);
+  --bg-clr: var(--clr-blue);
+  --clr: #fff;
+  background-color: var(--bg-clr);
+  border: 1px solid var(--clr);
   border-radius: 5px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  color: #fff;
+  color: var(--clr);
   display: inline-block;
   font-family: "Rubik", sans-serif;
   font-size: 0.9rem;
@@ -134,9 +137,27 @@ ul {
   width: -moz-fit-content;
 }
 
+.section__button:hover,
+.section__button:focus-visible {
+  --bg-clr: #fff;
+  --clr: var(--clr-blue);
+  outline: 0;
+}
+
 .section__button--variant {
-  background-color: #fafafa;
-  color: var(--clr-title);
+  --bg-clr: #fafafa;
+  --clr: var(--clr-title);
+  background-color: var(--bg-clr);
+  color: var(--clr);
+  border-color: transparent;
+}
+
+.section__button--variant:hover,
+.section__button--variant:focus-visible {
+  --bg-clr: #fafafa;
+  --clr: var(--clr-title);
+  border-color: var(--clr);
+  color: var(--clr);
 }
 
 .section__button + .section__button {
@@ -157,6 +178,12 @@ ul {
   padding: 1em;
   position: relative;
   width: 100%;
+}
+
+.toggle__option:not(.toggle__option--selected):hover,
+.toggle__option:not(.toggle__option--selected):focus-visible {
+  color: var(--clr-red);
+  outline: 0;
 }
 
 .toggle__option.last {
@@ -250,6 +277,11 @@ ul {
   user-select: none;
 }
 
+.faqs__header:hover .faqs__q,
+.faqs__header a:focus-visible .faqs__q {
+  color: var(--clr-red);
+}
+
 .faqs__q {
   font-size: calc(var(--fs-body) - 2px);
   font-weight: 400;
@@ -260,6 +292,7 @@ ul {
 
 .faqs__arrow {
   width: 5%;
+  margin-left: auto;
 }
 
 .faqs__arrow--up {
@@ -309,10 +342,45 @@ ul {
   padding: 1em;
 }
 
+.section__input--error {
+  background-image: url(images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: top 50% right 5%;
+  border: 2px solid var(--clr-red);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.section__error-msg {
+  background-color: var(--clr-red);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: block;
+  font-style: italic;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  text-align: left;
+  visibility: hidden;
+  width: 80%;
+}
+
+.section__error-msg--active {
+  visibility: visible;
+}
+
 .section__button--contact {
   background-color: var(--clr-red);
   width: 80%;
   font-weight: 500;
+  border-color: transparent;
+}
+
+.section__button--contact:hover,
+.section__button--contact:focus-visible {
+  --clr: var(--clr-red);
+  background-color: #fff;
+  border-color: var(--clr);
+  outline: 0;
 }
 
 .footer {
@@ -328,8 +396,15 @@ ul {
   margin-block: 2em;
   opacity: 0.9;
 }
+
 .footer__nav-list li + li {
   margin-top: 2em;
+}
+
+.footer__nav-list a:hover,
+.footer__nav-list a:focus-visible {
+  color: var(--clr-red);
+  outline: 0;
 }
 
 .footer__social-link + .footer__social-link {
