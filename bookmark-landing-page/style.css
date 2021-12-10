@@ -7,8 +7,8 @@
   --clr-title: hsl(229, 31%, 21%);
 
   --fs-body: 1.125rem;
-  --fs-title: 1.3rem;
-  --fs-xl: 1.5rem;
+  --fs-title: 1.5rem;
+  --fs-xl: 1.75rem;
 }
 
 *,
@@ -104,10 +104,11 @@ ul {
 }
 
 .section__title {
-  font-size: 1.5rem;
+  font-size: var(--fs-title);
   font-weight: 500;
   line-height: 1.25;
   color: var(--clr-title);
+  padding-inline: 1.5em;
 }
 
 .section__body {
@@ -115,7 +116,7 @@ ul {
 }
 
 .section__title--hero {
-  font-size: 1.75rem;
+  font-size: var(--fs-xl);
 }
 
 .section__button {
@@ -192,8 +193,8 @@ ul {
 }
 
 .feature > .section__img-container {
-  min-height: 250px;
   display: grid;
+  min-height: 250px;
   place-items: center;
 }
 
@@ -202,9 +203,10 @@ ul {
 }
 
 .download__cards-container {
-  margin-top: 2em;
   display: grid;
   grid-template-columns: 1fr;
+  margin-bottom: 8em;
+  margin-top: 2em;
   row-gap: 1em;
 }
 
@@ -217,7 +219,7 @@ ul {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   padding: 2em 1.5em 1.5em 1em;
-  width: 90%;
+  width: 80%;
 }
 
 .download__card > .section__title {
@@ -231,4 +233,36 @@ ul {
 .download__card > .section__button {
   margin: 4em auto 1em auto;
   width: 100%;
+}
+
+.section__faqs {
+  margin-top: 4em;
+  margin-bottom: 1.5em;
+  padding-inline: 1.5em;
+}
+
+.faqs__header {
+  align-items: center;
+  display: flex;
+  padding-block: 1em;
+}
+
+.faqs__q {
+  font-size: calc(var(--fs-body) - 2px);
+  font-weight: 400;
+  color: var(--clr-title);
+  text-align: left;
+  width: 100%;
+}
+
+.faqs__arrow {
+  width: 5%;
+}
+
+.faqs__a {
+  display: none;
+}
+
+.section--faqs .section__button {
+  margin-bottom: 6em;
 }
