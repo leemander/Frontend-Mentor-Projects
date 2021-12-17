@@ -192,11 +192,11 @@
             </a>
             <img
               src="images/icon-arrow.svg"
-              class="faqs__arrow faqs__arrow--up"
+              class="faqs__arrow"
               alt="reveal answer"
             />
           </div>
-          <p class="faqs__a faqs__a--selected" id="a2">
+          <p class="faqs__a" id="a2">
             Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
             ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
             aliquet convallis ultricies. Mauris augue massa, ultricies non
@@ -259,12 +259,16 @@
             type="text"
             class="section__input"
             placeholder="Enter your email address"
+            id="email-input"
           />
-          <small class="section__error-msg"
+          <small class="section__error-msg" id="error"
             >Whoops, make sure it's an email</small
           >
         </div>
-        <button class="section__button section__button--contact">
+        <button
+          class="section__button section__button--contact"
+          id="contact-btn"
+        >
           Contact Us
         </button>
       </section>

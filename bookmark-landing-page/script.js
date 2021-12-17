@@ -6,16 +6,12 @@ const closeMenuBtn = document.getElementById("close-mobile-menu");
 const featureBtnArr = document.querySelectorAll(".toggle__option");
 const featureDivArr = document.querySelectorAll(".feature");
 //q+a section elements
-const questionOne = document.getElementById("q1");
-const questionTwo = document.getElementById("q2");
-const questionThree = document.getElementById("q3");
-const questionFour = document.getElementById("q4");
 const questionArr = document.querySelectorAll(".faqs__header");
-const answerOne = document.getElementById("a1");
-const answerTwo = document.getElementById("a2");
-const answerThree = document.getElementById("a3");
-const answerFour = document.getElementById("a4");
 const answerArr = document.querySelectorAll(".faqs__a");
+//contact section elements
+const emailInput = document.getElementById("email-input");
+const emailError = document.getElementById("error");
+const emailBtn = document.getElementById("contact-btn");
 
 //functions
 function openCloseMenu() {
@@ -54,6 +50,24 @@ function changeArrow(q) {
   q.querySelector(".faqs__arrow").classList.add("faqs__arrow--up");
 }
 
+function validateEmail() {
+  if (checkEmail(emailInput.value.trim()) == false) {
+    emailInput.classList.add("section__input--error");
+    emailError.classList.add("section__error-msg--active");
+  } else {
+    emailInput.classList.remove("section__input--error");
+    emailError.classList.remove("section__error-msg--active");
+  }
+}
+
+function checkEmail(email) {
+  regex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(email);
+}
+
+checkEmail();
+
 //listeners
 openMenuBtn.addEventListener("click", openCloseMenu);
 closeMenuBtn.addEventListener("click", openCloseMenu);
@@ -69,3 +83,5 @@ questionArr.forEach((q) => {
     showAnswer(q.getAttribute("data-index"));
   });
 });
+
+emailBtn.addEventListener("click", validateEmail);
