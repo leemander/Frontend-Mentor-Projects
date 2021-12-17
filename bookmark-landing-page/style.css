@@ -59,7 +59,7 @@ ul {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2em;
-  padding: 2em 0;
+  padding: 2em 1em;
 }
 
 .header__hamburger {
@@ -431,6 +431,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
 }
 
 .mobile-menu__close {
