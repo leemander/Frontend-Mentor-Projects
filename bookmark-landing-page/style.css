@@ -175,10 +175,10 @@ ul {
 .toggle__option {
   background-color: transparent;
   border-top: 1px solid var(--clr-body);
-  color: var(--clr-body);
+  color: black;
   font-family: "Rubik", sans-serif;
   font-size: var(--fs-body);
-  font-weight: 500;
+  font-weight: 400;
   padding: 1em;
   position: relative;
   width: 100%;
@@ -216,6 +216,10 @@ ul {
 }
 
 .feature {
+  display: none;
+}
+
+.feature button {
   display: none;
 }
 
@@ -472,9 +476,9 @@ ul {
 
 @media (min-width: 1000px) {
   :root {
-    --fs-body: 1.25rem;
+    --fs-body: 1.4rem;
     --fs-title: 1.75rem;
-    --fs-xl: 2rem;
+    --fs-xl: 3rem;
   }
 
   .container {
@@ -498,8 +502,10 @@ ul {
   }
 
   .header__nav {
+    color: black;
     display: flex;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 400;
     gap: 3em;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -511,9 +517,10 @@ ul {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     color: #fff;
     letter-spacing: 1px;
-    padding: 0.75em 2.5em;
+    padding: 1em 2.5em;
   }
 
+  .feature--selected,
   .section--hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -527,7 +534,56 @@ ul {
 
   .hero__img-container {
     position: absolute;
-    right: -2.75vw;
+    right: -6.4vw;
     top: 0;
+  }
+
+  .features__toggle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin: 0 auto 3em auto;
+    position: relative;
+  }
+
+  .features__toggle::after {
+    content: "";
+    height: 1px;
+    width: 57%;
+    margin: 0 auto;
+    background-color: var(--clr-body);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .toggle__option {
+    border: 0 !important;
+    margin: 0 !important;
+  }
+
+  .toggle__option::after {
+    width: 100%;
+  }
+
+  .section--features .section__img-container {
+    width: 100%;
+  }
+
+  .bg-shape--left {
+    left: -10vw;
+    top: 8vh;
+    height: 40vh;
+    width: 43vw;
+  }
+
+  .feature__content {
+    text-align: left;
+  }
+
+  .feature__content button {
+    display: block;
   }
 }
