@@ -183,6 +183,7 @@
             like answered please feel free to email us.
           </p>
           <article class="section__faqs">
+            <hr />
             <div
               class="faqs__header"
               data-index="0"
@@ -274,55 +275,64 @@
           </article>
           <button class="section__button">More Info</button>
         </section>
+      </div>
         <section class="section section--contact">
-          <p class="section__pre-title">35,000+ ALREADY JOINED</p>
-          <h2 class="section__title">Stay up-to-date with what we're doing</h2>
-          <div class="section__input-container">
-            <input
-              type="text"
-              class="section__input"
-              placeholder="Enter your email address"
-              id="email-input"
-            />
-            <small class="section__error-msg" id="error"
-              >Whoops, make sure it's an email</small
-            >
+          <div class="container">
+            <p class="section__pre-title">35,000+ ALREADY JOINED</p>
+            <h2 class="section__title">Stay up-to-date with what we're doing</h2>
+            <div class="form">
+              <div class="section__input-container">
+                <input
+                  type="text"
+                  class="section__input"
+                  placeholder="Enter your email address"
+                  id="email-input"
+                />
+                <small class="section__error-msg" id="error"
+                  >Whoops, make sure it's an email</small
+                >
+              </div>
+              <button
+                class="section__button section__button--contact"
+                id="contact-btn"
+              >
+                Contact Us
+              </button>
+            </div>
           </div>
-          <button
-            class="section__button section__button--contact"
-            id="contact-btn"
-          >
-            Contact Us
-          </button>
         </section>
       </main>
       <footer class="footer">
-        <img
-          src="/images/logo-bookmark-footer.svg"
-          alt="bookmark"
-          class="footer__logo"
-        />
-        <nav>
-          <ul class="footer__nav-list">
-            <li><a href="#" class="footer__nav-link">FEATURES</a></li>
-            <li><a href="#" class="footer__nav-link">PRICING</a></li>
-            <li><a href="#" class="footer__nav-link">CONTACT</a></li>
-          </ul>
-        </nav>
-        <a href="#" class="footer__social-link"
-          ><img
-            class="footer__social-logo"
-            src="images/icon-facebook.svg"
-            alt="facebook"
-        /></a>
-        <a href="#" class="footer__social-link"
-          ><img
-            class="footer__social-logo"
-            src="images/icon-twitter.svg"
-            alt="twitter"
-        /></a>
+        <div class="container">
+           <img
+            src="/images/logo-bookmark-footer.svg"
+            alt="bookmark"
+            class="footer__logo"
+          />
+          <nav>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">FEATURES</a></li>
+              <li><a href="#" class="footer__nav-link">PRICING</a></li>
+              <li><a href="#" class="footer__nav-link">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="footer__socials">
+             <a href="#" class="footer__social-link"
+              ><img
+                class="footer__social-logo"
+                src="images/icon-facebook.svg"
+                alt="facebook"
+            /></a>
+            <a href="#" class="footer__social-link"
+              ><img
+                class="footer__social-logo"
+                src="images/icon-twitter.svg"
+                alt="twitter"
+            /></a>
+          </div>
+      </div>
       </footer>
-    </div>
+   
 
     <!--Mobile menu-->
 
