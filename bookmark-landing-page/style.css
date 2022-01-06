@@ -426,6 +426,14 @@ ul {
   margin-left: 2em;
 }
 
+.footer__social-link:first-of-type:hover .footer__social-logo {
+  content: url("images/icon-facebook-hover.svg");
+}
+
+.footer__social-link:nth-of-type(2):hover .footer__social-logo {
+  content: url("images/icon-twitter-hover.svg");
+}
+
 .mobile-menu {
   background-color: var(--clr-title);
   font-size: calc(var(--fs-body) + 0.25rem);
