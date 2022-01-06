@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --clr-cyan: hsl(179, 62%, 43%);
+  --clr-yellow: hsl(71, 73%, 54%);
+  --clr-grey: hsl(204, 43%, 93%);
+  --clr-grey-blue: hsl(218, 22%, 67%);
+
+  --fs-body: 1rem;
+  --fs-title: 1.4rem;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  --radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  font-family: "Karla", sans-serif;
+  min-height: 100vh;
+  place-items: center;
+  background-color: aliceblue;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: min(90%, 300px);
+}
+
+.card > section {
+  padding: 2em 1.5em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section1 {
+  background-color: #fff;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.section1 > .section__body {
+  color: var(--clr-grey-blue);
+  line-height: 1.5;
+}
+
+.section2 {
+  background-color: var(--clr-cyan);
+}
+
+.section3 {
+  background-color: #4abebd;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.section__header {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.section__header--cyan {
+  color: var(--clr-cyan);
+}
+
+.section__subheader {
+  color: var(--clr-yellow);
+  font-weight: var(--fw-bold);
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+.pricing__figure {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+.section__pricing {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.section__button {
+  background-color: var(--clr-yellow);
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: block;
+  font-family: "Karla", sans-serif;
+  font-size: var(--fs-body);
+  margin: 1em auto 0 auto;
+  padding: 1em;
+  width: 100%;
+}
+
+.section__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section__li + .section__li {
+  margin-top: 0.25em;
+}
