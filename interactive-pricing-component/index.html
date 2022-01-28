@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial.</p>
+        <p>No credit card required.</p>
+      </header>
+      <main class="main">
+        <section class="section--form">
+          <p class="form__views" id="views">100k Pageviews</p>
+          <input
+            type="range"
+            class="form__slider"
+            id="slider"
+            step="25"
+            value="50"
+          />
+          <p class="form__price" id="price">
+            <span class="price__figure">$16.00</span> / month
+          </p>
+          <div class="form__toggle-container" id="toggle">
+            <span class="form__toggle-label">Monthly Billing</span>
+            <div class="toggle">
+              <div class="toggle__dot" id="toggle-dot"></div>
+            </div>
+            <span class="form__toggle-label">
+              Yearly Billing
+              <span class="toggle-label__discount">-25% </span>
+            </span>
+          </div>
+        </section>
+        <section class="section--confirm">
+          <ul class="confirm__points">
+            <li><img src="images/icon-check.svg" />Unlimited websites</li>
+            <li><img src="images/icon-check.svg" />100% data ownership</li>
+            <li><img src="images/icon-check.svg" />Email reports</li>
+          </ul>
+          <button class="confirm__button">Start my trial</button>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
