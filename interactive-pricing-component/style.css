@@ -32,6 +32,9 @@ body {
   font-weight: var(--fw-body);
   font-size: 0.9375rem;
   color: var(--clr-body);
+  background-image: url(/images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
   background-color: var(--clr-bg);
   min-height: 100vh;
   display: grid;
@@ -50,6 +53,10 @@ section {
 
 .header {
   padding: 3em 0;
+  background-image: url(./images/pattern-circles.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 h1 {
@@ -72,6 +79,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
+  margin-top: 2em;
 }
 
 .form__views {
@@ -99,6 +107,13 @@ h1 {
   height: 0.5em;
   border-radius: 10em;
   margin: 1em 0;
+  opacity: 0.5;
+}
+
+.form__slider:hover,
+.form__slider:focus-visible {
+  opacity: 1;
+  outline: 0;
 }
 
 .form__slider::-webkit-slider-thumb {
@@ -107,7 +122,8 @@ h1 {
   width: 40px;
   aspect-ratio: 1;
   background: var(--clr-slider-bg);
-  cursor: pointer;
+  cursor: grab;
+  cursor: -webkit-grab;
   border-radius: 50%;
   background-image: url(images/icon-slider.svg);
   background-repeat: no-repeat;
@@ -121,7 +137,7 @@ h1 {
   width: 40px;
   aspect-ratio: 1;
   background: var(--clr-slider-bg);
-  cursor: pointer;
+  cursor: -moz-grab;
   border-radius: 50%;
   background-image: url(images/icon-slider.svg);
   background-repeat: no-repeat;
@@ -153,6 +169,13 @@ h1 {
   height: 22.5px;
   border-radius: 10em;
   background-color: var(--clr-toggle-bg);
+  border: 0;
+}
+
+.toggle:hover,
+.toggle:focus-visible {
+  background-color: var(--clr-slider-bg);
+  outline: 0;
 }
 
 .toggle__dot {
@@ -177,6 +200,7 @@ h1 {
 
 .section--confirm {
   margin-top: 10px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .confirm__points {
@@ -204,4 +228,9 @@ h1 {
   letter-spacing: 0.75px;
   color: var(--clr-CTA);
   background-color: var(--clr-title);
+  cursor: pointer;
+}
+
+.confirm__button:focus-visible {
+  outline-color: yellow;
 }
