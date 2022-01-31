@@ -49,13 +49,5 @@ function toggleYearly() {
   updateDOM();
 }
 
-slider.addEventListener("mousedown", () => {
-  slider.classList.add("dragged");
-});
-
-slider.addEventListener("mouseup", () => {
-  slider.classList.remove("dragged");
-});
-
 slider.addEventListener("change", updateViews);
 toggle.addEventListener("click", toggleYearly);
