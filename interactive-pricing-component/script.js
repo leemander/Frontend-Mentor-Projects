@@ -1,5 +1,6 @@
 const viewsEl = document.getElementById("views");
 const slider = document.getElementById("slider");
+const sliderFill = document.getElementById("slider-fill");
 const priceEl = document.getElementById("price");
 const toggle = document.getElementById("toggle");
 const toggleDot = document.getElementById("toggle-dot");
@@ -16,6 +17,7 @@ function updateDOM() {
           !yearly ? price : yearlyPrice
         }.00</span> / month
     `;
+  sliderFill.style.width = `${slider.value}%`;
 }
 
 function updateViews() {
@@ -46,6 +48,14 @@ function toggleYearly() {
   toggleDot.classList.toggle("yearly");
   updateDOM();
 }
+
+slider.addEventListener("mousedown", () => {
+  slider.classList.add("dragged");
+});
+
+slider.addEventListener("mouseup", () => {
+  slider.classList.remove("dragged");
+});
 
 slider.addEventListener("change", updateViews);
 toggle.addEventListener("click", toggleYearly);

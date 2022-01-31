@@ -19,20 +19,32 @@
     <div class="container">
       <header class="header">
         <h1 class="header__title">Simple, traffic-based pricing</h1>
-        <p>Sign-up for our 30-day trial.</p>
-        <p>No credit card required.</p>
+        <p>
+          Sign-up for our 30-day trial.<span class="mobile-only"><br /></span>
+          No credit card required.
+        </p>
       </header>
       <main class="main">
         <section class="section--form">
-          <p class="form__views" id="views">100k Pageviews</p>
-          <input
-            type="range"
-            class="form__slider"
-            id="slider"
-            step="25"
-            value="50"
-          />
-          <p class="form__price" id="price">
+          <div class="form__info-container">
+            <p class="form__views" id="views">100k Pageviews</p>
+            <p class="form__price desktop-only" id="price">
+              <span class="price__figure">$16.00</span> / month
+            </p>
+          </div>
+          <div class="form__slider-container">
+            <input
+              type="range"
+              class="form__slider"
+              id="slider"
+              step="25"
+              value="50"
+            />
+            <div class="visible-slider">
+              <div class="visible-slider__fill" id="slider-fill"></div>
+            </div>
+          </div>
+          <p class="form__price mobile-only" id="price">
             <span class="price__figure">$16.00</span> / month
           </p>
           <div class="form__toggle-container" id="toggle">
@@ -42,7 +54,10 @@
             </button>
             <span class="form__toggle-label">
               Yearly Billing
-              <span class="toggle-label__discount">-25% </span>
+              <span class="toggle-label__discount mobile-only">-25%</span>
+              <span class="toggle-label__discount desktop-only"
+                >25% discount</span
+              >
             </span>
           </div>
         </section>
