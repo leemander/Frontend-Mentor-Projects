@@ -168,7 +168,8 @@ h1 {
 .form__slider::-moz-range-thumb {
   appearance: none;
   width: 40px;
-  aspect-ratio: 1;
+  height: 40px;
+  border: 0;
   background: var(--clr-slider-bg);
   cursor: -moz-grab;
   border-radius: 50%;
