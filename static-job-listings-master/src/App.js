@@ -5,12 +5,12 @@ import data from "./data.json";
 export default function App() {
   const dataArr = data;
   const [filters, setFilters] = React.useState([]);
-  const [filteredJobs, setFilteredJobs] = React.useState([]);
+  const filteredJobs = [];
 
   const jobsEl = dataArr.map((job) => {
-    //populates an array of keywords which can be used to filter jobs based on the properties 'role', 'level', 'languages', and 'tools' found in the provided data
-
     const keywordsArr = [];
+
+    //populates an array of keywords which can be used to filter jobs based on the properties 'role', 'level', 'languages', and 'tools' found in the provided data
 
     keywordsArr.push(job.role);
     keywordsArr.push(job.level);
@@ -43,8 +43,11 @@ export default function App() {
   });
 
   function addFilter(keyword) {
-    setFilters((oldFilters) => [...oldFilters, keyword]);
-    setFilteredJobs(filterJobs);
+    setFilters((oldFilters) => {
+      return oldFilters.indexOf(keyword)
+        ? [...oldFilters, keyword]
+        : oldFilters;
+    });
   }
 
   function deleteFilter(index) {
@@ -58,24 +61,29 @@ export default function App() {
   }
 
   function filterJobs() {
-    const filteredJobsArr = [];
     jobsEl.forEach((el) => {
-      let pass;
+      let pass = false;
       for (let i = 0; i < filters.length; i++) {
-        el.props.keywords.indexOf(filters[i]) !== -1
-          ? (pass = true)
-          : (pass = false);
+        if (el.props.keywords.indexOf(filters[i]) !== -1) {
+          pass = true;
+        } else {
+          return;
+        }
       }
-      pass && filteredJobsArr.push(el);
+      pass && filteredJobs.push(el);
     });
-    return filteredJobsArr;
   }
+
+  filterJobs();
 
   const filtersEl = filters.map((filter, index) => {
     return (
-      <button key={index + 1} onClick={() => deleteFilter(index)}>
-        {filter}
-      </button>
+      <div className="filter" key={index + 1}>
+        <span>{filter}</span>
+        <button onClick={() => deleteFilter(index)}>
+          <img src={"./images/icon-remove.svg"} />
+        </button>
+      </div>
     );
   });
 
@@ -83,15 +91,17 @@ export default function App() {
     <div>
       <header></header>
       <main>
-        {filtersEl.length > 0 && (
-          <div className="main__filters">
-            {filtersEl}
-            <button className="filters__clear" onClick={clearFilters}>
-              Clear
-            </button>
-          </div>
-        )}
-        {jobsEl}
+        <div className="container">
+          {filtersEl.length > 0 && (
+            <div className="filters-container">
+              <div className="filters">{filtersEl}</div>
+              <button className="filters__clear" onClick={clearFilters}>
+                Clear
+              </button>
+            </div>
+          )}
+          {filteredJobs.length < 1 ? jobsEl : filteredJobs}
+        </div>
       </main>
     </div>
   );
