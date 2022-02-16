@@ -81,7 +81,8 @@ export default function App() {
       <div className="filter" key={index + 1}>
         <span>{filter}</span>
         <button onClick={() => deleteFilter(index)}>
-          <img src={"./images/icon-remove.svg"} />
+          <span>Remove filter</span>
+          <img alt="remove filter" src={"./images/icon-remove.svg"} />
         </button>
       </div>
     );
@@ -89,7 +90,9 @@ export default function App() {
 
   return (
     <div>
-      <header></header>
+      <header>
+        <h1>Job listings</h1>
+      </header>
       <main>
         <div className="container">
           {filtersEl.length > 0 && (

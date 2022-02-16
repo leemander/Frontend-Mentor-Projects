@@ -55,7 +55,10 @@ button {
   cursor: pointer;
 }
 
-h1,
+h1 {
+  display: none;
+}
+
 h2,
 h3 {
   font: inherit;
@@ -101,6 +104,11 @@ hr {
   background-color: var(--clr-new-bg);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.filter > button > span {
+  position: absolute;
+  top: -1000%;
 }
 
 .filters__clear {
@@ -160,6 +168,8 @@ hr {
   display: block;
   cursor: pointer;
   text-decoration: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 .job__info {
@@ -184,7 +194,7 @@ hr {
   border-radius: 5px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   :root {
     --fs-title: 1rem;
     --fs-body: 0.9rem;

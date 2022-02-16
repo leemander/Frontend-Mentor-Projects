@@ -17,20 +17,18 @@ export default function Job(props) {
   return (
     <article className={props.featured ? "job featured" : "job"}>
       <div className="job__data">
-        <img className="job__logo" src={props.logo} />
+        <img
+          className="job__logo"
+          src={props.logo}
+          alt={`${props.company} logo`}
+        />
         <div>
           <div className="job__company-container">
             <h2 className="job__company">{props.company}</h2>
-            {props.new && (
-              <span className="job__new">
-                <p>NEW!</p>
-              </span>
-            )}
+            {props.new && <span className="job__new">NEW!</span>}
             {props.featured && <span className="job__featured">FEATURED</span>}
           </div>
-          <a href="" className="job__position">
-            {props.position}
-          </a>
+          <button className="job__position">{props.position}</button>
           <div className="job__info">
             <span>{props.postedAt}</span>
             <span>&#8226;</span>
