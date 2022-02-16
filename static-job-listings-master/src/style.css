@@ -76,7 +76,7 @@ hr {
   top: -2em;
   background-color: #fff;
   border-radius: 5px;
-  padding: 1em;
+  padding: 1.5em;
   display: grid;
   grid-template-columns: 80% auto;
 }
@@ -111,8 +111,8 @@ hr {
 
 .job {
   border-radius: 5px;
-  padding: 2em 1em 1em 1em;
-  margin: 3em 0;
+  padding: 2em 1em 1.5em 1em;
+  margin: 4em 0;
   background-color: #fff;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -157,6 +157,9 @@ hr {
   color: var(--clr-title);
   margin-top: 1em;
   font-size: var(--fs-title);
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .job__info {
@@ -178,4 +181,89 @@ hr {
   padding: 10px;
   background-color: var(--clr-bg);
   color: var(--clr-body);
+  border-radius: 5px;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-title: 1rem;
+    --fs-body: 0.9rem;
+  }
+
+  header {
+    background-image: url("./images/bg-header-desktop.svg");
+    background-position: top;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .container {
+    width: min(1100px, 90%);
+  }
+
+  .filters-container {
+    padding-inline: 3em;
+  }
+
+  .filter > button:hover,
+  .filter > button:focus-visible {
+    background-color: var(--clr-title);
+    outline: 0;
+  }
+
+  .filters__clear {
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .filters__clear:hover,
+  .filters__clear:focus-visible {
+    text-decoration: underline;
+    color: var(--clr-new-bg);
+    outline: 0;
+  }
+
+  .job {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    margin: 1.5em 0;
+  }
+
+  .job__data {
+    display: grid;
+    grid-template-columns: 100px auto;
+    width: 100%;
+  }
+
+  .job__position {
+    margin-top: 0.5em;
+  }
+
+  .job__position:hover,
+  .job__position:focus-visible {
+    color: var(--clr-new-bg);
+    outline: 0;
+  }
+
+  .job__logo {
+    position: unset;
+    width: 75%;
+    margin: auto;
+  }
+
+  .job__keywords {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .job__keyword:hover,
+  .job__keyword:focus-visible {
+    color: #fff;
+    background-color: var(--clr-new-bg);
+    outline: 0;
+  }
 }
