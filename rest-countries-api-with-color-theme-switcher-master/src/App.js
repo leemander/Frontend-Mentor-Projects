@@ -3,12 +3,23 @@ import Country from "./components/Country";
 
 export default function App() {
   const [countries, setCountries] = React.useState([]);
+  const [filteredCountries, setFilteredCountries] = React.useState([]);
 
   React.useEffect(async () => {
     const results = await fetch("https://restcountries.com/v2/all");
     const data = await results.json();
     setCountries(data);
   }, []);
+
+  function filter(e) {
+    const region = e.target.value;
+
+    setFilteredCountries(() => {
+      return countriesEl.filter((country) => {
+        return country.props.region === region;
+      });
+    });
+  }
 
   const countriesEl = countries.map((country, index) => {
     return (
@@ -38,15 +49,21 @@ export default function App() {
               placeholder="Search for a country..."
             />
           </div>
-          <select className="main__filter" defaultValue="Filter by Region">
-            <option>Filter by Region</option>
-            <option>Africa</option>
-            <option>America</option>
-            <option>Asia</option>
-            <option>Europe</option>
-            <option>Oceania</option>
+          <select
+            className="main__filter"
+            defaultValue="Filter by Region"
+            onChange={(e) => filter(e)}
+          >
+            <option value="">Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
           </select>
-          <div className="main__countries">{countriesEl}</div>
+          <div className="main__countries">
+            {filteredCountries.length ? filteredCountries : countriesEl}
+          </div>
         </div>
       </main>
     </div>
