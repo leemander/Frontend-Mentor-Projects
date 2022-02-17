@@ -21,6 +21,22 @@ export default function App() {
     });
   }
 
+  function search(e) {
+    const term = e.target.value.toLowerCase();
+
+    const results = countriesEl.filter((country) => {
+      return country.props.name.toLowerCase().includes(term);
+    });
+
+    !results.length ? alert("no results") : setFilteredCountries(results);
+
+    /*setFilteredCountries(() => {
+      return countriesEl.filter((country) => {
+        return country.props.name.toLowerCase().includes(term);
+      });
+    });*/
+  }
+
   const countriesEl = countries.map((country, index) => {
     return (
       <Country
@@ -47,11 +63,14 @@ export default function App() {
             <input
               className="main__search"
               placeholder="Search for a country..."
+              onKeyUp={(e) => {
+                search(e);
+              }}
             />
           </div>
           <select
             className="main__filter"
-            defaultValue="Filter by Region"
+            defaultValue=""
             onChange={(e) => filter(e)}
           >
             <option value="">Filter by Region</option>
