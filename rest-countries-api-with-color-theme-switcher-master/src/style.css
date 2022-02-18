@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --clr-dm-el: hsl(209, 23%, 22%);
+  --clr-dm-bg: hsl(207, 26%, 17%);
+  --clr-dm-tx: hsl(0, 0%, 100%);
+
+  --clr-lm-el: hsl(0, 0%, 100%);
+  --clr-lm-bg: hsl(0, 0%, 98%);
+  --clr-lm-tx: hsl(200, 15%, 8%);
+  --clr-lm-in: hsl(0, 0%, 52%);
+
+  --fs-home: 0.875rem;
+  --fs-details: 1rem;
+
+  --fw-1: 300;
+  --fw-2: 600;
+  --fw-3: 800;
+}
+
 *,
 *::before,
 *::after {
@@ -6,6 +26,15 @@
 
 body {
   margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: var(--fs-home);
+  font-weight: var(--fw-2);
+  background-color: var(--clr-lm-bg);
+}
+
+input,
+select {
+  font: inherit;
 }
 
 button {
@@ -21,15 +50,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3em 1em;
+  padding: 1.5em 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: inherit;
 }
 
-main {
-  background-color: #fafafa;
+.header__dark-mode-toggle {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .container {
@@ -37,8 +72,46 @@ main {
   margin: 0 auto;
 }
 
-.main__country {
+.main {
   --radius: 5px;
+}
+
+.main__search-container,
+.main__filter-container {
+  border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main__search-container {
+  align-items: center;
+  background-color: #fff;
+  color: var(--clr-lm-in);
+  display: flex;
+  gap: 1em;
+  margin-top: 2em;
+  padding: 1em 2em;
+  width: 100%;
+}
+
+.main__search {
+  width: 100%;
+  border: 0;
+}
+
+.main__filter-container {
+  background-color: #fff;
+  margin-top: 1em;
+  width: 60%;
+  padding: 0 1em;
+}
+
+.main__filter {
+  border: 0;
+  width: 100%;
+  padding-block: 1em;
+}
+
+.main__country {
   background-color: #fff;
   width: min(80%, 300px);
   margin: 3em auto;
@@ -57,7 +130,7 @@ main {
 }
 
 .country__info {
-  padding: 1em;
+  padding: 1em 2em 2em 2em;
 }
 
 .country__facts {
