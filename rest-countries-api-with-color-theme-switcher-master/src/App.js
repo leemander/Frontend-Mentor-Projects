@@ -19,14 +19,8 @@ export default function App() {
   }, []);
 
   React.useEffect(() => {
-    setFailedSearch(false);
-    document.getElementById("search-bar").value = "";
-    setFilteredCountries(() => {
-      return countriesEl.filter((country) => {
-        return country.props.region === region;
-      });
-    });
-  }, [region]);
+    filterResults();
+  }, [region, searchTerm]);
 
   function handleChange(e) {
     setRegion(e.target.value);
@@ -36,21 +30,30 @@ export default function App() {
     setSearchTerm(e.target.value.toLowerCase());
   }
 
-  function search(e) {
+  function filterResults() {
     setFailedSearch(false);
-
-    const term = e.target.value.toLowerCase();
-
-    let results = countriesEl.filter((country) => {
-      return region === ""
-        ? country.props.name.toLowerCase().includes(term)
-        : country.props.name.toLowerCase().includes(term) &&
-            country.props.region === region;
-    });
-
-    !results.length && setFailedSearch(true);
-
-    setFilteredCountries(results);
+    if (region && !searchTerm) {
+      setFilteredCountries(() => {
+        return countriesEl.filter((country) => {
+          return country.props.region === region;
+        });
+      });
+    } else if (region && searchTerm) {
+      let results = countriesEl.filter((country) => {
+        return (
+          country.props.name.toLowerCase().includes(searchTerm) &&
+          country.props.region === region
+        );
+      });
+      !results.length && setFailedSearch(true);
+      setFilteredCountries(results);
+    } else if (searchTerm && !region) {
+      let results = countriesEl.filter((country) => {
+        return country.props.name.toLowerCase().includes(searchTerm);
+      });
+      !results.length && setFailedSearch(true);
+      setFilteredCountries(results);
+    }
   }
 
   const countriesEl = countries.map((country, index) => {
@@ -84,7 +87,7 @@ export default function App() {
               id="search-bar"
               placeholder="Search for a country..."
               onChange={(e) => {
-                search(e);
+                handleSearch(e);
               }}
             />
           </div>
