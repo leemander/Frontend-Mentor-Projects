@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function Country(props) {
+  function formatNumber(number) {
+    return new Intl.NumberFormat().format(number);
+  }
+
   return (
     <article className="main__country">
       <img className="country__flag" src={props.flag} />
@@ -9,7 +13,7 @@ export default function Country(props) {
         <ul className="country__facts">
           <li>
             <strong>Population: </strong>
-            {props.pop}
+            {formatNumber(props.pop)}
           </li>
           <li>
             <strong>Region: </strong>

@@ -111,6 +111,11 @@ h1 {
   padding-block: 1em;
 }
 
+.main__error {
+  color: red;
+  text-align: center;
+}
+
 .main__country {
   background-color: #fff;
   width: min(80%, 300px);

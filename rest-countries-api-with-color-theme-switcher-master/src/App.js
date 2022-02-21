@@ -8,6 +8,9 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 export default function App() {
   const [countries, setCountries] = React.useState([]);
   const [filteredCountries, setFilteredCountries] = React.useState([]);
+  const [region, setRegion] = React.useState("");
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [failedSearch, setFailedSearch] = React.useState(false);
 
   React.useEffect(async () => {
     const results = await fetch("https://restcountries.com/v2/all");
@@ -15,24 +18,39 @@ export default function App() {
     setCountries(data);
   }, []);
 
-  function filter(e) {
-    const region = e.target.value;
-
+  React.useEffect(() => {
+    setFailedSearch(false);
+    document.getElementById("search-bar").value = "";
     setFilteredCountries(() => {
       return countriesEl.filter((country) => {
         return country.props.region === region;
       });
     });
+  }, [region]);
+
+  function handleChange(e) {
+    setRegion(e.target.value);
+  }
+
+  function handleSearch(e) {
+    setSearchTerm(e.target.value.toLowerCase());
   }
 
   function search(e) {
+    setFailedSearch(false);
+
     const term = e.target.value.toLowerCase();
 
-    const results = countriesEl.filter((country) => {
-      return country.props.name.toLowerCase().includes(term);
+    let results = countriesEl.filter((country) => {
+      return region === ""
+        ? country.props.name.toLowerCase().includes(term)
+        : country.props.name.toLowerCase().includes(term) &&
+            country.props.region === region;
     });
 
-    !results.length ? alert("no results") : setFilteredCountries(results);
+    !results.length && setFailedSearch(true);
+
+    setFilteredCountries(results);
   }
 
   const countriesEl = countries.map((country, index) => {
@@ -63,6 +81,7 @@ export default function App() {
             <FontAwesomeIcon icon={faMagnifyingGlass} />
             <input
               className="main__search"
+              id="search-bar"
               placeholder="Search for a country..."
               onChange={(e) => {
                 search(e);
@@ -73,9 +92,9 @@ export default function App() {
             <select
               className="main__filter"
               defaultValue=""
-              onChange={(e) => filter(e)}
+              onChange={(e) => handleChange(e)}
             >
-              <option value="">Filter by Region</option>
+              <option value="">All Regions</option>
               <option value="Africa">Africa</option>
               <option value="Americas">Americas</option>
               <option value="Asia">Asia</option>
@@ -83,9 +102,15 @@ export default function App() {
               <option value="Oceania">Oceania</option>
             </select>
           </div>
-          <div className="main__countries">
-            {filteredCountries.length ? filteredCountries : countriesEl}
-          </div>
+          {failedSearch ? (
+            <p className="main__error">
+              Your search returned no results. Please try again.
+            </p>
+          ) : (
+            <div className="main__countries">
+              {filteredCountries.length ? filteredCountries : countriesEl}
+            </div>
+          )}
         </div>
       </main>
     </div>
