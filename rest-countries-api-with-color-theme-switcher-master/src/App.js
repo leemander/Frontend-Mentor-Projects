@@ -1,5 +1,6 @@
 import React from "react";
 import Country from "./components/Country";
+import Detail from "./components/Detail";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
@@ -11,6 +12,7 @@ export default function App() {
   const [region, setRegion] = React.useState("");
   const [searchTerm, setSearchTerm] = React.useState("");
   const [failedSearch, setFailedSearch] = React.useState(false);
+  const [selectedCountry, setSelectedCountry] = React.useState();
 
   React.useEffect(async () => {
     const results = await fetch("https://restcountries.com/v2/all");
@@ -58,6 +60,31 @@ export default function App() {
     }
   }
 
+  function formatNumber(number) {
+    return new Intl.NumberFormat().format(number);
+  }
+
+  function generateDetail(index) {
+    const country = countries[index];
+    const currencies = country.currencies.map((currency) => currency.name);
+    const languages = country.languages.map((language) => language.name);
+    setSelectedCountry(
+      <Detail
+        name={country.name}
+        flag={country.flag}
+        pop={country.population}
+        region={country.region}
+        capital={country.capital}
+        subregion={country.subregion}
+        languages={languages}
+        nativeName={country.nativeName}
+        domain={country.topLevelDomain}
+        currencies={currencies}
+        borders={country.borders}
+      />
+    );
+  }
+
   const countriesEl = countries.map((country, index) => {
     return (
       <Country
@@ -67,6 +94,7 @@ export default function App() {
         pop={country.population}
         region={country.region}
         capital={country.capital}
+        onClick={() => generateDetail(index)}
       />
     );
   });
@@ -113,6 +141,7 @@ export default function App() {
             </p>
           ) : (
             <div className="main__countries">
+              {selectedCountry}
               {filteredCountries.length ? filteredCountries : countriesEl}
             </div>
           )}
