@@ -53,6 +53,8 @@ export default function App() {
       });
       !results.length && setFailedSearch(true);
       setFilteredCountries(results);
+    } else {
+      setFilteredCountries([]);
     }
   }
 
