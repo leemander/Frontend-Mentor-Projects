@@ -138,11 +138,17 @@ h1 {
   padding: 1em 2em 2em 2em;
 }
 
-.country__facts {
+.country__facts,
+.detail__facts {
   list-style: none;
   padding-left: 0;
 }
 
-.country__facts > li + li {
+.country__facts > li + li,
+.detail__facts > li + li {
   margin-top: 0.5em;
+}
+
+.detail__facts {
+  margin-block: 2em;
 }

@@ -66,13 +66,15 @@ export default function App() {
 
   function generateDetail(index) {
     const country = countries[index];
+    const population = formatNumber(country.population);
     const currencies = country.currencies.map((currency) => currency.name);
     const languages = country.languages.map((language) => language.name);
+
     setSelectedCountry(
       <Detail
         name={country.name}
         flag={country.flag}
-        pop={country.population}
+        pop={population}
         region={country.region}
         capital={country.capital}
         subregion={country.subregion}
@@ -86,12 +88,13 @@ export default function App() {
   }
 
   const countriesEl = countries.map((country, index) => {
+    const population = formatNumber(country.population);
     return (
       <Country
         key={index + 1}
         flag={country.flag}
         name={country.name}
-        pop={country.population}
+        pop={population}
         region={country.region}
         capital={country.capital}
         onClick={() => generateDetail(index)}

@@ -1,12 +1,24 @@
 import React from "react";
 
 export default function Detail(props) {
+  function listRenderer(arr) {
+    return arr.length === 1
+      ? arr
+      : arr.map((element) => {
+          return arr.indexOf(element) + 1 !== arr.length
+            ? `${element}, `
+            : element;
+        });
+  }
+
+  const languages = listRenderer(props.languages);
+  const currencies = listRenderer(props.currencies);
   return (
     <section>
       <button className="detail__back">Back</button>
       <img src={props.flag} className="detail__flag" />
       <h2 className="detail__name">{props.name}</h2>
-      <ul>
+      <ul className="detail__facts">
         <li>
           <strong>Native Name: </strong>
           {props.nativeName}
@@ -28,16 +40,16 @@ export default function Detail(props) {
           {props.capital}
         </li>
       </ul>
-      <ul>
+      <ul className="detail__facts">
         <li>
           <strong>Top Level Domain: </strong>
           {props.domain}
         </li>
         <li>
-          <strong>Currency: </strong> {props.currencies}
+          <strong>Currencies: </strong> {currencies}
         </li>
         <li>
-          <strong>Languages: </strong> {props.languages}
+          <strong>Languages: </strong> {languages}
         </li>
       </ul>
       <h3>Border Countries:</h3>
