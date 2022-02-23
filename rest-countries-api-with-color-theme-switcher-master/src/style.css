@@ -149,6 +149,46 @@ h1 {
   margin-top: 0.5em;
 }
 
+.detail {
+  font-size: var(--fs-details);
+}
+
+.detail button {
+  border: 0;
+  background-color: #fff;
+  padding: 0.25em 2em;
+}
+
+.detail__back {
+  margin-block: 2em 3em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.detail__flag {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.detail__name {
+  margin-top: 1em;
+}
+
+.detail__borders-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.66em;
+  padding-bottom: 2em;
+}
+
+.detail__border-btn {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 .detail__facts {
   margin-block: 2em;
 }

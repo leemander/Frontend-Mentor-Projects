@@ -24,12 +24,16 @@ export default function App() {
     filterResults();
   }, [region, searchTerm]);
 
-  function handleChange(e) {
+  function handleFilterChange(e) {
     setRegion(e.target.value);
   }
 
   function handleSearch(e) {
-    setSearchTerm(e.target.value.toLowerCase());
+    setSearchTerm(e.target.value);
+  }
+
+  function handleBtnClick(index) {
+    generateDetail(index);
   }
 
   function filterResults() {
@@ -43,7 +47,7 @@ export default function App() {
     } else if (region && searchTerm) {
       let results = countriesEl.filter((country) => {
         return (
-          country.props.name.toLowerCase().includes(searchTerm) &&
+          country.props.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
           country.props.region === region
         );
       });
@@ -51,7 +55,9 @@ export default function App() {
       setFilteredCountries(results);
     } else if (searchTerm && !region) {
       let results = countriesEl.filter((country) => {
-        return country.props.name.toLowerCase().includes(searchTerm);
+        return country.props.name
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase());
       });
       !results.length && setFailedSearch(true);
       setFilteredCountries(results);
@@ -69,6 +75,30 @@ export default function App() {
     const population = formatNumber(country.population);
     const currencies = country.currencies.map((currency) => currency.name);
     const languages = country.languages.map((language) => language.name);
+    const bordersEl = [];
+
+    function bordersGenerator(borders) {
+      if (borders) {
+        borders.forEach((code) => {
+          countries.forEach((country, index) => {
+            if (country.alpha3Code === code) {
+              bordersEl.push(
+                <button
+                  key={index + 1}
+                  className="detail__border-btn"
+                  onClick={() => handleBtnClick(index)}
+                >
+                  {country.name}
+                </button>
+              );
+            }
+          });
+        });
+        return bordersEl;
+      }
+    }
+
+    bordersGenerator(country.borders);
 
     setSelectedCountry(
       <Detail
@@ -82,7 +112,10 @@ export default function App() {
         nativeName={country.nativeName}
         domain={country.topLevelDomain}
         currencies={currencies}
-        borders={country.borders}
+        borders={bordersEl}
+        closeDetail={() => {
+          setSelectedCountry();
+        }}
       />
     );
   }
@@ -112,43 +145,47 @@ export default function App() {
         </button>
       </header>
       <main className="main">
-        <div className="container">
-          <div className="main__search-container">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-            <input
-              className="main__search"
-              id="search-bar"
-              placeholder="Search for a country..."
-              onChange={(e) => {
-                handleSearch(e);
-              }}
-            />
-          </div>
-          <div className="main__filter-container">
-            <select
-              className="main__filter"
-              defaultValue=""
-              onChange={(e) => handleChange(e)}
-            >
-              <option value="">All Regions</option>
-              <option value="Africa">Africa</option>
-              <option value="Americas">Americas</option>
-              <option value="Asia">Asia</option>
-              <option value="Europe">Europe</option>
-              <option value="Oceania">Oceania</option>
-            </select>
-          </div>
-          {failedSearch ? (
-            <p className="main__error">
-              Your search returned no results. Please try again.
-            </p>
-          ) : (
-            <div className="main__countries">
-              {selectedCountry}
-              {filteredCountries.length ? filteredCountries : countriesEl}
+        {!selectedCountry ? (
+          <div className="container">
+            <div className="main__search-container">
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <input
+                className="main__search"
+                id="search-bar"
+                placeholder="Search for a country..."
+                onChange={(e) => {
+                  handleSearch(e);
+                }}
+                value={searchTerm}
+              />
             </div>
-          )}
-        </div>
+            <div className="main__filter-container">
+              <select
+                className="main__filter"
+                onChange={(e) => handleFilterChange(e)}
+                value={region}
+              >
+                <option value="">All Regions</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+              </select>
+            </div>
+            {failedSearch ? (
+              <p className="main__error">
+                Your search returned no results. Please try again.
+              </p>
+            ) : (
+              <div className="main__countries">
+                {filteredCountries.length ? filteredCountries : countriesEl}
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="container">{selectedCountry}</div>
+        )}
       </main>
     </div>
   );

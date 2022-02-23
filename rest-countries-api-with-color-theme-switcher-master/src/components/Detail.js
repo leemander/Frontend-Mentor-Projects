@@ -1,5 +1,6 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLeftLong } from "@fortawesome/free-solid-svg-icons";
 export default function Detail(props) {
   function listRenderer(arr) {
     return arr.length === 1
@@ -13,9 +14,13 @@ export default function Detail(props) {
 
   const languages = listRenderer(props.languages);
   const currencies = listRenderer(props.currencies);
+
   return (
-    <section>
-      <button className="detail__back">Back</button>
+    <section className="detail">
+      <button className="detail__back" onClick={props.closeDetail}>
+        <FontAwesomeIcon icon={faLeftLong} />
+        Back
+      </button>
       <img src={props.flag} className="detail__flag" />
       <h2 className="detail__name">{props.name}</h2>
       <ul className="detail__facts">
@@ -52,8 +57,12 @@ export default function Detail(props) {
           <strong>Languages: </strong> {languages}
         </li>
       </ul>
-      <h3>Border Countries:</h3>
-      {props.borders}
+      {props.borders.length > 0 && (
+        <div>
+          <h3>Border Countries:</h3>
+          <div className="detail__borders-container">{props.borders}</div>
+        </div>
+      )}
     </section>
   );
 }
