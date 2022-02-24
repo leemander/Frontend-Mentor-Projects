@@ -114,6 +114,7 @@ export default function App() {
         currencies={currencies}
         borders={bordersEl}
         closeDetail={() => {
+          window.scroll(0, 0);
           setSelectedCountry();
         }}
       />

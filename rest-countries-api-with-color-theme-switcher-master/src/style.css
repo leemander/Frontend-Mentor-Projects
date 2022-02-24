@@ -237,13 +237,26 @@ h1 {
   }
 
   .main__country {
-    width: 100%;
-    margin: 0;
+    width: min(100%, 626px);
+    margin: 0 auto;
   }
 
   .country__info {
     margin-block: auto;
     padding: 0 2em;
+  }
+
+  .detail .flex {
+    align-items: flex-start;
+    gap: 8em;
+  }
+
+  .detail__flag {
+    max-height: unset;
+  }
+
+  .detail__info {
+    width: 100%;
   }
 }
 

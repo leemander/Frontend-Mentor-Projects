@@ -15,10 +15,12 @@ export default function Country(props) {
             <strong>Region: </strong>
             {props.region}
           </li>
-          <li>
-            <strong>Capital: </strong>
-            {props.capital}
-          </li>
+          {props.capital && (
+            <li>
+              <strong>Capital: </strong>
+              {props.capital}
+            </li>
+          )}
         </ul>
       </div>
     </button>
