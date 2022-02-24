@@ -246,7 +246,21 @@ h1 {
     padding: 0 2em;
   }
 
-  .detail .flex {
+  .detail__flag {
+    max-height: unset;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --fs-home: 0.9rem;
+    --fs-details: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .desktop-flex {
+    display: flex;
     align-items: flex-start;
     gap: 8em;
   }
@@ -258,11 +272,8 @@ h1 {
   .detail__info {
     width: 100%;
   }
-}
 
-@media (min-width: 700px) {
-  :root {
-    --fs-home: 0.9rem;
-    --fs-details: 1rem;
+  .detail__name {
+    margin: 0;
   }
 }

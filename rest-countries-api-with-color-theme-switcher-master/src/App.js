@@ -73,8 +73,12 @@ export default function App() {
   function generateDetail(index) {
     const country = countries[index];
     const population = formatNumber(country.population);
-    const currencies = country.currencies.map((currency) => currency.name);
-    const languages = country.languages.map((language) => language.name);
+    const currencies = country.cuurencies
+      ? country.currencies.map((currency) => currency.name)
+      : [];
+    const languages = country.languages
+      ? country.languages.map((language) => language.name)
+      : [];
     const bordersEl = [];
 
     function bordersGenerator(borders) {

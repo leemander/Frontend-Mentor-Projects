@@ -21,7 +21,7 @@ export default function Detail(props) {
         <FontAwesomeIcon icon={faLeftLong} />
         Back
       </button>
-      <div className="flex">
+      <div className="desktop-flex">
         <div className="detail__flag-container">
           <img src={props.flag} className="detail__flag" />
         </div>
@@ -45,19 +45,23 @@ export default function Detail(props) {
                 <strong>Subregion: </strong>
                 {props.subregion}
               </li>
-              <li>
-                <strong>Capital: </strong>
-                {props.capital}
-              </li>
+              {props.capital && (
+                <li>
+                  <strong>Capital: </strong>
+                  {props.capital}
+                </li>
+              )}
             </ul>
             <ul className="detail__facts">
               <li>
                 <strong>Top Level Domain: </strong>
                 {props.domain}
               </li>
-              <li>
-                <strong>Currencies: </strong> {currencies}
-              </li>
+              {props.currencies.length > 0 && (
+                <li>
+                  <strong>Currencies: </strong> {currencies}
+                </li>
+              )}
               <li>
                 <strong>Languages: </strong> {languages}
               </li>
