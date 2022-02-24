@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Country(props) {
   return (
-    <article className="main__country" onClick={props.onClick}>
+    <button className="main__country" onClick={props.onClick}>
       <img className="country__flag" src={props.flag} />
       <div className="country__info">
         <h2 className="country__name">{props.name}</h2>
@@ -21,6 +21,6 @@ export default function Country(props) {
           </li>
         </ul>
       </div>
-    </article>
+    </button>
   );
 }

@@ -118,6 +118,8 @@ export default function App() {
         }}
       />
     );
+
+    window.scroll(0, 0);
   }
 
   const countriesEl = countries.map((country, index) => {
@@ -138,40 +140,44 @@ export default function App() {
   return (
     <div>
       <header className="header">
-        <h1>Where in the world?</h1>
-        <button className="header__dark-mode-toggle">
-          <FontAwesomeIcon icon={faMoon} />
-          Dark Mode
-        </button>
+        <div className="container">
+          <h1>Where in the world?</h1>
+          <button className="header__dark-mode-toggle">
+            <FontAwesomeIcon icon={faMoon} />
+            Dark Mode
+          </button>
+        </div>
       </header>
       <main className="main">
         {!selectedCountry ? (
           <div className="container">
-            <div className="main__search-container">
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
-              <input
-                className="main__search"
-                id="search-bar"
-                placeholder="Search for a country..."
-                onChange={(e) => {
-                  handleSearch(e);
-                }}
-                value={searchTerm}
-              />
-            </div>
-            <div className="main__filter-container">
-              <select
-                className="main__filter"
-                onChange={(e) => handleFilterChange(e)}
-                value={region}
-              >
-                <option value="">All Regions</option>
-                <option value="Africa">Africa</option>
-                <option value="Americas">Americas</option>
-                <option value="Asia">Asia</option>
-                <option value="Europe">Europe</option>
-                <option value="Oceania">Oceania</option>
-              </select>
+            <div className="flex">
+              <div className="main__search-container">
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                <input
+                  className="main__search"
+                  id="search-bar"
+                  placeholder="Search for a country..."
+                  onChange={(e) => {
+                    handleSearch(e);
+                  }}
+                  value={searchTerm}
+                />
+              </div>
+              <div className="main__filter-container">
+                <select
+                  className="main__filter"
+                  onChange={(e) => handleFilterChange(e)}
+                  value={region}
+                >
+                  <option value="">All Regions</option>
+                  <option value="Africa">Africa</option>
+                  <option value="Americas">Americas</option>
+                  <option value="Asia">Asia</option>
+                  <option value="Europe">Europe</option>
+                  <option value="Oceania">Oceania</option>
+                </select>
+              </div>
             </div>
             {failedSearch ? (
               <p className="main__error">
