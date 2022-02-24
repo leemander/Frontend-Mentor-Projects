@@ -51,10 +51,18 @@ img {
   margin: 0 auto;
 }
 
+.dark {
+  color: var(--clr-dm-tx);
+}
+
 .header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 1em;
   padding: 1.5em 0;
+}
+
+.dark .header {
+  background-color: var(--clr-dm-bg);
 }
 
 .header > .container {
@@ -70,6 +78,7 @@ h1 {
 .header__dark-mode-toggle {
   background-color: transparent;
   border: 0;
+  color: inherit;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -77,6 +86,10 @@ h1 {
 
 .main {
   --radius: 5px;
+}
+
+.dark .main {
+  background-color: var(--clr-dm-bg);
 }
 
 .main__search-container,
@@ -96,9 +109,24 @@ h1 {
   width: 100%;
 }
 
+.dark .main__search-container {
+  background-color: var(--clr-dm-el);
+  color: #fff;
+}
+
 .main__search {
   width: 100%;
   border: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+.dark .main__search::placeholder {
+  color: var(--clr-dm-tx);
+}
+
+.dark .main__search::-ms-input-placeholder {
+  color: var(--clr-dm-tx);
 }
 
 .main__filter-container {
@@ -108,10 +136,20 @@ h1 {
   padding: 0 1em;
 }
 
+.dark .main__filter-container {
+  background-color: var(--clr-dm-el);
+}
+
 .main__filter {
+  background-color: transparent;
   border: 0;
-  width: 100%;
+  color: inherit;
   padding-block: 1em;
+  width: 100%;
+}
+
+.dark .main__filter > option {
+  background-color: var(--clr-dm-bg);
 }
 
 .main__error {
@@ -130,6 +168,11 @@ h1 {
   padding: 0;
   text-align: left;
   width: min(80%, 300px);
+}
+
+.dark .main__country {
+  background-color: var(--clr-dm-el);
+  color: #fff;
 }
 
 .country__flag {
@@ -160,9 +203,14 @@ h1 {
 }
 
 .detail button {
-  border: 0;
   background-color: #fff;
+  border: 0;
+  color: inherit;
   padding: 0.25em 2em;
+}
+
+.dark .detail button {
+  background-color: var(--clr-dm-el);
 }
 
 .detail__back {

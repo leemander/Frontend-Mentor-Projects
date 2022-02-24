@@ -13,6 +13,11 @@ export default function App() {
   const [searchTerm, setSearchTerm] = React.useState("");
   const [failedSearch, setFailedSearch] = React.useState(false);
   const [selectedCountry, setSelectedCountry] = React.useState();
+  const [darkMode, setDarkMode] = React.useState(false);
+
+  darkMode
+    ? (document.body.style.backgroundColor = "hsl(207, 26%, 17%)")
+    : (document.body.style.backgroundColor = "hsl(0, 0%, 98%)");
 
   React.useEffect(async () => {
     const results = await fetch("https://restcountries.com/v2/all");
@@ -143,13 +148,22 @@ export default function App() {
   });
 
   return (
-    <div>
+    <div className={darkMode ? "dark" : undefined}>
       <header className="header">
         <div className="container">
           <h1>Where in the world?</h1>
-          <button className="header__dark-mode-toggle">
-            <FontAwesomeIcon icon={faMoon} />
-            Dark Mode
+          <button
+            className="header__dark-mode-toggle"
+            onClick={() => {
+              setDarkMode((oldSetting) => !oldSetting);
+            }}
+          >
+            {!darkMode ? (
+              <FontAwesomeIcon icon={faMoon} />
+            ) : (
+              <FontAwesomeIcon icon={faSun} />
+            )}
+            {!darkMode ? "Dark Mode" : "Light Mode"}
           </button>
         </div>
       </header>
