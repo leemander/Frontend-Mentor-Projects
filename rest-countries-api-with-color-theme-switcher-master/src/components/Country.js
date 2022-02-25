@@ -3,7 +3,11 @@ import React from "react";
 export default function Country(props) {
   return (
     <button className="main__country" onClick={props.onClick}>
-      <img className="country__flag" src={props.flag} />
+      <img
+        className="country__flag"
+        src={props.flag}
+        alt={`Flag of ${props.name}`}
+      />
       <div className="country__info">
         <h2 className="country__name">{props.name}</h2>
         <ul className="country__facts">

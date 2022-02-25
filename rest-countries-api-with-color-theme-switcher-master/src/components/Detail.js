@@ -23,7 +23,11 @@ export default function Detail(props) {
       </button>
       <div className="desktop-flex">
         <div className="detail__flag-container">
-          <img src={props.flag} className="detail__flag" />
+          <img
+            src={props.flag}
+            className="detail__flag"
+            alt={`Flag of ${props.name}`}
+          />
         </div>
         <div className="detail__info">
           <h2 className="detail__name">{props.name}</h2>
