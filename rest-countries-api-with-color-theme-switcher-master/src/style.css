@@ -32,14 +32,27 @@ body {
   margin: 0;
 }
 
-input,
-select {
+input:focus-visible,
+select:focus-visible {
+  outline: 0;
+}
+
+input {
   font: inherit;
 }
 
-button {
+button,
+select {
   font: inherit;
   cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid black;
+}
+
+.dark button:focus-visible {
+  outline: 2px solid #fff;
 }
 
 img {
@@ -84,6 +97,11 @@ h1 {
   gap: 0.5rem;
 }
 
+.header__dark-mode-toggle:hover,
+.header__dark-mode-toggle:focus-visible {
+  text-decoration: underline;
+}
+
 .main {
   --radius: 5px;
 }
@@ -121,6 +139,14 @@ h1 {
   color: inherit;
 }
 
+.main__search:focus-visible {
+  outline: 2px solid black;
+}
+
+.dark .main__search:focus-visible {
+  outline: 2px solid #fff;
+}
+
 .dark .main__search::placeholder {
   color: var(--clr-dm-tx);
 }
@@ -148,6 +174,14 @@ h1 {
   width: 100%;
 }
 
+.main__filter:focus-visible {
+  outline: 2px solid black;
+}
+
+.dark .main__filter:focus-visible {
+  outline: 2px solid #fff;
+}
+
 .dark .main__filter > option {
   background-color: var(--clr-dm-bg);
 }
@@ -170,9 +204,17 @@ h1 {
   width: min(80%, 300px);
 }
 
+.main__country:focus-visible {
+  outline: 5px solid black;
+}
+
 .dark .main__country {
   background-color: var(--clr-dm-el);
   color: #fff;
+}
+
+.dark .main__country:focus-visible {
+  outline: 5px solid #fff;
 }
 
 .country__flag {
