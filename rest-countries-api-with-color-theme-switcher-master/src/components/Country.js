@@ -5,7 +5,7 @@ export default function Country(props) {
     <section
       className="main__country"
       onClick={props.onClick}
-      aria-lavel="button"
+      aria-label="button"
       tabIndex={0}
     >
       <img
