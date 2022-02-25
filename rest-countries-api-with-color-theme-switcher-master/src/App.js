@@ -191,6 +191,7 @@ export default function App() {
                   className="main__filter"
                   onChange={(e) => handleFilterChange(e)}
                   value={region}
+                  aria-label="filter countries by region"
                 >
                   <option value="">All Regions</option>
                   <option value="Africa">Africa</option>

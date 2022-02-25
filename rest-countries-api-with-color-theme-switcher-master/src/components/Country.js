@@ -2,13 +2,18 @@ import React from "react";
 
 export default function Country(props) {
   return (
-    <button className="main__country" onClick={props.onClick}>
+    <section
+      className="main__country"
+      onClick={props.onClick}
+      aria-lavel="button"
+      tabIndex={0}
+    >
       <img
         className="country__flag"
         src={props.flag}
         alt={`Flag of ${props.name}`}
       />
-      <span className="country__info">
+      <div className="country__info">
         <h2 className="country__name">{props.name}</h2>
         <ul className="country__facts">
           <li>
@@ -26,7 +31,7 @@ export default function Country(props) {
             </li>
           )}
         </ul>
-      </span>
-    </button>
+      </div>
+    </section>
   );
 }
