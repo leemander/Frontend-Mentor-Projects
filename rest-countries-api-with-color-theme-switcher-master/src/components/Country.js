@@ -8,7 +8,7 @@ export default function Country(props) {
         src={props.flag}
         alt={`Flag of ${props.name}`}
       />
-      <div className="country__info">
+      <span className="country__info">
         <h2 className="country__name">{props.name}</h2>
         <ul className="country__facts">
           <li>
@@ -26,7 +26,7 @@ export default function Country(props) {
             </li>
           )}
         </ul>
-      </div>
+      </span>
     </button>
   );
 }
