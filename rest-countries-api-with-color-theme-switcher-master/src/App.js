@@ -19,10 +19,13 @@ export default function App() {
     ? (document.body.style.backgroundColor = "hsl(207, 26%, 17%)")
     : (document.body.style.backgroundColor = "hsl(0, 0%, 98%)");
 
-  React.useEffect(async () => {
-    const results = await fetch("https://restcountries.com/v2/all");
-    const data = await results.json();
-    setCountries(data);
+  React.useEffect(() => {
+    async function getCountries() {
+      const results = await fetch("https://restcountries.com/v2/all");
+      const data = await results.json();
+      setCountries(data);
+    }
+    getCountries();
   }, []);
 
   React.useEffect(() => {
