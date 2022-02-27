@@ -146,6 +146,11 @@ export default function App() {
         region={country.region}
         capital={country.capital}
         onClick={() => generateDetail(index)}
+        onKeyDown={(event) => {
+          if (event.keyCode === 32 || event.keyCode === 13) {
+            generateDetail(index);
+          }
+        }}
       />
     );
   });

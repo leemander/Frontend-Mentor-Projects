@@ -7,6 +7,7 @@ export default function Country(props) {
       onClick={props.onClick}
       aria-label="button"
       tabIndex={0}
+      onKeyDown={props.onKeyDown}
     >
       <img
         className="country__flag"
