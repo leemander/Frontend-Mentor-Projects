@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="./images/logo.svg"
+        alt="sneakers logo"
+        class="nav--desktop__logo"
+      />
+      <nav class="nav--desktop">
+        <a href="#" class="nav--desktop__link"> Collections </a>
+        <a href="#" class="nav--desktop__link"> Men </a>
+        <a href="#" class="nav--desktop__link"> Women </a>
+        <a href="#" class="nav--desktop__link">About</a>
+        <a href="#" class="nav--desktop__link">Contact</a>
+      </nav>
+      <section class="header__user-info">
+        <div class="user-info__cart-container">
+          <img src="./images/icon-cart.svg" alt="shopping cart" />
+        </div>
+        <img src="./images/image-avatar.png" alt="your avatar" />
+      </section>
+    </header>
+    <main class="main">
+      <section class="main__gallery">
+        <button class="gallery__button">
+          <span class="sr-only">previous image</span>
+          <img src="./images/icon-previous.svg" />
+        </button>
+        <button class="gallery__button">
+          <span class="sr-only">next image</span>
+          <img src="./images/icon-next.svg" />
+        </button>
+        <div class="gallery__thumbnails">
+          <img
+            class="gallery__thumbnail selected"
+            src="./images/image-product-1-thumbnail.jpg"
+          />
+          <img
+            class="gallery__thumbnail"
+            src="./images/image-product-2-thumbnail.jpg"
+          />
+          <img
+            class="gallery__thumbnail"
+            src="./images/image-product-3-thumbnail.jpg"
+          />
+          <img
+            class="gallery__thumbnail"
+            src="./images/image-product-4-thumbnail.jpg"
+          />
+        </div>
+      </section>
+      <section class="main__product">
+        <p class="product__company-name">Sneaker Company</p>
+        <h1 class="product__name">Fall Limited Edition Sneakers</h1>
+        <p class="product__description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <section class="product__pricing">
+          <span class="pricing__current">$125.00</span>
+          <span class="pricing__discount">50%</span>
+          <span class="pricing__normal">$250.00</span>
+        </section>
+        <section class="product__buy">
+          <button id="subtract" class="buy__button">
+            <span class="sr-only">minus</span>
+            <img src="/images/icon-minus.svg" alt="minus" />
+          </button>
+          <span id="amount" class="buy__amount">0</span>
+          <button id="add" class="buy__button">
+            <span class="sr-only">increase</span>
+            <img src="./images/icon-plus.svg" alt="plus" />
+          </button>
+          <button id="add-to-cart" class="buy__add-to-cart">
+            <img src="./images/icon-cart.svg" />
+            <span>Add to cart</span>
+          </button>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
