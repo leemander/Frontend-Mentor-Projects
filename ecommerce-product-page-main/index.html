@@ -14,24 +14,34 @@
   </head>
   <body>
     <header class="header">
-      <img
-        src="./images/logo.svg"
-        alt="sneakers logo"
-        class="nav--desktop__logo"
-      />
-      <nav class="nav--desktop">
-        <a href="#" class="nav--desktop__link">Collections</a>
-        <a href="#" class="nav--desktop__link">Men</a>
-        <a href="#" class="nav--desktop__link">Women</a>
-        <a href="#" class="nav--desktop__link">About</a>
-        <a href="#" class="nav--desktop__link">Contact</a>
-      </nav>
-      <section class="header__user-info">
-        <div class="user-info__cart-container">
-          <img src="./images/icon-cart.svg" alt="shopping cart" />
-        </div>
-        <img src="./images/image-avatar.png" alt="your avatar" />
-      </section>
+      <div class="container">
+        <button class="header__open-nav">
+          <span class="sr-only">open navigation menu</span>
+          <img src="./images/icon-menu.svg" alt="open navigation menu" />
+        </button>
+        <img
+          src="./images/logo.svg"
+          alt="sneakers logo"
+          class="nav--desktop__logo"
+        />
+        <nav class="nav--desktop desktop-only">
+          <a href="#" class="nav--desktop__link">Collections</a>
+          <a href="#" class="nav--desktop__link">Men</a>
+          <a href="#" class="nav--desktop__link">Women</a>
+          <a href="#" class="nav--desktop__link">About</a>
+          <a href="#" class="nav--desktop__link">Contact</a>
+        </nav>
+        <section class="header__user-info">
+          <button class="user-info__cart">
+            <img src="./images/icon-cart.svg" alt="shopping cart" />
+          </button>
+          <img
+            src="./images/image-avatar.png"
+            alt="your avatar"
+            class="user-info__avatar"
+          />
+        </section>
+      </div>
     </header>
     <main class="main">
       <section class="main__gallery">
@@ -43,7 +53,7 @@
           <span class="sr-only">next image</span>
           <img src="./images/icon-next.svg" />
         </button>
-        <div class="gallery__thumbnails">
+        <div class="gallery__thumbnails desktop-only">
           <img
             class="gallery__thumbnail selected"
             src="./images/image-product-1-thumbnail.jpg"
@@ -63,33 +73,37 @@
         </div>
       </section>
       <section class="main__product">
-        <p class="product__company-name">Sneaker Company</p>
-        <h1 class="product__name">Fall Limited Edition Sneakers</h1>
-        <p class="product__description">
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they’ll withstand everything
-          the weather can offer.
-        </p>
-        <section class="product__pricing">
-          <span class="pricing__current">$125.00</span>
-          <span class="pricing__discount">50%</span>
-          <span class="pricing__normal">$250.00</span>
-        </section>
-        <section class="product__buy">
-          <button id="subtract" class="buy__button">
-            <span class="sr-only">minus</span>
-            <img src="/images/icon-minus.svg" alt="minus" />
-          </button>
-          <span id="amount" class="buy__amount">0</span>
-          <button id="add" class="buy__button">
-            <span class="sr-only">increase</span>
-            <img src="./images/icon-plus.svg" alt="plus" />
-          </button>
-          <button id="add-to-cart" class="buy__add-to-cart">
-            <img src="./images/icon-cart.svg" />
-            <span>Add to cart</span>
-          </button>
-        </section>
+        <div class="container">
+          <p class="product__company-name">Sneaker Company</p>
+          <h1 class="product__name">Fall Limited Edition Sneakers</h1>
+          <p class="product__description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <section class="product__pricing">
+            <span class="pricing__current">$125.00</span>
+            <span class="pricing__discount">50%</span>
+            <span class="pricing__normal">$250.00</span>
+          </section>
+          <section class="product__buy">
+            <div class="buy__controls">
+              <button id="subtract" class="buy__button">
+                <span class="sr-only">minus</span>
+                <img src="/images/icon-minus.svg" alt="minus" />
+              </button>
+              <span id="amount" class="buy__amount">0</span>
+              <button id="add" class="buy__button">
+                <span class="sr-only">increase</span>
+                <img src="./images/icon-plus.svg" alt="plus" />
+              </button>
+            </div>
+            <button id="add-to-cart" class="buy__add-to-cart">
+              <img src="./images/icon-cart-btn.svg" />
+              <span>Add to cart</span>
+            </button>
+          </section>
+        </div>
       </section>
     </main>
 
