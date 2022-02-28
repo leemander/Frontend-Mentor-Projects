@@ -3,9 +3,17 @@
 :root {
   --clr-add-btn: hsl(26, 100%, 55%);
   --clr-selected-thumb: hsl(25, 100%, 94%);
+
   --clr-title: hsl(220, 13%, 13%);
   --clr-body: hsl(219, 9%, 45%);
   --clr-old-price: hsl(220, 14%, 75%);
   --clr-buy-container: hsl(223, 64%, 98%);
   --clr-body: #fff;
+
+  --ff-body: "Kumbh Sans", sans-serif;
+
+  --fs-body: 1rem;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
 }
