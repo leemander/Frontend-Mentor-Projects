@@ -234,6 +234,10 @@ img {
     margin-left: 2em;
   }
 
+  .user-info__avatar {
+    width: 50px;
+  }
+
   .header hr {
     width: 100%;
     flex: none;
@@ -245,7 +249,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10em;
-    padding: 3em;
+    padding: 4em 3em;
   }
 
   .main__gallery-container {
@@ -306,7 +310,7 @@ img {
   }
 
   .main__product {
-    margin: auto;
+    margin-top: 2em;
   }
 
   .product__company-name {
@@ -315,6 +319,10 @@ img {
 
   .product__name {
     font-size: calc(var(--fs-body) * 3);
+  }
+
+  .product__description {
+    margin-top: 2em;
   }
 
   .product__pricing {
@@ -326,7 +334,7 @@ img {
   }
 
   .product__buy {
-    margin-top: 2em;
+    margin-top: 3.5em;
     display: flex;
     gap: 1em;
   }
