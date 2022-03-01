@@ -41,39 +41,39 @@
             class="user-info__avatar"
           />
         </section>
+        <hr class="desktop-only" />
       </div>
     </header>
-    <main class="main">
-      <section class="main__gallery">
-        <button class="gallery__button">
-          <span class="sr-only">previous image</span>
-          <img src="./images/icon-previous.svg" />
-        </button>
-        <button class="gallery__button">
-          <span class="sr-only">next image</span>
-          <img src="./images/icon-next.svg" />
-        </button>
-        <div class="gallery__thumbnails desktop-only">
-          <img
-            class="gallery__thumbnail selected"
-            src="./images/image-product-1-thumbnail.jpg"
-          />
-          <img
-            class="gallery__thumbnail"
-            src="./images/image-product-2-thumbnail.jpg"
-          />
-          <img
-            class="gallery__thumbnail"
-            src="./images/image-product-3-thumbnail.jpg"
-          />
-          <img
-            class="gallery__thumbnail"
-            src="./images/image-product-4-thumbnail.jpg"
-          />
-        </div>
-      </section>
+    <main class="main desktop-container">
+      <div class="main__gallery-container">
+        <section class="main__gallery">
+          <button class="gallery__button">
+            <span class="sr-only">previous image</span>
+            <img src="./images/icon-previous.svg" />
+          </button>
+          <button class="gallery__button">
+            <span class="sr-only">next image</span>
+            <img src="./images/icon-next.svg" />
+          </button>
+        </section>
+        <section class="gallery__thumbnails desktop-only">
+          <button class="gallery__thumbnail selected" id="thumb-1">
+            <span class="sr-only">picture 1</span>
+          </button>
+          <button class="gallery__thumbnail" id="thumb-2">
+            <span class="sr-only">picture 2</span>
+          </button>
+          <button class="gallery__thumbnail" id="thumb-3">
+            <span class="sr-only">picture 3</span>
+          </button>
+          <button class="gallery__thumbnail" id="thumb-4">
+            <span class="sr-only">picture 4</span>
+          </button>
+        </section>
+      </div>
+
       <section class="main__product">
-        <div class="container">
+        <div class="container mobile-container">
           <p class="product__company-name">Sneaker Company</p>
           <h1 class="product__name">Fall Limited Edition Sneakers</h1>
           <p class="product__description">
