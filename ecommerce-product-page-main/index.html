@@ -15,7 +15,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <button class="header__open-nav">
+        <button class="header__open-nav" id="open-mobile-menu">
           <span class="sr-only">open navigation menu</span>
           <img src="./images/icon-menu.svg" alt="open navigation menu" />
         </button>
@@ -108,6 +108,20 @@
         </div>
       </section>
     </main>
+
+    <div class="lightbox-bg show" id="mobile-menu">
+      <aside class="nav--mobile">
+        <button class="nav--mobile__close" id="close-mobile-menu">
+          <span class="sr-only">close menu</span>
+          <img src="./images/icon-close.svg" alt="close menu" />
+        </button>
+        <a href="#" class="nav--mobile__link">Collections</a>
+        <a href="#" class="nav--mobile__link">Men</a>
+        <a href="#" class="nav--mobile__link">Women</a>
+        <a href="#" class="nav--mobile__link">About</a>
+        <a href="#" class="nav--mobile__link">Contact</a>
+      </aside>
+    </div>
 
     <script src="script.js"></script>
   </body>
