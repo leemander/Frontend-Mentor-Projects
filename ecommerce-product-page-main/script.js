@@ -8,3 +8,8 @@ function toggleMenu() {
 
 openMobileMenu.addEventListener("click", toggleMenu);
 closeMobileMenu.addEventListener("click", toggleMenu);
+mobileMenu.addEventListener("click", (event) => {
+  if (event.target === mobileMenu) {
+    toggleMenu();
+  }
+});
