@@ -32,7 +32,7 @@
           <a href="#" class="nav--desktop__link">Contact</a>
         </nav>
         <section class="header__user-info">
-          <button class="user-info__cart">
+          <button class="user-info__cart" id="cart-btn">
             <img src="./images/icon-cart.svg" alt="shopping cart" />
           </button>
           <button class="user-info__profile">
@@ -47,6 +47,10 @@
       </div>
     </header>
     <main class="main desktop-container">
+      <aside class="main__cart" id="cart">
+        <section class="cart__header"><h2>Cart</h2></section>
+        <section class="cart__main"><p>Your cart is empty.</p></section>
+      </aside>
       <div class="main__gallery-container">
         <section class="main__gallery">
           <button class="gallery__button">
