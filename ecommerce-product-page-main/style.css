@@ -136,17 +136,19 @@ img {
 .gallery__button {
   aspect-ratio: 1;
   background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25%;
   border-radius: 50%;
-  position: relative;
   width: 40px;
 }
 
-.gallery__button > img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
+#nxt-img-btn {
+  background-image: url(./images/icon-next.svg);
+}
+
+#prev-img-btn {
+  background-image: url(./images/icon-previous.svg);
 }
 
 .product__company-name {
@@ -210,6 +212,21 @@ img {
   justify-content: space-between;
   margin-top: 1em;
   padding: 1em;
+}
+
+.buy__button {
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  padding: 1em;
+}
+
+#add {
+  background-image: url(./images/icon-plus.svg);
+}
+
+#subtract {
+  background-image: url(./images/icon-minus.svg);
 }
 
 .buy__add-to-cart {

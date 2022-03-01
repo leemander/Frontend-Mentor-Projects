@@ -6,6 +6,10 @@ const cart = document.getElementById("cart");
 const currentImg = document.getElementById("gallery");
 const nextImg = document.getElementById("nxt-img-btn");
 const prevImg = document.getElementById("prev-img-btn");
+const subtractBtn = document.getElementById("subtract");
+const addBtn = document.getElementById("add");
+const amountEl = document.getElementById("amount");
+const addToCartBtn = document.getElementById("add-to-cart");
 
 function toggleAside(aside) {
   aside === "menu"
@@ -32,6 +36,13 @@ function changeImage(target) {
   currentImg.style.backgroundImage = `url(${images[imageIndex]})`;
 }
 
+let amount = 0;
+
+function changeAmount(target) {
+  target === addBtn ? amount++ : amount--;
+  amount < 0 ? (amount = 0) : (amountEl.innerText = amount);
+}
+
 openMobileMenu.addEventListener("click", () => toggleAside("menu"));
 closeMobileMenu.addEventListener("click", () => toggleAside("menu"));
 mobileMenu.addEventListener("click", (event) => {
@@ -39,6 +50,9 @@ mobileMenu.addEventListener("click", (event) => {
     toggleAside("menu");
   }
 });
+
 cartBtn.addEventListener("click", toggleAside);
 nextImg.addEventListener("click", (event) => changeImage(event.target));
 prevImg.addEventListener("click", (event) => changeImage(event.target));
+addBtn.addEventListener("click", (event) => changeAmount(event.target));
+subtractBtn.addEventListener("click", (event) => changeAmount(event.target));
