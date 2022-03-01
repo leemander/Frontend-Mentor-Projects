@@ -54,6 +54,9 @@ function deleteItem() {
 function addToBasket() {
   if (amount > 0) {
     amountInCart += amount;
+    if (document.querySelector(".cart__label")) {
+      document.querySelector(".cart__label").remove();
+    }
     const cartLabel = document.createElement("span");
     cartLabel.classList.add("cart__label");
     cartLabel.innerText = amountInCart;
