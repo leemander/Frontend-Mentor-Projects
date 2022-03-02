@@ -114,6 +114,7 @@ img {
 .main__cart {
   background-color: #fff;
   border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
   display: none;
   grid-template-rows: auto 1fr;
   left: 50%;
@@ -416,6 +417,13 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 8em;
     padding: 3em;
+  }
+
+  .main__cart {
+    left: unset;
+    top: 7.5%;
+    right: 2.5%;
+    transform: translate(0, 0);
   }
 
   .main__gallery-container {
