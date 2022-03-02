@@ -165,15 +165,19 @@ lightboxPrev.addEventListener("click", (event) => {
   lightboxMainImg.style.backgroundImage = changeImage(event.target);
 });
 lightboxThumb1.addEventListener("click", (event) => {
+  replaceSelected(event.target);
   lightboxMainImg.style.backgroundImage = changeImage(event.target);
 });
 lightboxThumb2.addEventListener("click", (event) => {
+  replaceSelected(event.target);
   lightboxMainImg.style.backgroundImage = changeImage(event.target);
 });
 lightboxThumb3.addEventListener("click", (event) => {
+  replaceSelected(event.target);
   lightboxMainImg.style.backgroundImage = changeImage(event.target);
 });
 lightboxThumb4.addEventListener("click", (event) => {
+  replaceSelected(event.target);
   lightboxMainImg.style.backgroundImage = changeImage(event.target);
 });
 
