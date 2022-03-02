@@ -668,6 +668,7 @@ img {
 
   .lightbox__thumbnail {
     width: 19%;
+    border-radius: 15px;
   }
 }
 

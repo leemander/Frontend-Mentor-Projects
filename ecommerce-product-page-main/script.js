@@ -17,17 +17,22 @@ const thumb2 = document.getElementById("thumb-2");
 const thumb3 = document.getElementById("thumb-3");
 const thumb4 = document.getElementById("thumb-4");
 
+//lightbox elements
+const lightbox = document.getElementById("lightbox");
+const lightboxClose = document.getElementById("lightbox-close");
+const lightboxMainImg = document.getElementById("lightbox-main-img");
+const lightboxPrev = document.getElementById("lightbox-prev");
+const lightboxNext = document.getElementById("lightbox-next");
+const lightboxThumb1 = document.getElementById("lightbox-thumb-1");
+const lightboxThumb2 = document.getElementById("lightbox-thumb-2");
+const lightboxThumb3 = document.getElementById("lightbox-thumb-3");
+const lightboxThumb4 = document.getElementById("lightbox-thumb-4");
+
 //buy controls element
 const subtractBtn = document.getElementById("subtract");
 const addBtn = document.getElementById("add");
 const amountEl = document.getElementById("amount");
 const addToCartBtn = document.getElementById("add-to-cart");
-
-function removeSelected() {
-  document
-    .querySelectorAll(".gallery__thumbnail")
-    .forEach((thumb) => thumb.classList.remove("selected"));
-}
 
 function toggleAside(aside) {
   aside === "menu"
@@ -35,39 +40,40 @@ function toggleAside(aside) {
     : cart.classList.toggle("open");
 }
 
+function replaceSelected(thumbnail) {
+  let thumbnailArr = [];
+  thumbnail.parentNode.classList.contains("gallery__thumbnails")
+    ? (thumbnailArr = document.querySelectorAll(".gallery__thumbnail"))
+    : (thumbnailArr = document.querySelectorAll(".lightbox__thumbnail"));
+  thumbnailArr.forEach((thumb) => thumb.classList.remove("selected"));
+  thumbnail.classList.add("selected");
+}
+
+const images = [
+  "./images/image-product-1.jpg",
+  "./images/image-product-2.jpg",
+  "./images/image-product-3.jpg",
+  "./images/image-product-4.jpg",
+];
+
 let imageIndex = 0;
 
 function changeImage(target) {
-  const images = [
-    "./images/image-product-1.jpg",
-    "./images/image-product-2.jpg",
-    "./images/image-product-3.jpg",
-    "./images/image-product-4.jpg",
-  ];
-
-  if (target === nextImg) {
+  if (target === nextImg || target === lightboxNext) {
     imageIndex < images.length - 1 ? imageIndex++ : (imageIndex = 0);
-  } else if (target === prevImg) {
+  } else if (target === prevImg || target === lightboxPrev) {
     imageIndex > 0 ? imageIndex-- : (imageIndex = 3);
-  } else if (target === thumb1) {
-    removeSelected();
-    thumb1.classList.add("selected");
+  } else if (target === thumb1 || target === lightboxThumb1) {
     imageIndex = 0;
-  } else if (target === thumb2) {
-    removeSelected();
-    thumb2.classList.add("selected");
+  } else if (target === thumb2 || target === lightboxThumb2) {
     imageIndex = 1;
-  } else if (target === thumb3) {
-    removeSelected();
-    thumb3.classList.add("selected");
+  } else if (target === thumb3 || target === lightboxThumb3) {
     imageIndex = 2;
-  } else if (target === thumb4) {
-    removeSelected();
-    thumb4.classList.add("selected");
+  } else if (target === thumb4 || target === lightboxThumb4) {
     imageIndex = 3;
   }
 
-  currentImg.style.backgroundImage = `url(${images[imageIndex]})`;
+  return `url(${images[imageIndex]})`;
 }
 
 let amount = 0;
@@ -120,12 +126,57 @@ mobileMenu.addEventListener("click", (event) => {
 });
 
 cartBtn.addEventListener("click", toggleAside);
-nextImg.addEventListener("click", (event) => changeImage(event.target));
-prevImg.addEventListener("click", (event) => changeImage(event.target));
+
+//main image gallery listeners
+nextImg.addEventListener("click", (event) => {
+  currentImg.style.backgroundImage = changeImage(event.target);
+});
+prevImg.addEventListener("click", (event) => {
+  currentImg.style.backgroundImage = changeImage(event.target);
+});
+thumb1.addEventListener("click", (event) => {
+  replaceSelected(event.target);
+  currentImg.style.backgroundImage = changeImage(event.target);
+});
+thumb2.addEventListener("click", (event) => {
+  replaceSelected(event.target);
+  currentImg.style.backgroundImage = changeImage(event.target);
+});
+thumb3.addEventListener("click", (event) => {
+  replaceSelected(event.target);
+  currentImg.style.backgroundImage = changeImage(event.target);
+});
+thumb4.addEventListener("click", (event) => {
+  replaceSelected(event.target);
+  currentImg.style.backgroundImage = changeImage(event.target);
+});
+
+//lightbox image gallery listeners
+currentImg.addEventListener("click", () => {
+  lightbox.classList.add("open");
+});
+lightboxClose.addEventListener("click", () => {
+  lightbox.classList.remove("open");
+});
+lightboxNext.addEventListener("click", (event) => {
+  lightboxMainImg.style.backgroundImage = changeImage(event.target);
+});
+lightboxPrev.addEventListener("click", (event) => {
+  lightboxMainImg.style.backgroundImage = changeImage(event.target);
+});
+lightboxThumb1.addEventListener("click", (event) => {
+  lightboxMainImg.style.backgroundImage = changeImage(event.target);
+});
+lightboxThumb2.addEventListener("click", (event) => {
+  lightboxMainImg.style.backgroundImage = changeImage(event.target);
+});
+lightboxThumb3.addEventListener("click", (event) => {
+  lightboxMainImg.style.backgroundImage = changeImage(event.target);
+});
+lightboxThumb4.addEventListener("click", (event) => {
+  lightboxMainImg.style.backgroundImage = changeImage(event.target);
+});
+
 addBtn.addEventListener("click", (event) => changeAmount(event.target));
 subtractBtn.addEventListener("click", (event) => changeAmount(event.target));
 addToCartBtn.addEventListener("click", addToBasket);
-thumb1.addEventListener("click", (event) => changeImage(event.target));
-thumb2.addEventListener("click", (event) => changeImage(event.target));
-thumb3.addEventListener("click", (event) => changeImage(event.target));
-thumb4.addEventListener("click", (event) => changeImage(event.target));
