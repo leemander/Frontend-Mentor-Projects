@@ -300,6 +300,11 @@ img {
   padding: 1em;
 }
 
+.buy__button:focus-visible,
+.buy__button:hover {
+  opacity: 0.5;
+}
+
 #add {
   background-image: url(./images/icon-plus.svg);
 }
@@ -312,6 +317,7 @@ img {
   align-items: center;
   background-color: var(--clr-add-btn);
   border-radius: 10px;
+  box-shadow: 0 5px 20px -5px var(--clr-add-btn);
   color: #fff;
   display: flex;
   font-weight: var(--fw-bold);
@@ -437,6 +443,7 @@ img {
   .user-info__profile:focus-visible {
     border-radius: 50%;
     border: 2px solid var(--clr-add-btn);
+    outline: 0;
   }
 
   .header hr {
@@ -470,6 +477,7 @@ img {
   .main__gallery {
     aspect-ratio: 1;
     border-radius: var(--radius);
+    cursor: pointer;
     max-width: 500px;
     width: 100%;
   }
@@ -486,10 +494,15 @@ img {
 
   .gallery__thumbnail {
     aspect-ratio: 1;
-    width: 21%;
+    background-size: cover;
     border-radius: var(--radius);
     margin-top: 2em;
-    background-size: cover;
+    position: relative;
+    width: 21%;
+  }
+
+  .gallery__thumbnail:focus-visible {
+    outline: 0;
   }
 
   .gallery__thumbnail.selected {
@@ -497,13 +510,23 @@ img {
     position: relative;
   }
 
-  .gallery__thumbnail.selected::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+  .gallery__thumbnail::before {
     background-color: var(--clr-selected-thumb);
-    opacity: 0.66;
     border-radius: var(--radius);
+    content: "";
+    display: none;
+    inset: 0;
+    opacity: 0.66;
+    position: absolute;
+  }
+
+  .gallery__thumbnail:hover::before,
+  .gallery__thumbnail:focus-visible::before {
+    display: block;
+  }
+
+  .gallery__thumbnail.selected::before {
+    display: block;
   }
 
   #thumb-1 {
@@ -560,6 +583,12 @@ img {
   .buy__add-to-cart {
     width: 60%;
     font-size: calc(var(--fs-body) * 1.1);
+  }
+
+  .buy__add-to-cart:hover,
+  .buy__add-to-cart:focus-visible {
+    opacity: 0.5;
+    outline: 0;
   }
 }
 
