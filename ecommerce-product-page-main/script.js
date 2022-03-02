@@ -32,7 +32,6 @@ function toggleAside(aside) {
 let imageIndex = 0;
 
 function changeImage(target) {
-  console.log(target);
   const images = [
     "./images/image-product-1.jpg",
     "./images/image-product-2.jpg",
