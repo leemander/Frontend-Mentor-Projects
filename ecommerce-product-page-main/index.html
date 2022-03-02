@@ -41,13 +41,19 @@
     <main class="main desktop-container">
       <aside class="main__cart" id="cart">
         <section class="cart__header"><h2>Cart</h2></section>
-        <section class="cart__main" id="cart-contents">
-          <p>Your cart is empty.</p>
+        <section class="cart__main">
+          <div id="cart-contents"></div>
+          <p id="cart-empty">Your cart is empty.</p>
         </section>
       </aside>
 
       <div class="main__gallery-container">
-        <section class="main__gallery" id="gallery" tabindex="0">
+        <section
+          class="main__gallery"
+          id="gallery"
+          tabindex="0"
+          aria-label="enlarge image"
+        >
           <button class="gallery__button" id="prev-img-btn">
             <span class="sr-only">previous image</span>
           </button>

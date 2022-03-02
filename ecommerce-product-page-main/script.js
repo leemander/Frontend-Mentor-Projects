@@ -7,6 +7,7 @@ const cartBtn = document.getElementById("cart-btn");
 //cart elements
 const cart = document.getElementById("cart");
 const cartContents = document.getElementById("cart-contents");
+const cartEmpty = document.getElementById("cart-empty");
 
 //image gallery elements
 const currentImg = document.getElementById("gallery");
@@ -86,7 +87,8 @@ function changeAmount(target) {
 
 function deleteItem() {
   amountInCart = 0;
-  cartContents.innerHTML = `<p>Your cart is empty.</p>`;
+  cartContents.style.display = "none";
+  cartEmpty.style.display = "block";
   document.querySelector(".cart__label").remove();
 }
 
@@ -100,6 +102,9 @@ function addToBasket() {
     cartLabel.classList.add("cart__label");
     cartLabel.innerText = amountInCart;
     cartBtn.appendChild(cartLabel);
+
+    cartEmpty.style.display = "none";
+    cartContents.style.display = "block";
 
     cartContents.innerHTML = `
         <div class="cart__contents">
@@ -117,6 +122,7 @@ function addToBasket() {
   }
 }
 
+//mobile menu event listeners
 openMobileMenu.addEventListener("click", () => toggleAside("menu"));
 closeMobileMenu.addEventListener("click", () => toggleAside("menu"));
 mobileMenu.addEventListener("click", (event) => {
@@ -125,7 +131,16 @@ mobileMenu.addEventListener("click", (event) => {
   }
 });
 
+//cart event listeners
 cartBtn.addEventListener("click", toggleAside);
+document.addEventListener("click", (event) => {
+  //checks to see if the click target is contained within the cart element or another relevant element and if not closes the cart
+  if (!cart.contains(event.target) && !cartBtn.contains(event.target)) {
+    if (cart.classList.contains("open")) {
+      cart.classList.toggle("open");
+    }
+  }
+});
 
 //main image gallery listeners
 nextImg.addEventListener("click", (event) => {
@@ -153,7 +168,15 @@ thumb4.addEventListener("click", (event) => {
 
 //lightbox image gallery listeners
 currentImg.addEventListener("click", () => {
-  lightbox.classList.add("open");
+  if (window.screen.width > 1000) {
+    lightbox.classList.add("open");
+  }
+});
+currentImg.addEventListener("keydown", (event) => {
+  if (event.keyCode === 13 || event.keyCode === 32)
+    if (window.screen.width > 1000) {
+      lightbox.classList.add("open");
+    }
 });
 lightboxClose.addEventListener("click", () => {
   lightbox.classList.remove("open");
@@ -180,7 +203,13 @@ lightboxThumb4.addEventListener("click", (event) => {
   replaceSelected(event.target);
   lightboxMainImg.style.backgroundImage = changeImage(event.target);
 });
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    lightbox.classList.remove("open");
+  }
+});
 
+//buying controls listeners
 addBtn.addEventListener("click", (event) => changeAmount(event.target));
 subtractBtn.addEventListener("click", (event) => changeAmount(event.target));
 addToCartBtn.addEventListener("click", addToBasket);

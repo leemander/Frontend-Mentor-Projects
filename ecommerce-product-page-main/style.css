@@ -50,7 +50,8 @@ img {
 }
 
 .sr-only {
-  display: none;
+  position: absolute;
+  left: -1000%;
 }
 
 .desktop-only {
@@ -444,7 +445,7 @@ img {
   .user-info__profile {
     background-size: cover;
     width: 50px;
-    margin-left: 2em;
+    margin-left: 1.5em;
   }
 
   .user-info__profile:hover,
