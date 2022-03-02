@@ -107,8 +107,11 @@ img {
 .user-info__profile {
   aspect-ratio: 1;
   background-image: url(./images/image-avatar.png);
-  background-size: 100% 100%;
-  width: 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  border: 2px solid transparent;
+  border-radius: 50%;
 }
 
 .main__cart {
@@ -199,7 +202,8 @@ img {
   width: 100%;
 }
 
-.main__gallery {
+.main__gallery,
+.lightbox__main-img {
   align-items: center;
   background-image: url(/images/image-product-1.jpg);
   background-position: bottom 50% left 50%;
@@ -212,7 +216,8 @@ img {
   padding: 0 1em;
 }
 
-.gallery__button {
+.gallery__button,
+.lightbox__arrow {
   aspect-ratio: 1;
   background-color: #fff;
   background-position: center;
@@ -222,11 +227,13 @@ img {
   width: 40px;
 }
 
-#nxt-img-btn {
+#nxt-img-btn,
+#lightbox-next {
   background-image: url(./images/icon-next.svg);
 }
 
-#prev-img-btn {
+#prev-img-btn,
+#lightbox-prev {
   background-image: url(./images/icon-previous.svg);
 }
 
@@ -435,6 +442,7 @@ img {
   }
 
   .user-info__profile {
+    background-size: cover;
     width: 50px;
     margin-left: 2em;
   }
@@ -486,13 +494,15 @@ img {
     display: none;
   }
 
-  .gallery__thumbnails {
+  .gallery__thumbnails,
+  .lightbox__thumbnails {
     display: flex;
     justify-content: space-between;
     position: relative;
   }
 
-  .gallery__thumbnail {
+  .gallery__thumbnail,
+  .lightbox__thumbnail {
     aspect-ratio: 1;
     background-size: cover;
     border-radius: var(--radius);
@@ -501,16 +511,19 @@ img {
     width: 21%;
   }
 
-  .gallery__thumbnail:focus-visible {
+  .gallery__thumbnail:focus-visible,
+  .lightbox__thumbnail:focus-visible {
     outline: 0;
   }
 
-  .gallery__thumbnail.selected {
+  .gallery__thumbnail.selected,
+  .lightbox__thumbnail.selected {
     border: 4px solid var(--clr-add-btn);
     position: relative;
   }
 
-  .gallery__thumbnail::before {
+  .gallery__thumbnail::before,
+  .lightbox__thumbnail::before {
     background-color: var(--clr-selected-thumb);
     border-radius: var(--radius);
     content: "";
@@ -521,27 +534,34 @@ img {
   }
 
   .gallery__thumbnail:hover::before,
-  .gallery__thumbnail:focus-visible::before {
+  .gallery__thumbnail:focus-visible::before,
+  .lightbox__thumbnail:hover::before,
+  .lightbox__thumbnail:focus-visible::before {
     display: block;
   }
 
-  .gallery__thumbnail.selected::before {
+  .gallery__thumbnail.selected::before,
+  .lightbox__thumbnail.selected::before {
     display: block;
   }
 
-  #thumb-1 {
+  #thumb-1,
+  #lightbox-thumb-1 {
     background-image: url(./images/image-product-1-thumbnail.jpg);
   }
 
-  #thumb-2 {
+  #thumb-2,
+  #lightbox-thumb-2 {
     background-image: url(./images/image-product-2-thumbnail.jpg);
   }
 
-  #thumb-3 {
+  #thumb-3,
+  #lightbox-thumb-3 {
     background-image: url(./images/image-product-3-thumbnail.jpg);
   }
 
-  #thumb-4 {
+  #thumb-4,
+  #lightbox-thumb-4 {
     background-image: url(./images/image-product-4-thumbnail.jpg);
   }
 
@@ -550,11 +570,11 @@ img {
   }
 
   .product__company-name {
-    font-size: var(--fs-body);
+    font-size: calc(var(--fs-body) * 0.9);
   }
 
   .product__name {
-    font-size: calc(var(--fs-body) * 0.5);
+    font-size: calc(var(--fs-body) * 2);
   }
 
   .product__description {
@@ -589,6 +609,62 @@ img {
   .buy__add-to-cart:focus-visible {
     opacity: 0.5;
     outline: 0;
+  }
+
+  .lightbox {
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max(40%, 300px);
+  }
+
+  .lightbox__close {
+    align-self: flex-end;
+    aspect-ratio: 1;
+    background-image: url(./images/icon-close-lightbox.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    width: 20px;
+  }
+
+  .lightbox__main-img {
+    aspect-ratio: 1;
+    border-radius: 1em;
+    display: relative;
+    margin-top: 1em;
+    padding: 0;
+    width: 100%;
+  }
+
+  .lightbox__arrow {
+    width: 50px;
+  }
+
+  #lightbox-prev {
+    position: absolute;
+    left: -4.5%;
+  }
+
+  #lightbox-next {
+    position: absolute;
+    right: -4.5%;
+  }
+
+  .lightbox__thumbnails {
+    --radius: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 2em;
+  }
+
+  .lightbox__thumbnail {
+    width: 19%;
   }
 }
 
