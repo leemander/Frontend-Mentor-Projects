@@ -23,6 +23,12 @@ const addBtn = document.getElementById("add");
 const amountEl = document.getElementById("amount");
 const addToCartBtn = document.getElementById("add-to-cart");
 
+function removeSelected() {
+  document
+    .querySelectorAll(".gallery__thumbnail")
+    .forEach((thumb) => thumb.classList.remove("selected"));
+}
+
 function toggleAside(aside) {
   aside === "menu"
     ? mobileMenu.classList.toggle("open")
@@ -44,12 +50,20 @@ function changeImage(target) {
   } else if (target === prevImg) {
     imageIndex > 0 ? imageIndex-- : (imageIndex = 3);
   } else if (target === thumb1) {
+    removeSelected();
+    thumb1.classList.add("selected");
     imageIndex = 0;
   } else if (target === thumb2) {
+    removeSelected();
+    thumb2.classList.add("selected");
     imageIndex = 1;
   } else if (target === thumb3) {
+    removeSelected();
+    thumb3.classList.add("selected");
     imageIndex = 2;
   } else if (target === thumb4) {
+    removeSelected();
+    thumb4.classList.add("selected");
     imageIndex = 3;
   }
 

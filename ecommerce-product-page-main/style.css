@@ -505,8 +505,11 @@ img {
   .lightbox__thumbnail {
     aspect-ratio: 1;
     background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px solid #fff;
     border-radius: var(--radius);
     margin-top: 2em;
+    padding: 0;
     position: relative;
     width: 21%;
   }
@@ -525,7 +528,6 @@ img {
   .gallery__thumbnail::before,
   .lightbox__thumbnail::before {
     background-color: var(--clr-selected-thumb);
-    border-radius: var(--radius);
     content: "";
     display: none;
     inset: 0;
@@ -543,6 +545,7 @@ img {
   .gallery__thumbnail.selected::before,
   .lightbox__thumbnail.selected::before {
     display: block;
+    border-radius: calc(var(--radius) - 2px);
   }
 
   #thumb-1,
