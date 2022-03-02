@@ -1,12 +1,23 @@
+//menu elements
 const openMobileMenu = document.getElementById("open-mobile-menu");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeMobileMenu = document.getElementById("close-mobile-menu");
 const cartBtn = document.getElementById("cart-btn");
+
+//cart elements
 const cart = document.getElementById("cart");
 const cartContents = document.getElementById("cart-contents");
+
+//image gallery elements
 const currentImg = document.getElementById("gallery");
 const nextImg = document.getElementById("nxt-img-btn");
 const prevImg = document.getElementById("prev-img-btn");
+const thumb1 = document.getElementById("thumb-1");
+const thumb2 = document.getElementById("thumb-2");
+const thumb3 = document.getElementById("thumb-3");
+const thumb4 = document.getElementById("thumb-4");
+
+//buy controls element
 const subtractBtn = document.getElementById("subtract");
 const addBtn = document.getElementById("add");
 const amountEl = document.getElementById("amount");
@@ -21,6 +32,7 @@ function toggleAside(aside) {
 let imageIndex = 0;
 
 function changeImage(target) {
+  console.log(target);
   const images = [
     "./images/image-product-1.jpg",
     "./images/image-product-2.jpg",
@@ -32,6 +44,14 @@ function changeImage(target) {
     imageIndex < images.length - 1 ? imageIndex++ : (imageIndex = 0);
   } else if (target === prevImg) {
     imageIndex > 0 ? imageIndex-- : (imageIndex = 3);
+  } else if (target === thumb1) {
+    imageIndex = 0;
+  } else if (target === thumb2) {
+    imageIndex = 1;
+  } else if (target === thumb3) {
+    imageIndex = 2;
+  } else if (target === thumb4) {
+    imageIndex = 3;
   }
 
   currentImg.style.backgroundImage = `url(${images[imageIndex]})`;
@@ -92,3 +112,7 @@ prevImg.addEventListener("click", (event) => changeImage(event.target));
 addBtn.addEventListener("click", (event) => changeAmount(event.target));
 subtractBtn.addEventListener("click", (event) => changeAmount(event.target));
 addToCartBtn.addEventListener("click", addToBasket);
+thumb1.addEventListener("click", (event) => changeImage(event.target));
+thumb2.addEventListener("click", (event) => changeImage(event.target));
+thumb3.addEventListener("click", (event) => changeImage(event.target));
+thumb4.addEventListener("click", (event) => changeImage(event.target));
