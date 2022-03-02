@@ -51,7 +51,8 @@ img {
 
 .sr-only {
   position: absolute;
-  left: -1000%;
+  left: -10000%;
+  visibility: hidden;
 }
 
 .desktop-only {
