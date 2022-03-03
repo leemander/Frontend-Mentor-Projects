@@ -59,11 +59,19 @@ const images = [
 
 let imageIndex = 0;
 
+console.log(eval("lightboxThumb1"));
+
 function changeImage(target) {
   if (target === nextImg || target === lightboxNext) {
     imageIndex < images.length - 1 ? imageIndex++ : (imageIndex = 0);
+    if (target == lightboxNext) {
+      replaceSelected(eval(`lightboxThumb${imageIndex + 1}`));
+    }
   } else if (target === prevImg || target === lightboxPrev) {
     imageIndex > 0 ? imageIndex-- : (imageIndex = 3);
+    if (target == lightboxPrev) {
+      replaceSelected(eval(`lightboxThumb${imageIndex + 1}`));
+    }
   } else if (target === thumb1 || target === lightboxThumb1) {
     imageIndex = 0;
   } else if (target === thumb2 || target === lightboxThumb2) {
