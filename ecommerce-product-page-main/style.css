@@ -379,6 +379,17 @@ img {
   margin-top: 1em;
 }
 
+@media (min-width: 700px) {
+  .container {
+    width: min(95%, 600px);
+  }
+  .main__gallery {
+    height: min(100vh, 500px);
+    background-size: cover;
+    background-position: top 25% left 0;
+  }
+}
+
 @media (min-width: 1000px) {
   .container,
   .desktop-container {
