@@ -694,7 +694,14 @@ img {
 
   .lightbox__thumbnail {
     width: 19%;
+    border: 0;
     border-radius: 15px;
+    transform: scale(4px);
+  }
+
+  .lightbox__thumbnail.selected {
+    transform: unset;
+    border: 4px solid var(--clr-add-btn);
   }
 }
 
