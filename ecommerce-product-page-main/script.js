@@ -59,8 +59,6 @@ const images = [
 
 let imageIndex = 0;
 
-console.log(eval("lightboxThumb1"));
-
 function changeImage(target) {
   if (target === nextImg || target === lightboxNext) {
     imageIndex < images.length - 1 ? imageIndex++ : (imageIndex = 0);
@@ -130,6 +128,12 @@ function addToBasket() {
   }
 }
 
+function openLightbox() {
+  console.log(imageIndex);
+  lightboxMainImg.style.backgroundImage = `url(${images[imageIndex]})`;
+  replaceSelected(eval(`lightboxThumb${imageIndex + 1}`));
+}
+
 //mobile menu event listeners
 openMobileMenu.addEventListener("click", () => toggleAside("menu"));
 closeMobileMenu.addEventListener("click", () => toggleAside("menu"));
@@ -178,6 +182,7 @@ thumb4.addEventListener("click", (event) => {
 currentImg.addEventListener("click", () => {
   if (window.screen.width > 1000) {
     lightbox.classList.add("open");
+    openLightbox();
   }
 });
 currentImg.addEventListener("keydown", (event) => {
