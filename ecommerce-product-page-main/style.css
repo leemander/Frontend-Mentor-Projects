@@ -208,13 +208,13 @@ img {
 .lightbox__main-img {
   align-items: center;
   background-image: url(./images/image-product-1.jpg);
-  background-position: bottom 50% left 50%;
   background-size: cover;
+  background-position: top;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 600px;
-  min-height: 35vh;
+  height: max(35vh, 300px);
   padding: 0 1em;
 }
 
@@ -488,8 +488,13 @@ img {
     aspect-ratio: 1;
     border-radius: var(--radius);
     cursor: pointer;
+    height: unset;
     max-width: 500px;
+    min-height: 35vh;
     width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .gallery__button {
@@ -644,12 +649,15 @@ img {
 
   .lightbox__main-img {
     aspect-ratio: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     border-radius: 1em;
     display: relative;
+    height: unset;
     margin-top: 1em;
     padding: 2em;
     width: 100%;
-    border: 1px solid red;
   }
 
   .lightbox__arrow {
