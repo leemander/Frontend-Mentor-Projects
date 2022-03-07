@@ -81,7 +81,7 @@ img {
 .header__user-info {
   align-items: center;
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
   margin-left: auto;
 }
 
@@ -91,7 +91,7 @@ img {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
-  width: 20px;
+  width: 22.5px;
 }
 
 .cart__label {
@@ -114,6 +114,10 @@ img {
   width: 30px;
   border: 2px solid transparent;
   border-radius: 50%;
+}
+
+.main {
+  padding-bottom: 2em;
 }
 
 .main__cart {
@@ -278,7 +282,7 @@ img {
   background-color: var(--clr-selected-thumb);
   border-radius: 5px;
   color: var(--clr-add-btn);
-  padding: 0 5px;
+  padding: 2.5px 7px;
 }
 
 .pricing__normal {
