@@ -20,8 +20,8 @@ Users should be able to:
 
 # Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/ecommerce-product-page-main](GitHub)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/ecommerce-product-page-main/](GitHub Pages)
+- Solution URL: [GitHub](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/ecommerce-product-page-main)
+- Live Site URL: [GitHub Pages](https://crackerfactory64.github.io/Frontend-Mentor-Projects/ecommerce-product-page-main/)
 
 # Built with
 
