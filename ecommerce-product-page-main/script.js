@@ -91,13 +91,6 @@ function changeAmount(target) {
   amount < 0 ? (amount = 0) : (amountEl.innerText = amount);
 }
 
-function deleteItem() {
-  amountInCart = 0;
-  cartContents.style.display = "none";
-  cartEmpty.style.display = "block";
-  document.querySelector(".cart__label").remove();
-}
-
 function addToBasket() {
   if (amount > 0) {
     amountInCart += amount;
@@ -125,11 +118,29 @@ function addToBasket() {
         </div>
         <button class="cart__checkout" id="checkout-btn" onclick="location.reload()">Checkout</button>
     `;
+    amount = 0;
+    amountEl.innerText = amount;
   }
 }
 
+function deleteItem() {
+  amountInCart = 0;
+  cartContents.style.display = "none";
+  cartEmpty.style.display = "block";
+  document.querySelector(".cart__label").remove();
+}
+
 function openLightbox() {
-  console.log(imageIndex);
+  const selectedThumb = document.querySelector(".selected");
+  if (selectedThumb === thumb1) {
+    imageIndex = 0;
+  } else if (selectedThumb === thumb2) {
+    imageIndex = 1;
+  } else if (selectedThumb === thumb3) {
+    imageIndex = 2;
+  } else if (selectedThumb === thumb4) {
+    imageIndex = 3;
+  }
   lightboxMainImg.style.backgroundImage = `url(${images[imageIndex]})`;
   replaceSelected(eval(`lightboxThumb${imageIndex + 1}`));
 }

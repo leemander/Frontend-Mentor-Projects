@@ -706,11 +706,17 @@ img {
   .lightbox__thumbnail {
     width: 19%;
     border: 0;
-    border-radius: 15px;
-    transform: scale(4px);
+    box-shadow: 0 0 0 4px transparent;
+    border-radius: var(--radius);
+    transform: scale(96.066%);
+  }
+
+  .lightbox__thumbnail::before {
+    border-radius: var(--radius);
   }
 
   .lightbox__thumbnail.selected {
+    box-shadow: 0;
     transform: unset;
     border: 4px solid var(--clr-add-btn);
   }
