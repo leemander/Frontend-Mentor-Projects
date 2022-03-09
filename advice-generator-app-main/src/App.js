@@ -24,10 +24,11 @@ function App() {
         <img
           className="card__divider"
           src={window.innerWidth > 500 ? desktopDivider : mobileDivider}
+          alt=""
         />
         <button className="card__new" onClick={() => window.location.reload()}>
           <span className="sr-only">generate new advice</span>
-          <img src={diceIcon} alt="dice icon" />
+          <img src={diceIcon} alt="" />
         </button>
       </div>
     </main>
