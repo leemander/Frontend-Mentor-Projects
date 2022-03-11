@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Rock Paper Scissors</h1>
+        <img
+          src="./images/logo.svg"
+          class="header__logo"
+          alt="rock paper scissors"
+        />
+        <div class="header__score-container">
+          <p class="header__score-label">Score</p>
+          <p class="header__score" id="score">12</p>
+        </div>
+      </header>
+      <main class="game">
+        <button class="game__btn" id="paper" aria-label="select paper"></button>
+        <button
+          class="game__btn"
+          id="scissors"
+          aria-label="select scissors"
+        ></button>
+        <button class="game__btn" id="rock" aria-label="select rock"></button>
+      </main>
+      <footer class="footer">
+        <button class="footer__btn" id="rules-btn">Rules</button>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
