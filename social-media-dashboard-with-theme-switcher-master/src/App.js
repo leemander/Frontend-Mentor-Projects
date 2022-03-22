@@ -119,13 +119,26 @@ export default function App() {
   });
 
   return (
-    <main>
-      <h1>Social Media Tracker</h1>
-      <section className="main__totals">{totalsEl}</section>
-      <section className="main__dailies">
-        <h2>Overview - Today</h2>
-        <div className="dailies-container">{dailiesEl}</div>
-      </section>
-    </main>
+    <div className="container">
+      <header className="header">
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+        <hr></hr>
+        <div className="header__dark-mode-toggle-container">
+          <span>Dark Mode</span>
+          <button
+            className="header__dark-mode-toggle"
+            aria-label="toggle dark mode on and off"
+          ></button>
+        </div>
+      </header>
+      <main className="main">
+        <section className="main__totals">{totalsEl}</section>
+        <section className="main__dailies">
+          <h2>Overview - Today</h2>
+          <div className="dailies-container">{dailiesEl}</div>
+        </section>
+      </main>
+    </div>
   );
 }

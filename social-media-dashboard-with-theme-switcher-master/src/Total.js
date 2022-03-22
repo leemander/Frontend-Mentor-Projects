@@ -1,6 +1,12 @@
 import React from "react";
 
 export default function Total(props) {
+  function renderFollowers(figure) {
+    return figure.toString().length === 5
+      ? figure.toString()[0] + figure.toString()[1] + "k"
+      : figure;
+  }
+
   return (
     <article className="totals__total">
       <div className="row">
@@ -13,7 +19,7 @@ export default function Total(props) {
       </div>
       <div className="total__followers-container">
         <p>
-          <strong>{props.followers}</strong>
+          <strong>{renderFollowers(props.followers)}</strong>
         </p>
         <p className="spaced">followers</p>
       </div>
