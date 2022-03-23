@@ -49,7 +49,7 @@ img {
 
 .container {
   margin: 0 auto;
-  width: min(calc(100vw - 2em), 350px);
+  width: min(calc(100vw - 2em), 1300px);
 }
 
 .header {
@@ -57,13 +57,13 @@ img {
   padding: calc(var(--spacing) * 2) 0.1em;
 }
 
-.header > h1 {
+.header h1 {
   color: var(--clr-lt-title);
   font-size: calc(var(--fs-heading) * 1.75);
   font-weight: var(--fw-bold);
 }
 
-.header > p {
+.header p {
   color: var(--clr-lt-body);
   font-size: var(--fs-heading);
   font-weight: var(--fw-bold);
@@ -231,4 +231,36 @@ img {
 .daily__difference {
   grid-area: change;
   margin-left: auto;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --fs-heading: 1rem;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header > hr {
+    display: none;
+  }
+
+  .header__dark-mode-toggle-container {
+    margin-block: auto;
+    gap: var(--spacing);
+  }
+
+  .main__totals,
+  .dailies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: calc(var(--spacing) * 1.75);
+  }
+
+  .totals__wrapper:first-of-type {
+    margin-top: calc(var(--spacing) * 2);
+  }
 }

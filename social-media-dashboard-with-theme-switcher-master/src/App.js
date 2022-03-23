@@ -128,8 +128,10 @@ export default function App() {
   return (
     <div className="container">
       <header className="header">
-        <h1>Social Media Dashboard</h1>
-        <p>Total Followers: 23,004</p>
+        <div>
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
         <hr></hr>
         <div className="header__dark-mode-toggle-container">
           <span>Dark Mode</span>
