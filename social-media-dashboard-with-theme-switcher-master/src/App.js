@@ -92,13 +92,20 @@ export default function App() {
     },
   ];
 
+  function renderFollowers(figure) {
+    //formats 5 digit numbers to 'Xk'
+    return figure.toString().length === 5
+      ? figure.toString()[0] + figure.toString()[1] + "k"
+      : figure;
+  }
+
   const totalsEl = totals.map((total, index) => {
     return (
       <Total
         key={index}
         service={total.service}
         user={total.username}
-        followers={total.followers}
+        followers={renderFollowers(total.followers)}
         gain={total.gain}
         difference={total.difference}
       />
@@ -111,7 +118,7 @@ export default function App() {
         key={index}
         service={daily.service}
         metric={daily.metric}
-        amount={daily.amount}
+        amount={renderFollowers(daily.amount)}
         gain={daily.gain}
         difference={daily.difference}
       />
