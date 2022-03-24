@@ -92,6 +92,8 @@ export default function App() {
     },
   ];
 
+  const [darkMode, setDarkMode] = React.useState(false);
+
   function renderFollowers(figure) {
     //formats 5 digit numbers to 'Xk'
     return figure.toString().length === 5
@@ -125,29 +127,40 @@ export default function App() {
     );
   });
 
+  darkMode
+    ? document.body.classList.add("dark")
+    : document.body.classList.remove("dark");
+
   return (
-    <div className="container">
+    <>
       <header className="header">
-        <div>
-          <h1>Social Media Dashboard</h1>
-          <p>Total Followers: 23,004</p>
-        </div>
-        <hr></hr>
-        <div className="header__dark-mode-toggle-container">
-          <span>Dark Mode</span>
-          <button
-            className="header__dark-mode-toggle"
-            aria-label="toggle dark mode on and off"
-          ></button>
+        <div className="container">
+          <div>
+            <h1>Social Media Dashboard</h1>
+            <p>Total Followers: 23,004</p>
+          </div>
+          <hr></hr>
+          <div className="header__dark-mode-toggle-container">
+            <span>Dark Mode</span>
+            <button
+              className="header__dark-mode-toggle"
+              aria-label="toggle dark mode on and off"
+              onClick={() => {
+                setDarkMode((prev) => !prev);
+              }}
+            ></button>
+          </div>
         </div>
       </header>
-      <main className="main">
-        <section className="main__totals">{totalsEl}</section>
-        <section className="main__dailies">
-          <h2>Overview - Today</h2>
-          <div className="dailies-container">{dailiesEl}</div>
-        </section>
-      </main>
-    </div>
+      <div className="container">
+        <main className="main">
+          <section className="main__totals">{totalsEl}</section>
+          <section className="main__dailies">
+            <h2>Overview - Today</h2>
+            <div className="dailies-container">{dailiesEl}</div>
+          </section>
+        </main>
+      </div>
+    </>
   );
 }

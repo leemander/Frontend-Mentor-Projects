@@ -15,6 +15,17 @@
   --clr-lt-body: hsl(228, 12%, 44%);
   --clr-lt-title: hsl(230, 17%, 14%);
 
+  --clr-dk-toggle: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  --clr-dk-bg: hsl(230, 17%, 14%);
+  --clr-dk-header: hsl(232, 19%, 15%);
+  --clr-dk-card: hsl(228, 28%, 20%);
+  --clr-dk-body: hsl(228, 34%, 66%);
+  --clr-dk-title: hsl(0, 0%, 100%);
+
   --fw-reg: 400;
   --fw-bold: 700;
   --ff: "Inter", sans-serif;
@@ -39,6 +50,11 @@ body {
   font-weight: var(--fw-reg);
 }
 
+body.dark {
+  background-color: var(--clr-dk-bg);
+  color: var(--clr-dk-body);
+}
+
 button {
   cursor: pointer;
 }
@@ -55,6 +71,11 @@ img {
 .header {
   background-color: var(--clr-lt-header);
   padding: calc(var(--spacing) * 2) 0.1em;
+  min-height: 27vh;
+}
+
+.dark .header {
+  background-color: var(--clr-dk-header);
 }
 
 .header h1 {
@@ -63,14 +84,18 @@ img {
   font-weight: var(--fw-bold);
 }
 
+.dark .header h1 {
+  color: var(--clr-dk-title);
+}
+
 .header p {
-  color: var(--clr-lt-body);
+  color: inherit;
   font-size: var(--fs-heading);
   font-weight: var(--fw-bold);
   margin-block: calc(var(--spacing) * 0.5) var(--spacing);
 }
 
-.header > hr {
+.header hr {
   color: var(--clr-lt-body);
 }
 
@@ -95,17 +120,32 @@ img {
   padding: 0 4px;
 }
 
+.dark .header__dark-mode-toggle {
+  background: var(--clr-dk-toggle);
+}
+
 .header__dark-mode-toggle::after {
   aspect-ratio: 1;
   background-color: var(--clr-lt-bg);
   border-radius: 50%;
   content: "";
   display: block;
+  margin-left: auto;
   width: 45%;
+}
+
+.dark .header__dark-mode-toggle::after {
+  background-color: var(--clr-dk-bg);
+  margin-left: unset;
 }
 
 .main {
   padding-bottom: calc(var(--spacing) * 2);
+}
+
+.main__totals {
+  position: relative;
+  top: -5vh;
 }
 
 .totals__wrapper {
@@ -138,8 +178,12 @@ img {
   background-color: var(--clr-lt-card);
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-  text-align: center;
   padding: calc(var(--spacing) * 2) 0;
+  text-align: center;
+}
+
+.dark .totals__total {
+  background-color: var(--clr-dk-card);
 }
 
 .totals__total > .row {
@@ -170,12 +214,12 @@ img {
 
 .total__difference,
 .daily__difference {
-  color: var(--clr-down);
-  font-weight: var(--fw-bold);
-  display: flex;
-  justify-content: center;
   align-items: center;
+  color: var(--clr-down);
+  display: flex;
+  font-weight: var(--fw-bold);
   gap: calc(var(--spacing) * 0.5);
+  justify-content: center;
 }
 
 .total__difference {
@@ -188,25 +232,30 @@ img {
 }
 
 .main__dailies {
-  margin-top: calc(var(--spacing) * 3);
+  margin-top: var(--spacing);
 }
 
 .main__dailies > h2 {
-  margin-bottom: calc(var(--spacing));
   font-size: calc(var(--fs-heading) * 1.75);
+  margin-bottom: calc(var(--spacing));
 }
 
 .dailies__daily {
   background-color: var(--clr-lt-card);
-  margin-top: var(--spacing);
   border-radius: var(--radius);
-  padding: calc(var(--spacing) * 1.5);
+  color: inherit;
   display: grid;
   grid-template-areas:
     "metric logo"
     "amount change";
-  gap: calc(var(--spacing) * 1.5);
+  margin-top: var(--spacing);
+  padding: calc(var(--spacing) * 1.5);
   font-weight: var(--fw-bold);
+  gap: calc(var(--spacing) * 1.5);
+}
+
+.dark .dailies__daily {
+  background-color: var(--clr-dk-card);
 }
 
 .daily__metric {
@@ -221,16 +270,22 @@ img {
 }
 
 .daily__amount {
-  grid-area: amount;
-  margin-right: auto;
   font-size: calc(var(--fs-heading) * 2);
   font-weight: var(--fw-bold);
+  grid-area: amount;
   letter-spacing: unset;
+  margin-right: auto;
 }
 
 .daily__difference {
   grid-area: change;
   margin-left: auto;
+}
+
+.dark .total__followers-container strong,
+.dark .daily__amount,
+.dark h2 {
+  color: var(--clr-dk-title);
 }
 
 @media (min-width: 700px) {
@@ -239,28 +294,40 @@ img {
   }
 
   .header {
-    display: flex;
+    min-height: 30vh;
+  }
+
+  .header > .container {
     align-items: center;
+    display: flex;
     justify-content: space-between;
   }
 
-  .header > hr {
+  .header hr {
     display: none;
   }
 
   .header__dark-mode-toggle-container {
-    margin-block: auto;
     gap: var(--spacing);
+    margin-block: auto;
+  }
+
+  .main__totals {
+    top: -18vh;
   }
 
   .main__totals,
   .dailies-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: calc(var(--spacing) * 1.75);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   .totals__wrapper:first-of-type {
     margin-top: calc(var(--spacing) * 2);
+  }
+
+  .main__dailies {
+    margin-top: -7em;
   }
 }
