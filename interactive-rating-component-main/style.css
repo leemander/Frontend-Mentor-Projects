@@ -25,6 +25,10 @@
   margin: 0;
 }
 
+*:focus-visible {
+  outline: 0;
+}
+
 body {
   background-color: var(--clr-neutral-800);
   color: var(--clr-neutral-200);
@@ -52,7 +56,7 @@ button {
   width: min(calc(100vw - 2em), 400px);
 }
 
-.card__content--initial {
+.hide {
   display: none;
 }
 
@@ -90,15 +94,32 @@ button {
   color: inherit;
 }
 
+.card__rating-btn.selected {
+  background-color: var(--clr-neutral-300);
+  color: var(--clr-neutral-100);
+}
+
+.card__rating-btn:hover,
+.card__rating-btn:focus-visible {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+
 .card__submit {
   background-color: var(--clr-primary-400);
   border-radius: 10em;
   color: var(--clr-neutral-100);
-  margin-top: var(--space);
+  margin-top: 2em;
   letter-spacing: 2px;
   padding-block: 0.66em;
   text-transform: uppercase;
   width: 100%;
+}
+
+.card__submit:hover,
+.card__submit:focus-visible {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
 }
 
 .card__content--complete {
