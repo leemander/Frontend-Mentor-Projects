@@ -14,7 +14,7 @@
   </head>
   <body>
     <section class="card">
-      <div class="card__content--initial">
+      <div class="card__content--initial" id="initial">
         <div class="card__img-container">
           <img src="./images/icon-star.svg" alt="" class="card__img--star" />
         </div>
@@ -27,18 +27,20 @@
           <button class="card__rating-btn" id="rating-1">1</button>
           <button class="card__rating-btn" id="rating-2">2</button>
           <button class="card__rating-btn" id="rating-3">3</button>
-          <button class="card__rating-btn selected" id="rating-4">4</button>
+          <button class="card__rating-btn" id="rating-4">4</button>
           <button class="card__rating-btn" id="rating-5">5</button>
         </div>
         <button class="card__submit" id="submit">Submit</button>
       </div>
-      <div class="card__content--complete hide">
+      <div class="card__content--complete hide" id="complete">
         <img
           src="./images/illustration-thank-you.svg"
           alt=""
           class="card__img--thanks"
         />
-        <div class="card__accent"><span>You selected x out of 5</span></div>
+        <div class="card__accent">
+          <span id="selection">You selected x out of 5</span>
+        </div>
         <h2>Thank you!</h2>
         <p>
           We appreciate you taking the time to give a rating. If you ever need
