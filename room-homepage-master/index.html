@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Room homepage | Frontend Mentor</title>
+  </head>
+  <body>
+    <dialog class="mobile-menu">
+      <button
+        class="mobile-menu__close"
+        id="close"
+        aria-label="close mobile navigation menu"
+      >
+        <img src="./images/icon-close.svg" alt="" />
+      </button>
+      <nav class="mobile-menu__nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#">home</a></li>
+          <li><a class="nav__link" href="#">shop</a></li>
+          <li><a class="nav__link" href="#">about</a></li>
+          <li><a class="nav__link" href="#">contact</a></li>
+        </ul>
+      </nav>
+    </dialog>
+    <header class="header">
+      <button
+        class="header__hamburger"
+        id="open"
+        aria-label="open navigation menu"
+      >
+        <img src="./images/icon-hamburger.svg" alt="" />
+      </button>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#">home</a></li>
+          <li><a class="nav__link" href="#">shop</a></li>
+          <li><a class="nav__link" href="#">about</a></li>
+          <li><a class="nav__link" href="#">contact</a></li>
+        </ul>
+      </nav>
+      <img class="header__logo" src="./images/logo.svg" alt="room" />
+    </header>
+    <main class="main">
+      <section class="main__hero">
+        <article class="hero__slide--1 selected">
+          <div class="slide__img-container">
+            <button
+              class="slide__change-btn"
+              id="prev"
+              aria-label="previous slide"
+            >
+              <img src="./images/icon-angle-left.svg" alt="" />
+            </button>
+            <button class="slide__change-btn" id="next" aria-label="next slide">
+              <img src="./images/icon-angle-right.svg" alt="" />
+            </button>
+          </div>
+          <div class="slide__content">
+            <h2 class="slide__title">Discover innovative ways to decorate</h2>
+            <p class="slide__body">
+              We provide unmatched quality, comfort, and style for property
+              owners across the country. Our experts combine form and function
+              in bringing your vision to life. Create a room in your own style
+              with our collection and make your property a reflection of you and
+              what you love.
+            </p>
+            <a class="slide__cta" href="#">
+              Shop Now
+              <img src="./images/icon-arrow.svg" alt="" />
+            </a>
+          </div>
+        </article>
+        <article class="hero__slide--2">
+          <div class="slide__img-container">
+            <button
+              class="slide__change-btn"
+              id="prev"
+              aria-label="previous slide"
+            >
+              <img src="./images/icon-angle-left.svg" alt="" />
+            </button>
+            <button class="slide__change-btn" id="next" aria-label="next slide">
+              <img src="./images/icon-angle-right.svg" alt="" />
+            </button>
+          </div>
+          <div class="slide__content">
+            <h2 class="slide__title">We are available all across the globe</h2>
+            <p class="slide__body">
+              With stores all over the world, it's easy for you to find
+              furniture for your home or place of business. Locally, we’re in
+              most major cities throughout the country. Find the branch nearest
+              you using our store locator. Any questions? Don't hesitate to
+              contact us today.
+            </p>
+            <a class="slide__cta" href="#">
+              Shop Now
+              <img src="./images/icon-arrow.svg" alt="" />
+            </a>
+          </div>
+        </article>
+        <article class="hero__slide--3">
+          <div class="slide__img-container">
+            <button
+              class="slide__change-btn"
+              id="prev"
+              aria-label="previous slide"
+            >
+              <img src="./images/icon-angle-left.svg" alt="" />
+            </button>
+            <button class="slide__change-btn" id="next" aria-label="next slide">
+              <img src="./images/icon-angle-right.svg" alt="" />
+            </button>
+          </div>
+          <div class="slide__content">
+            <h2 class="slide__title">Manufactured with the best materials</h2>
+            <p class="slide__body">
+              Our modern furniture store provides a high level of quality. Our
+              company has invested in advanced technology to ensure that every
+              product is made as perfect and as consistent as possible. With
+              three decades of experience in this industry, we understand what
+              customers want for their home and office.
+            </p>
+            <a class="slide__cta" href="#">
+              Shop Now
+              <img src="./images/icon-arrow.svg" alt="" />
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <section class="main__about">
+        <img
+          class="about__img"
+          src="./images/image-about-dark.jpg"
+          alt="modern chairs and coffee table"
+        />
+        <article class="about__content">
+          <h3 class="about__title">About our furniture</h3>
+          <p class="about__body">
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </article>
+        <img
+          class="about__img"
+          src="./images/image-about-light.jpg"
+          alt="modern chair"
+        />
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
