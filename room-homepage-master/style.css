@@ -114,6 +114,10 @@ h3 {
   margin-inline: auto;
 }
 
+.hero__slide {
+  display: none;
+}
+
 .slide__img-container {
   min-height: 40vh;
   background-size: cover;
@@ -137,10 +141,6 @@ h3 {
 
 .slide__change-btn--prev {
   transform: translateX(-100%);
-}
-
-.hero__slide {
-  display: none;
 }
 
 .hero__slide.selected {
@@ -193,4 +193,23 @@ h3 {
   letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: var(--fw-boldest);
+}
+
+@media (min-width: 600px) {
+  .hero__slide--1 > .slide__img-container {
+    background-image: url(./images/desktop-image-hero-1.jpg);
+  }
+  .hero__slide--2 > .slide__img-container {
+    background-image: url(./images/desktop-image-hero-2.jpg);
+  }
+  .hero__slide--3 > .slide__img-container {
+    background-image: url(./images/desktop-image-hero-3.jpg);
+  }
+
+  .about__img {
+    width: 100%;
+    max-height: 40vh;
+    object-fit: cover;
+    object-position: top;
+  }
 }
