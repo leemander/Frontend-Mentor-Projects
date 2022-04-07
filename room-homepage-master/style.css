@@ -56,12 +56,16 @@ h3 {
 
 .container {
   margin-inline: auto;
-  width: min(calc(100vw - 2em), 320px);
+  width: min(calc(100vw - 4em), 1000px);
+}
+
+.mobile-menu::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .mobile-menu {
   border: 0;
-  width: 100%;
+  min-width: 100%;
   padding-block: 4em;
   z-index: 10;
 }
@@ -94,6 +98,7 @@ h3 {
   padding-block: 4em;
   position: absolute;
   width: 100%;
+  z-index: 10;
 }
 
 .header__nav {
@@ -114,7 +119,7 @@ h3 {
   background-size: cover;
   background-position: bottom;
   position: relative;
-  z-index: -10;
+  z-index: 0;
 }
 
 .slide__change-btn {
@@ -154,7 +159,7 @@ h3 {
 
 .slide__content,
 .about__content {
-  padding-block: 5em;
+  padding-block: 6em;
 }
 
 .slide__title {
@@ -166,18 +171,19 @@ h3 {
 .about__body {
   font-weight: var(--fw-bold);
   margin-top: 0.9em;
+  min-height: 12em;
 }
 
 .slide__cta {
   align-items: center;
   color: var(--clr-v-dark-grey);
   display: flex;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: var(--fw-bolder);
   gap: 2em;
   letter-spacing: 10px;
   line-height: 1;
-  margin-top: 4em;
+  margin-top: 2em;
   text-transform: uppercase;
 }
 
