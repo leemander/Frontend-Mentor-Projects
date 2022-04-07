@@ -20,7 +20,9 @@
 
 a,
 button {
+  border: 0;
   color: inherit;
+  cursor: pointer;
   font: inherit;
   text-decoration: none;
 }
@@ -32,7 +34,7 @@ img {
 
 body {
   background-color: var(--clr-white);
-  color: var(--clr-v-dark-grey);
+  color: var(--clr-dark-grey);
   font-family: "Spartan", Helvetica, sans-serif;
   font-size: 0.75rem;
   font-weight: var(--fw-bold);
@@ -42,6 +44,111 @@ body {
 h2,
 h3 {
   color: var(--clr-black);
-  font-size: 1.5rem;
+  font-size: 1.65rem;
+  font-weight: var(--fw-boldest);
+}
+
+.sr-only {
+  position: absolute;
+  top: -10000%;
+  visibility: hidden;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(calc(100vw - 2em), 320px);
+}
+
+.header {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  padding: 4em 2em;
+  position: absolute;
+  width: 100%;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__hamburger {
+  background-color: transparent;
+  position: absolute;
+}
+
+.header__logo {
+  margin-inline: auto;
+}
+
+.slide__img-container {
+  min-height: 40vh;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  z-index: -10;
+}
+
+.slide__change-btn {
+  background-color: var(--clr-black);
+  bottom: 0;
+  display: flex;
+  padding: 1.5em 2em;
+  position: absolute;
+  right: 0;
+}
+
+.slide__change-btn > img {
+  margin: auto;
+}
+
+.slide__change-btn--prev {
+  transform: translateX(-100%);
+}
+
+.hero__slide--1 > .slide__img-container {
+  background-image: url(./images/mobile-image-hero-1.jpg);
+}
+.hero__slide--2 > .slide__img-container {
+  background-image: url(./images/mobile-image-hero-2.jpg);
+}
+.hero__slide--3 > .slide__img-container {
+  background-image: url(./images/mobile-image-hero-3.jpg);
+}
+
+.slide__content,
+.about__content {
+  padding-block: 6em;
+}
+
+.slide__title {
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.slide__body,
+.about__body {
+  font-weight: var(--fw-bold);
+  margin-top: 0.9em;
+}
+
+.slide__cta {
+  align-items: center;
+  color: var(--clr-v-dark-grey);
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: var(--fw-bolder);
+  gap: 2em;
+  letter-spacing: 10px;
+  line-height: 1;
+  margin-top: 4em;
+  text-transform: uppercase;
+}
+
+.about__title {
+  color: var(--clr-black);
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
   font-weight: var(--fw-boldest);
 }

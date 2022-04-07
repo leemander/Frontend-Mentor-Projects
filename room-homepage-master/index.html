@@ -49,89 +49,104 @@
       <img class="header__logo" src="./images/logo.svg" alt="room" />
     </header>
     <main class="main">
+      <h1 class="sr-only">Room furniture</h1>
       <section class="main__hero">
-        <article class="hero__slide--1 selected">
+        <article class="hero__slide hero__slide--1 selected">
           <div class="slide__img-container">
             <button
-              class="slide__change-btn"
-              id="prev"
+              class="slide__change-btn slide__change-btn--prev"
               aria-label="previous slide"
             >
               <img src="./images/icon-angle-left.svg" alt="" />
             </button>
-            <button class="slide__change-btn" id="next" aria-label="next slide">
+            <button
+              class="slide__change-btn slide__change-btn--next"
+              aria-label="next slide"
+            >
               <img src="./images/icon-angle-right.svg" alt="" />
             </button>
           </div>
           <div class="slide__content">
-            <h2 class="slide__title">Discover innovative ways to decorate</h2>
-            <p class="slide__body">
-              We provide unmatched quality, comfort, and style for property
-              owners across the country. Our experts combine form and function
-              in bringing your vision to life. Create a room in your own style
-              with our collection and make your property a reflection of you and
-              what you love.
-            </p>
-            <a class="slide__cta" href="#">
-              Shop Now
-              <img src="./images/icon-arrow.svg" alt="" />
-            </a>
+            <div class="container">
+              <h2 class="slide__title">Discover innovative ways to decorate</h2>
+              <p class="slide__body">
+                We provide unmatched quality, comfort, and style for property
+                owners across the country. Our experts combine form and function
+                in bringing your vision to life. Create a room in your own style
+                with our collection and make your property a reflection of you
+                and what you love.
+              </p>
+              <a class="slide__cta" href="#">
+                Shop Now
+                <img src="./images/icon-arrow.svg" alt="" />
+              </a>
+            </div>
           </div>
         </article>
-        <article class="hero__slide--2">
+        <article class="hero__slide hero__slide--2">
           <div class="slide__img-container">
             <button
-              class="slide__change-btn"
-              id="prev"
+              class="slide__change-btn slide__change-btn--prev"
               aria-label="previous slide"
             >
               <img src="./images/icon-angle-left.svg" alt="" />
             </button>
-            <button class="slide__change-btn" id="next" aria-label="next slide">
+            <button
+              class="slide__change-btn slide__change-btn--next"
+              aria-label="next slide"
+            >
               <img src="./images/icon-angle-right.svg" alt="" />
             </button>
           </div>
           <div class="slide__content">
-            <h2 class="slide__title">We are available all across the globe</h2>
-            <p class="slide__body">
-              With stores all over the world, it's easy for you to find
-              furniture for your home or place of business. Locally, we’re in
-              most major cities throughout the country. Find the branch nearest
-              you using our store locator. Any questions? Don't hesitate to
-              contact us today.
-            </p>
-            <a class="slide__cta" href="#">
-              Shop Now
-              <img src="./images/icon-arrow.svg" alt="" />
-            </a>
+            <div class="container">
+              <h2 class="slide__title">
+                We are available all across the globe
+              </h2>
+              <p class="slide__body">
+                With stores all over the world, it's easy for you to find
+                furniture for your home or place of business. Locally, we’re in
+                most major cities throughout the country. Find the branch
+                nearest you using our store locator. Any questions? Don't
+                hesitate to contact us today.
+              </p>
+              <a class="slide__cta" href="#">
+                <span>Shop Now</span>
+                <img src="./images/icon-arrow.svg" alt="" />
+              </a>
+            </div>
           </div>
         </article>
-        <article class="hero__slide--3">
+        <article class="hero__slide hero__slide--3">
           <div class="slide__img-container">
             <button
-              class="slide__change-btn"
-              id="prev"
+              class="slide__change-btn slide__change-btn--prev"
               aria-label="previous slide"
             >
               <img src="./images/icon-angle-left.svg" alt="" />
             </button>
-            <button class="slide__change-btn" id="next" aria-label="next slide">
+            <button
+              class="slide__change-btn slide__change-btn--next"
+              aria-label="next slide"
+            >
               <img src="./images/icon-angle-right.svg" alt="" />
             </button>
           </div>
           <div class="slide__content">
-            <h2 class="slide__title">Manufactured with the best materials</h2>
-            <p class="slide__body">
-              Our modern furniture store provides a high level of quality. Our
-              company has invested in advanced technology to ensure that every
-              product is made as perfect and as consistent as possible. With
-              three decades of experience in this industry, we understand what
-              customers want for their home and office.
-            </p>
-            <a class="slide__cta" href="#">
-              Shop Now
-              <img src="./images/icon-arrow.svg" alt="" />
-            </a>
+            <div class="container">
+              <h2 class="slide__title">Manufactured with the best materials</h2>
+              <p class="slide__body">
+                Our modern furniture store provides a high level of quality. Our
+                company has invested in advanced technology to ensure that every
+                product is made as perfect and as consistent as possible. With
+                three decades of experience in this industry, we understand what
+                customers want for their home and office.
+              </p>
+              <a class="slide__cta" href="#">
+                Shop Now
+                <img src="./images/icon-arrow.svg" alt="" />
+              </a>
+            </div>
           </div>
         </article>
       </section>
@@ -143,15 +158,17 @@
           alt="modern chairs and coffee table"
         />
         <article class="about__content">
-          <h3 class="about__title">About our furniture</h3>
-          <p class="about__body">
-            Our multifunctional collection blends design and function to suit
-            your individual taste. Make each room unique, or pick a cohesive
-            theme that best express your interests and what inspires you. Find
-            the furniture pieces you need, from traditional to contemporary
-            styles or anything in between. Product specialists are available to
-            help you create your dream space.
-          </p>
+          <div class="container">
+            <h3 class="about__title">About our furniture</h3>
+            <p class="about__body">
+              Our multifunctional collection blends design and function to suit
+              your individual taste. Make each room unique, or pick a cohesive
+              theme that best express your interests and what inspires you. Find
+              the furniture pieces you need, from traditional to contemporary
+              styles or anything in between. Product specialists are available
+              to help you create your dream space.
+            </p>
+          </div>
         </article>
         <img
           class="about__img"
