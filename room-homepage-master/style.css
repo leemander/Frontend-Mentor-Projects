@@ -82,7 +82,7 @@ h3 {
 }
 
 .slide__img-container {
-  min-height: 40vh;
+  min-height: 45vh;
   background-size: cover;
   background-position: bottom;
   position: relative;
@@ -106,6 +106,14 @@ h3 {
   transform: translateX(-100%);
 }
 
+.hero__slide {
+  display: none;
+}
+
+.hero__slide.selected {
+  display: block;
+}
+
 .hero__slide--1 > .slide__img-container {
   background-image: url(./images/mobile-image-hero-1.jpg);
 }
@@ -118,7 +126,7 @@ h3 {
 
 .slide__content,
 .about__content {
-  padding-block: 6em;
+  padding-block: 5em;
 }
 
 .slide__title {
