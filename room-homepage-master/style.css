@@ -59,11 +59,39 @@ h3 {
   width: min(calc(100vw - 2em), 320px);
 }
 
+.mobile-menu {
+  border: 0;
+  width: 100%;
+  padding-block: 4em;
+  z-index: 10;
+}
+
+.mobile-menu > .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-menu__close {
+  background-color: transparent;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.mobile-menu__nav > .nav__list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  gap: 2.5em;
+  color: var(--clr-black);
+  font-weight: var(--fw-boldest);
+}
+
 .header {
   align-items: center;
   background-color: transparent;
   display: flex;
-  padding: 4em 2em;
+  padding-block: 4em;
   position: absolute;
   width: 100%;
 }
