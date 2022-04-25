@@ -88,7 +88,10 @@ a {
 
 .hero__img--mobile {
   margin: 0 auto;
-  width: min(100, 768px);
+  width: min(100%, 768px);
+  max-height: 100%;
+  object-position: center top;
+  object-fit: cover;
 }
 
 .hero__img--desktop {
@@ -121,7 +124,9 @@ a {
 
 .hero__logos-container {
   justify-content: space-between;
+  margin-inline: auto;
   margin-top: calc(var(--space) * 2);
+  max-width: 500px;
 }
 
 .hero__logos-container > img {
