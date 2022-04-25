@@ -6,7 +6,7 @@
   --clr-800: hsl(0, 0%, 8%);
 
   --fs-body: 1rem;
-  --fs-title: calc(var(--fs-body) * 2.19);
+  --fs-title: calc(var(--fs-body) * 2.2);
   --fw-reg: 500;
   --fw-bold: 700;
   --space: 1.5rem;
@@ -48,7 +48,7 @@ a {
 
 .container {
   margin: 0 auto;
-  width: min(calc(100vw - 2.5em), 1000px);
+  width: min(calc(100vw - 2em), 1000px);
 }
 
 .row {
