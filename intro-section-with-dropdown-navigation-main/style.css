@@ -81,6 +81,11 @@ a {
   width: 35px;
 }
 
+.main__hero {
+  display: grid;
+  grid-template-rows: 40vh 1fr;
+}
+
 .hero__img--mobile {
   margin: 0 auto;
   width: min(100, 768px);
@@ -91,7 +96,7 @@ a {
 }
 
 .hero__content {
-  margin-top: calc(var(--space) * 2);
+  margin-top: calc(var(--space) * 1);
   text-align: center;
 }
 
