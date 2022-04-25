@@ -78,6 +78,7 @@ a {
   background-size: contain;
   border: 0;
   height: 38px;
+  margin-right: calc(var(--space) * 0.5);
   width: 35px;
 }
 
