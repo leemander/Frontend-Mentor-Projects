@@ -91,7 +91,7 @@ a {
 }
 
 .hero__content {
-  margin-top: calc(var(--space) * 2.5);
+  margin-top: calc(var(--space) * 2);
   text-align: center;
 }
 
@@ -103,7 +103,7 @@ a {
 
 .hero__body {
   margin-inline: auto;
-  margin-top: calc(var(--space) * 1.5);
+  margin-top: var(--space);
   max-width: 500px;
 }
 
@@ -111,7 +111,7 @@ a {
   background-color: var(--clr-800);
   color: var(--clr-200);
   margin-inline: auto;
-  margin-top: calc(var(--space) * 1.5);
+  margin-top: var(--space);
 }
 
 .hero__logos-container {
