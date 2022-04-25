@@ -102,7 +102,9 @@ a {
 }
 
 .hero__body {
+  margin-inline: auto;
   margin-top: calc(var(--space) * 1.5);
+  max-width: 500px;
 }
 
 .hero__button {
