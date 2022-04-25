@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Intro section with dropdown navigation | Frontend Mentor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <img src="./images/logo.svg" alt="snap" class="header__logo" />
+        <button
+          class="header__hamburger"
+          aria-label="open navigation menu"
+          id="open-menu"
+        ></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="grid main__hero">
+        <img
+          src="./images/image-hero-mobile.png"
+          alt="young man working on a laptop"
+          class="hero__img--mobile"
+        />
+        <img
+          src="./images/image-hero-desktop.png"
+          alt="young man working on a laptop"
+          class="hero__img--desktop"
+        />
+        <article class="hero__content">
+          <div class="container">
+            <h1 class="hero__title">Make remote work</h1>
+            <p class="hero__body">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button class="button hero__button">Learn more</button>
+            <div class="row hero__logos-container">
+              <img src="./images/client-databiz.svg" alt="databiz" />
+              <img src="./images/client-audiophile.svg" alt="audiophile" />
+              <img src="./images/client-meet.svg" alt="meet" />
+              <img src="./images/client-maker.svg" alt="maker" />
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <dialog class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <button
+          class="mobile-menu__close-button"
+          aria-label="close navigation menu"
+          id="close-menu"
+        ></button>
+        <nav class="mobile-menu__nav">
+          <ul>
+            <li>
+              <button class="mobile__menu__expandable" id="features-btn">
+                Features
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  class="mobile-menu__arrow mobile-menu__arrow--down"
+                  alt="click to expand"
+                />
+                <img
+                  src="./images/icon-arrow-up.svg"
+                  class="mobile-menu__arrow mobile-menu__arrow--up"
+                  alt="click to collapse"
+                />
+              </button>
+            </li>
+            <ul
+              class="mobile-menu__sub-menu mobile-menu__features"
+              id="features"
+            >
+              <nav aria-label="features nav">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="./images/icon-todo.svg"
+                        class="features__icon"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="./images/icon-calendar.svg"
+                        class="features__icon"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="./images/icon-reminders.svg"
+                        class="features__icon"
+                        alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img
+                        src="./images/icon-planning.svg"
+                        class="features__icon"
+                        alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </nav>
+            </ul>
+            <li>
+              <button class="mobile__menu__expandable" id="comapny-btn">
+                Company
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  class="mobile-menu__arrow mobile-menu__arrow--down"
+                  alt="click to expand"
+                />
+                <img
+                  src="./images/icon-arrow-up.svg"
+                  class="mobile-menu__arrow mobile-menu__arrow--up"
+                  alt="click to collapse"
+                />
+              </button>
+            </li>
+            <ul class="mobile-menu__sub-menu mobile-menu__company" id="company">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+        </nav>
+      </div>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
