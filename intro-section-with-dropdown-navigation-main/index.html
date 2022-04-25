@@ -59,103 +59,96 @@
     </main>
 
     <dialog class="mobile-menu" id="mobile-menu">
-      <div class="container">
-        <button
-          class="mobile-menu__close-button"
-          aria-label="close navigation menu"
-          id="close-menu"
-        ></button>
-        <nav class="mobile-menu__nav">
-          <ul>
+      <button
+        class="mobile-menu__close-button"
+        aria-label="close navigation menu"
+        id="close-menu"
+      ></button>
+      <nav class="mobile-menu__nav">
+        <ul>
+          <li>
+            <button class="mobile-menu__expandable" id="features-btn">
+              Features
+              <img
+                src="./images/icon-arrow-down.svg"
+                class="mobile-menu__arrow mobile-menu__arrow--down"
+                alt="click to expand"
+              />
+              <img
+                src="./images/icon-arrow-up.svg"
+                class="mobile-menu__arrow mobile-menu__arrow--up"
+                alt="click to collapse"
+              />
+            </button>
+          </li>
+
+          <ul class="mobile-menu__sub-menu mobile-menu__features" id="features">
             <li>
-              <button class="mobile__menu__expandable" id="features-btn">
-                Features
-                <img
-                  src="./images/icon-arrow-down.svg"
-                  class="mobile-menu__arrow mobile-menu__arrow--down"
-                  alt="click to expand"
+              <a href="#"
+                ><img
+                  src="./images/icon-todo.svg"
+                  class="features__icon"
+                  alt=""
                 />
-                <img
-                  src="./images/icon-arrow-up.svg"
-                  class="mobile-menu__arrow mobile-menu__arrow--up"
-                  alt="click to collapse"
-                />
-              </button>
+                Todo List
+              </a>
             </li>
-            <ul
-              class="mobile-menu__sub-menu mobile-menu__features"
-              id="features"
-            >
-              <nav aria-label="features nav">
-                <ul>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./images/icon-todo.svg"
-                        class="features__icon"
-                        alt=""
-                      />
-                      Todo List
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./images/icon-calendar.svg"
-                        class="features__icon"
-                        alt=""
-                      />
-                      Calendar
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./images/icon-reminders.svg"
-                        class="features__icon"
-                        alt=""
-                      />
-                      Reminders
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./images/icon-planning.svg"
-                        class="features__icon"
-                        alt=""
-                      />
-                      Planning
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </ul>
             <li>
-              <button class="mobile__menu__expandable" id="comapny-btn">
-                Company
-                <img
-                  src="./images/icon-arrow-down.svg"
-                  class="mobile-menu__arrow mobile-menu__arrow--down"
-                  alt="click to expand"
+              <a href="#"
+                ><img
+                  src="./images/icon-calendar.svg"
+                  class="features__icon"
+                  alt=""
                 />
-                <img
-                  src="./images/icon-arrow-up.svg"
-                  class="mobile-menu__arrow mobile-menu__arrow--up"
-                  alt="click to collapse"
-                />
-              </button>
+                <span>Calendar</span>
+              </a>
             </li>
-            <ul class="mobile-menu__sub-menu mobile-menu__company" id="company">
-              <li><a href="#">History</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">About</a></li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-reminders.svg"
+                  class="features__icon"
+                  alt=""
+                />
+                Reminders
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-planning.svg"
+                  class="features__icon"
+                  alt=""
+                />
+                Planning
+              </a>
+            </li>
           </ul>
-        </nav>
-      </div>
+
+          <li>
+            <button class="mobile-menu__expandable" id="company-btn">
+              Company
+              <img
+                src="./images/icon-arrow-down.svg"
+                class="mobile-menu__arrow mobile-menu__arrow--down"
+                alt="click to expand"
+              />
+              <img
+                src="./images/icon-arrow-up.svg"
+                class="mobile-menu__arrow mobile-menu__arrow--up"
+                alt="click to collapse"
+              />
+            </button>
+          </li>
+          <ul class="mobile-menu__sub-menu mobile-menu__company" id="company">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
     </dialog>
     <script src="script.js"></script>
   </body>
