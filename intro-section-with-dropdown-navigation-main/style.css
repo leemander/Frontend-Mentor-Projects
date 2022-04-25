@@ -9,6 +9,7 @@
   --fs-title: calc(var(var(--fs-body) * 2));
   --fw-reg: 500;
   --fw-bold: 700;
+  --space: 1.5rem;
 }
 
 *,
@@ -43,4 +44,34 @@ a {
   color: inherit;
   font: inherit;
   text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: min(calc(100vw - 2em), 350px);
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  padding: var(--space);
+}
+
+.header__hamburger {
+  aspect-ratio: 1;
+  background-color: transparent;
+  background-image: url("./images/icon-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  width: 38px;
+}
+
+.hero__img--desktop {
+  display: none;
 }
