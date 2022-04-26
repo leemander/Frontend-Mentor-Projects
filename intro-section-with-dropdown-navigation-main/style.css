@@ -205,8 +205,12 @@ a {
   gap: calc(var(--space) * 0.8);
 }
 
-.mobile-menu__sub-menu li > a {
+.mobile-menu__sub-menu a {
   align-items: center;
   display: flex;
-  gap: calc(var(--space) * 0.5);
+  gap: 10px;
+}
+
+.mobile-menu__sub-menu img {
+  width: 18px;
 }
