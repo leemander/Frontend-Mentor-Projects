@@ -48,7 +48,7 @@ a {
 
 .container {
   margin: 0 auto;
-  width: min(calc(100vw - 2em), 1000px);
+  width: min(calc(100vw - 2em), 1350px);
 }
 
 .row {
