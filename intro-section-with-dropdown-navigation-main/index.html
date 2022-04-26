@@ -23,6 +23,97 @@
             aria-label="open navigation menu"
             id="open-menu"
           ></button>
+          <nav class="header__nav">
+            <ul>
+              <li>
+                <button class="menu__expandable" id="desktop-features-btn">
+                  Features
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    class="menu__arrow menu__arrow--down"
+                    alt="click to expand"
+                  />
+                  <img
+                    src="./images/icon-arrow-up.svg"
+                    class="menu__arrow menu__arrow--up"
+                    alt="click to collapse"
+                  />
+                </button>
+              </li>
+
+              <ul class="menu__sub-menu menu__features" id="desktop-features">
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/icon-todo.svg"
+                      class="features__icon"
+                      alt=""
+                    />
+                    <span>Todo List</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/icon-calendar.svg"
+                      class="features__icon"
+                      alt=""
+                    />
+                    <span>Calendar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/icon-reminders.svg"
+                      class="features__icon"
+                      alt=""
+                    />
+                    <span>Reminders</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./images/icon-planning.svg"
+                      class="features__icon"
+                      alt=""
+                    />
+                    <span>Planning</span>
+                  </a>
+                </li>
+              </ul>
+
+              <li>
+                <button class="menu__expandable" id="desktop-company-btn">
+                  Company
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    class="menu__arrow menu__arrow--down"
+                    alt="click to expand"
+                  />
+                  <img
+                    src="./images/icon-arrow-up.svg"
+                    class="menu__arrow menu__arrow--up"
+                    alt="click to collapse"
+                  />
+                </button>
+              </li>
+              <ul class="menu__sub-menu menu__company" id="desktop-company">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+          <nav class="header__user-controls">
+            <ul>
+              <li><a href="#">Login</a></li>
+              <li><a href="#" class="header__register">Register</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
@@ -67,22 +158,22 @@
       <nav class="mobile-menu__nav">
         <ul>
           <li>
-            <button class="mobile-menu__expandable" id="features-btn">
+            <button class="menu__expandable" id="features-btn">
               Features
               <img
                 src="./images/icon-arrow-down.svg"
-                class="mobile-menu__arrow mobile-menu__arrow--down"
+                class="menu__arrow menu__arrow--down"
                 alt="click to expand"
               />
               <img
                 src="./images/icon-arrow-up.svg"
-                class="mobile-menu__arrow mobile-menu__arrow--up"
+                class="menu__arrow menu__arrow--up"
                 alt="click to collapse"
               />
             </button>
           </li>
 
-          <ul class="mobile-menu__sub-menu mobile-menu__features" id="features">
+          <ul class="menu__sub-menu menu__features" id="features">
             <li>
               <a href="#"
                 ><img
@@ -126,21 +217,21 @@
           </ul>
 
           <li>
-            <button class="mobile-menu__expandable" id="company-btn">
+            <button class="menu__expandable" id="company-btn">
               Company
               <img
                 src="./images/icon-arrow-down.svg"
-                class="mobile-menu__arrow mobile-menu__arrow--down"
+                class="menu__arrow menu__arrow--down"
                 alt="click to expand"
               />
               <img
                 src="./images/icon-arrow-up.svg"
-                class="mobile-menu__arrow mobile-menu__arrow--up"
+                class="menu__arrow menu__arrow--up"
                 alt="click to collapse"
               />
             </button>
           </li>
-          <ul class="mobile-menu__sub-menu mobile-menu__company" id="company">
+          <ul class="menu__sub-menu menu__company" id="company">
             <li><a href="#">History</a></li>
             <li><a href="#">Our Team</a></li>
             <li><a href="#">Blog</a></li>
