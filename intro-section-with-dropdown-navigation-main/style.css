@@ -48,7 +48,7 @@ a {
 
 .container {
   margin: 0 auto;
-  width: min(calc(100vw - 2em), 1350px);
+  width: min(calc(100vw - 4em), 1500px);
 }
 
 .row {
@@ -80,6 +80,11 @@ a {
   height: 38px;
   margin-right: calc(var(--space) * 0.5);
   width: 35px;
+}
+
+.header__nav,
+.header__user-controls {
+  display: none;
 }
 
 .main__hero {
@@ -218,7 +223,7 @@ a {
 @media (min-width: 1000px) {
   :root {
     --fs-body: 1.125rem;
-    --fs-title: calc(var(--fs-body) * 3);
+    --fs-title: calc(var(--fs-body) * 4);
   }
 
   .header .row {
@@ -230,6 +235,7 @@ a {
   }
 
   .header__nav {
+    display: block;
     margin-left: calc(var(--space) * 3);
   }
 
@@ -243,6 +249,7 @@ a {
   }
 
   .header__user-controls {
+    display: block;
     margin-left: auto;
   }
 
@@ -269,5 +276,65 @@ a {
   .menu__company {
     top: calc(var(--space) * 1.5);
     right: calc(var(--space) * 7.4);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main__hero {
+    display: grid;
+    gap: calc(var(--space) * 5);
+    grid-template-columns: 1fr 45%;
+    grid-template-rows: unset;
+    margin-inline: auto;
+    margin-top: calc(var(--space) * 3);
+    max-height: 50vh;
+    width: calc(100% - var(--space) * 15);
+  }
+
+  .hero__img--mobile {
+    display: none;
+  }
+
+  .hero__img--desktop {
+    aspect-ratio: 1;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero__content {
+    order: -1;
+    text-align: start;
+    padding-top: calc(var(--space) * 3);
+  }
+
+  .hero__content > .container {
+    width: 100%;
+  }
+
+  .hero__body {
+    line-height: 1.7;
+    margin-inline: unset;
+    margin-top: calc(var(--space) * 2);
+    width: max(90%, 380px);
+  }
+
+  .hero__button {
+    border: 2px solid transparent;
+    margin-inline: unset;
+    margin-top: calc(var(--space) * 2);
+  }
+
+  .hero__button:hover,
+  .hero__button:focus-visible {
+    background-color: var(--clr-200);
+    border-color: var(--clr-700);
+    color: var(--clr-800);
+  }
+
+  .hero__logos-container {
+    margin-top: calc(var(--space) * 5);
+    max-width: 1000%;
   }
 }
