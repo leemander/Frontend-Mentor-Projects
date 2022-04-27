@@ -48,7 +48,7 @@ a {
 
 .container {
   margin: 0 auto;
-  width: min(calc(100vw - 2em), 1350px);
+  width: min(calc(100vw - 4em), 1500px);
 }
 
 .row {
@@ -287,6 +287,7 @@ a {
     grid-template-rows: unset;
     margin-inline: auto;
     margin-top: calc(var(--space) * 3);
+    max-height: 50vh;
     width: calc(100% - var(--space) * 15);
   }
 
@@ -295,10 +296,11 @@ a {
   }
 
   .hero__img--desktop {
+    aspect-ratio: 1;
     display: block;
+    height: 100%;
     object-fit: cover;
     object-position: center;
-    min-height: 100%;
   }
 
   .hero__content {
@@ -315,13 +317,20 @@ a {
     line-height: 1.7;
     margin-inline: unset;
     margin-top: calc(var(--space) * 2);
-    max-width: 380px;
-    width: 100%;
+    width: max(90%, 380px);
   }
 
   .hero__button {
+    border: 2px solid transparent;
     margin-inline: unset;
     margin-top: calc(var(--space) * 2);
+  }
+
+  .hero__button:hover,
+  .hero__button:focus-visible {
+    background-color: var(--clr-200);
+    border-color: var(--clr-700);
+    color: var(--clr-800);
   }
 
   .hero__logos-container {
