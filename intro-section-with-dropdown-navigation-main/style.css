@@ -223,7 +223,7 @@ a {
 @media (min-width: 1000px) {
   :root {
     --fs-body: 1.125rem;
-    --fs-title: calc(var(--fs-body) * 3);
+    --fs-title: calc(var(--fs-body) * 4);
   }
 
   .header .row {
@@ -276,5 +276,56 @@ a {
   .menu__company {
     top: calc(var(--space) * 1.5);
     right: calc(var(--space) * 7.4);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main__hero {
+    display: grid;
+    gap: calc(var(--space) * 5);
+    grid-template-columns: 1fr 45%;
+    grid-template-rows: unset;
+    margin-inline: auto;
+    margin-top: calc(var(--space) * 3);
+    width: calc(100% - var(--space) * 15);
+  }
+
+  .hero__img--mobile {
+    display: none;
+  }
+
+  .hero__img--desktop {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    min-height: 100%;
+  }
+
+  .hero__content {
+    order: -1;
+    text-align: start;
+    padding-top: calc(var(--space) * 3);
+  }
+
+  .hero__content > .container {
+    width: 100%;
+  }
+
+  .hero__body {
+    line-height: 1.7;
+    margin-inline: unset;
+    margin-top: calc(var(--space) * 2);
+    max-width: 380px;
+    width: 100%;
+  }
+
+  .hero__button {
+    margin-inline: unset;
+    margin-top: calc(var(--space) * 2);
+  }
+
+  .hero__logos-container {
+    margin-top: calc(var(--space) * 5);
+    max-width: 1000%;
   }
 }
