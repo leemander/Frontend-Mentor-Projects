@@ -82,6 +82,11 @@ a {
   width: 35px;
 }
 
+.header__nav,
+.header__user-controls {
+  display: none;
+}
+
 .main__hero {
   display: grid;
   grid-template-rows: 40vh 1fr;
@@ -230,6 +235,7 @@ a {
   }
 
   .header__nav {
+    display: block;
     margin-left: calc(var(--space) * 3);
   }
 
@@ -243,6 +249,7 @@ a {
   }
 
   .header__user-controls {
+    display: block;
     margin-left: auto;
   }
 
