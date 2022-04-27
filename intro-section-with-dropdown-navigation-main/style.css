@@ -128,6 +128,13 @@ a {
   margin-top: var(--space);
 }
 
+.hero__button:hover,
+.hero__button:focus-visible {
+  background-color: var(--clr-200);
+  border-color: var(--clr-700);
+  color: var(--clr-800);
+}
+
 .hero__logos-container {
   justify-content: space-between;
   margin-inline: auto;
@@ -324,13 +331,6 @@ a {
     border: 2px solid transparent;
     margin-inline: unset;
     margin-top: calc(var(--space) * 2);
-  }
-
-  .hero__button:hover,
-  .hero__button:focus-visible {
-    background-color: var(--clr-200);
-    border-color: var(--clr-700);
-    color: var(--clr-800);
   }
 
   .hero__logos-container {
