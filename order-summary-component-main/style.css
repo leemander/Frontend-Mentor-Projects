@@ -2,6 +2,7 @@
 
 :root {
   --clr-pr-100: hsl(225, 100%, 94%);
+  --clr-pr-600: hsl(245, 75%, 75%);
   --clr-pr-700: hsl(245, 75%, 52%);
 
   --clr-neu-100: hsl(225, 100%, 98%);
@@ -122,4 +123,43 @@ button {
   border: 0;
   font-weight: var(--fw-900);
   color: var(--clr-neu-400);
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --fs: 1.125rem;
+  }
+
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-position: left 0;
+    background-size: 100%;
+  }
+  .card {
+    max-width: 33vw;
+  }
+
+  .card__hero-img {
+    width: 100%;
+  }
+
+  .card__content > p {
+    max-width: 75%;
+  }
+
+  .card__plan > button:hover,
+  .card__plan > button:focus-visible {
+    color: var(--clr-pr-600);
+    text-decoration: none;
+  }
+
+  .card__proceed-btn:hover,
+  .card__proceed-btn:focus-visible {
+    background-color: var(--clr-pr-600);
+  }
+
+  .card__cancel-btn:hover,
+  .card__cancel-btn:focus-visible {
+    color: var(--clr-neu-900);
+  }
 }
