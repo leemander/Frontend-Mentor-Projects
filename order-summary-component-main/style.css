@@ -25,7 +25,7 @@
 }
 
 body {
-  background-color: var(--clr-neu-100);
+  background-color: var(--clr-pr-100);
   background-image: url("./images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
   background-position: top;
