@@ -147,6 +147,12 @@ button {
     max-width: 75%;
   }
 
+  .card__plan {
+    --gap: 1.5rem;
+    gap: var(--gap);
+    padding-inline: var(--gap);
+  }
+
   .card__plan > button:hover,
   .card__plan > button:focus-visible {
     color: var(--clr-pr-600);
