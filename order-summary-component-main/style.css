@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --clr-pr-100: hsl(225, 100%, 94%);
+  --clr-pr-700: hsl(245, 75%, 52%);
+
+  --clr-neu-100: hsl(225, 100%, 98%);
+  --clr-neu-300: hsl(224, 23%, 75%);
+  --clr-neu-400: hsl(224, 23%, 55%);
+  --clr-neu-800: hsl(223, 47%, 23%);
+
+  --fs: 16px;
+
+  --fw-700: 500;
+  --fw-800: 700;
+  --fw-900: 900;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-neu-100);
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  display: grid;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--fs);
+  font-weight: var(--fw-700);
+  line-height: 1.7;
+  min-height: 100vh;
+  place-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.card {
+  --radius: 1.25em;
+  background-color: #fff;
+  border-radius: var(--radius);
+  max-width: 350px;
+  text-align: center;
+}
+
+.card__hero-img {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-inline: 1.5em;
+  padding-block: 2em;
+}
+
+.card__content > h2 {
+  font-weight: var(--fw-900);
+}
+
+.card__content > p {
+  color: var(--clr-neu-400);
+  margin-inline: auto;
+  max-width: 90%;
+}
+
+.card__plan {
+  align-items: center;
+  background-color: var(--clr-neu-100);
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.plan__info > h4 {
+  font-weight: var(--fw-900);
+}
+
+.plan__info > p {
+  color: var(--clr-neu-400);
+  margin-top: -5px;
+}
+
+.card__plan > button {
+  background-color: transparent;
+  border: 0;
+  color: var(--clr-pr-700);
+  font-size: calc(var(--fs) * 0.9);
+  font-weight: var(--fw-800);
+  margin-left: auto;
+  text-decoration: underline;
+}
+
+.card__proceed-btn {
+  background-color: var(--clr-pr-700);
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem var(--clr-neu-300);
+  color: var(--clr-pr-100);
+  font-weight: var(--fw-800);
+  letter-spacing: 1px;
+  padding: 1rem;
+}
+
+.card__cancel-btn {
+  background-color: transparent;
+  border: 0;
+  font-weight: var(--fw-900);
+  color: var(--clr-neu-400);
+}
