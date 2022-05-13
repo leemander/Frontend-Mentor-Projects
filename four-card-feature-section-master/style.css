@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  --clr-ntr-200: hsl(0, 0%, 98%);
+  --clr-ntr-500: hsl(229, 6%, 66%);
+  --clr-ntr-700: hsl(234, 12%, 34%);
+
+  --ff: "Poppins", sans-serif;
+  --fs: 0.9375rem;
+  --fw-thin: 200;
+  --fw-reg: 400;
+  --fw-bold: 600;
+
+  --space: 1em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-ntr-200);
+  color: var(--clr-ntr-500);
+  font-family: var(--ff);
+  font-size: var(--fs);
+  display: grid;
+  font-weight: var(--fw-reg);
+  line-height: 1.7;
+  min-height: 100vh;
+  padding-block: 5em;
+  place-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  --width: calc(100vw - 4em);
+  --max-width: 350px;
+  width: min(var(--width), var(--max-width));
+  margin-inline: auto;
+}
+
+.thin {
+  font-weight: var(--fw-thin);
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro__pre-header,
+.intro__title {
+  font-size: calc(var(--fs) * 1.7);
+}
+
+.intro__title {
+  color: var(--clr-ntr-700);
+  font-weight: var(--fw-bold);
+  margin-top: -5px;
+}
+
+.intro__body {
+  margin-inline: auto;
+  margin-top: var(--space);
+  max-width: 500px;
+}
+
+.cards {
+  display: grid;
+  gap: calc(var(--space) * 1.5);
+  grid-template-columns: 1fr;
+  margin-top: calc(var(--space) * 4);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px 0 hsla(0, 0%, 0%, 0.15);
+  padding: calc(var(--space) * 2);
+}
+
+.card__title {
+  color: var(--clr-ntr-700);
+  font-size: calc(var(--fs) * 1.33);
+  font-weight: var(--fw-bold);
+}
+
+.card__body {
+  font-size: calc(var(--fs) * 0.9);
+}
+
+.card__img {
+  margin-left: auto;
+  margin-top: calc(var(--space) * 2);
+}
+
+.card--supervisor {
+  border-top: 5px solid var(--clr-cyan);
+}
+
+.card--team {
+  border-top: 5px solid var(--clr-red);
+}
+
+.card--karma {
+  border-top: 5px solid var(--clr-orange);
+  margin-top: calc(var(--space) * 2);
+}
+
+.card--calculator {
+  border-top: 5px solid var(--clr-blue);
+}
+
+@media (min-width: 700px) {
+  .container {
+    --max-width: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --fs: 1rem;
+  }
+  .container {
+    --max-width: 1200px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+  }
+}
