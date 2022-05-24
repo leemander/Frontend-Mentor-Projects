@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expenses chart component | Frontend Mentor</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="row">
+          <div class="column">
+            <p class="small white">My balance</p>
+            <p class="white big" id="balance">$921.48</p>
+          </div>
+          <img src="./images/logo.svg" alt="" />
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="black">Spending - Last 7 days</h1>
+        <article class="main__chart">
+          <div class="chart__bars"></div>
+          <div class="chart__labels small">
+            <p class="chrat__label">mon</p>
+            <p class="chrat__label">tue</p>
+            <p class="chrat__label">wed</p>
+            <p class="chrat__label">thu</p>
+            <p class="chrat__label">fri</p>
+            <p class="chrat__label">sat</p>
+            <p class="chrat__label">sun</p>
+          </div>
+        </article>
+        <hr />
+        <article class="main__stats">
+          <div class="row">
+            <div class="column">
+              <p class="small">Total this month</p>
+              <p class="big black" id="total">$478.33</p>
+            </div>
+            <div class="column">
+              <p class="black right" id="difference">+2.4%</p>
+              <p class="small">from last month</p>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

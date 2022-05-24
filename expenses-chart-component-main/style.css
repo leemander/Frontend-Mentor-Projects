@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  --clr-soft-red: hsl(10, 79%, 65%);
+  --clr-cyan: hsl(186, 34%, 60%);
+  --clr-ntr-200: hsl(25, 47%, 15%);
+  --clr-ntr-400: hsl(28, 10%, 53%);
+  --clr-ntr-600: hsl(27, 66%, 92%);
+  --clr-ntr-800: hsl(33, 100%, 98%);
+
+  --ff: "DM Sans", sans-serif;
+  --fs: 1.125rem;
+  --fw-med: 400;
+  --fw-bold: 700;
+
+  --padding: 1em;
+  --radius: 10px;
+  --space: 1em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: l;
+}
+
+body {
+  background-color: var(--clr-ntr-600);
+  color: var(--clr-ntr-400);
+  display: grid;
+  font-family: var(--ff);
+  font-size: var(--fs);
+  min-height: 100vh;
+  place-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 360px;
+  width: calc(100vw - 2em);
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column > * {
+  margin-block: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 0.5);
+}
+
+.small {
+  font-size: calc(var(--fs) * 0.85);
+}
+
+.big {
+  font-size: calc(var(--fs) * 1.4);
+  font-weight: var(--fw-bold);
+}
+
+.white {
+  color: var(--clr-ntr-800);
+}
+
+.black {
+  color: var(--clr-ntr-200);
+  font-weight: var(--fw-bold);
+}
+
+.right {
+  text-align: right;
+}
+
+.header,
+.main {
+  background-color: var(--clr-soft-red);
+  border-radius: var(--radius);
+  padding: var(--padding);
+}
+
+.main {
+  background-color: var(--clr-ntr-800);
+  margin-top: var(--space);
+}
+
+.chart__labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: calc(var(--fs) * 1.4);
+  font-weight: var(--fw-bold);
+}
+
+hr {
+  border: 1px var(--clr-ntr-600) solid;
+}
