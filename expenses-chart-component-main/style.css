@@ -95,9 +95,38 @@ img {
   margin-top: var(--space);
 }
 
+.main__chart {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80% 20%;
+  min-height: 300px;
+}
+
+.chart__bars,
 .chart__labels {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5em;
+}
+
+.chart__bar {
+  background-color: var(--clr-soft-red);
+  border-radius: 5px;
+  content: "";
+  display: block;
+  height: 50%;
+  margin-top: auto;
+  width: 100%;
+}
+
+.chart__bar--biggest {
+  height: 100%;
+  background-color: var(--clr-cyan);
+}
+
+.chart__label {
+  width: 100%;
+  text-align: center;
 }
 
 h1 {
