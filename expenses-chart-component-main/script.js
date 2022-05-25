@@ -29,6 +29,15 @@ const data = [
     amount: 25.48,
   },
 ];
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
 
 const barsEl = document.getElementById("bars");
 const totalEl = document.getElementById("total");
@@ -38,6 +47,8 @@ let total = data.reduce((accumulator, day) => accumulator + day.amount, 0);
 //generates the bars for the bar chart
 data.forEach((day) => {
   const barContainer = document.createElement("div");
+  barContainer.tabIndex = 0;
+  barContainer.ariaLabel = `${days[day.day - 1]}: $${day.amount}`;
   barContainer.classList.add("chart__bar-container");
 
   //figures out how tall to make the current
