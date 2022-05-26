@@ -12,7 +12,7 @@
   --fw-med: 400;
   --fw-bold: 700;
 
-  --padding: 1.5em 2em;
+  --padding: 2em 1.5em;
   --radius: 10px;
   --space: 1em;
 }
@@ -31,7 +31,6 @@ body {
   font-family: var(--ff);
   font-size: var(--fs);
   min-height: 100vh;
-  overflow-y: hidden;
   place-items: center;
 }
 
@@ -101,7 +100,9 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 80% 20%;
+  margin-inline: auto;
   height: 250px;
+  width: 100%;
 }
 
 .chart__bars,
