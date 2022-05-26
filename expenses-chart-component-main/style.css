@@ -174,7 +174,7 @@ hr {
 
 @media (min-width: 700px) {
   .container {
-    max-width: 450px;
+    max-width: 500px;
   }
 
   h1 {

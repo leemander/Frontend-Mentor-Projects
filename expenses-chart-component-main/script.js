@@ -55,7 +55,7 @@ function generateBars() {
     //figures out how tall to make the current
     //bar based on what percentage of the total it represents
 
-    barContainer.style.height = `${(day.amount / total) * 375}%`;
+    barContainer.style.height = `${(day.amount / total) * 300}%`;
 
     const bar = document.createElement("div");
     bar.classList.add("chart__bar");
