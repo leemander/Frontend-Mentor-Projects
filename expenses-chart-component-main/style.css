@@ -12,7 +12,7 @@
   --fw-med: 400;
   --fw-bold: 700;
 
-  --padding: 1em;
+  --padding: 1.5em 2em;
   --radius: 10px;
   --space: 1em;
 }
@@ -59,16 +59,16 @@ img {
 .column {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--space) * 0.5);
+  gap: 0;
 }
 
 .small {
-  font-size: calc(var(--fs) * 0.85);
+  font-size: calc(var(--fs) * 0.9);
   font-weight: var(--fw-med);
 }
 
 .big {
-  font-size: calc(var(--fs) * 1.4);
+  font-size: calc(var(--fs) * 2);
   font-weight: var(--fw-bold);
 }
 
@@ -101,7 +101,7 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 80% 20%;
-  height: 200px;
+  height: 250px;
 }
 
 .chart__bars,
@@ -112,6 +112,7 @@ img {
 }
 
 .chart__bar-container {
+  display: flex;
   margin-top: auto;
   position: relative;
 }
@@ -130,7 +131,8 @@ img {
   content: "";
   display: block;
   height: 100%;
-  max-height: 160px;
+  margin-top: auto;
+  max-height: 180px;
   width: 100%;
 }
 
@@ -161,8 +163,9 @@ img {
 }
 
 h1 {
-  font-size: calc(var(--fs) * 1.4);
+  font-size: calc(var(--fs) * 1.33);
   font-weight: var(--fw-bold);
+  margin: 0;
 }
 
 hr {
@@ -171,6 +174,15 @@ hr {
 
 @media (min-width: 700px) {
   .container {
-    max-width: 500px;
+    max-width: 450px;
+  }
+
+  h1 {
+    font-size: calc(var(--fs) * 1.6);
+  }
+
+  .chart__popup {
+    font-size: calc(var(--fs) * 0.75);
+    top: -3.25em;
   }
 }
