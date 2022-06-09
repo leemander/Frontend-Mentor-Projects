@@ -11,11 +11,15 @@
     />
     <title>Shortly URL shortening API Challenge | Frontend Mentor</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/add40c6218.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
       <div class="container row">
-        <img src="./images/logo.svg" alt="Shortly" />
+        <img src="./images/logo.svg" alt="Shortly" class="header__logo" />
         <nav class="header__nav" aria-label="main navigation">
           <ul class="nav-list header__nav-list">
             <li><a href="#">Features</a></li>
@@ -28,28 +32,26 @@
           </ul>
         </nav>
         <button
-          class="button header__open-menu mobile-only"
+          class="button header__open-menu"
           aria-label="Open navigation menu"
-        ></button>
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </header>
     <main class="main">
+      <section class="main__hero">
+        <img src="./images/illustration-working.svg" alt="" class="hero__img" />
+        <div class="hero__content container">
+          <h1 class="title hero__title">More than just shorter links</h1>
+          <p>
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <a href="#" class="hero__cta">Get Started</a>
+        </div>
+      </section>
       <div class="container">
-        <section class="main__hero">
-          <img
-            src="./images/illustration-working.svg"
-            alt=""
-            class="hero__img"
-          />
-          <div class="hero__content">
-            <h1 class="title hero__title">More than just shorter links</h1>
-            <p>
-              Build your brand’s recognition and get detailed insights on how
-              your links are performing.
-            </p>
-            <a href="#" class="hero__cta">Get Started</a>
-          </div>
-        </section>
         <form class="main__url-shrinker">
           <input
             type="text"

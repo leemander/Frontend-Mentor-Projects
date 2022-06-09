@@ -11,7 +11,7 @@
 
   --fs-m: 1.125rem;
   --fs-l: 1.25rem;
-  --fs-x: 1.5rem;
+  --fs-xl: 2.2rem;
   --ff: "Poppins", sans-serif;
   --fw-med: 500;
   --fw-bold: 700;
@@ -31,6 +31,7 @@ body {
   font-family: var(--ff);
   font-size: var(--fs-m);
   font-weight: var(--fw-med);
+  line-height: 1.5;
   text-align: center;
 }
 
@@ -44,7 +45,6 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
 }
 
 ul {
@@ -56,4 +56,67 @@ ul {
   margin-inline: auto;
   max-width: 350px;
   width: calc(100vw - 2em);
+}
+
+.row {
+  align-items: center;
+  display: flex;
+}
+
+.header {
+  padding-block: calc(var(--space) * 1.5) var(--space);
+}
+
+.header > .row {
+  justify-content: space-between;
+}
+
+.header__open-menu {
+  aspect-ratio: 1;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  width: 30px;
+}
+
+.header__open-menu > i {
+  color: var(--clr-ntr-300);
+  font-size: 1.5rem;
+}
+
+.header__nav {
+  display: none;
+}
+
+.hero__img {
+  object-fit: cover;
+  object-position: right -7.5vw top 0;
+  width: 130%;
+}
+
+.hero__content {
+  margin-top: calc(var(--space) * 2);
+}
+
+.hero__title {
+  color: var(--clr-ntr-800);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+}
+
+.main__hero p {
+  font-size: var(--fs-m);
+  margin-top: var(--space);
+}
+
+.hero__cta {
+  background-color: var(--clr-cyan);
+  border-radius: 10em;
+  color: #fff;
+  display: block;
+  margin-inline: auto;
+  margin-top: var(--space);
+  padding: calc(var(--space) * 0.5) var(--space);
+  width: 50%;
 }
