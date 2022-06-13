@@ -37,7 +37,8 @@ body {
 
 button,
 form,
-a {
+a,
+input {
   color: inherit;
   font: inherit;
   text-decoration: none;
@@ -119,4 +120,32 @@ ul {
   margin-top: var(--space);
   padding: calc(var(--space) * 0.5) var(--space);
   width: 55%;
+}
+
+.main__url-shrinker {
+  --border: 5px;
+  background-color: var(--clr-violet);
+  background-image: url(./images/bg-shorten-mobile.svg);
+  background-position: top -50% right 0;
+  background-repeat: no-repeat;
+  border-radius: var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+  padding: var(--space);
+}
+
+.main__url-shrinker > * {
+  border: 0;
+  border-radius: var(--border);
+  padding: calc(var(--space) * 0.5);
+}
+
+.main__url-shrinker > input {
+  color: var(--clr-ntr-300);
+}
+
+.main__url-shrinker > button {
+  background-color: var(--clr-cyan);
+  color: #fff;
 }
