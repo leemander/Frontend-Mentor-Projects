@@ -4,6 +4,7 @@
   --clr-violet: hsl(257, 27%, 26%);
   --clr-red: hsl(0, 87%, 67%);
 
+  --clr-ntr-100: hsl(225, 33%, 95%);
   --clr-ntr-200: hsl(0, 0%, 75%);
   --clr-ntr-300: hsl(257, 7%, 63%);
   --clr-ntr-800: hsl(255, 11%, 22%);
@@ -133,6 +134,8 @@ ul {
   flex-direction: column;
   gap: var(--space);
   padding: var(--space);
+  position: relative;
+  top: 5em;
 }
 
 .main__url-shrinker > * {
@@ -148,4 +151,14 @@ ul {
 .main__url-shrinker > button {
   background-color: var(--clr-cyan);
   color: #fff;
+}
+
+.main__stats {
+  background-color: var(--clr-ntr-100);
+  color: var(--clr-ntr-300);
+  padding-top: 10em;
+}
+
+.main__stats h3 {
+  color: var(--clr-ntr-900);
 }
