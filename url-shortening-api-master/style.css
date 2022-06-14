@@ -162,3 +162,51 @@ ul {
 .main__stats h3 {
   color: var(--clr-ntr-900);
 }
+
+.stats__features {
+  --space: 5em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+  margin-top: var(--space);
+  padding-bottom: var(--space);
+  position: relative;
+}
+
+.features__bg {
+  background-color: var(--clr-cyan);
+  bottom: var(--space);
+  content: "";
+  display: block;
+  height: 800px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 10px;
+  z-index: 0;
+}
+
+.stats__card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 1.5em 2em 1.5em;
+  z-index: 1;
+}
+
+.card__img {
+  aspect-ratio: 1;
+  background-color: var(--clr-violet);
+  border-radius: 50%;
+  display: grid;
+  left: 50%;
+  place-items: center;
+  position: relative;
+  top: -2em;
+  transform: translateX(-50%);
+  width: 80px;
+}
+
+.stats__card > p {
+  font-size: 1rem;
+  margin-top: 1em;
+}
