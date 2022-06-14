@@ -11,7 +11,7 @@
   --clr-ntr-900: hsl(260, 8%, 14%);
 
   --fs-m: 1.125rem;
-  --fs-l: 1.25rem;
+  --fs-l: 1.66rem;
   --fs-xl: 2.2rem;
   --ff: "Poppins", sans-serif;
   --fw-med: 500;
@@ -112,7 +112,7 @@ ul {
   margin-top: var(--space);
 }
 
-.hero__cta {
+.cta {
   background-color: var(--clr-cyan);
   border-radius: 10em;
   color: #fff;
@@ -209,4 +209,47 @@ ul {
 .stats__card > p {
   font-size: 1rem;
   margin-top: 1em;
+}
+
+.main__boost {
+  background-image: url(./images/bg-boost-mobile.svg);
+  background-color: var(--clr-violet);
+  background-size: 100% 100%;
+  color: #fff;
+  padding-block: 5em;
+}
+
+.main__boost h4 {
+  font-size: var(--fs-l);
+  font-weight: var(--fw-bold);
+}
+
+.footer {
+  background-color: var(--clr-ntr-900);
+  padding-block: 3em;
+}
+
+.footer__logo {
+  filter: brightness(10);
+  margin-inline: auto;
+}
+
+.footer__nav > p {
+  color: #fff;
+  margin-top: 3em;
+}
+
+.footer__nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: var(--space);
+}
+
+.footer__social-links > ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 2em;
 }
