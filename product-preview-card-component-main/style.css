@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
 :root {
   --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-darker-cyan: hsl(158, 26%, 25%);
   --clr-cream: hsl(30, 38%, 92%);
 
   --clr-ntr-100: hsl(0, 0%, 100%);
@@ -112,4 +113,47 @@ button {
   min-height: 50px;
   justify-content: center;
   width: 100%;
+}
+@media (min-width: 800px) {
+  .card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    max-width: 600px;
+  }
+
+  .card__img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--radius);
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .card__img--desktop {
+    display: block;
+  }
+
+  .card__img--mobile {
+    display: none;
+  }
+
+  .card__content {
+    padding: 2.25em;
+  }
+
+  .card__title {
+    margin-top: 0.75em;
+  }
+
+  .card__body {
+    font-size: var(--fs);
+    margin-top: 2em;
+  }
+
+  .card__add-button {
+    margin-top: 2em;
+  }
+
+  .card__add-button:hover {
+    background-color: var(--clr-darker-cyan);
+  }
 }
