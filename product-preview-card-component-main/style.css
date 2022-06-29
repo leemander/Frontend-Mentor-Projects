@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+
+  --clr-ntr-100: hsl(0, 0%, 100%);
+  --clr-ntr-400: hsl(228, 12%, 48%);
+  --clr-ntr-800: hsl(212, 21%, 14%);
+
+  --ff-body: "Montserrat", sans-serif;
+  --ff-title: "Fraunces", serif;
+
+  --fs: 0.875rem;
+  --fw-reg: 500;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-cream);
+  color: var(--clr-ntr-400);
+  display: grid;
+  font-family: var(--ff-body);
+  font-size: var(--fs);
+  font-weight: var(--fw-reg);
+  min-height: 100vh;
+  place-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+.card {
+  --radius: 10px;
+  background-color: var(--clr-ntr-100);
+  max-width: 375px;
+  width: calc(100vw - 2.4em);
+  border-radius: var(--radius);
+}
+
+.card__img {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.card__img--desktop {
+  display: none;
+}
+
+.card__content {
+  padding: 1.5em;
+}
+
+.card__pre-header {
+  letter-spacing: 3px;
+}
+
+.card__title {
+  color: var(--clr-ntr-800);
+  font-family: var(--ff-title);
+  font-size: 1.9rem;
+  line-height: 1;
+  margin-top: 0.5em;
+}
+
+.card__body {
+  font-size: calc(var(--fs) * 0.93);
+  margin-top: 1em;
+  line-height: 1.7;
+}
+
+.card__price-container {
+  align-items: center;
+  display: flex;
+  gap: 1em;
+  margin-top: 3em;
+}
+
+.price__current {
+  color: var(--clr-dark-cyan);
+  font-family: var(--ff-title);
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+}
+
+.price__former {
+  text-decoration: line-through;
+}
+
+.card__add-button {
+  align-items: center;
+  background-color: var(--clr-dark-cyan);
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--clr-ntr-100);
+  cursor: pointer;
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+  min-height: 50px;
+  justify-content: center;
+  width: 100%;
+}
