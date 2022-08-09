@@ -126,7 +126,7 @@ select {
 
 .container {
   margin-inline: auto;
-  max-width: 350px;
+  max-width: 330px;
   width: calc (100vw - var(--space-600));
 }
 
@@ -221,4 +221,21 @@ button[data-type="hamburger"] {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+/* COMPONENT STYLING */
+
+header {
+  padding-block: var(--space-200);
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-wrapper > nav,
+.header-wrapper > button:not([data-type="hamburger"]) {
+  display: none;
 }
