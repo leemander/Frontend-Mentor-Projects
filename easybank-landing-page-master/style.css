@@ -135,6 +135,18 @@ select {
   }
 }
 
+.even-columns {
+  display: grid;
+  gap: var(--space-400);
+  grid-auto-flow: row;
+}
+
+@media (min-width: 800px) {
+  .even-columns {
+    grid-auto-flow: column;
+  }
+}
+
 .bg-white {
   background-color: var(--clr-nuetral-100);
 }
@@ -144,7 +156,7 @@ select {
 }
 
 .bg-grey {
-  background-color: var(--clr-nuetral-300);
+  background-color: var(--clr-nuetral-200);
 }
 
 .bg-navy {
@@ -273,6 +285,7 @@ header {
   background-image: url("./images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
   background-position: top -12px left 0;
+  padding-bottom: var(--space-500);
 }
 
 .intro img {
@@ -287,4 +300,29 @@ header {
 
 .intro button {
   margin-block: var(--space-400);
+}
+
+.features {
+  padding-block: var(--space-600);
+}
+
+.features img {
+  margin-inline: auto;
+}
+
+.features h3 {
+  font-size: var(--fs-500);
+  margin-top: var(--space-200);
+}
+
+.features p {
+  color: var(--clr-nuetral-700);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+  margin-top: var(--space-200);
+}
+
+.features .even-columns {
+  margin-top: var(--space-600);
 }
