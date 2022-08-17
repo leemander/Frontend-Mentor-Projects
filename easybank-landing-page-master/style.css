@@ -199,6 +199,24 @@ select {
   font-size: var(--fs-800);
 }
 
+@media (min-width: 800px) {
+  .text-small {
+    font-size: var(--fs-500);
+  }
+
+  .text-medium {
+    font-size: var(--fs-600);
+  }
+
+  .text-large {
+    font-size: var(--fs-800);
+  }
+
+  .text-xl {
+    font-size: var(--fs-900);
+  }
+}
+
 .text-thin {
   font-weight: var(--fw-300);
 }
@@ -222,6 +240,12 @@ body {
   font-size: var(--fs-500);
   font-weight: var(--fw-400);
   text-align: center;
+}
+
+@media (min-width: 800px) {
+  body {
+    text-align: start;
+  }
 }
 
 button {
@@ -277,6 +301,12 @@ header {
   left: 0;
   width: 100vw;
   z-index: 1000;
+}
+
+@media (min-width: 800px) {
+  header {
+    position: unset;
+  }
 }
 
 .header-wrapper {
@@ -355,6 +385,38 @@ header {
   margin-block: var(--space-400);
 }
 
+@media (min-width: 800px) {
+  .intro {
+    background-image: url("./images/bg-intro-desktop.svg");
+    background-position: top -10em right -30em;
+    padding-bottom: 0;
+  }
+
+  .intro img {
+    top: 5em;
+    right: -11em;
+  }
+
+  .intro > div {
+    display: grid;
+    grid-template-columns: 40vw 1fr;
+  }
+
+  .intro-wrapper {
+    margin-block: auto;
+    order: -1;
+    text-align: start;
+  }
+
+  .intro h1 {
+    max-width: 15ch;
+  }
+
+  .intro p {
+    max-width: 45ch;
+  }
+}
+
 .features {
   padding-block: var(--space-600);
 }
@@ -424,6 +486,18 @@ header {
   line-height: 1.5;
 }
 
+@media (min-width: 800px) {
+  .features img {
+    margin-inline: unset;
+  }
+
+  .articles img {
+    max-height: 165px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
 footer {
   padding-block: var(--space-400);
 }
@@ -458,13 +532,38 @@ footer img:first-of-type {
   gap: var(--space-100);
 }
 
-.site-map > ul:nth-of-type(2) {
+.site-map > ul:last-of-type {
   margin-top: var(--space-100);
 }
 
-footer div:last-of-type {
+footer .even-columns div:last-of-type {
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: var(--space-300);
+}
+
+@media (min-width: 800px) {
+  footer .even-columns > div:first-of-type,
+  footer .even-columns > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .site-map {
+    align-items: center;
+    font-size: var(--fs-400);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-map > ul:last-of-type {
+    margin-top: 0;
+  }
+
+  footer .even-columns > div:last-of-type {
+    align-items: end;
+    justify-content: center;
+  }
 }
