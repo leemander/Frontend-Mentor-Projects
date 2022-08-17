@@ -126,7 +126,7 @@ select {
 .container {
   margin-inline: auto;
   max-width: 330px;
-  width: calc (100vw - var(--space-600));
+  width: calc(100vw - var(--space-600));
 }
 
 @media (min-width: 800px) {
@@ -242,6 +242,11 @@ button:not([data-type="hamburger"]) {
   padding: 0.75em var(--space-400);
 }
 
+button:not([data-type="hamburger"]):hover,
+button:not([data-type="hamburger"]):focus-visible {
+  opacity: 0.5;
+}
+
 button[data-type="hamburger"] {
   background-color: transparent;
   border: 0;
@@ -275,14 +280,58 @@ header {
 }
 
 .header-wrapper {
+  color: var(--clr-nuetral-700);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.header-wrapper ul {
+  display: flex;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  gap: var(--space-200);
+}
+
+.header-wrapper a::after {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-600),
+    var(--clr-primary-500)
+  );
+  content: "";
+  display: block;
+  height: 5px;
+  position: relative;
+  top: calc(var(--space-300) + 1px);
+  visibility: hidden;
+  width: 100%;
+}
+
+.header-wrapper a:hover,
+.header-wrapper a:focus-visible {
+  color: var(--clr-primary-800);
+}
+
+.header-wrapper a:hover::after,
+.header-wrapper a:focus-visible::after {
+  visibility: visible;
+}
+
 .header-wrapper > nav,
 .header-wrapper > button:not([data-type="hamburger"]) {
   display: none;
+}
+
+@media (min-width: 800px) {
+  .header-wrapper > nav,
+  .header-wrapper > button:not([data-type="hamburger"]) {
+    display: block;
+  }
+
+  button[data-type="hamburger"] {
+    display: none;
+  }
 }
 
 .intro {
