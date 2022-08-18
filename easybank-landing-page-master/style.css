@@ -299,7 +299,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -368,6 +368,7 @@ header {
   background-image: url("./images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
   background-position: top -12px left 0;
+  overflow: hidden;
   padding-bottom: var(--space-500);
 }
 
@@ -388,18 +389,20 @@ header {
 @media (min-width: 800px) {
   .intro {
     background-image: url("./images/bg-intro-desktop.svg");
-    background-position: top -10em right -30em;
+    background-position: top -15em right -30em;
     padding-bottom: 0;
+    margin-block: 0 -5em;
+    min-height: 650px;
   }
 
   .intro img {
-    top: 5em;
+    top: 1em;
     right: -11em;
   }
 
   .intro > div {
     display: grid;
-    grid-template-columns: 40vw 1fr;
+    grid-template-columns: min(40vw, 560px) 1fr;
   }
 
   .intro-wrapper {
@@ -477,9 +480,14 @@ header {
   font-size: var(--fs-300);
 }
 
-.article-content > h5 {
+.article-content > a {
   color: var(--clr-primary-800);
   font-size: var(--fs-500);
+}
+
+.article-content > a:hover,
+.article-content > a:focus-visible {
+  color: var(--clr-primary-600);
 }
 
 .article-content > p {
@@ -502,10 +510,6 @@ footer {
   padding-block: var(--space-400);
 }
 
-footer img:first-of-type {
-  margin-inline: auto;
-}
-
 .socials {
   margin-top: var(--space-300);
 }
@@ -515,11 +519,15 @@ footer img:first-of-type {
   display: flex;
   gap: var(--space-200);
   justify-content: center;
+  margin: 0;
 }
 
-.socials img {
-  aspect-ratio: 1;
-  height: 25px;
+.socials svg {
+  fill: #fff;
+}
+
+svg:hover {
+  fill: var(--clr-primary-600);
 }
 
 .site-map > * {
@@ -546,9 +554,14 @@ footer .even-columns div:last-of-type {
 @media (min-width: 800px) {
   footer .even-columns > div:first-of-type,
   footer .even-columns > div:last-of-type {
+    align-items: start;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .socials {
+    margin-top: unset;
   }
 
   .site-map {
@@ -558,12 +571,17 @@ footer .even-columns div:last-of-type {
     justify-content: space-between;
   }
 
+  .site-map a:hover,
+  .site-map a:focus-visible {
+    color: var(--clr-primary-600);
+  }
+
   .site-map > ul:last-of-type {
     margin-top: 0;
   }
 
   footer .even-columns > div:last-of-type {
     align-items: end;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
