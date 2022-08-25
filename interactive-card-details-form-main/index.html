@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interactive card details form | Frontend Mentor</title>
+  </head>
+  <body>
+    <div class="image-wrapper">
+      <div class="container">
+        <img
+          class="image-wrapper__back"
+          src="./images/bg-card-back.png"
+          alt=""
+        />
+        <img
+          class="image-wrapper__front"
+          src="./images/bg-card-front.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="form-wrapper">
+      <div class="container">
+        <form>
+          <label for="cardholder-name">
+            Cardholder Name
+            <input
+              type="text"
+              id="cardholder-name"
+              placeholder="e.g. Jane Appleseed"
+            />
+          </label>
+          <label for="card-number">
+            Card Number
+            <input
+              type="number"
+              id="card-number"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+          </label>
+
+          <div class="even-columns">
+            <div>
+              <fieldset>
+                <legend>Exp. Date (MM/YY)</legend>
+                <label for="expiry-month" class="sr-only">Expiry Month</label>
+                <input type="number" id="expiry-month" placeholder="MM" />
+                <label for="expiry-year" class="sr-only">Expiry Month</label>
+                <input type="number" id="expiry-year" placeholder="YY" />
+              </fieldset>
+            </div>
+            <div>
+              <label for="cvc">
+                CVC
+                <input type="number" id="cvc" placeholder="e.g. 123" />
+              </label>
+            </div>
+          </div>
+          <button id="confirm-button">Confirm</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

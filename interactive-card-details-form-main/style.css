@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  --clr-primary-500: hsl(0, 100%, 66%);
+  --clr-primary-600: hsl(249, 99%, 64%);
+  --clr-primary-700: hsl(278, 94%, 30%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(270, 3%, 87%);
+  --clr-neutral-400: hsl(279, 6%, 55%);
+  --clr-neutral-800: hsl(278, 68%, 11%);
+
+  --ff: "Space Grotesk", sans-serif;
+
+  --fs-500: 0.8rem;
+  --fs-600: 0.9rem;
+  --fs-700: 1rem;
+  --fs-800: 1.1rem;
+  --fs-900: 1.2rem;
+
+  --fw-reg: 500;
+
+  --space-100: 0.5em;
+  --space-200: 1em;
+  --space-300: 1.5em;
+  --space-400: 2em;
+  --space-500: 2.5em;
+  --space-600: 3em;
+  --space-700: 3.5em;
+  --space-800: 4em;
+  --space-900: 4.5em;
+}
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* UTILITY CLASSES */
+
+.container {
+  margin-inline: auto;
+  max-width: 370px;
+  width: calc(100vw - 2em);
+}
+
+.even-columns {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 50%;
+  gap: var(--space-100);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* COMPONENT STYLING */
+
+body {
+  color: var(--clr-neutral-800);
+  display: grid;
+  font-family: var(--ff);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-reg);
+  gap: var(--space-900);
+  grid-template-rows: 33vh 1fr;
+  text-transform: uppercase;
+}
+
+.image-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url(./images/bg-main-mobile.png);
+}
+
+.image-wrapper > .container {
+  position: relative;
+}
+
+.image-wrapper img {
+  position: absolute;
+  width: 90%;
+}
+
+.image-wrapper__back {
+  right: 0;
+  top: 0;
+  transform: translateY(33%);
+}
+
+.image-wrapper__front {
+  left: 0;
+  top: 0;
+  transform: translateY(90%);
+}
+
+form {
+  --padding: var(--space-200);
+  --radius: var(--space-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+  letter-spacing: 1px;
+  margin-top: var(--space-900);
+}
+
+input {
+  border-color: var(--clr-neutral-200);
+  border-radius: var(--radius);
+  border-style: solid;
+  padding: var(--padding);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100);
+}
+
+fieldset {
+  border: 0;
+  display: flex;
+  gap: var(--space-100);
+  padding: 0;
+  padding-top: var(--space-100);
+}
+
+fieldset > input {
+  width: 100%;
+}
+
+button {
+  background-color: var(--clr-neutral-800);
+  border-radius: var(--radius);
+  border: 0;
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-800);
+  letter-spacing: inherit;
+  padding: var(--padding);
+}
