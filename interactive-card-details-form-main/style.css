@@ -120,7 +120,6 @@ select {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 50% 50%;
-  gap: var(--space-100);
 }
 
 .sr-only {
@@ -143,7 +142,7 @@ body {
   font-family: var(--ff);
   font-size: var(--fs-600);
   font-weight: var(--fw-reg);
-  gap: var(--space-900);
+  gap: var(--space-500);
   grid-template-rows: 33vh 1fr;
   text-transform: uppercase;
 }
@@ -151,7 +150,7 @@ body {
 .image-wrapper {
   background-repeat: no-repeat;
   background-size: cover;
-  background: url(./images/bg-main-mobile.png);
+  background-image: url(./images/bg-main-mobile.png);
 }
 
 .image-wrapper > .container {
@@ -185,17 +184,40 @@ form {
   margin-top: var(--space-900);
 }
 
-input {
-  border-color: var(--clr-neutral-200);
-  border-radius: var(--radius);
-  border-style: solid;
-  padding: var(--padding);
-}
-
 label {
   display: flex;
   flex-direction: column;
   gap: var(--space-100);
+}
+
+input {
+  border-color: var(--clr-neutral-200);
+  border-radius: var(--radius);
+  border-style: solid;
+  font-size: var(--fs-800);
+  padding: var(--padding);
+  width: 100%;
+}
+
+.input-wrapper {
+  background: linear-gradient(
+    to right,
+    var(--clr-primary-600),
+    var(--clr-primary-700)
+  );
+  border-radius: calc(var(--radius) + 3px);
+  content: "";
+  padding: 1px;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--clr-neutral-200);
+}
+
+input:focus-visible {
+  border-color: transparent;
+  outline: 0;
 }
 
 fieldset {
