@@ -44,11 +44,13 @@
           </label>
           <label for="card-number">
             Card Number
-            <input
-              type="number"
-              id="card-number"
-              placeholder="e.g. 1234 5678 9123 0000"
-            />
+            <div class="input-wrapper">
+              <input
+                type="number"
+                id="card-number"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+            </div>
           </label>
 
           <div class="even-columns">
@@ -56,15 +58,21 @@
               <fieldset>
                 <legend>Exp. Date (MM/YY)</legend>
                 <label for="expiry-month" class="sr-only">Expiry Month</label>
-                <input type="number" id="expiry-month" placeholder="MM" />
+                <div class="input-wrapper">
+                  <input type="number" id="expiry-month" placeholder="MM" />
+                </div>
                 <label for="expiry-year" class="sr-only">Expiry Month</label>
-                <input type="number" id="expiry-year" placeholder="YY" />
+                <div class="input-wrapper">
+                  <input type="number" id="expiry-year" placeholder="YY" />
+                </div>
               </fieldset>
             </div>
             <div>
               <label for="cvc">
                 CVC
-                <input type="number" id="cvc" placeholder="e.g. 123" />
+                <div class="input-wrapper">
+                  <input type="number" id="cvc" placeholder="e.g. 123" />
+                </div>
               </label>
             </div>
           </div>
@@ -72,5 +80,6 @@
         </form>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

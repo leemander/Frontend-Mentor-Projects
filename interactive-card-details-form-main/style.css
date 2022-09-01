@@ -200,15 +200,19 @@ input {
 }
 
 .input-wrapper {
+  background: transparent;
+  border-radius: calc(var(--radius) + 3px);
+  content: "";
+  padding: 2px;
+  width: 100%;
+}
+
+.input-wrapper.show {
   background: linear-gradient(
     to right,
     var(--clr-primary-600),
     var(--clr-primary-700)
   );
-  border-radius: calc(var(--radius) + 3px);
-  content: "";
-  padding: 1px;
-  width: 100%;
 }
 
 input::placeholder {
