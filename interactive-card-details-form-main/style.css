@@ -179,9 +179,18 @@ form {
   --radius: var(--space-100);
   display: flex;
   flex-direction: column;
-  gap: var(--space-300);
+  gap: var(--space-100);
   letter-spacing: 1px;
-  margin-top: var(--space-900);
+  margin-top: var(--space-700);
+}
+
+form small {
+  color: var(--clr-primary-500);
+  visibility: hidden;
+}
+
+small.show {
+  visibility: visible;
 }
 
 label {
@@ -230,10 +239,26 @@ fieldset {
   gap: var(--space-100);
   padding: 0;
   padding-top: var(--space-100);
+  position: relative;
 }
 
 fieldset > input {
   width: 100%;
+}
+
+fieldset > small {
+  position: absolute;
+  bottom: -2.1em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 button {
@@ -241,6 +266,7 @@ button {
   border-radius: var(--radius);
   border: 0;
   color: var(--clr-neutral-100);
+  cursor: pointer;
   font-size: var(--fs-800);
   letter-spacing: inherit;
   padding: var(--padding);
