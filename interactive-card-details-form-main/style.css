@@ -147,6 +147,13 @@ body {
   text-transform: uppercase;
 }
 
+@media (min-width: 1200px) {
+  body {
+    grid-template-rows: unset;
+    grid-template-columns: 33vw 1fr;
+  }
+}
+
 .image-wrapper {
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,6 +179,31 @@ body {
   left: 0;
   top: 0;
   transform: translateY(90%);
+}
+
+@media (min-width: 1200px) {
+  .image-wrapper > .container {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .image-wrapper img {
+    max-width: 500px;
+  }
+
+  .image-wrapper__back {
+    transform: translate(50%, 50vh);
+  }
+
+  .image-wrapper__front {
+    left: unset;
+    right: 0;
+    transform: translate(25%, 20vh);
+  }
+
+  .form-wrapper {
+    margin: auto;
+  }
 }
 
 form {
