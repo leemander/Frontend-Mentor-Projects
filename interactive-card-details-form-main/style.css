@@ -188,7 +188,7 @@ form {
   flex-direction: column;
   gap: var(--space-100);
   letter-spacing: 1px;
-  margin-top: var(--space-700);
+  margin-top: var(--space-500);
 }
 
 @media (min-width: 1200px) {
