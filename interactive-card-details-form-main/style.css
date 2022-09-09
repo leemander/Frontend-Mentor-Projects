@@ -262,7 +262,7 @@ input {
 }
 
 .input-wrapper.error {
-  background: none;
+  background: transparent;
   background-color: var(--clr-primary-500);
 }
 
