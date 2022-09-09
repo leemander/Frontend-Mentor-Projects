@@ -33,6 +33,13 @@ const processForm = () => {
     numberInput.parentElement.classList.add("error");
     numberError.innerText = "Can't be blank";
     numberError.classList.add("show");
+  } else if (!+numberInput.value) {
+    numberInput.parentElement.classList.add("error");
+    numberError.innerText = "Must be a number";
+    numberError.classList.add("show");
+  } else if (numberInput.value.length < 16) {
+    numberError.innerText = "Must be 16 digits long with spaces";
+    numberError.classList.add("show");
   } else {
     numberInput.parentElement.classList.remove("error");
     numberError.classList.remove("show");
@@ -42,6 +49,11 @@ const processForm = () => {
     monthInput.parentElement.classList.add("error");
     yearInput.parentElement.classList.add("error");
     dateError.innerText = "Can't be blank";
+    dateError.classList.add("show");
+  } else if (!+monthInput.value || !+yearInput.value) {
+    monthInput.parentElement.classList.add("error");
+    yearInput.parentElement.classList.add("error");
+    dateError.innerText = "Must be a number";
     dateError.classList.add("show");
   } else {
     monthInput.parentElement.classList.remove("error");
@@ -53,23 +65,14 @@ const processForm = () => {
     cvcInput.parentElement.classList.add("error");
     cvcError.innerText = "Can't be blank";
     cvcError.classList.add("show");
+  } else if (!+cvcInput.value) {
+    cvcInput.parentElement.classList.add("error");
+    cvcError.innerText = "Must be a number";
+    cvcError.classList.add("show");
   } else {
     cvcInput.parentElement.classList.remove("error");
     cvcError.classList.remove("show");
   }
-
-  errors.forEach((error) => {
-    let pass = true;
-
-    if (error.classList.contains("show")) {
-      pass = false;
-    }
-
-    if (pass) {
-      formWrapper.style.display = "none";
-      success.classList.add("show");
-    }
-  });
 };
 
 inputs.forEach((input) => {
@@ -85,6 +88,19 @@ inputs.forEach((input) => {
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
   processForm();
+
+  let pass = true;
+
+  errors.forEach((error) => {
+    if (error.classList.contains("show")) {
+      pass = false;
+    }
+  });
+
+  if (pass) {
+    formWrapper.style.display = "none";
+    success.classList.add("show");
+  }
 });
 
 continueButton.addEventListener("click", () => {
