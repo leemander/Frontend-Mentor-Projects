@@ -1,4 +1,7 @@
+const formWrapper = document.querySelector(".form-wrapper");
+
 const inputs = document.querySelectorAll("input");
+const errors = document.querySelectorAll("small");
 
 const nameInput = document.getElementById("cardholder-name");
 const numberInput = document.getElementById("card-number");
@@ -12,6 +15,9 @@ const dateError = document.getElementById("date-error");
 const cvcError = document.getElementById("cvc-error");
 
 const submitBtn = document.getElementById("confirm-button");
+
+const success = document.getElementById("success");
+const continueButton = document.getElementById("continue");
 
 const processForm = () => {
   if (!nameInput.value) {
@@ -51,6 +57,19 @@ const processForm = () => {
     cvcInput.parentElement.classList.remove("error");
     cvcError.classList.remove("show");
   }
+
+  errors.forEach((error) => {
+    let pass = true;
+
+    if (error.classList.contains("show")) {
+      pass = false;
+    }
+
+    if (pass) {
+      formWrapper.style.display = "none";
+      success.classList.add("show");
+    }
+  });
 };
 
 inputs.forEach((input) => {
@@ -66,4 +85,8 @@ inputs.forEach((input) => {
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
   processForm();
+});
+
+continueButton.addEventListener("click", () => {
+  document.location.reload();
 });

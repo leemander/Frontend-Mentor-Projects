@@ -346,6 +346,7 @@ button {
 }
 
 .success button {
+  letter-spacing: 1px;
   margin-top: var(--space-500);
   width: 100%;
 }
