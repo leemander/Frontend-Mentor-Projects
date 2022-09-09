@@ -38,7 +38,7 @@ const processForm = () => {
     numberError.innerText = "Must be a number";
     numberError.classList.add("show");
   } else if (numberInput.value.length < 16) {
-    numberError.innerText = "Must be 16 digits long with spaces";
+    numberError.innerText = "Must be 16 digits";
     numberError.classList.add("show");
   } else {
     numberInput.parentElement.classList.remove("error");
@@ -73,6 +73,19 @@ const processForm = () => {
     cvcInput.parentElement.classList.remove("error");
     cvcError.classList.remove("show");
   }
+
+  let pass = true;
+
+  errors.forEach((error) => {
+    if (error.classList.contains("show")) {
+      pass = false;
+    }
+  });
+
+  if (pass) {
+    formWrapper.style.display = "none";
+    success.classList.add("show");
+  }
 };
 
 inputs.forEach((input) => {
@@ -88,19 +101,6 @@ inputs.forEach((input) => {
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
   processForm();
-
-  let pass = true;
-
-  errors.forEach((error) => {
-    if (error.classList.contains("show")) {
-      pass = false;
-    }
-  });
-
-  if (pass) {
-    formWrapper.style.display = "none";
-    success.classList.add("show");
-  }
 });
 
 continueButton.addEventListener("click", () => {
