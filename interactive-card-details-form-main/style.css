@@ -29,6 +29,9 @@
   --space-700: 3.5em;
   --space-800: 4em;
   --space-900: 4.5em;
+
+  --padding: var(--space-200);
+  --radius: var(--space-100);
 }
 
 /* RESET */
@@ -182,8 +185,6 @@ body {
 }
 
 form {
-  --padding: var(--space-200);
-  --radius: var(--space-100);
   display: flex;
   flex-direction: column;
   gap: var(--space-100);
@@ -315,4 +316,36 @@ button {
   font-size: var(--fs-800);
   letter-spacing: inherit;
   padding: var(--padding);
+}
+
+.success {
+  display: none;
+  margin: auto;
+  text-align: center;
+}
+
+.success.show {
+  display: block;
+}
+
+.success img {
+  margin-inline: auto;
+}
+
+.success h2 {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin-top: var(--space-200);
+}
+
+.success p {
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-900);
+  margin-top: var(--space-100);
+  text-transform: initial;
+}
+
+.success button {
+  margin-top: var(--space-500);
+  width: 100%;
 }
