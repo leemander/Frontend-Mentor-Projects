@@ -39,7 +39,7 @@ const processForm = () => {
     nameError.classList.remove("show");
   }
 
-  //resets input value to be just numbers in case number already formatted
+  //resets input value to be just numbers to allow validation to work
   numberInput.value = numberInput.value
     .split("")
     .filter((x) => x != " ")
@@ -113,6 +113,10 @@ inputs.forEach((input) => {
   input.addEventListener("focusout", (event) => {
     event.target.parentElement.classList.remove("show");
   });
+});
+
+numberInput.addEventListener("focusout", () => {
+  numberInput.value = formatNumber(numberInput.value);
 });
 
 submitBtn.addEventListener("click", (event) => {
