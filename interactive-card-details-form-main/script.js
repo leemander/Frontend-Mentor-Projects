@@ -72,6 +72,11 @@ const processForm = () => {
     yearInput.parentElement.classList.add("error");
     dateError.innerText = "Must be a number";
     dateError.classList.add("show");
+  } else if (+monthInput.value > 12) {
+    monthInput.parentElement.classList.add("error");
+    yearInput.parentElement.classList.add("error");
+    dateError.innerText = "Must be a valid month";
+    dateError.classList.add("show");
   } else {
     monthInput.parentElement.classList.remove("error");
     yearInput.parentElement.classList.remove("error");
