@@ -39,6 +39,12 @@ const processForm = () => {
     nameError.classList.remove("show");
   }
 
+  //resets input value to be just numbers in case number already formatted
+  numberInput.value = numberInput.value
+    .split("")
+    .filter((x) => x != " ")
+    .join("");
+
   if (!numberInput.value) {
     numberInput.parentElement.classList.add("error");
     numberError.innerText = "Can't be blank";
