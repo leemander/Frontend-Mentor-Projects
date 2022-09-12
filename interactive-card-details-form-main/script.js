@@ -116,7 +116,9 @@ inputs.forEach((input) => {
 });
 
 numberInput.addEventListener("focusout", () => {
-  numberInput.value = formatNumber(numberInput.value);
+  if (+numberInput.value) {
+    numberInput.value = formatNumber(numberInput.value);
+  }
 });
 
 submitBtn.addEventListener("click", (event) => {
