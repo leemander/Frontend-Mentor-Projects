@@ -19,6 +19,16 @@ const submitBtn = document.getElementById("confirm-button");
 const success = document.getElementById("success");
 const continueButton = document.getElementById("continue");
 
+const formatNumber = (number) => {
+  let result = "";
+  number.split("").forEach((digit, index) => {
+    index === 3 || index === 7 || index === 11
+      ? (result += `${digit} `)
+      : (result += digit);
+  });
+  return result;
+};
+
 const processForm = () => {
   if (!nameInput.value) {
     nameInput.parentElement.classList.add("error");
@@ -37,10 +47,11 @@ const processForm = () => {
     numberInput.parentElement.classList.add("error");
     numberError.innerText = "Must be a number";
     numberError.classList.add("show");
-  } else if (numberInput.value.length < 16) {
+  } else if (numberInput.value.length !== 16) {
     numberError.innerText = "Must be 16 digits";
     numberError.classList.add("show");
   } else {
+    numberInput.value = formatNumber(numberInput.value);
     numberInput.parentElement.classList.remove("error");
     numberError.classList.remove("show");
   }
