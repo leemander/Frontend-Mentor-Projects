@@ -170,6 +170,7 @@ body {
 .image-wrapper div {
   background-repeat: no-repeat;
   background-size: 100%;
+  border-radius: var(--space-100);
   color: var(--clr-neutral-200);
   height: 50%;
   letter-spacing: 1px;
@@ -234,8 +235,9 @@ form {
     max-width: unset;
   }
 
-  .image-wrapper img {
+  .image-wrapper div {
     max-width: 500px;
+    min-height: 250px;
   }
 
   .image-wrapper__back {
