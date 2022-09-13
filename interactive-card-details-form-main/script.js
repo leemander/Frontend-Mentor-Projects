@@ -1,5 +1,10 @@
 const formWrapper = document.querySelector(".form-wrapper");
 
+const cardNumberGraphic = document.getElementById("number-graphic");
+const nameGraphic = document.getElementById("name-graphic");
+const expiryGraphic = document.getElementById("expiry-graphic");
+const cvcGraphic = document.getElementById("cvc-graphic");
+
 const inputs = document.querySelectorAll("input");
 const errors = document.querySelectorAll("small");
 
@@ -123,6 +128,35 @@ inputs.forEach((input) => {
 numberInput.addEventListener("focusout", () => {
   if (+numberInput.value) {
     numberInput.value = formatNumber(numberInput.value);
+    cardNumberGraphic.innerText = numberInput.value;
+  } else {
+    cardNumberGraphic.innerText = "0000 0000 0000 0000";
+  }
+});
+
+nameInput.addEventListener("focusout", () => {
+  if (nameInput.value) {
+    nameGraphic.innerText = nameInput.value;
+  } else {
+    nameGraphic.innerText = "Jane Appleseed";
+  }
+});
+
+[monthInput, yearInput].forEach((input) => {
+  input.addEventListener("focusout", () => {
+    if (monthInput.value && yearInput.value) {
+      expiryGraphic.innerText = `${monthInput.value}/${yearInput.value}`;
+    } else {
+      expiryGraphic.innerText = "00/00";
+    }
+  });
+});
+
+cvcInput.addEventListener("focusout", () => {
+  if (cvcInput.value) {
+    cvcGraphic.innerText = cvcInput.value;
+  } else {
+    cvcGraphic.innerText = "000";
   }
 });
 
