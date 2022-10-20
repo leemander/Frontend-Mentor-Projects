@@ -15,12 +15,18 @@
     <title>Calculator app | Frontend Mentor</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="theme1">
     <div class="container">
       <div class="calculator">
         <div class="calculator__header">
           <h1>calc</h1>
+          <span>THEME</span>
           <button class="header__theme-switcher">
+            <div class="theme-switcher__label">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
             <div class="theme-switcher__inner"></div>
           </button>
         </div>
@@ -30,7 +36,7 @@
           <button class="buttons__button" data-button="8">8</button>
           <button class="buttons__button" data-button="9">9</button>
           <button
-            class="buttons__button buttons__button--blue"
+            class="buttons__button buttons__button--accent"
             data-button="del"
           >
             DEL
@@ -48,13 +54,13 @@
           <button class="buttons__button" data-button="divide">/</button>
           <button class="buttons__button" data-button="multiply">x</button>
           <button
-            class="buttons__button buttons__button--blue"
+            class="buttons__button buttons__button--accent buttons__button--large"
             data-button="reset"
           >
             RESET
           </button>
           <button
-            class="buttons__button buttons__button--red"
+            class="buttons__button buttons__button--large"
             data-button="equals"
           >
             =
