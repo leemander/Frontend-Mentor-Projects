@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
 :root {
-  --theme1-color-neutral-100: hsl(0, 0%, 100%);
-  --theme1-color-neutral-200: hsl(30, 25%, 89%);
-  --theme1-color-neutral-300: hsl(28, 16%, 65%);
-  --theme1-color-neutral-400: hsl(225, 21%, 49%);
-  --theme1-color-neutral-500: hsl(224, 28%, 35%);
-  --theme1-color-neutral-600: hsl(222, 26%, 31%);
-  --theme1-color-neutral-700: hsl(221, 14%, 31%);
-  --theme1-color-neutral-800: hsl(223, 31%, 20%);
-  --theme1-color-neutral-900: hsl(224, 36%, 15%);
-
-  --theme1-color-primary-red: hsl(6, 63%, 50%);
-  --theme1-color-primary-dark-red: hsl(6, 70%, 34%);
-
   --ff: "League Spartan", sans-serif;
   --fs: 2rem;
   --fw: 700;
@@ -105,13 +92,66 @@ body {
 }
 
 .theme1 {
-  background-color: var(--theme1-color-neutral-600);
-  color: var(--theme1-color-neutral-100);
+  --color-button-accent-bg: hsl(225, 21%, 49%);
+  --color-button-accent-shadow: hsl(221, 14%, 31%);
+  --color-button-accent-text: hsl(0, 0%, 100%);
+  --color-button-bg: hsl(30, 25%, 89%);
+  --color-button-equals-bg: hsl(6, 63%, 50%);
+  --color-button-equals-shadow: hsl(6, 70%, 34%);
+  --color-button-equals-text: hsl(0, 0%, 100%);
+  --color-button-shadow: hsl(28, 16%, 65%);
+  --color-button-text: hsl(221, 14%, 31%);
+  --color-buttons-bg: hsl(223, 31%, 20%);
+  --color-screen-bg: hsl(224, 36%, 15%);
+  --color-theme-switcher-bg: hsl(223, 31%, 20%);
+  --color-theme-switcher-inner: hsl(6, 63%, 50%);
+  background-color: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%);
+}
+
+.theme2 {
+  --color-button-accent-bg: hsl(185, 42%, 37%);
+  --color-button-accent-shadow: hsl(185, 58%, 25%);
+  --color-button-accent-text: hsl(0, 0%, 100%);
+  --color-button-bg: hsl(45, 7%, 89%);
+  --color-button-equals-bg: hsl(25, 98%, 40%);
+  --color-button-equals-shadow: hsl(25, 99%, 27%);
+  --color-button-equals-text: hsl(0, 0%, 100%);
+  --color-button-shadow: hsl(35, 11%, 61%);
+  --color-button-text: hsl(221, 14%, 31%);
+  --color-buttons-bg: hsl(0, 5%, 81%);
+  --color-screen-bg: hsl(0, 0%, 93%);
+  --color-theme-switcher-bg: hsl(0, 5%, 81%);
+  --color-theme-switcher-inner: hsl(6, 63%, 50%);
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+
+.theme3 {
+  --color-button-accent-bg: hsl(281, 89%, 26%);
+  --color-button-accent-shadow: hsl(285, 91%, 52%);
+  --color-button-accent-text: hsl(0, 0%, 100%);
+  --color-button-bg: hsl(268, 47%, 21%);
+  --color-button-equals-bg: hsl(176, 100%, 44%);
+  --color-button-equals-shadow: hsl(177, 92%, 70%);
+  --color-button-equals-text: hsl(198, 20%, 13%);
+  --color-button-shadow: hsl(290, 70%, 36%);
+  --color-button-text: hsl(52, 100%, 62%);
+  --color-buttons-bg: hsl(268, 71%, 12%);
+  --color-screen-bg: hsl(268, 71%, 12%);
+  --color-theme-switcher-bg: hsl(268, 71%, 12%);
+  --color-theme-switcher-inner: hsl(176, 100%, 44%);
+  background-color: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+
+button {
+  cursor: pointer;
 }
 
 .container {
   margin-inline: auto;
-  max-width: 23em;
+  max-width: 500px;
   width: calc(100vw - 1.5em);
 }
 
@@ -137,16 +177,13 @@ h1 {
 }
 
 .header__theme-switcher {
+  background-color: var(--color-theme-switcher-bg);
   border-radius: 10em;
   border: 0;
   color: inherit;
   height: 25px;
   position: relative;
   width: 60px;
-}
-
-.theme1 .header__theme-switcher {
-  background-color: var(--theme1-color-neutral-800);
 }
 
 .theme-switcher__label {
@@ -160,69 +197,86 @@ h1 {
 
 .theme-switcher__inner {
   aspect-ratio: 1;
+  background-color: var(--color-theme-switcher-inner);
   border-radius: 50%;
   content: "";
   display: block;
   width: 14px;
 }
 
-.theme1 .theme-switcher__inner {
-  margin-right: auto;
+.header__theme-switcher:hover .theme-switcher__inner {
+  filter: brightness(1.2);
 }
 
 .theme1 .theme-switcher__inner {
-  background-color: var(--theme1-color-primary-red);
+  margin-inline-end: auto;
+}
+
+.theme2 .theme-switcher__inner {
+  margin-inline: auto;
+}
+
+.theme3 .theme-switcher__inner {
+  margin-inline-start: auto;
 }
 
 .calculator__screen {
+  background-color: var(--color-screen-bg);
   border-radius: var(--radius);
   padding: var(--padding);
   text-align: end;
 }
 
-.theme1 .calculator__screen {
-  background-color: var(--theme1-color-neutral-900);
-}
-
 .calculator__buttons {
   --padding: 0.75em;
+  background-color: var(--color-buttons-bg);
   border-radius: var(--radius);
+  color: var(--color-button-text);
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(4, 1fr);
   padding: var(--padding);
 }
 
-.theme1 .calculator__buttons {
-  background-color: var(--theme1-color-neutral-800);
-  color: var(--theme1-color-neutral-700);
+@media (min-width: 800px) {
+  .calculator__buttons {
+    --padding: 1em;
+    gap: 0.5em;
+  }
 }
 
 .buttons__button {
-  border: 0;
+  -moz-box-shadow: inset 0px -5px 0px 0px var(--color-button-shadow);
+  -webkit-box-shadow: inset 0px -5px 0px 0px var(--color-button-shadow);
+  background-color: var(--color-button-bg);
   border-radius: 0.25em;
-  color: inherit;
+  border: 0;
+  box-shadow: inset 0px -5px 0px 0px var(--color-button-shadow);
+  color: var(--color-button-text);
   display: grid;
   font-size: var(--fs);
   place-items: center;
 }
 
+.buttons__button:hover {
+  filter: brightness(1.2);
+}
+
 .buttons__button--accent {
+  -moz-box-shadow: inset 0px -5px 0px 0px var(--color-button-accent-shadow);
+  -webkit-box-shadow: inset 0px -5px 0px 0px var(--color-button-accent-shadow);
+  background-color: var(--color-button-accent-bg);
+  box-shadow: inset 0px -5px 0px 0px var(--color-button-accent-shadow);
+  color: var(--color-button-accent-text);
   font-size: 1rem;
 }
 
-.theme1 .buttons__button {
-  background-color: var(--theme1-color-neutral-200);
-}
-
-.theme1 .buttons__button--accent {
-  background-color: var(--theme1-color-neutral-400);
-  color: var(--theme1-color-neutral-100);
-}
-
-.theme1 .buttons__button[data-button="equals"] {
-  background-color: var(--theme1-color-primary-red);
-  color: var(--theme1-color-neutral-100);
+.buttons__button[data-button="equals"] {
+  -moz-box-shadow: inset 0px -5px 0px 0px var(--color-button-equals-shadow);
+  -webkit-box-shadow: inset 0px -5px 0px 0px var(--color-button-equals-shadow);
+  background-color: var(--color-button-equals-bg);
+  box-shadow: inset 0px -5px 0px 0px var(--color-button-equals-shadow);
+  color: var(--color-button-equals-text);
 }
 
 .buttons__button--large {

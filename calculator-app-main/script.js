@@ -1,10 +1,13 @@
 const buttons = [...document.querySelectorAll(".buttons__button")];
 const display = document.getElementById("screen");
+const themeSwitcher = document.getElementById("theme-switcher");
 
 let xRegister = "";
 let yRegister = "";
 let operator = "";
 let result = 0;
+
+let theme = 1;
 
 const operators = ["plus", "minus", "divide", "multiply"];
 
@@ -76,6 +79,15 @@ function handleButtonPress() {
   }
 }
 
+function changeTheme() {
+  const body = window.document.body;
+  body.classList.remove(`theme${theme}`);
+  theme < 3 ? theme++ : (theme = 1);
+  body.classList.add(`theme${theme}`);
+}
+
 buttons.forEach((button) => {
   button.addEventListener("click", handleButtonPress);
 });
+
+themeSwitcher.addEventListener("click", changeTheme);
