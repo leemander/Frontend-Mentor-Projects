@@ -9,6 +9,14 @@ let result = 0;
 
 let theme = 1;
 
+if (window.matchMedia) {
+  // Check if the dark-mode Media-Query matches
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    theme = 2;
+    changeTheme();
+  }
+}
+
 const operators = ["plus", "minus", "divide", "multiply"];
 
 function formatNumber(num) {
@@ -81,7 +89,7 @@ function handleButtonPress() {
 
 function changeTheme() {
   const body = window.document.body;
-  body.classList.remove(`theme${theme}`);
+  body.classList.remove(...body.classList);
   theme < 3 ? theme++ : (theme = 1);
   body.classList.add(`theme${theme}`);
 }
