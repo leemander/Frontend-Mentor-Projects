@@ -97,6 +97,11 @@ select {
   }
 }
 
+a {
+  text-decoration: none;
+  font: inherit;
+}
+
 /* Utility Classes */
 
 .color-100 {
@@ -190,6 +195,7 @@ header > img {
 main {
   display: grid;
   gap: 3em;
+  padding-bottom: 5em;
 }
 
 .hero {
@@ -215,4 +221,46 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
   width: 50%;
+}
+
+.new {
+  background-color: var(--color-neutral-900);
+  display: grid;
+  padding: 1em;
+}
+
+.new > h2 {
+  color: var(--color-primary-soft-orange);
+  font-size: var(--font-size-large);
+}
+
+.new__article {
+  display: grid;
+  gap: 1em;
+  padding-block: 1em;
+}
+
+.new__article > a {
+  font-size: var(--font-size-medium);
+}
+
+.new__article:not(:last-of-type) {
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.top {
+  display: grid;
+  gap: 2em;
+}
+
+.top__article {
+  display: grid;
+  grid-template-columns: 30% auto;
+  gap: 1.5em;
+}
+
+.article__number {
+  color: var(--color-neutral-200);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
 }
