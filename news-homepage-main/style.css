@@ -16,7 +16,7 @@
   --font-weight-bolder: 800;
 
   --font-size-small: 0.9375rem;
-  --font-size-medium: 1.1rem;
+  --font-size-medium: 1.2rem;
   --font-size-large: 2.6rem;
 }
 
@@ -99,7 +99,13 @@ select {
 
 a {
   text-decoration: none;
+  color: inherit;
   font: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 /* Utility Classes */
@@ -178,6 +184,41 @@ header {
 
 header > img {
   width: 45px;
+}
+
+.header__nav {
+  background-color: var(--color-neutral-100);
+  display: none;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 70%;
+}
+
+.header__close-button {
+  aspect-ratio: 1;
+  background-color: transparent;
+  background-image: url("./images/icon-menu-close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  color: inherit;
+  display: block;
+  font: inherit;
+  margin-left: auto;
+  margin-right: 1em;
+  margin-top: 2em;
+  padding: 1em;
+  width: 50px;
+}
+
+.header__nav > ul {
+  display: grid;
+  font-size: var(--font-size-medium);
+  gap: 1em;
+  margin-top: 5em;
+  padding-left: 2em;
 }
 
 .header__hamburger {
