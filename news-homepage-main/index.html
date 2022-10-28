@@ -17,10 +17,11 @@
     <div class="container">
       <header>
         <img src="./images/logo.svg" alt="" />
-        <nav class="header__nav">
+        <nav class="header__nav" id="nav">
           <button
             aria-label="close navigation menu"
             class="mobile-only header__close-button"
+            id="close-nav"
           ></button>
           <ul aria-label="primary navigation" class="weight-400 color-800">
             <li><a href="#">Home</a></li>
@@ -33,6 +34,7 @@
         <button
           class="header__hamburger mobile-only"
           aria-label="navigation menu"
+          id="open-nav"
         ></button>
       </header>
       <main>
@@ -100,7 +102,7 @@
             />
             <div class="grid-rows">
               <p class="article__number">01</p>
-              <h3 class="weight-800 color-900">Reviving Retro PCs</h3>
+              <a href="#" class="weight-800 color-900">Reviving Retro PCs</a>
               <p class="weight-400 color-700">
                 What happens when old PCs are given modern uprades?
               </p>
@@ -113,7 +115,9 @@
             />
             <div class="grid-rows">
               <p class="article__number">02</p>
-              <h3 class="weight-800 color-900">Top 10 Laptops of 2022</h3>
+              <a href="#" class="weight-800 color-900"
+                >Top 10 Laptops of 2022</a
+              >
               <p class="weight-400 color-700">
                 Our best picks for various needs and budgets.
               </p>
@@ -126,7 +130,7 @@
             />
             <div class="grid-rows">
               <p class="article__number">03</p>
-              <h3 class="weight-800 color-900">The Growth of Gaming</h3>
+              <a href="#" class="weight-800 color-900">The Growth of Gaming</a>
               <p class="weight-400 color-700">
                 How the pandemic has sparked fresh opportunities.
               </p>
@@ -135,5 +139,6 @@
         </aside>
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

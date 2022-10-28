@@ -16,16 +16,8 @@
   --font-weight-bolder: 800;
 
   --font-size-small: 0.9375rem;
-  --font-size-medium: 1.2rem;
+  --font-size-medium: 1.1rem;
   --font-size-large: 2.6rem;
-}
-
-@media (min-width: 800px) {
-  :root {
-    --font-size-small: 1rem;
-    --font-size-medium: 1.25rem;
-    --font-size-large: 3.5em;
-  }
 }
 
 /* Reset */
@@ -106,9 +98,9 @@ select {
 }
 
 a {
-  text-decoration: none;
-
+  color: inherit;
   font: inherit;
+  text-decoration: none;
 }
 
 ul {
@@ -156,7 +148,7 @@ ul {
 
 .container {
   width: calc(100vw - 2em);
-  max-width: 370px;
+  max-width: 500px;
   margin-inline: auto;
 }
 
@@ -171,7 +163,7 @@ ul {
 
   .container {
     width: calc(100vw - 5em);
-    max-width: unset;
+    max-width: 1100px;
   }
 }
 
@@ -181,6 +173,10 @@ body {
   background-color: var(--color-neutral-100);
   font-family: var(--font-family);
   font-size: var(--font-size-small);
+}
+
+a:hover {
+  color: var(--color-primary-soft-orange);
 }
 
 header {
@@ -196,6 +192,8 @@ header > img {
 
 .header__nav {
   background-color: var(--color-neutral-100);
+  box-shadow: 0px 0px 0px 100vw rgba(0, 0, 0, 0.66);
+  color: var(--color-neutral-900);
   display: none;
   height: 100vh;
   position: fixed;
@@ -204,8 +202,13 @@ header > img {
   width: 70%;
 }
 
+.header__nav.open {
+  display: block;
+}
+
 @media (min-width: 800px) {
   .header__nav {
+    box-shadow: none;
     display: block;
     height: unset;
     position: unset;
@@ -240,6 +243,7 @@ header > img {
 
 @media (min-width: 800px) {
   .header__nav > ul {
+    font-size: var(--font-size-small);
     gap: 2em;
     grid-auto-flow: column;
     margin: unset;
@@ -270,9 +274,12 @@ main {
 }
 
 @media (min-width: 800px) {
+  main {
+    gap: 5em;
+  }
   .main__columns {
-    gap: 2em;
-    grid-template-columns: 3fr 1fr;
+    gap: 1.5em;
+    grid-template-columns: 2fr 1fr;
   }
 }
 
@@ -291,6 +298,12 @@ h1 {
   line-height: 1;
 }
 
+@media (min-width: 800px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
 .hero__button {
   background-color: var(--color-primary-red);
   color: var(--color-neutral-100);
@@ -305,6 +318,11 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
   width: 50%;
+}
+
+.hero__button:hover {
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-100);
 }
 
 @media (min-width: 800px) {
@@ -351,6 +369,7 @@ h1 {
 @media (min-width: 800px) {
   .top {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
   }
 }
 
@@ -364,4 +383,12 @@ h1 {
   color: var(--color-neutral-200);
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
+}
+
+.top__article a {
+  font-size: var(--font-size-medium);
+}
+
+.top__article a:hover {
+  color: var(--color-primary-red);
 }
