@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <section class="info">
+          <h1>IP Address Tracker</h1>
+          <form class="info__input">
+            <input type="text" id="ip-input" />
+            <button type="submit" aria-label="submit"></button>
+          </form>
+          <div class="info__facts">
+            <div class="facts__fact">
+              <p class="fact__label">IP Address</p>
+              <p id="ip"></p>
+            </div>
+            <div class="facts__fact">
+              <p class="fact__label">Location</p>
+              <p id="location"></p>
+            </div>
+            <div class="facts__fact">
+              <p class="fact__label">Timezone</p>
+              <p id="timezone"></p>
+            </div>
+            <div class="facts__fact">
+              <p class="fact__label">ISP</p>
+              <p id="isp"></p>
+            </div>
+          </div>
+        </section>
+        <section class="map"></section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
