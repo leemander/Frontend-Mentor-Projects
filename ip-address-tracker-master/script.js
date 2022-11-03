@@ -1,5 +1,7 @@
 const form = document.getElementById("form");
 const ipInput = document.getElementById("ip-input");
+const error = document.getElementById("error");
+
 const ipEl = document.getElementById("ip");
 const locationEl = document.getElementById("location");
 const timezoneEl = document.getElementById("timezone");
@@ -10,16 +12,31 @@ let locationText;
 let timezone;
 let isp;
 
+//leaflet.js map initialisation
 map = L.map("map", {
   attributionControl: false,
   zoomControl: false,
   scrollWheelZoom: false,
 });
 
-const getData = (ipAddress = "") => {
+const getData = (input = "") => {
+  //checks to see if the input is an ip address or domain name based on the presence of any non-numeric characters
+  let isIp = true;
+  inputArr = input.split(".");
+  inputArr.forEach((i) => {
+    if (!parseInt(i)) {
+      isIp = false;
+    }
+  });
+
+  error.classList.remove("show");
+
   fetch(
-    "https://geo.ipify.org/api/v2/country,city?apiKey=at_yjLrZHyDC4kVsYY1eDLpUl8yMmUXI&ipAddress=" +
-      ipAddress
+    isIp
+      ? "https://geo.ipify.org/api/v2/country,city?apiKey=at_yjLrZHyDC4kVsYY1eDLpUl8yMmUXI&ipAddress=" +
+          input
+      : "https://geo.ipify.org/api/v2/country,city?apiKey=at_yjLrZHyDC4kVsYY1eDLpUl8yMmUXI&domain=" +
+          input
   )
     .then((res) => res.json())
     .then((data) => {
@@ -37,14 +54,17 @@ const getData = (ipAddress = "") => {
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
 
-      marker = L.marker([data.location.lat, data.location.lng], {}).addTo(map);
+      marker = L.marker([data.location.lat, data.location.lng]).addTo(map);
 
       displayData();
+      if (!input) ipInput.value = ip;
+    })
+    .catch(() => {
+      error.classList.add("show");
     });
 };
 
 const displayData = () => {
-  ipInput.value = ip;
   ipEl.innerText = ip;
   locationEl.innerText = locationText;
   timezoneEl.innerText = "UTC " + timezone;
@@ -53,10 +73,7 @@ const displayData = () => {
 
 getData();
 
-//setTimeout(displayData, 1000);
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   getData(ipInput.value);
-  // setTimeout(displayData, 1000);
 });
