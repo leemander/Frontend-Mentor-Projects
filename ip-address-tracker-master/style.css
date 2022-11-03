@@ -170,3 +170,34 @@ h1 {
   height: 62vh;
   z-index: -10;
 }
+
+@media (min-width: 60.75em) {
+  :root {
+    --font-size-small: 0.9rem;
+    --font-size-regular: 1.3rem;
+  }
+
+  main {
+    grid-template-rows: 30vh 1fr;
+  }
+
+  .info__facts {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2em;
+    padding-block: 2em;
+    text-align: start;
+  }
+
+  .facts__fact {
+    display: grid;
+    padding-inline: 2em;
+  }
+
+  .facts__fact:not(:last-of-type) {
+    border-right: 1px solid var(--color-neutral-700);
+  }
+
+  .map {
+    height: 70vh;
+  }
+}
