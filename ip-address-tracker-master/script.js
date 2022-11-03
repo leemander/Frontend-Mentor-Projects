@@ -15,10 +15,22 @@ const getData = () => {
   )
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       ip = data.ip;
       locationText = `${data.location.city}, ${data.location.region} ${data.location.country}`;
       timezone = data.location.timezone;
       isp = data.isp;
+      map = L.map("map", {
+        attributionControl: false,
+        zoomControl: false,
+        scrollWheelZoom: false,
+      }).setView([data.location.lat, data.location.lng], 18);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+      marker = L.marker([data.location.lat, data.location.lng]).addTo(map);
     });
 };
 

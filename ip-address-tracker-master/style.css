@@ -104,7 +104,7 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: 33vh 1fr;
+  grid-template-rows: 38vh 1fr;
 }
 
 .info {
@@ -154,11 +154,9 @@ h1 {
   background-color: var(--color-neutral-100);
   border-radius: 1em;
   display: grid;
+  gap: 1em;
   margin-top: 1em;
-}
-
-.facts__fact {
-  margin-block: 1em;
+  padding-block: 1em;
 }
 
 .fact__label {
@@ -169,7 +167,6 @@ h1 {
 }
 
 .map {
-  aspect-ratio: 1;
-  background-color: red;
+  height: 62vh;
   z-index: -10;
 }
