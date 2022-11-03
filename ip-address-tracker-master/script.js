@@ -57,7 +57,6 @@ const getData = (input = "") => {
       marker = L.marker([data.location.lat, data.location.lng]).addTo(map);
 
       displayData();
-      if (!input) ipInput.value = ip;
     })
     .catch(() => {
       error.classList.add("show");

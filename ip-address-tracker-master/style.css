@@ -123,12 +123,14 @@ h1 {
   color: hsl(0, 0%, 100%);
   font-weight: var(--font-weight-semi-bold);
   letter-spacing: 1px;
-  margin-block: 1em;
+  margin-block: 0.5em;
 }
 
 .info__input {
   --radius: 1em;
   display: flex;
+  max-width: 40em;
+  margin-inline: auto;
 }
 
 .info__input > * {
@@ -198,10 +200,6 @@ h1 {
     --font-size-regular: 1.3rem;
   }
 
-  main {
-    grid-template-rows: 30vh 1fr;
-  }
-
   .info__facts {
     grid-template-columns: repeat(4, 1fr);
 
@@ -216,9 +214,5 @@ h1 {
 
   .facts__fact:not(:last-of-type) {
     border-right: 1px solid var(--color-neutral-700);
-  }
-
-  .map {
-    height: 70vh;
   }
 }
