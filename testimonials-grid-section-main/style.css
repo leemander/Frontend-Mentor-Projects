@@ -1,0 +1,178 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --color-primary-violet: hsl(263, 55%, 52%);
+  --color-primary-grayish-blue: hsl(217, 19%, 35%);
+  --color-primary-blackish-blue: hsl(219, 29%, 14%);
+
+  --color-neutral-800: hsl(0, 0%, 81%);
+  --color-neutral-900: hsl(210, 46%, 95%);
+
+  --font-family: "Barlow Semi Condensed", sans-serif;
+  --font-weight-regular: 500;
+  --font-weight-bold: 600;
+  --font-size: 0.813rem;
+  --font-size-large: 1.25rem;
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-large);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 23rem;
+  width: calc(100vw - 1em);
+}
+
+body {
+  background-color: var(--color-neutral-900);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: #fff;
+  font-weight: var(--font-weight-regular);
+}
+
+.grid {
+  display: grid;
+  gap: 1em;
+  margin-block: 4em;
+}
+
+.grid__test {
+  background-color: var(--background-color);
+  border-radius: 1em;
+  color: var(--color);
+  display: grid;
+  gap: 1em;
+  padding: 1.75em;
+}
+
+.test__header {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: auto 1fr;
+}
+
+.test__header img {
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  max-width: 40px;
+}
+
+.header__nametag {
+  margin-block: auto;
+}
+
+.header__nametag > p {
+  opacity: 0.7;
+}
+
+.grid__test > p:last-of-type {
+  line-height: 1.7;
+  opacity: 0.5;
+}
+
+.grid__test:nth-of-type(1) {
+  --background-color: var(--color-primary-violet);
+  --border-color: rgba(255, 255, 255, 0.5);
+  --color: #fff;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 right 15%;
+}
+
+.grid__test:nth-of-type(2) {
+  --background-color: var(--color-primary-grayish-blue);
+  --border-color: var(--color-primary-grayish-blue);
+  --color: #fff;
+}
+
+.grid__test:nth-of-type(3),
+.grid__test:nth-of-type(5) {
+  --background-color: #fff;
+  --border-color: #fff;
+  --color: var(--color-primary-grayish-blue);
+}
+
+.grid__test:nth-of-type(4) {
+  --background-color: var(--color-primary-blackish-blue);
+  --border-color: var(--color-primary-violet);
+  --color: #fff;
+}
