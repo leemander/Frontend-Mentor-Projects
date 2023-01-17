@@ -18,23 +18,23 @@
       <div class="container">
         <nav class="header__nav">
           <a href="#"><img src="images/logo.svg" alt="Insure" /></a>
-          <ul>
-            <li><a href="">How We Work</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Account</a></li>
-            <li><a href="" class="border-link">View Plans</a></li>
+          <ul aria-expanded="false" id="menu">
+            <li><a href="#">How We Work</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#" class="border-link">View Plans</a></li>
           </ul>
-          <button class="nav__hamburger mobile-only"></button>
+          <button class="nav__hamburger mobile-only" id="menu-button"></button>
         </nav>
       </div>
     </header>
     <main>
       <section class="hero">
-        <div class="container">
-          <div class="hero__grid">
-            <div class="hero__content">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <div class="container">
               <hr class="desktop-only" />
-              <h1>Humanizing your insurance.</h1>
+              <h1>Humanizing<br />your insurance.</h1>
               <p>
                 Get your life insurance coverage easier and faster. We blend our
                 expertise and technology to help you find the plan that’s right
@@ -42,15 +42,29 @@
               </p>
               <a href="#" class="border-link">View Plans</a>
             </div>
-            <picture>
-              <source
-                media="(min-width: 1000px)"
-                srcset="/images/image-intro-desktop.jpg"
-              />
-              <img src="/images/image-intro-mobile.jpg" alt="" />
-            </picture>
           </div>
+          <picture>
+            <source
+              media="(min-width: 1000px)"
+              srcset="/images/image-intro-desktop.jpg"
+            />
+            <img src="/images/image-intro-mobile.jpg" alt="" />
+          </picture>
         </div>
+        <picture class="hero__bg-left">
+          <source
+            media="(min-width: 1000px)"
+            srcset="/images/bg-pattern-intro-left-desktop.jpg"
+          />
+          <img src="/images/bg-pattern-intro-left-mobile.svg" alt="" />
+        </picture>
+        <picture class="hero__bg-right">
+          <source
+            media="(min-width: 1000px)"
+            srcset="/images/bg-pattern-intro-right-desktop.jpg"
+          />
+          <img src="/images/bg-pattern-intro-right-mobile.svg" alt="" />
+        </picture>
       </section>
       <section class="info">
         <div class="container">
@@ -83,7 +97,7 @@
             </article>
           </div>
         </div>
-        <div class="info__banner">
+        <div class="info__banner container">
           <h4>Find out more about how we work</h4>
           <a href="#" class="border-link">How We Work</a>
         </div>
@@ -91,7 +105,7 @@
     </main>
     <footer>
       <div class="container">
-        <div class="footer__socials">
+        <div class="footer__top">
           <img src="/images/logo.svg" alt="Insure" />
           <nav class="footer__socials">
             <a href="#"
@@ -145,5 +159,6 @@
         </nav>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
