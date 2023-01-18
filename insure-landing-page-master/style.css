@@ -477,7 +477,7 @@ footer a {
   }
 
   .hero__content {
-    padding-block-end: 8em;
+    padding-block: 8em;
   }
 
   .hero__content hr {
@@ -502,8 +502,7 @@ footer a {
     margin-inline: unset;
     position: absolute;
     right: 8em;
-    top: 5em;
-    /*transform: translateX(50vw) translateY(-60vh);*/
+    top: 8em;
   }
 
   .hero__bg-left {
@@ -512,7 +511,71 @@ footer a {
 
   .hero__bg-right {
     clip-path: inset(4.05em 0 0 0);
-    right: -5%;
+    right: 0;
     top: -7.5%;
+  }
+
+  .info hr {
+    margin-inline: unset;
+    max-width: 10vw;
+    margin-block-end: 2em;
+  }
+
+  .info__selling-points {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: unset;
+    margin-block-start: 2em;
+  }
+
+  .info__point > img {
+    margin-inline: unset;
+  }
+
+  .info__banner {
+    background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+    background-position: right;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-block: 3em;
+    padding-inline: 5em;
+  }
+
+  .info__banner > h4 {
+    font-size: var(--font-size-x-large);
+  }
+
+  .info__banner > a {
+    margin: auto;
+  }
+
+  footer {
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+  }
+
+  .footer__top > img {
+    margin-right: auto;
+  }
+
+  .footer__socials {
+    margin-block: auto;
+    margin-inline-start: auto;
+  }
+
+  .footer__socials > a:is(:hover, :focus-visible) {
+    filter: brightness(0.33);
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer__grid a:is(:hover, :focus-visible) {
+    text-decoration: underline;
   }
 }
