@@ -533,7 +533,7 @@ footer a {
   }
 
   .info__banner {
-    background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
     background-position: right;
     display: grid;
     grid-template-columns: 1fr auto;
