@@ -141,7 +141,7 @@ hr {
   margin-inline: auto;
   margin-top: calc(var(--spacing) * 2);
   letter-spacing: 2px;
-  padding: 0.5em 2em;
+  padding: 0.5em 1.5em;
   text-transform: uppercase;
   text-decoration: none;
   width: fit-content;
@@ -233,6 +233,11 @@ hr {
   margin-top: var(--spacing);
 }
 
+.hero__content a {
+  position: relative;
+  z-index: 10;
+}
+
 .hero__bg-left,
 .hero__bg-right {
   display: block;
@@ -245,7 +250,7 @@ hr {
 }
 
 .hero__bg-right {
-  top: 83.5%;
+  top: 85.5%;
   right: 0;
 }
 
@@ -353,4 +358,46 @@ footer ul {
 footer a {
   color: inherit;
   text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --font-size-medium: 1.1rem;
+    --font-size-large: 2rem;
+    --font-size-x-large: 3rem;
+  }
+
+  .container {
+    max-width: 500px;
+  }
+
+  .header__nav > ul[aria-expanded="true"] {
+    background-image: none;
+  }
+
+  .hero__grid {
+    grid-template-rows: auto 1fr;
+    gap: 2em;
+  }
+
+  .hero__content {
+    padding-block-end: 5em;
+  }
+
+  .hero__grid > picture {
+    margin: auto;
+    order: unset;
+  }
+
+  .hero__bg-left {
+    top: 0;
+  }
+
+  .hero__bg-right {
+    top: 25%;
+  }
+
+  .info {
+    padding-top: 3em;
+  }
 }

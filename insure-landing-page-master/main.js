@@ -3,7 +3,6 @@ const menu = document.getElementById("menu");
 
 const interactiveElements = [...menu.querySelectorAll("a"), menuButton];
 let index = 0;
-console.table(interactiveElements);
 
 function handleTabPress(e) {
   if (menu.getAttribute("aria-expanded") === "true") {
