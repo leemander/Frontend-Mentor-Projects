@@ -225,6 +225,7 @@ hr {
   background-image: url(./images/icon-hamburger.svg);
   background-repeat: no-repeat;
   background-position: center;
+  border: 2px solid;
   aspect-ratio: 1;
   width: 30px;
 }
@@ -491,7 +492,7 @@ footer a {
   }
 
   .hero__content p {
-    max-width: 40vw;
+    max-width: 39vw;
   }
 
   .hero__content a {
@@ -501,7 +502,7 @@ footer a {
   .hero__grid > picture {
     margin-inline: unset;
     position: absolute;
-    right: 8em;
+    right: 10vw;
     top: 8em;
   }
 
@@ -577,5 +578,14 @@ footer a {
 
   .footer__grid a:is(:hover, :focus-visible) {
     text-decoration: underline;
+  }
+}
+@media (min-width: 1500px) {
+  :root {
+    --font-size-medium: 1.2rem;
+  }
+
+  .container {
+    max-width: 1400px;
   }
 }
