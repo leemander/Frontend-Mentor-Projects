@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-200: hsl(270, 20%, 96%);
+  --color-neutral-500: hsl(206, 6%, 79%);
+  --color-neutral-600: hsl(270, 7%, 64%);
+  --color-neutral-700: hsl(271, 15%, 43%);
+
+  --color-primary-200: hsl(276, 100%, 81%);
+  --color-primary-300: hsl(289, 100%, 72%);
+  --color-primary-600: hsl(276, 55%, 52%);
+  --color-primary-800: hsl(271, 36%, 24%);
+
+  --color-gradient: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+
+  --font-family: "Rubik", Helvetica, sans-serif;
+  --font-size-body: 1rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --border-radius: 1rem;
+}
+
+/*RESET START*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*RESET END*/
+
+body {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-600);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.illustration-container {
+  display: grid;
+  min-height: 66dvh;
+  min-height: 66vh;
+  overflow: hidden;
+  place-items: center;
+  position: relative;
+}
+
+.illustration-container__bg-shape {
+  background: var(--color-gradient);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: block;
+  height: 90%;
+  left: -50%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.information-container {
+  font-weight: var(--font-weight-medium);
+  line-height: 1.7;
+  margin-inline: auto;
+  text-align: center;
+  width: calc(100% - 3rem);
+}
+
+h1 {
+  color: var(--color-primary-800);
+  font-weight: var(--font-weight-bold);
+  font-size: calc(var(--font-size-body) * 2.5);
+}
