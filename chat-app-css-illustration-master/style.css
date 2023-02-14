@@ -9,18 +9,22 @@
 
   --color-primary-200: hsl(276, 100%, 81%);
   --color-primary-300: hsl(289, 100%, 72%);
+  --color-primary-400: hsl(293, 100%, 63%);
+  --color-primary-500: hsl(264, 100%, 61%);
   --color-primary-600: hsl(276, 55%, 52%);
   --color-primary-800: hsl(271, 36%, 24%);
 
-  --color-gradient: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  --color-gradient: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
 
   --font-family: "Rubik", Helvetica, sans-serif;
   --font-size-body: 1rem;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
-
-  --border-radius: 1rem;
 }
 
 /*RESET START*/
@@ -121,13 +125,15 @@ main {
   display: grid;
   min-height: 66dvh;
   min-height: 66vh;
-  overflow: hidden;
   place-items: center;
   position: relative;
 }
 
 .illustration-container__bg-shape {
-  background: var(--color-gradient);
+  background: linear-gradient(
+    var(--color-primary-400),
+    var(--color-primary-600)
+  );
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   display: block;
@@ -136,18 +142,58 @@ main {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: -10;
+}
+
+.illustration-container__illustration {
+  --border-radius: 2rem;
+  background-color: var(--color-neutral-100);
+  border-radius: var(--border-radius);
+  box-shadow: 1rem 1rem 1.5rem var(--color-neutral-500);
+  height: 95%;
+  overflow: hidden;
+  padding: 0.5rem;
+  position: relative;
+  transform: translateY(1.5rem);
+  width: 70%;
+}
+
+.illustration__bezel {
+  background-color: var(--color-neutral-100);
+  border-radius: 10rem;
+  height: 7.5%;
+  left: 50%;
+  transform: translate(-50%, -1rem);
+  width: 50%;
+  position: absolute;
+}
+
+.illustration__screen {
+  border-radius: var(--border-radius);
+  background-color: var(--color-neutral-200);
+  height: 100%;
+}
+
+.screen__header {
+  background: var(--color-gradient);
+  border-radius: 0.5rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  box-shadow: 0 0.25rem 0.25rem var(--color-neutral-500);
+  height: 15%;
 }
 
 .information-container {
-  font-weight: var(--font-weight-medium);
-  line-height: 1.7;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
   margin-inline: auto;
+  margin-top: 2rem;
   text-align: center;
   width: calc(100% - 3rem);
 }
 
 h1 {
   color: var(--color-primary-800);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   font-size: calc(var(--font-size-body) * 2.5);
 }
