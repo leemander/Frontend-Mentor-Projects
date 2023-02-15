@@ -391,3 +391,37 @@ h1 {
   font-size: calc(var(--font-size-body) * 2.5);
   font-weight: var(--font-weight-medium);
 }
+
+@media (min-width: 70rem) {
+  main {
+    gap: 8rem;
+    grid-template-rows: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .illustration-container {
+    min-height: 100vh;
+    min-height: 100dvh;
+    place-items: unset;
+  }
+
+  .illustration-container__bg-shape {
+    left: -30%;
+  }
+
+  .illustration-container__illustration {
+    margin-inline-start: auto;
+    margin-block: auto;
+  }
+
+  .information-container {
+    --font-size-body: 1.5rem;
+    text-align: start;
+    display: grid;
+    place-content: center;
+    margin: auto;
+    margin-inline: unset;
+    min-height: 100dvh;
+    min-height: 100vh;
+  }
+}
