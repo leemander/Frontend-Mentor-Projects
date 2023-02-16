@@ -127,7 +127,10 @@ body {
 
 main {
   display: grid;
+  gap: 2rem;
   grid-template-rows: 1fr auto;
+  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -412,7 +415,8 @@ main {
   height: 150%;
   position: absolute;
   bottom: 0;
-  right: -50%;
+  right: 0;
+  transform: translateX(50%);
   z-index: -10;
 }
 
@@ -423,7 +427,7 @@ h1 {
 }
 
 .information-container__content {
-  padding-block: 1rem 2.5rem;
+  padding-bottom: 2rem;
 }
 
 .information-container__content > p {
@@ -472,7 +476,6 @@ h1 {
 
   .information-container__bg-shape {
     bottom: -60%;
-    right: -50%;
   }
 
   .information-container__content > p {
