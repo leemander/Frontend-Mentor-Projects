@@ -112,6 +112,10 @@ select {
 
 /*RESET END*/
 
+html {
+  overflow: hidden;
+}
+
 body {
   background-color: var(--color-neutral-200);
   color: var(--color-neutral-600);
@@ -385,25 +389,37 @@ main {
   transform: translateY(-10%) rotate(45deg);
 }
 
+.animate {
+  opacity: 1;
+  transform: translateX(0) !important;
+  transition: all 350ms linear;
+}
+
 .information-container {
   font-weight: var(--font-weight-regular);
+  height: 100%;
   line-height: 1.6;
-  margin-inline: auto;
   margin-top: 2rem;
+  position: relative;
   text-align: center;
-  width: calc(100% - 3rem);
+}
+
+.information-container__bg-shape {
+  background-color: var(--color-neutral-400);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  bottom: 0;
+  right: -50%;
+  z-index: -10;
 }
 
 h1 {
   color: var(--color-primary-800);
   font-size: calc(var(--font-size-body) * 2.5);
   font-weight: var(--font-weight-medium);
-}
-
-.animate {
-  opacity: 1;
-  transform: translateX(0) !important;
-  transition: all 350ms linear;
 }
 
 @media (min-width: 70rem) {
