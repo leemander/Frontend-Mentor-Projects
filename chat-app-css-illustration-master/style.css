@@ -111,9 +111,8 @@ select {
 }
 
 /*RESET END*/
-
 html {
-  overflow: hidden;
+  height: 100%;
 }
 
 body {
@@ -129,6 +128,7 @@ body {
 main {
   display: grid;
   grid-template-rows: 1fr auto;
+  overflow: hidden;
 }
 
 .illustration-container {
@@ -144,8 +144,8 @@ main {
     var(--color-primary-400),
     var(--color-primary-600)
   );
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 100rem;
+  border-bottom-right-radius: 100rem;
   display: block;
   height: 90%;
   left: -50%;
@@ -396,18 +396,18 @@ main {
 }
 
 .information-container {
+  font-size: var(--font-size-body);
   font-weight: var(--font-weight-regular);
   height: 100%;
   line-height: 1.6;
-  margin-top: 2rem;
   position: relative;
   text-align: center;
 }
 
 .information-container__bg-shape {
   background-color: var(--color-neutral-400);
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-top-left-radius: 100rem;
+  border-top-right-radius: 100rem;
   width: 100%;
   height: 150%;
   position: absolute;
@@ -422,10 +422,21 @@ h1 {
   font-weight: var(--font-weight-medium);
 }
 
+.information-container__content {
+  padding-block: 1rem 2.5rem;
+}
+
+.information-container__content > p {
+  margin-inline: auto;
+  width: calc(100% - 2rem);
+}
+
 @media (min-width: 70rem) {
   main {
+    gap: 5rem;
     grid-template-rows: 0;
     grid-template-columns: 1fr 1fr;
+    overflow: unset;
   }
 
   .illustration-container {
@@ -437,7 +448,7 @@ h1 {
   .illustration-container__bg-shape {
     width: 200%;
     max-width: 50vw;
-    left: -25%;
+    left: -42.5%;
   }
 
   .illustration-container__illustration {
@@ -446,17 +457,26 @@ h1 {
   }
 
   .information-container {
-    --font-size-body: 1.5rem;
+    --font-size-body: 1.2rem;
     text-align: start;
     display: grid;
-    place-content: center;
-    margin: auto;
-    margin-inline: unset;
     min-height: 100dvh;
     min-height: 100vh;
+    padding: 0;
+    overflow: hidden;
   }
 
-  .information-container > p {
-    max-width: 50ch;
+  .information-container__content {
+    margin-block: auto;
+  }
+
+  .information-container__bg-shape {
+    bottom: -60%;
+    right: -50%;
+  }
+
+  .information-container__content > p {
+    margin-inline: unset;
+    max-width: 45ch;
   }
 }
