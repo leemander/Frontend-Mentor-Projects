@@ -15,11 +15,12 @@
   </head>
   <body>
     <main>
+      <div class="loading" id="loading">Loading...</div>
       <section class="result">
         <div class="result__content">
           <h1>Your Result</h1>
           <div class="result__total">
-            <p id="total">76</p>
+            <p id="total"></p>
             <p>of 100</p>
           </div>
           <div>
@@ -34,44 +35,7 @@
       <section class="summary">
         <div class="summary__content">
           <h2>Summary</h2>
-          <div class="summary__results" id="summary">
-            <div class="summary__result" data-test="reaction">
-              <img
-                class="result__icon"
-                src="./assets/images/icon-reaction.svg"
-                alt=""
-              />
-              <span class="result__name">Reaction</span>
-              <span class="result__score"><strong>80</strong> / 100</span>
-            </div>
-            <div class="summary__result" data-test="reaction">
-              <img
-                class="result__icon"
-                src="./assets/images/icon-reaction.svg"
-                alt=""
-              />
-              <span class="result__name">Reaction</span>
-              <span class="result__score"><strong>80</strong> / 100</span>
-            </div>
-            <div class="summary__result" data-test="reaction">
-              <img
-                class="result__icon"
-                src="./assets/images/icon-reaction.svg"
-                alt=""
-              />
-              <span class="result__name">Reaction</span>
-              <span class="result__score"><strong>80</strong> / 100</span>
-            </div>
-            <div class="summary__result" data-test="reaction">
-              <img
-                class="result__icon"
-                src="./assets/images/icon-reaction.svg"
-                alt=""
-              />
-              <span class="result__name">Reaction</span>
-              <span class="result__score"><strong>80</strong> / 100</span>
-            </div>
-          </div>
+          <div class="summary__results" id="summary"></div>
           <button>Continue</button>
         </div>
       </section>
