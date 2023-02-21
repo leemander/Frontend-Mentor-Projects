@@ -226,6 +226,12 @@ main {
   width: 100%;
 }
 
+.summary__content > button:is(:hover, :focus-visible) {
+  background-color: unset;
+  background: var(--color-gradient-bg);
+  outline: 0;
+}
+
 .summary__result {
   background-color: var(--background-color);
   border-radius: 1rem;
