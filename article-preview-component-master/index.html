@@ -16,12 +16,11 @@
   <body>
     <main>
       <article class="article-preview">
-        <picture class="preview__picture">
-          <img
-            src="./images/drawers.jpg"
-            alt="Green chest of drawers with artwork and wheat on top"
-          />
-        </picture>
+        <img
+          class="preview__image"
+          src="./images/drawers.jpg"
+          alt="Green chest of drawers with artwork and wheat on top"
+        />
         <div class="preview__content">
           <h1 class="preview__title">
             Shift the overall look and feel by adding these wonderful touches to
@@ -36,7 +35,7 @@
             <img
               src="./images/avatar-michelle.jpg"
               alt=""
-              class="info__picture"
+              class="info__image"
             />
             <div>
               <p class="info__author">Michelle Appleton</p>
@@ -44,8 +43,10 @@
             </div>
             <button class="info__share" aria-label="share article"></button>
           </div>
-          <div class="preview__share">
-            <span>Share</span>
+        </div>
+        <div class="preview__share">
+          <span>Share</span>
+          <div>
             <a href="#">
               <img src="./images/icon-facebook.svg" alt="Share on facebook" />
             </a>
@@ -56,6 +57,7 @@
               <img src="./images/icon-pinterest.svg" alt="Share on pinterest" />
             </a>
           </div>
+          <button class="info__share" aria-label="share article"></button>
         </div>
       </article>
     </main>
