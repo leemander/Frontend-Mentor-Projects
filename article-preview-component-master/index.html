@@ -31,7 +31,7 @@
             felt slightly bare and uninviting. I've got some simple tips to help
             you make any room feel complete.
           </p>
-          <div class="preview__info">
+          <div class="preview__info" id="info">
             <img
               src="./images/avatar-michelle.jpg"
               alt=""
@@ -41,23 +41,35 @@
               <p class="info__author">Michelle Appleton</p>
               <p class="info__date">28 Jun 2020</p>
             </div>
-            <button class="info__share" aria-label="share article"></button>
+            <button
+              id="open-share-menu"
+              class="info__button"
+              aria-label="share article"
+            ></button>
           </div>
-        </div>
-        <div class="preview__share">
-          <span>Share</span>
-          <div>
-            <a href="#">
-              <img src="./images/icon-facebook.svg" alt="Share on facebook" />
-            </a>
-            <a href="#">
-              <img src="./images/icon-twitter.svg" alt="Share on twitter" />
-            </a>
-            <a href="#">
-              <img src="./images/icon-pinterest.svg" alt="Share on pinterest" />
-            </a>
+          <div class="preview__share" id="share-menu">
+            <span>Share</span>
+            <div>
+              <a href="#">
+                <img src="./images/icon-facebook.svg" alt="Share on facebook" />
+              </a>
+              <a href="#">
+                <img src="./images/icon-twitter.svg" alt="Share on twitter" />
+              </a>
+              <a href="#">
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt="Share on pinterest"
+                />
+              </a>
+            </div>
+            <button
+              class="info__button"
+              data-close
+              aria-label="share article"
+              id="close-share-menu"
+            ></button>
           </div>
-          <button class="info__share" aria-label="share article"></button>
         </div>
       </article>
     </main>
