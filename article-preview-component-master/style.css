@@ -173,7 +173,7 @@ main {
   place-content: center;
 }
 
-.preview__info.closed {
+.preview__info.hidden {
   display: none;
 }
 
