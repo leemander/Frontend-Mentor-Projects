@@ -10,21 +10,31 @@
   --color-neutral-700: hsl(207, 13%, 34%);
   --color-neutral-900: hsl(240, 10%, 16%);
 
-  --gradient-red: linear-gradient(
+  --gradient-red-mobile: linear-gradient(
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  --gradient-blue-mobile: linear-gradient(
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
+
+  --gradient-red-desktop: linear-gradient(
     to right,
     hsl(13, 100%, 72%),
     hsl(353, 100%, 62%)
   );
-  --gradient-blue: linear-gradient(
+  --gradient-blue-desktop: linear-gradient(
     to right,
     hsl(237, 17%, 21%),
     hsl(237, 23%, 32%)
   );
 
+  --font-size-500: 0.875rem;
   --font-size-600: 1rem;
-  --font-size-700: 1.125rem;
-  --font-size-800: 2rem;
-  --font-size-900: 3rem;
+  --font-size-700: 1.25rem;
+  --font-size-800: 1.5rem;
+  --font-size-900: 2rem;
 
   --font-family-main: "Overpass", sans-serif;
   --font-family-secondary: "Ubuntu", sans-serif;
@@ -56,4 +66,98 @@ button {
 img {
   display: block;
   max-width: 100%;
+}
+
+body {
+  --border-radius: 5em;
+  color: var(--color-primary-800);
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-600);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 370px;
+  width: calc(100% - 5em);
+}
+
+.header {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em 1.5em;
+  position: absolute;
+  width: 100%;
+}
+
+.header > img {
+  max-width: 70px;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__menu-button {
+  aspect-ratio: 1;
+  background-color: transparent;
+  background-image: url(./images/icon-hamburger.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  width: 50px;
+}
+
+.hero {
+  background: url(./images/bg-pattern-intro-mobile.svg),
+    var(--gradient-red-mobile);
+  background-size: 300%;
+  background-position: left -17em top 35%;
+  background-repeat: no-repeat;
+  color: var(--color-neutral-100);
+  padding-block: 11em 8em;
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.hero__content {
+  display: grid;
+  gap: 1em;
+}
+
+h1 {
+  font-size: var(--font-size-900);
+  font-weight: var(--font-weight-semibold);
+}
+
+.hero__content > .row {
+  align-items: start;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5em;
+}
+
+.hero__content > .row > * {
+  margin: auto;
+  width: 100%;
+}
+
+.button-link {
+  background-color: var(--color-neutral-100);
+  border-radius: 10em;
+  color: var(--color-primary-500);
+  display: block;
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-500);
+  font-weight: var(--font-weight-bold);
+  padding: 1em;
+}
+
+.button-link--outline {
+  background-color: transparent;
+  border: 1px solid;
+  color: var(--color-neutral-100);
 }
