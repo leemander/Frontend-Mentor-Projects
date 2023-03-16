@@ -6,6 +6,7 @@
   --color-primary-800: hsl(208, 49%, 24%);
 
   --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-200: hsla(240, 2%, 79%, 0.3);
   --color-neutral-300: hsl(240, 2%, 79%);
   --color-neutral-700: hsl(207, 13%, 34%);
   --color-neutral-900: hsl(240, 10%, 16%);
@@ -103,7 +104,61 @@ body {
 }
 
 .header__nav {
+  background-color: var(--color-neutral-100);
+  border-radius: 0.5em;
+  color: var(--color-neutral-700);
+  font-weight: var(--font-weight-semibold);
   display: none;
+  left: 0.75em;
+  padding: 2em;
+  position: absolute;
+  top: 8em;
+  width: calc(100% - 1.5em);
+}
+
+.header__nav > ul {
+  display: grid;
+  gap: 2em;
+}
+
+.header__nav button {
+  background-color: transparent;
+  background: url(./images/icon-arrow-dark.svg) no-repeat top 50% right 0;
+  border: 0;
+  font-size: var(--font-size-700);
+  padding-inline: 1em;
+}
+
+.header__sub-menu {
+  --space: 1.5em;
+  background-color: var(--color-neutral-200);
+  border-radius: 0.5em;
+  display: none;
+  gap: var(--space);
+  margin-top: var(--space);
+  padding: var(--space);
+}
+
+.header__nav > hr {
+  background-color: var(--color-neutral-200);
+  margin-block: 1em;
+}
+
+.header__nav > a {
+  font-size: var(--font-size-700);
+}
+
+.button-link {
+  background: var(--gradient-red-desktop);
+  border-radius: 10em;
+  color: var(--color-neutral-100);
+  display: block;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-bold);
+  margin-inline: auto;
+  margin-top: 1em;
+  padding: 0.6em 0;
+  width: 55%;
 }
 
 .header__menu-button {
@@ -150,18 +205,15 @@ h1 {
   width: 100%;
 }
 
-.button-link {
+.hero .button-link {
+  background-image: none;
   background-color: var(--color-neutral-100);
-  border-radius: 10em;
   color: var(--color-primary-500);
-  display: block;
-  font-family: var(--font-family-secondary);
   font-size: var(--font-size-500);
-  font-weight: var(--font-weight-bold);
   padding: 1em;
 }
 
-.button-link--outline {
+.button-link.button-link--outline {
   background-color: transparent;
   border: 1px solid;
   color: var(--color-neutral-100);
