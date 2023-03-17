@@ -106,6 +106,7 @@ body {
 .header__nav {
   background-color: var(--color-neutral-100);
   border-radius: 0.5em;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
   color: var(--color-neutral-700);
   font-weight: var(--font-weight-semibold);
   display: none;
@@ -116,6 +117,10 @@ body {
   width: calc(100% - 1.5em);
 }
 
+.header__nav.show {
+  display: block;
+}
+
 .header__nav > ul {
   display: grid;
   gap: 2em;
@@ -123,10 +128,16 @@ body {
 
 .header__nav button {
   background-color: transparent;
-  background: url(./images/icon-arrow-dark.svg) no-repeat top 50% right 0;
   border: 0;
   font-size: var(--font-size-700);
-  padding-inline: 1em;
+}
+
+.header__nav button > svg {
+  margin-bottom: 2px;
+}
+
+.header__nav button.active > svg {
+  transform: rotate(180deg);
 }
 
 .header__sub-menu {
@@ -137,6 +148,10 @@ body {
   gap: var(--space);
   margin-top: var(--space);
   padding: var(--space);
+}
+
+.header__sub-menu.show {
+  display: grid;
 }
 
 .header__nav > hr {
@@ -169,6 +184,10 @@ body {
   background-repeat: no-repeat;
   border: 0;
   width: 50px;
+}
+
+.header__nav.show + .header__menu-button {
+  background-image: url(./images/icon-close.svg);
 }
 
 .hero {

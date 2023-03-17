@@ -16,11 +16,24 @@
   <body>
     <header class="header">
       <img src="./images/logo.svg" alt="Blogr" class="header__logo" />
-      <nav class="header__nav">
+      <nav class="header__nav" id="navigation-menu">
         <ul>
           <li>
-            <button>Product</button>
-            <ul class="header__sub-menu" aria-expanded="false">
+            <button
+              id="product-button"
+              onclick="toggleShow(event,'product-submenu')"
+            >
+              Product
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path
+                  fill="none"
+                  stroke="#FF7B86"
+                  stroke-width="2"
+                  d="M1 1l4 4 4-4"
+                />
+              </svg>
+            </button>
+            <ul class="header__sub-menu" id="product-submenu">
               <a href="#">Overview</a>
               <a href="#">Pricing</a>
               <a href="#">Marketplace</a>
@@ -29,8 +42,21 @@
             </ul>
           </li>
           <li>
-            <button>Company</button>
-            <ul class="header__sub-menu" aria-expanded="false">
+            <button
+              id="company-button"
+              onclick="toggleShow(event, 'company-submenu')"
+            >
+              Company
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path
+                  fill="none"
+                  stroke="#FF7B86"
+                  stroke-width="2"
+                  d="M1 1l4 4 4-4"
+                />
+              </svg>
+            </button>
+            <ul class="header__sub-menu" id="company-submenu">
               <a href="#">About</a>
               <a href="#">Team</a>
               <a href="#">Blog</a>
@@ -38,8 +64,21 @@
             </ul>
           </li>
           <li>
-            <button>Connect</button>
-            <ul class="header__sub-menu" aria-expanded="false">
+            <button
+              id="connect-button"
+              onclick="toggleShow(event, 'connect-submenu')"
+            >
+              Connect
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path
+                  fill="none"
+                  stroke="#FF7B86"
+                  stroke-width="2"
+                  d="M1 1l4 4 4-4"
+                />
+              </svg>
+            </button>
+            <ul class="header__sub-menu" id="connect-submenu">
               <a href="#">Contact</a>
               <a href="#">Newsletter</a>
               <a href="#">LinkedIn</a>
@@ -51,6 +90,7 @@
         <a href="#" class="button-link">Sign Up</a>
       </nav>
       <button
+        id="toggle-menu"
         class="header__menu-button"
         aria-label="toggle navigation menu"
       ></button>
