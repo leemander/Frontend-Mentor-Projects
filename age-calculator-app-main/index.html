@@ -15,20 +15,22 @@
   <body>
     <main class="app">
       <form class="app__form">
-        <div class="form__grid-item">
-          <label for="day">Day</label>
-          <input type="number" id="day" />
-          <span class="form__error" id="day-error">Error</span>
-        </div>
-        <div class="form__grid-item">
-          <label for="month">Month</label>
-          <input type="number" id="month" />
-          <span class="form__error" id="month-error">Error</span>
-        </div>
-        <div class="form__grid-item">
-          <label for="year">Year</label>
-          <input type="number" id="year" />
-          <span class="form__error" id="year-error">Error</span>
+        <div class="form__grid">
+          <div class="form__grid-item">
+            <label for="day">Day</label>
+            <input type="number" id="day" placeholder="DD" data-error />
+            <span class="form__error" id="day-error">Error</span>
+          </div>
+          <div class="form__grid-item">
+            <label for="month">Month</label>
+            <input type="number" id="month" placeholder="MM" />
+            <span class="form__error" id="month-error">Error</span>
+          </div>
+          <div class="form__grid-item">
+            <label for="year">Year</label>
+            <input type="number" id="year" placeholder="YYYY" />
+            <span class="form__error" id="year-error">Error</span>
+          </div>
         </div>
         <hr />
         <button aria-label="Submit"></button>

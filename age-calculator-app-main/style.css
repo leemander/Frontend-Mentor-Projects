@@ -74,3 +74,186 @@ select {
 }
 
 /*RESET ENDS*/
+
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./assets/fonts/Poppins-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 800;
+  src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+
+:root {
+  --color-primary-500: hsl(259, 100%, 65%);
+  --color-primary-600: hsl(0, 100%, 67%);
+
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-200: hsl(0, 0%, 94%);
+  --color-neutral-400: hsl(0, 0%, 86%);
+  --color-neutral-700: hsl(0, 1%, 44%);
+  --color-neutral-900: hsl(0, 0%, 8%);
+
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-900);
+  display: grid;
+  font-family: var(--font-family);
+  font-weight: 800;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.app {
+  background-color: var(--color-neutral-100);
+  border-radius: 1em;
+  border-bottom-right-radius: 33%;
+  max-width: 900px;
+  padding: 3em;
+  position: relative;
+  width: calc(100vw - 2em);
+}
+
+.form__grid {
+  display: grid;
+  gap: 2em;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 11em);
+}
+
+.form__grid-item {
+  display: grid;
+  font-size: 0.9rem;
+  gap: 0.5em;
+}
+
+.form__grid-item > label {
+  color: var(--color-neutral-700);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.app__form input {
+  border-radius: 0.33em;
+  border: 2px var(--color-neutral-400) solid;
+  font-size: 2rem;
+  font-weight: 800;
+  outline: 0;
+  padding: 0.4em 0.8em;
+  width: 100%;
+}
+
+.form__grid-item > span {
+  color: var(--color-primary-600);
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 400;
+  visibility: hidden;
+}
+
+.form__grid-item:has(input[data-error]) > label {
+  color: var(--color-primary-600);
+}
+.form__grid-item:has(input[data-error]) > input {
+  border-color: var(--color-primary-600);
+}
+.form__grid-item:has(input[data-error]) > span {
+  visibility: visible;
+}
+
+.app__form > hr {
+  border-top: 2px solid var(--color-neutral-400);
+  margin-block: 3em;
+  margin-inline-end: 5em;
+  width: 90%;
+}
+
+.app__form > button {
+  aspect-ratio: 1;
+  background-color: var(--color-primary-500);
+  background-image: url(./assets/images/icon-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  border-radius: 50%;
+  border: 0;
+  position: absolute;
+  right: 4em;
+  transform: translateY(-6.2em);
+  width: 100px;
+}
+
+.app__results {
+  display: grid;
+  font-size: 7rem;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.app__results > p {
+  line-height: 1.2;
+}
+
+.app__results span {
+  color: var(--color-primary-500);
+}
+
+@media (max-width: 650px) {
+  body {
+    display: block;
+  }
+
+  .app {
+    margin-inline: auto;
+    margin-top: 5em;
+    padding: 1em;
+  }
+
+  .form__grid {
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .app__form label,
+  .app__form span {
+    font-size: 0.75rem;
+  }
+
+  .app__form input {
+    font-size: 1rem;
+  }
+
+  .app__form hr {
+    width: 100%;
+  }
+
+  .app__form button {
+    background-size: 40%;
+    left: 50%;
+    right: unset;
+    top: unset;
+    transform: translateX(-50%) translateY(-4.7em);
+    width: 50px;
+  }
+
+  .app__results {
+    font-size: 2.5rem;
+  }
+}
