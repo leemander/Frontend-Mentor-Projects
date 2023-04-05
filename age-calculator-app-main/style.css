@@ -160,9 +160,22 @@ body {
   width: 100%;
 }
 
+.app__form input:focus-within {
+  border-color: var(--color-primary-500);
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .form__grid-item > span {
   color: var(--color-primary-600);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-style: italic;
   font-weight: 400;
   visibility: hidden;
@@ -194,15 +207,20 @@ body {
   background-size: 60%;
   border-radius: 50%;
   border: 0;
+  cursor: pointer;
   position: absolute;
   right: 4em;
   transform: translateY(-6.2em);
   width: 100px;
 }
 
+.app__form > button:is(:hover, :focus-visible) {
+  background-color: var(--color-neutral-900);
+}
+
 .app__results {
   display: grid;
-  font-size: 7rem;
+  font-size: 5rem;
   font-style: italic;
   font-weight: 800;
 }
