@@ -9,7 +9,7 @@ const yearResult = document.getElementById("results-years");
 const monthResult = document.getElementById("results-months");
 const dayResult = document.getElementById("results-days");
 
-const CURRENT_DATE = new Date();
+const CURRENT_DATE = luxon.DateTime.now(); //dates and difference calculation handled by the Luxon library
 
 function validateForm() {
   let pass = true;
@@ -42,7 +42,7 @@ function validateForm() {
   }
 
   if (yearInput.value) {
-    if (yearInput.value > CURRENT_DATE.getFullYear()) {
+    if (yearInput.value > CURRENT_DATE.c.year) {
       yearInput.setAttribute("data-error", "");
       pass = false;
     }
@@ -103,11 +103,13 @@ function getUserDate() {
   const month = monthInput.value;
   const year = yearInput.value;
 
-  const difference = CURRENT_DATE - new Date(`${year}-${month}-${day}`);
+  const userDate = luxon.DateTime.fromISO(`${year}-${month}-${day}`);
 
-  const years = Math.floor(difference / 31536000000);
-  const months = Math.floor((difference % 31536000000) / 2629800000);
-  const days = Math.floor((difference % 2629800000) / 86400000);
+  const difference = CURRENT_DATE.diff(userDate, ["years", "months", "days"]);
+
+  const years = difference.years;
+  const months = difference.months;
+  const days = Math.floor(difference.days);
 
   yearResult.innerText = years;
   monthResult.innerText = months;
