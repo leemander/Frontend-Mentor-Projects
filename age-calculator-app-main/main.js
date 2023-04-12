@@ -103,7 +103,11 @@ function getUserDate() {
   const month = monthInput.value;
   const year = yearInput.value;
 
-  const userDate = luxon.DateTime.fromISO(`${year}-${month}-${day}`);
+  const userDate = luxon.DateTime.fromObject({
+    day: day,
+    month: month,
+    year: year,
+  });
 
   const difference = CURRENT_DATE.diff(userDate, ["years", "months", "days"]);
 
@@ -114,7 +118,11 @@ function getUserDate() {
   yearResult.innerText = years;
   monthResult.innerText = months;
   dayResult.innerText = days;
+
+  //displayResults(years, months, days);
 }
+
+function displayResults(years, months, days) {}
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
