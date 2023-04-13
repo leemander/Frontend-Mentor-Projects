@@ -38,6 +38,7 @@ function validateForm() {
     if (monthInput.value < 1 || monthInput.value > 12) {
       monthInput.setAttribute("data-error", "");
       pass = false;
+      monthError.innerText = "Must be a valid month";
     }
   }
 
@@ -45,6 +46,7 @@ function validateForm() {
     if (yearInput.value > CURRENT_DATE.c.year) {
       yearInput.setAttribute("data-error", "");
       pass = false;
+      yearError.innerText = "Must be in the past";
     }
   }
 
@@ -115,14 +117,38 @@ function getUserDate() {
   const months = difference.months;
   const days = Math.floor(difference.days);
 
-  yearResult.innerText = years;
-  monthResult.innerText = months;
-  dayResult.innerText = days;
-
-  //displayResults(years, months, days);
+  displayResults(years, months, days);
 }
 
-function displayResults(years, months, days) {}
+function displayResults(years, months, days) {
+  let y = 0;
+  let m = 0;
+  let d = 0;
+
+  const renderYears = setInterval(() => {
+    yearResult.innerText = y;
+    y++;
+    if (y > years) {
+      clearInterval(renderYears);
+    }
+  }, 35);
+
+  const renderMonths = setInterval(() => {
+    monthResult.innerText = y;
+    m++;
+    if (m > months) {
+      clearInterval(renderMonths);
+    }
+  }, 35);
+
+  const renderDays = setInterval(() => {
+    dayResult.innerText = d;
+    d++;
+    if (d > days) {
+      clearInterval(renderDays);
+    }
+  }, 35);
+}
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
