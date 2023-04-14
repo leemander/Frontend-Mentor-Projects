@@ -241,7 +241,7 @@ input::-webkit-inner-spin-button {
   .app {
     margin-inline: auto;
     margin-top: 5em;
-    padding: 1em;
+    padding: 3em 1em;
   }
 
   .form__grid {
@@ -272,6 +272,6 @@ input::-webkit-inner-spin-button {
   }
 
   .app__results {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }

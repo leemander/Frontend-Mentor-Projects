@@ -1,4 +1,3 @@
-const dateForm = document.getElementById("date-form");
 const dayInput = document.getElementById("day");
 const monthInput = document.getElementById("month");
 const yearInput = document.getElementById("year");
@@ -64,7 +63,8 @@ function validateForm() {
   }
 
   if (pass) {
-    if (validateDays(dayInput.value, monthInput.value, yearInput.value)) {
+    if (validateDate(dayInput.value, monthInput.value, yearInput.value)) {
+      //if all the inputs are valid and the date exists then continue
       getUserDate();
     } else {
       inputs.forEach((input) => {
@@ -76,7 +76,7 @@ function validateForm() {
   }
 }
 
-function validateDays(days, month, year) {
+function validateDate(days, month, year) {
   function isLeapYear(year) {
     return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
   }
@@ -84,6 +84,7 @@ function validateDays(days, month, year) {
 
   let valid = true;
 
+  //checks to see if the given amount of days for the given month is valid, taking into account variation due to leap years
   switch (+month) {
     case 2:
       if (leapYear) {
@@ -134,11 +135,15 @@ function getUserDate() {
 }
 
 function displayResults(years, months, days) {
-  submitButton.disabled = true;
+  submitButton.disabled = true; //disables the submit button so the user can't trigger multiple renders
+
+  //to enable the animated text effect these variables store a number between 0 and the final number of years, months, and days to be displayed...
 
   let y = 0;
   let m = 0;
   let d = 0;
+
+  // ...which is then incremented by the following functions
 
   const renderYears = setInterval(() => {
     yearResult.innerText = y;
@@ -168,12 +173,12 @@ function displayResults(years, months, days) {
 }
 
 function checkRender(years, months, days) {
+  //this function uses the MutationObserver API to track changes to the result elements in the DOM and when the innerText of those matches the final years, months, and days as calculated by getUserDate the submit button is re-enabled
   let renderedDays = 0;
   let renderedMonths = 0;
   let renderedYears = 0;
 
   function checkIfFinished() {
-    console.log(renderedDays, days);
     if (
       +renderedDays === days &&
       +renderedMonths === months &&
@@ -186,22 +191,22 @@ function checkRender(years, months, days) {
   const yearObserver = new MutationObserver((mutationList) => {
     mutationList.forEach((mutation) => {
       renderedYears = mutation.addedNodes[0].nodeValue;
-      checkIfFinished();
     });
+    checkIfFinished();
   });
 
   const monthObserver = new MutationObserver((mutationList) => {
     mutationList.forEach((mutation) => {
       renderedMonths = mutation.addedNodes[0].nodeValue;
-      checkIfFinished();
     });
+    checkIfFinished();
   });
 
   const dayObserver = new MutationObserver((mutationList) => {
     mutationList.forEach((mutation) => {
       renderedDays = mutation.addedNodes[0].nodeValue;
-      checkIfFinished();
     });
+    checkIfFinished();
   });
 
   yearObserver.observe(yearResult, { childList: true });
