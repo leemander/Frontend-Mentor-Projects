@@ -1,3 +1,4 @@
+const dateForm = document.getElementById("date-form");
 const dayInput = document.getElementById("day");
 const monthInput = document.getElementById("month");
 const yearInput = document.getElementById("year");
@@ -27,7 +28,11 @@ function validateForm() {
   });
 
   if (dayInput.value) {
-    if (dayInput.value < 1 || dayInput.value > 31) {
+    if (
+      dayInput.value < 1 ||
+      dayInput.value > 31 ||
+      !Number.isInteger(+dayInput.value)
+    ) {
       dayInput.setAttribute("data-error", "");
       pass = false;
       dayError.innerText = "Must be a valid day";
@@ -35,7 +40,11 @@ function validateForm() {
   }
 
   if (monthInput.value) {
-    if (monthInput.value < 1 || monthInput.value > 12) {
+    if (
+      monthInput.value < 1 ||
+      monthInput.value > 12 ||
+      !Number.isInteger(+monthInput.value)
+    ) {
       monthInput.setAttribute("data-error", "");
       pass = false;
       monthError.innerText = "Must be a valid month";
@@ -47,6 +56,10 @@ function validateForm() {
       yearInput.setAttribute("data-error", "");
       pass = false;
       yearError.innerText = "Must be in the past";
+    } else if (!Number.isInteger(+yearInput.value)) {
+      yearInput.setAttribute("data-error", "");
+      pass = false;
+      yearError.innerText = "Must be a valid year";
     }
   }
 
@@ -121,6 +134,8 @@ function getUserDate() {
 }
 
 function displayResults(years, months, days) {
+  submitButton.disabled = true;
+
   let y = 0;
   let m = 0;
   let d = 0;
@@ -134,7 +149,7 @@ function displayResults(years, months, days) {
   }, 35);
 
   const renderMonths = setInterval(() => {
-    monthResult.innerText = y;
+    monthResult.innerText = m;
     m++;
     if (m > months) {
       clearInterval(renderMonths);
@@ -148,6 +163,50 @@ function displayResults(years, months, days) {
       clearInterval(renderDays);
     }
   }, 35);
+
+  checkRender(years, months, days);
+}
+
+function checkRender(years, months, days) {
+  let renderedDays = 0;
+  let renderedMonths = 0;
+  let renderedYears = 0;
+
+  function checkIfFinished() {
+    console.log(renderedDays, days);
+    if (
+      +renderedDays === days &&
+      +renderedMonths === months &&
+      +renderedYears === years
+    ) {
+      submitButton.disabled = false;
+    }
+  }
+
+  const yearObserver = new MutationObserver((mutationList) => {
+    mutationList.forEach((mutation) => {
+      renderedYears = mutation.addedNodes[0].nodeValue;
+      checkIfFinished();
+    });
+  });
+
+  const monthObserver = new MutationObserver((mutationList) => {
+    mutationList.forEach((mutation) => {
+      renderedMonths = mutation.addedNodes[0].nodeValue;
+      checkIfFinished();
+    });
+  });
+
+  const dayObserver = new MutationObserver((mutationList) => {
+    mutationList.forEach((mutation) => {
+      renderedDays = mutation.addedNodes[0].nodeValue;
+      checkIfFinished();
+    });
+  });
+
+  yearObserver.observe(yearResult, { childList: true });
+  monthObserver.observe(monthResult, { childList: true });
+  dayObserver.observe(dayResult, { childList: true });
 }
 
 submitButton.addEventListener("click", (e) => {

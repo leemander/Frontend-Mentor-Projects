@@ -210,11 +210,11 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   position: absolute;
   right: 4em;
-  transform: translateY(-6.2em);
+  transform: translateY(-6.26em);
   width: 100px;
 }
 
-.app__form > button:is(:hover, :focus-visible) {
+.app__form > button:is(:hover, :focus-visible, [disabled]) {
   background-color: var(--color-neutral-900);
 }
 
