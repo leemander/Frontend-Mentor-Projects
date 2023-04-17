@@ -185,6 +185,9 @@ function checkRender(years, months, days) {
       +renderedYears === years
     ) {
       submitButton.disabled = false;
+      yearObserver.disconnect();
+      monthObserver.disconnect();
+      dayObserver.disconnect();
     }
   }
 
