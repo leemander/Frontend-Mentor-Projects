@@ -80,7 +80,7 @@ select {
 @font-face {
   font-family: "Roboto";
   src: url(./assets/fonts/Roboto-Regular.ttf);
-  font-weight: 400 700;
+  font-weight: 400, 700;
 }
 
 :root {
@@ -92,7 +92,7 @@ select {
   --font-family: "Roboto", sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --font-color: var(--color-neutral-700);
+  --font-color: var(--color-neutral-800);
   --spacing: 1em;
 }
 
@@ -101,7 +101,93 @@ body {
   color: var(--font-color);
   display: grid;
   font-family: var(--font-family);
+  font-size: 1rem;
   font-weight: var(--font-weight-regular);
   min-height: 100dvh;
   place-content: center;
+}
+
+.main {
+  background-color: var(--color-neutral-100);
+  border-radius: calc(var(--spacing) * 2);
+  display: grid;
+  gap: calc(var(--spacing) * 2);
+  grid-auto-flow: column;
+  padding: calc(var(--spacing) * 1.5);
+}
+
+.main__content {
+  font-weight: var(--font-weight-bold);
+  margin-block: calc(var(--spacing) * 2.5);
+  margin-inline: calc(var(--spacing) * 2.5);
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+}
+
+h1 + p {
+  margin-top: var(--spacing);
+  width: 40ch;
+}
+
+.main__content ul {
+  display: grid;
+  gap: var(--spacing);
+  list-style: none;
+  margin-top: calc(var(--spacing) * 1.5);
+  padding-left: 0;
+}
+
+.main__content li {
+  background-image: url(./assets/images/icon-list.svg);
+  background-repeat: no-repeat;
+  background-position: left 0 top 50%;
+  padding-left: 2em;
+}
+
+.content__form {
+  display: grid;
+  gap: var(--spacing);
+  margin-top: calc(var(--spacing) * 2);
+}
+
+.content__form label {
+  font-size: small;
+  font-weight: var(--font-weight-bold);
+}
+
+.content__form input,
+.content__form button {
+  border: 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+  outline: 0;
+  padding: var(--spacing);
+}
+
+.content__form input {
+  border: 1px var(--color-neutral-300) solid;
+}
+
+.content__form input:focus-within {
+  border-color: var(--color-neutral-800);
+}
+
+.content__form button {
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1.25px;
+}
+
+.content__form button:is(:hover, :focus-visible) {
+  background-image: linear-gradient(
+    to right,
+    hsl(347, 100%, 66%),
+    var(--color-primary-600)
+  );
+  box-shadow: 0 30px 30px -20px var(--color-primary-600);
 }
