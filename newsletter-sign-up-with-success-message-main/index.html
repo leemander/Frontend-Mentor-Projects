@@ -17,30 +17,43 @@
   </head>
   <body>
     <main class="main">
-      <div class="main__content">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-        <form class="content__form">
-          <div class="form__label-container">
-            <label for="email">Email address</label>
-            <small>Valid email required</small>
-          </div>
-          <input type="text" id="email" placeholder="email@company.com" />
-          <button>Subscribe to monthly newsletter</button>
-        </form>
+      <div class="main__grid">
+        <div class="main__content">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+          <form class="content__form">
+            <div class="form__label-container">
+              <label for="email">Email address</label>
+              <small>Valid email required</small>
+            </div>
+            <input type="text" id="email" placeholder="email@company.com" />
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <picture class="main__image">
+          <source
+            media="(max-width: 500px)"
+            srcset="./assets/images/illustration-sign-up-mobile.svg"
+          />
+          <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
+        </picture>
       </div>
-      <picture class="main__image">
-        <source
-          media="(max-width: 500px)"
-          srcset="./assets/images/illustration-sign-up-mobile.svg"
-        />
-        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
-      </picture>
+      <div class="main__success">
+        <img src="./assets/images/icon-success.svg" alt="" />
+        <div>
+          <h2>Thanks for subscribing!</h2>
+          <p id="success-message">
+            A confirmation email has been sent to x. Please open it and click
+            the button inside to confirm your subscription
+          </p>
+        </div>
+        <button>Dismiss message</button>
+      </div>
     </main>
     <script src="main.js"></script>
   </body>

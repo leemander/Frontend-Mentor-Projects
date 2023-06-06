@@ -110,10 +110,13 @@ body {
 .main {
   background-color: var(--color-neutral-100);
   border-radius: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 1.5);
+}
+
+.main__grid {
   display: grid;
   gap: calc(var(--spacing) * 2);
   grid-auto-flow: column;
-  padding: calc(var(--spacing) * 1.5);
 }
 
 .main__content {
@@ -129,7 +132,7 @@ h1 {
 }
 
 h1 + p {
-  margin-top: var(--spacing);
+  margin-block-start: var(--spacing);
   max-width: 40ch;
 }
 
@@ -137,7 +140,7 @@ h1 + p {
   display: grid;
   gap: var(--spacing);
   list-style: none;
-  margin-top: calc(var(--spacing) * 1.5);
+  margin-block-start: calc(var(--spacing) * 1.5);
   padding-left: 0;
 }
 
@@ -151,7 +154,7 @@ h1 + p {
 .content__form {
   display: grid;
   gap: var(--spacing);
-  margin-top: calc(var(--spacing) * 2);
+  margin-block-start: calc(var(--spacing) * 2);
 }
 
 .form__label-container {
@@ -171,7 +174,7 @@ h1 + p {
 }
 
 .content__form input,
-.content__form button {
+button {
   border: 0;
   border-radius: 0.5em;
   cursor: pointer;
@@ -197,14 +200,14 @@ h1 + p {
   color: var(--color-primary-600);
 }
 
-.content__form button {
+button {
   background-color: var(--color-neutral-800);
   color: var(--color-neutral-100);
   font-weight: var(--font-weight-bold);
   letter-spacing: 1.25px;
 }
 
-.content__form button:is(:hover, :focus-visible) {
+button:is(:hover, :focus-visible) {
   background-image: linear-gradient(
     to right,
     hsl(347, 100%, 66%),
@@ -220,6 +223,23 @@ h1 + p {
   object-fit: cover;
 }
 
+.main__success {
+  display: none;
+  gap: 2em;
+  font-weight: var(--font-weight-bold);
+  max-width: 24em;
+  padding: calc(var(--spacing) * 2);
+}
+
+.main__success h2 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.main__success p {
+  margin-block-start: var(--spacing);
+}
+
 @media (width <= 500px) {
   body {
     display: block;
@@ -227,11 +247,14 @@ h1 + p {
 
   .main {
     border-radius: 0;
-    gap: var(--spacing);
-    grid-auto-flow: row;
     height: 100%;
     padding: 0;
     width: 100%;
+  }
+
+  .main__grid {
+    gap: var(--spacing);
+    grid-auto-flow: row;
   }
 
   .main__image {
@@ -259,6 +282,18 @@ h1 + p {
   }
 
   h1 + p {
-    margin-top: 0.5em;
+    margin-block-start: 0.5em;
+  }
+
+  .main__success {
+    min-height: 100dvh;
+  }
+
+  .main__success img {
+    margin-block-start: auto;
+  }
+
+  .main__success button {
+    margin-block-start: auto;
   }
 }
