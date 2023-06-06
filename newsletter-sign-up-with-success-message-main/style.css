@@ -154,9 +154,20 @@ h1 + p {
   margin-top: calc(var(--spacing) * 2);
 }
 
-.content__form label {
+.form__label-container {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.form__label-container label {
   font-size: small;
   font-weight: var(--font-weight-bold);
+}
+
+.form__label-container small {
+  color: var(--color-primary-600);
+  display: none;
+  margin-inline-start: auto;
 }
 
 .content__form input,
@@ -174,6 +185,16 @@ h1 + p {
 
 .content__form input:focus-within {
   border-color: var(--color-neutral-800);
+}
+
+.content__form.error input {
+  background-color: hsl(4, 100%, 67%, 0.2);
+  border-color: var(--color-primary-600);
+  color: var(--color-primary-600);
+}
+
+.content__form.error input::placeholder {
+  color: var(--color-primary-600);
 }
 
 .content__form button {
