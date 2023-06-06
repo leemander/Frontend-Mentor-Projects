@@ -130,7 +130,7 @@ h1 {
 
 h1 + p {
   margin-top: var(--spacing);
-  width: 40ch;
+  max-width: 40ch;
 }
 
 .main__content ul {
@@ -190,4 +190,54 @@ h1 + p {
     var(--color-primary-600)
   );
   box-shadow: 0 30px 30px -20px var(--color-primary-600);
+}
+
+.main__image {
+  display: grid;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+
+@media (width <= 500px) {
+  body {
+    display: block;
+  }
+
+  .main {
+    border-radius: 0;
+    gap: var(--spacing);
+    grid-auto-flow: row;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+
+  .main__image {
+    order: -1;
+  }
+
+  .main__content {
+    color: var(--color-neutral-800);
+    display: block;
+    margin: 0;
+    padding: 0 calc(var(--spacing) * 1.5) calc(var(--spacing) * 1.5)
+      calc(var(--spacing) * 1.5);
+  }
+
+  .main__content li:not(:last-child) {
+    background-position: left 0 top 0;
+  }
+
+  .main__content li {
+    max-width: 35ch;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h1 + p {
+    margin-top: 0.5em;
+  }
 }
