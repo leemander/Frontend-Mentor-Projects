@@ -92,7 +92,7 @@ select {
   --font-family: "Roboto", sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --font-color: var(--color-neutral-800);
+  --font-color: var(--color-neutral-700);
   --spacing: 1em;
 }
 
@@ -117,6 +117,10 @@ body {
   display: grid;
   gap: calc(var(--spacing) * 2);
   grid-auto-flow: column;
+}
+
+.main__grid.hide {
+  display: none;
 }
 
 .main__content {
@@ -153,7 +157,6 @@ h1 + p {
 
 .content__form {
   display: grid;
-  gap: var(--spacing);
   margin-block-start: calc(var(--spacing) * 2);
 }
 
@@ -184,10 +187,19 @@ button {
 
 .content__form input {
   border: 1px var(--color-neutral-300) solid;
+  margin-top: 0.5em;
 }
 
 .content__form input:focus-within {
   border-color: var(--color-neutral-800);
+}
+
+.content__form button {
+  margin-top: calc(var(--spacing) * 1.5);
+}
+
+.content__form.error small {
+  display: grid;
 }
 
 .content__form.error input {
@@ -229,6 +241,10 @@ button:is(:hover, :focus-visible) {
   font-weight: var(--font-weight-bold);
   max-width: 24em;
   padding: calc(var(--spacing) * 2);
+}
+
+.main__success.show {
+  display: grid;
 }
 
 .main__success h2 {

@@ -17,7 +17,7 @@
   </head>
   <body>
     <main class="main">
-      <div class="main__grid">
+      <div class="main__grid" id="main-content">
         <div class="main__content">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -26,12 +26,17 @@
             <li>Measuring to ensure updates are a success</li>
             <li>And much more!</li>
           </ul>
-          <form class="content__form">
+          <form class="content__form" id="sign-up-form">
             <div class="form__label-container">
               <label for="email">Email address</label>
               <small>Valid email required</small>
             </div>
-            <input type="text" id="email" placeholder="email@company.com" />
+            <input
+              type="text"
+              id="email"
+              placeholder="email@company.com"
+              autocomplete="off"
+            />
             <button>Subscribe to monthly newsletter</button>
           </form>
         </div>
@@ -43,7 +48,7 @@
           <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
         </picture>
       </div>
-      <div class="main__success">
+      <div class="main__success" id="success-content">
         <img src="./assets/images/icon-success.svg" alt="" />
         <div>
           <h2>Thanks for subscribing!</h2>
@@ -52,7 +57,7 @@
             the button inside to confirm your subscription
           </p>
         </div>
-        <button>Dismiss message</button>
+        <button id="dismiss-button">Dismiss message</button>
       </div>
     </main>
     <script src="main.js"></script>
