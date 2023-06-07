@@ -110,7 +110,9 @@ body {
 .main {
   background-color: var(--color-neutral-100);
   border-radius: calc(var(--spacing) * 2);
+  margin-inline: auto;
   padding: calc(var(--spacing) * 1.5);
+  width: calc(100% - 2em);
 }
 
 .main__grid {
@@ -124,7 +126,6 @@ body {
 }
 
 .main__content {
-  font-weight: var(--font-weight-bold);
   margin-block: calc(var(--spacing) * 2.5);
   margin-inline: calc(var(--spacing) * 2.5);
 }
@@ -215,7 +216,6 @@ button {
 button {
   background-color: var(--color-neutral-800);
   color: var(--color-neutral-100);
-  font-weight: var(--font-weight-bold);
   letter-spacing: 1.25px;
 }
 
@@ -238,7 +238,6 @@ button:is(:hover, :focus-visible) {
 .main__success {
   display: none;
   gap: 2em;
-  font-weight: var(--font-weight-bold);
   max-width: 24em;
   padding: calc(var(--spacing) * 2);
 }
@@ -256,14 +255,14 @@ button:is(:hover, :focus-visible) {
   margin-block-start: var(--spacing);
 }
 
-@media (width <= 500px) {
+@media (width <= 800px) {
   body {
     display: block;
   }
 
   .main {
     border-radius: 0;
-    height: 100%;
+    min-height: 100dvh;
     padding: 0;
     width: 100%;
   }
@@ -271,6 +270,8 @@ button:is(:hover, :focus-visible) {
   .main__grid {
     gap: var(--spacing);
     grid-auto-flow: row;
+    margin-inline: auto;
+    max-width: 500px;
   }
 
   .main__image {
