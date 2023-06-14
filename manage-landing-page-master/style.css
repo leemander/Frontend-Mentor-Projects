@@ -1,5 +1,7 @@
 /* RESET STARTS */
 
+/* https://andy-bell.co.uk/a-modern-css-reset/#heading-a-reset-of-sensible-defaults */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -76,3 +78,54 @@ select {
 }
 
 /* RESET ENDS */
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --color-primary-200: hsla(12, 88%, 59%, 1);
+  --color-primary-800: hsla(228, 39%, 23%, 1);
+  --color-neutral-100: hsla(0, 0%, 98%, 1);
+  --color-neutral-200: hsla(13, 100%, 96%, 1);
+  --color-neutral-500: hsla(227, 12%, 61%, 1);
+  --color-neutral-900: hsla(233, 12%, 13%, 1);
+
+  --font-family: "Be Vietnam Pro", sans-serif;
+  --font-size: 1rem;
+  --font-color-body: var(--color-neutral-500);
+  --font-color-title: var(--color-primary-800);
+  --font-weight-light: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+body {
+  background-color: var(--color-neutral-100);
+  color: var(--font-color-body);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  left: -10000em;
+  position: absolute;
+  visibility: hidden;
+}
+
+.desktop-only {
+  display: none;
+}
