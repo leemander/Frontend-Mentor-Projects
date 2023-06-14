@@ -127,5 +127,83 @@ ul {
 }
 
 .desktop-only {
+  display: none !important;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 350px;
+  width: calc(100% - 3em);
+}
+
+main {
+  background-image: url(./images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: top -6em right -8em;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 3em;
+}
+
+.header__logo {
+  max-width: 125px;
+}
+
+.header > nav {
   display: none;
+}
+
+.header__hamburger {
+  aspect-ratio: 1;
+  background-image: url(./images/icon-hamburger.svg);
+  background-color: transparent;
+  background-position: top 3px left 50%;
+  background-repeat: no-repeat;
+  border: 0;
+  height: 35px;
+}
+
+.hero {
+  display: grid;
+}
+
+.hero__info {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+h1 {
+  color: var(--font-color-title);
+  font-size: calc(var(--font-size) * 2.6);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
+.hero__info > p {
+  margin-inline: auto;
+  margin-top: 1em;
+  max-width: 32ch;
+}
+
+.cta-link {
+  background-color: var(--color-primary-200);
+  border-radius: 100em;
+  color: var(--color-neutral-200);
+  display: block;
+  font-size: calc(var(--font-size) * 0.9);
+  font-weight: var(--font-weight-bold);
+  margin-inline: auto;
+  margin-top: 1.5em;
+  padding: 0.5em 2em;
+  width: fit-content;
+}
+
+.hero__img {
+  order: -1;
 }
