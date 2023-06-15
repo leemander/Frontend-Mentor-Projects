@@ -361,3 +361,81 @@ h1 {
   background-color: var(--color-neutral-100);
   color: var(--color-primary-200);
 }
+
+footer {
+  background-color: var(--color-neutral-900);
+  padding-block: 3em 2em;
+}
+
+.footer__grid {
+  display: grid;
+}
+
+.footer__newsletter-form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer__newsletter-form input,
+.footer__newsletter-form button {
+  border: 0;
+  border-radius: 1000em;
+  font-size: calc(var(--font-size) * 0.9);
+}
+
+.newsletter-form__input {
+  padding: 0.5em 2em;
+  width: 100%;
+}
+
+.newsletter-form__button {
+  background-color: var(--color-primary-200);
+  color: var(--color-neutral-100);
+  font-weight: var(--font-weight-bold);
+  padding: 0.5em 1.5em;
+  text-transform: uppercase;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 2em;
+}
+
+.footer__nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-inline: auto;
+  padding: 0;
+}
+
+.footer__socials {
+  margin-block-start: 1em;
+  display: grid;
+  gap: 2em;
+}
+
+.socials-list > ul {
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: column;
+  padding: 0;
+  place-items: center;
+}
+
+.socials-list img {
+  aspect-ratio: 1;
+  width: 35px;
+}
+
+.footer__logo {
+  margin-inline: auto;
+}
+
+footer small {
+  display: block;
+  margin-block-start: 4em;
+  text-align: center;
+  width: 100%;
+}
