@@ -120,6 +120,18 @@ ul {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--font-color-title);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
 .visually-hidden {
   left: -10000em;
   position: absolute;
@@ -178,17 +190,13 @@ main {
 }
 
 h1 {
-  color: var(--font-color-title);
   font-size: calc(var(--font-size) * 2.6);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: -1px;
-  line-height: 1.25;
 }
 
 .hero__info > p {
   margin-inline: auto;
   margin-top: 1em;
-  max-width: 32ch;
+  max-width: 35ch;
 }
 
 .cta-link {
@@ -206,4 +214,61 @@ h1 {
 
 .hero__img {
   order: -1;
+}
+
+.info__intro {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.info__intro > h2 {
+  font-size: calc(var(--font-size) * 2);
+  margin-inline: auto;
+  max-width: 15ch;
+}
+
+.info__intro > p {
+  margin-top: 1em;
+}
+
+.info__points {
+  display: grid;
+  gap: 2em;
+  margin-top: 3em;
+  padding: 0;
+}
+
+.info__point > h3 {
+  background-color: hsla(12, 88%, 59%, 0.2);
+  border-bottom-left-radius: 1000em;
+  border-top-left-radius: 1000em;
+  font-size: var(--font-size);
+  margin-inline-start: 1em;
+  padding-block: 0.5em;
+  padding-inline-start: 4em;
+  position: relative;
+}
+
+.info__point > h3::before {
+  background-color: var(--color-primary-200);
+  border-radius: 1000em;
+  color: var(--color-neutral-100);
+  content: "01";
+  left: 0;
+  padding-block: 0.5em;
+  padding-inline: 1.25em;
+  position: absolute;
+  top: 0;
+}
+
+.info__points > li:nth-of-type(2) h3::before {
+  content: "02";
+}
+
+.info__points > li:nth-of-type(3) h3::before {
+  content: "03";
+}
+
+.info__point > P {
+  margin-top: 1em;
 }
