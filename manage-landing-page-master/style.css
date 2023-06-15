@@ -212,6 +212,10 @@ h1 {
   width: fit-content;
 }
 
+.cta-link:not([data-color]) {
+  box-shadow: 0 0.75em 0.5em -0.37em hsla(12, 88%, 59%, 0.5);
+}
+
 .hero__img {
   order: -1;
 }
