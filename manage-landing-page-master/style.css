@@ -185,7 +185,7 @@ main {
 }
 
 .hero__info {
-  margin-top: 1.5em;
+  margin-block-start: 1.5em;
   text-align: center;
 }
 
@@ -195,7 +195,7 @@ h1 {
 
 .hero__info > p {
   margin-inline: auto;
-  margin-top: 1em;
+  margin-block-start: 1em;
   max-width: 35ch;
 }
 
@@ -207,7 +207,7 @@ h1 {
   font-size: calc(var(--font-size) * 0.9);
   font-weight: var(--font-weight-bold);
   margin-inline: auto;
-  margin-top: 1.5em;
+  margin-block-start: 1.5em;
   padding: 0.5em 2em;
   width: fit-content;
 }
@@ -217,7 +217,7 @@ h1 {
 }
 
 .info__intro {
-  margin-top: 4em;
+  margin-block-start: 4em;
   text-align: center;
 }
 
@@ -228,13 +228,13 @@ h1 {
 }
 
 .info__intro > p {
-  margin-top: 1em;
+  margin-block-start: 1em;
 }
 
 .info__points {
   display: grid;
   gap: 2em;
-  margin-top: 3em;
+  margin-block-start: 3em;
   padding: 0;
 }
 
@@ -270,5 +270,73 @@ h1 {
 }
 
 .info__point > P {
-  margin-top: 1em;
+  margin-block-start: 1em;
+}
+
+.testimonials {
+  padding-block-end: 3em;
+  text-align: center;
+}
+
+.testimonials h4 {
+  font-size: calc(var(--font-size) * 2);
+  margin-block-start: 2em;
+}
+
+.testimonials__slider {
+  display: flex;
+  gap: 2em;
+  margin-block-start: 4em;
+  overflow-x: scroll;
+  padding-block-start: 40px;
+}
+
+.slider__slide {
+  background-color: hsla(227, 12%, 61%, 0.05);
+  padding-block: 3em 2em;
+  padding-inline: 0.5em;
+  position: relative;
+  text-align: center;
+  min-width: 100%;
+}
+
+.slider__slide > img {
+  aspect-ratio: 1;
+  left: 50%;
+  margin-inline: auto;
+  max-width: 80px;
+  position: absolute;
+  transform: translateX(-50%) translateY(calc(-3em + -50%));
+}
+
+.slider__slide > h5 {
+  font-size: calc(var(--font-size) * 1.1);
+}
+
+.slider__slide > p {
+  text-wrap: balance;
+}
+
+.testimonials__indicators {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-block-start: 2em;
+  margin-inline: auto;
+}
+
+.testimonials__indicator {
+  aspect-ratio: 1;
+  border: 1px solid var(--color-primary-200);
+  border-radius: 50%;
+  display: block;
+  width: 10px;
+}
+
+.testimonials__indicator.current {
+  background-color: var(--color-primary-200);
+}
+
+.testimonials > .cta-link {
+  margin-top: 3em;
 }
