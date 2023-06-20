@@ -90,7 +90,7 @@ select {
   --color-neutral-900: hsla(233, 12%, 13%, 1);
 
   --font-family: "Be Vietnam Pro", sans-serif;
-  --font-size: 1rem;
+  --font-size: 16px;
   --font-color-body: var(--color-neutral-500);
   --font-color-title: var(--color-primary-800);
   --font-weight-light: 400;
@@ -146,6 +146,10 @@ h6 {
   margin-inline: auto;
   max-width: 350px;
   width: calc(100% - 3em);
+}
+
+.even-columns {
+  display: grid;
 }
 
 main {
@@ -442,4 +446,156 @@ footer small {
   margin-block-start: 4em;
   text-align: center;
   width: 100%;
+}
+
+@media (width > 60em) {
+  :root {
+    font-size: 19px;
+  }
+
+  .desktop-only {
+    display: unset !important;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .container {
+    max-width: 60em;
+  }
+
+  .header {
+    justify-content: unset;
+  }
+
+  .header > nav {
+    display: flex;
+    width: 100%;
+  }
+
+  .header__nav-list {
+    color: var(--color-neutral-900);
+    display: flex;
+    font-weight: var(--font-weight-bold);
+    gap: 2em;
+    margin-inline: auto;
+  }
+
+  .header__cta {
+    margin: auto;
+    width: 15%;
+  }
+
+  .hero {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__info {
+    text-align: start;
+  }
+
+  .hero__info > * {
+    margin-inline: unset !important;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-wrap: balance;
+  }
+
+  .hero__img {
+    order: 1000;
+  }
+
+  .info {
+    gap: 4em;
+    grid-auto-flow: column;
+    margin-block-start: 8em;
+  }
+
+  .info__intro {
+    margin: unset;
+    text-align: start;
+  }
+
+  .info__intro > h2 {
+    font-size: 2rem;
+    margin-inline: unset;
+    max-width: unset;
+  }
+
+  .info__points {
+    margin: unset;
+  }
+
+  .info__point > h3 {
+    background-color: transparent;
+    font-size: 1.1rem;
+    padding-left: 4.5em;
+  }
+
+  .info__point > p {
+    padding-left: 4.5em;
+  }
+
+  .slider__slide {
+    min-width: 50%;
+  }
+
+  .cta > .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cta h6 {
+    max-width: 20ch;
+    text-align: start;
+  }
+
+  .cta a {
+    margin-block: auto;
+    margin-inline: auto 0;
+  }
+
+  .footer__grid {
+    grid-auto-flow: column;
+    grid-template-columns: 1.5fr 3fr 1.5fr;
+  }
+
+  .footer__grid > * {
+    margin: unset;
+  }
+
+  .footer__socials {
+    order: -1;
+  }
+
+  .footer__logo {
+    order: -1;
+    margin-block-start: 1em;
+    margin-inline: 0 auto;
+    width: 60%;
+  }
+
+  .socials-list img {
+    max-width: 30px;
+  }
+
+  .footer__nav > ul {
+    margin-inline: 4em;
+  }
+
+  .footer__newsletter-form {
+    align-items: center;
+    order: 1000;
+    margin-block: 1em auto;
+  }
+
+  footer small {
+    text-align: end;
+    margin-block-start: unset;
+  }
 }
