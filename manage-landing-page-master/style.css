@@ -497,6 +497,11 @@ footer small {
     width: calc(100% - 3em);
   }
 
+  main {
+    background-position: top -5em right -5em, top 130vh left -20em;
+    background-size: 50%;
+  }
+
   .header {
     justify-content: unset;
   }
@@ -579,6 +584,13 @@ footer small {
 
   .slider__slide {
     min-width: 50%;
+  }
+
+  .cta {
+    background-image: url(./images/bg-simplify-section-desktop.svg);
+    background-position: left 12em bottom 0;
+    background-size: 100%;
+    padding-block: 3em;
   }
 
   .cta > .container {
