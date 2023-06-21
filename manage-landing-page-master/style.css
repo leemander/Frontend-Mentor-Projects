@@ -158,10 +158,11 @@ button:is(:hover, :focus-visible) {
 }
 
 main {
-  background-image: url(./images/bg-tablet-pattern.svg);
+  background-image: url(./images/bg-tablet-pattern.svg),
+    url(./images/bg-tablet-pattern.svg);
   background-repeat: no-repeat;
-  background-size: 125%;
-  background-position: top -6em right -8em;
+  background-size: 125%, 100%;
+  background-position: top -6em right -8em, top 62.5vh right -14em;
 }
 
 .header {
