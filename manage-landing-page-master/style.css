@@ -152,6 +152,11 @@ h6 {
   display: grid;
 }
 
+a:is(:hover, :focus-visible),
+button:is(:hover, :focus-visible) {
+  opacity: 0.5;
+}
+
 main {
   background-image: url(./images/bg-tablet-pattern.svg);
   background-repeat: no-repeat;
@@ -404,6 +409,10 @@ footer {
   text-transform: uppercase;
 }
 
+footer {
+  color: var(--color-neutral-100);
+}
+
 .footer__nav {
   display: flex;
   justify-content: space-between;
@@ -416,6 +425,11 @@ footer {
   gap: 1em;
   margin-inline: auto;
   padding: 0;
+}
+
+.footer__nav a:is(:hover, :focus-visible) {
+  color: var(--color-primary-200);
+  opacity: 1;
 }
 
 .footer__socials {
@@ -432,8 +446,16 @@ footer {
   place-items: center;
 }
 
+.socials-list a:is(:hover, :focus-visible) {
+  filter: invert(50%) sepia(87%) saturate(2928%) hue-rotate(338deg)
+    brightness(98%) contrast(93%);
+  opacity: 1;
+  outline: 0;
+}
+
 .socials-list img {
   aspect-ratio: 1;
+  cursor: pointer;
   width: 35px;
 }
 
@@ -442,10 +464,12 @@ footer {
 }
 
 footer small {
+  color: var(--color-neutral-500);
   display: block;
   margin-block-start: 4em;
+  margin-inline: auto;
   text-align: center;
-  width: 100%;
+  width: max-content;
 }
 
 @media (width > 60em) {
@@ -475,8 +499,9 @@ footer small {
   }
 
   .header__nav-list {
-    color: var(--color-neutral-900);
+    color: var(--color-primary-800);
     display: flex;
+    font-size: 0.8rem;
     font-weight: var(--font-weight-bold);
     gap: 2em;
     margin-inline: auto;
@@ -521,9 +546,13 @@ footer small {
   }
 
   .info__intro > h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-inline: unset;
     max-width: unset;
+  }
+
+  .info__intro > p {
+    max-width: 35ch;
   }
 
   .info__points {
@@ -580,6 +609,11 @@ footer small {
     width: 60%;
   }
 
+  .socials-list {
+    margin-block-start: auto;
+    place-self: start;
+  }
+
   .socials-list img {
     max-width: 30px;
   }
@@ -597,5 +631,7 @@ footer small {
   footer small {
     text-align: end;
     margin-block-start: unset;
+    margin-inline: auto 0;
+    transform: translateY(-3.5em);
   }
 }
