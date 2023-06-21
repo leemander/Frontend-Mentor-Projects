@@ -144,7 +144,7 @@ h6 {
 
 .container {
   margin-inline: auto;
-  max-width: 350px;
+  max-width: 21em;
   width: calc(100% - 3em);
 }
 
@@ -172,7 +172,8 @@ main {
 }
 
 .header__logo {
-  max-width: 125px;
+  margin-block-start: 0.33em;
+  max-width: 8em;
 }
 
 .header > nav {
@@ -186,7 +187,7 @@ main {
   background-position: top 3px left 50%;
   background-repeat: no-repeat;
   border: 0;
-  height: 35px;
+  height: 2.5em;
 }
 
 .hero {
@@ -301,7 +302,7 @@ h1 {
   gap: 2em;
   margin-block-start: 4em;
   overflow-x: scroll;
-  padding-block-start: 40px;
+  padding-block-start: 3em;
 }
 
 .slider__slide {
@@ -317,7 +318,7 @@ h1 {
   aspect-ratio: 1;
   left: 50%;
   margin-inline: auto;
-  max-width: 80px;
+  max-width: 4.5em;
   position: absolute;
   transform: translateX(-50%) translateY(calc(-3em + -50%));
 }
@@ -332,7 +333,7 @@ h1 {
 
 .testimonials__indicators {
   display: flex;
-  gap: 5px;
+  gap: 0.33em;
   justify-content: center;
   margin-block-start: 2em;
   margin-inline: auto;
@@ -456,7 +457,7 @@ footer {
 .socials-list img {
   aspect-ratio: 1;
   cursor: pointer;
-  width: 35px;
+  width: 2em;
 }
 
 .footer__logo {
@@ -487,6 +488,12 @@ footer small {
 
   .container {
     max-width: 60em;
+  }
+
+  .desktop-container {
+    margin-inline: auto;
+    max-width: 60em;
+    width: calc(100% - 3em);
   }
 
   .header {
@@ -615,7 +622,7 @@ footer small {
   }
 
   .socials-list img {
-    max-width: 30px;
+    max-width: 1.5em;
   }
 
   .footer__nav > ul {
