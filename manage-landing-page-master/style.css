@@ -582,8 +582,12 @@ footer small {
     padding-left: 4.5em;
   }
 
+  .testimonials__slider {
+    padding-block-end: 1em;
+  }
+
   .slider__slide {
-    min-width: 50%;
+    min-width: 40%;
   }
 
   .cta {
