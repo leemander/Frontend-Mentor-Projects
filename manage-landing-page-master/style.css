@@ -333,11 +333,17 @@ h1 {
 }
 
 .testimonials__slider {
+  -ms-overflow-style: none; /* IE and Edge */
   display: flex;
   gap: 2em;
   margin-block-start: 4em;
   overflow-x: scroll;
   padding-block-start: 3em;
+  scrollbar-width: none; /* Firefox */
+}
+
+.testimonials__slider::-webkit-scrollbar {
+  display: none;
 }
 
 .slider__slide {
