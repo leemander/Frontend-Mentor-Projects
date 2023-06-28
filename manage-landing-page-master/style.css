@@ -182,30 +182,32 @@ main {
   display: none;
 }
 
-.header[data-menu-open="true"] > nav {
-  background: linear-gradient(transparent, hsla(0, 0%, 0%, 0.5));
-  color: var(--color-primary-800);
-  display: block;
-  font-weight: var(--font-weight-bold);
-  height: 100dvh;
-  left: 0;
-  padding-block: 1em;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
+@media (width < 800px) {
+  .header[data-menu-open="true"] > nav {
+    background: linear-gradient(transparent, hsla(0, 0%, 0%, 0.5));
+    color: var(--color-primary-800);
+    display: block;
+    font-weight: var(--font-weight-bold);
+    height: 100dvh;
+    left: 0;
+    padding-block: 1em;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
 
-.header__nav-list {
-  background-color: var(--color-neutral-100);
-  border-radius: 0.25em;
-  display: grid;
-  gap: 1em;
-  margin-inline: auto;
-  margin-top: 7em;
-  padding: 2em 0;
-  width: calc(100% - 3em);
+  .header__nav-list {
+    background-color: var(--color-neutral-100);
+    border-radius: 0.25em;
+    display: grid;
+    gap: 1em;
+    margin-inline: auto;
+    margin-top: 7em;
+    padding: 2em 0;
+    width: calc(100% - 3em);
+  }
 }
 
 .header__hamburger {
