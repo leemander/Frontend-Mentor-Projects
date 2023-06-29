@@ -83,6 +83,7 @@ select {
 
 :root {
   --color-primary-200: hsla(12, 88%, 59%, 1);
+  --color-primary-700: rgb(221, 58, 80);
   --color-primary-800: hsla(228, 39%, 23%, 1);
   --color-neutral-100: hsla(0, 0%, 98%, 1);
   --color-neutral-200: hsla(13, 100%, 96%, 1);
@@ -431,20 +432,42 @@ footer {
   gap: 5px;
 }
 
+.footer__newsletter-form[data-error] > input {
+  border-color: var(--color-primary-700);
+  color: var(--color-primary-700);
+}
+
+.footer__newsletter-form[data-error] > input::placeholder {
+  color: var(--color-primary-700);
+}
+
+.footer__newsletter-form + p {
+  color: var(--color-primary-700);
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0.5em 2em;
+  visibility: hidden;
+}
+
+.footer__newsletter-form[data-error] + p {
+  visibility: visible;
+}
+
 .footer__newsletter-form input,
 .footer__newsletter-form button {
-  border: 0;
   border-radius: 1000em;
   font-size: calc(var(--font-size) * 0.9);
 }
 
 .newsletter-form__input {
+  border-radius: 1px solid transparent;
   padding: 0.5em 2em;
   width: 100%;
 }
 
 .newsletter-form__button {
   background-color: var(--color-primary-200);
+  border: 0;
   color: var(--color-neutral-100);
   font-weight: var(--font-weight-bold);
   padding: 0.5em 1.5em;

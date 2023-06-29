@@ -154,15 +154,18 @@
     <footer>
       <div class="container">
         <div class="footer__grid">
-          <form class="footer__newsletter-form">
-            <label class="visually hidden" for="email"></label>
-            <input
-              class="newsletter-form__input"
-              id="email"
-              placeholder="Updates in your inbox..."
-            />
-            <button class="newsletter-form__button">Go</button>
-          </form>
+          <div>
+            <form class="footer__newsletter-form" id="newsletter-form">
+              <label class="visually hidden" for="email"></label>
+              <input
+                class="newsletter-form__input"
+                id="email"
+                placeholder="Updates in your inbox..."
+              />
+              <button class="newsletter-form__button">Go</button>
+            </form>
+            <p class="newsletter-form__error">Please enter a valid email</p>
+          </div>
           <nav class="footer__nav">
             <ul role="list">
               <li><a href="#">Home</a></li>
