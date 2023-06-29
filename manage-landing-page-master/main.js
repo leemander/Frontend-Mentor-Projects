@@ -1,9 +1,11 @@
 const header = document.getElementById("header");
 const menuButton = document.getElementById("menu-button");
 const slider = document.getElementById("slider");
+const sliders = [...document.getElementsByClassName("slider__slide")];
 const sliderIndicators = [
   ...document.getElementsByClassName("testimonials__indicator"),
 ];
+
 let menuOpen = false;
 
 function toggleMenu() {
@@ -11,7 +13,8 @@ function toggleMenu() {
   menuOpen = !menuOpen;
 }
 
-let sliderPosition = 410;
+let slideWidth = sliders[0].getBoundingClientRect().width;
+let sliderPosition = slideWidth + 32;
 let currentSlideIndex = 1;
 
 function moveSlider() {
@@ -19,7 +22,9 @@ function moveSlider() {
   sliderIndicators.forEach((i) => i.classList.remove("current"));
   sliderIndicators[currentSlideIndex].classList.add("current");
 
-  sliderPosition < 1230 ? (sliderPosition += 410) : (sliderPosition = 0);
+  sliderPosition <= slider.scrollWidth - slider.scrollLeft
+    ? (sliderPosition += slideWidth + 32)
+    : (sliderPosition = 0);
   currentSlideIndex < 3 ? currentSlideIndex++ : (currentSlideIndex = 0);
 }
 
