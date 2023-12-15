@@ -7,6 +7,48 @@ body {
   min-height: 100dvh;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 400px;
+  width: calc(100% - 2em);
+}
+
 .faqs {
   background-color: #ffff;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.faqs > header {
+  display: flex;
+  gap: 1em;
+}
+
+.faqs__list {
+  padding: 0;
+  list-style: none;
+}
+
+.list__q {
+  background-color: transparent;
+  background-image: url(./assets/images/icon-plus.svg);
+  background-position: top 50% right 0;
+  background-repeat: no-repeat;
+  border: 0;
+  padding: 1em 0;
+  text-align: start;
+  width: 100%;
+}
+
+.list__q > span {
+  display: block;
+  width: 80%;
+}
+
+.list__a {
+  display: none;
+}
+
+.list__a.show {
+  display: block;
 }
