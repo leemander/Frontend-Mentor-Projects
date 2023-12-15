@@ -1,0 +1,12 @@
+body {
+  background-color: hsl(277, 90%, 96%);
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+}
+
+.faqs {
+  background-color: #ffff;
+}
