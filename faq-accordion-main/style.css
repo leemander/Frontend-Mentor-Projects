@@ -3,8 +3,9 @@ body {
   background-image: url("./assets/images/background-pattern-mobile.svg");
   background-repeat: no-repeat;
   display: grid;
-  place-items: center;
+  margin: 0;
   min-height: 100dvh;
+  place-items: center;
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
 .faqs {
   background-color: #ffff;
   border-radius: 0.5em;
+  min-height: 480px;
   padding: 1em;
 }
 
@@ -35,9 +37,14 @@ body {
   background-position: top 50% right 0;
   background-repeat: no-repeat;
   border: 0;
+  cursor: pointer;
   padding: 1em 0;
   text-align: start;
   width: 100%;
+}
+
+.list__q:has(+ .show) {
+  background-image: url(./assets/images/icon-minus.svg);
 }
 
 .list__q > span {
@@ -51,4 +58,5 @@ body {
 
 .list__a.show {
   display: block;
+  margin-block: 1em;
 }
