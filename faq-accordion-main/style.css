@@ -80,9 +80,9 @@ header > h2 {
   border: 0;
   color: inherit;
   cursor: pointer;
-  font: inherit;
   font-size: 1.1rem;
   font-weight: 600;
+  font: inherit;
   letter-spacing: -0.5px;
   padding: 0;
   text-align: start;
@@ -104,12 +104,8 @@ header > h2 {
 
 .list__a {
   color: hsl(290, 7%, 40%);
-  position: relative;
   display: none;
-}
-
-.list__a.fade-out {
-  animation: fade-out 0.33s linear;
+  position: relative;
 }
 
 .list__a.show {
@@ -140,6 +136,7 @@ hr {
 
   .list__q {
     font-weight: 700;
+    padding-block: 0.1em;
   }
 }
 
@@ -152,16 +149,5 @@ hr {
   100% {
     bottom: 0;
     opacity: 1;
-  }
-}
-@keyframes fade-out {
-  0% {
-    bottom: 0;
-    opacity: 1;
-  }
-
-  100% {
-    bottom: -10px;
-    opacity: 0;
   }
 }
