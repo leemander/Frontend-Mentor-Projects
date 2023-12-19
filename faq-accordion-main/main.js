@@ -16,3 +16,10 @@ function showAnswer(e) {
 questions.forEach((question) =>
   question.addEventListener("click", (e) => showAnswer(e))
 );
+
+answers.forEach((answer) =>
+  answer.addEventListener("animationend", (e) => {
+    if (e.animationName === "fade-out") {
+    }
+  })
+);

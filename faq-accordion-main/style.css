@@ -104,10 +104,16 @@ header > h2 {
 
 .list__a {
   color: hsl(290, 7%, 40%);
+  position: relative;
   display: none;
 }
 
+.list__a.fade-out {
+  animation: fade-out 0.33s linear;
+}
+
 .list__a.show {
+  animation: fade-in 0.33s linear;
   display: block;
 }
 
@@ -134,5 +140,28 @@ hr {
 
   .list__q {
     font-weight: 700;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    bottom: -10px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  100% {
+    bottom: -10px;
+    opacity: 0;
   }
 }
