@@ -24,6 +24,7 @@ body {
   background-color: hsl(277, 90%, 96%);
   background-image: url("./assets/images/background-pattern-mobile.svg");
   background-repeat: no-repeat;
+  background-size: 100%;
   color: hsl(294, 56%, 13%);
   display: grid;
   font-family: "Work Sans", system-ui, -apple-system, BlinkMacSystemFont,
@@ -38,7 +39,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 600px;
   width: calc(100% - 2em);
 }
 
@@ -46,11 +47,12 @@ body {
   background-color: #ffff;
   border-radius: 0.5em;
   box-shadow: 0 1em 2em hsla(0, 0%, 0%, 0.1);
-  min-height: 570px;
+  min-height: 580px;
   padding: 1em 1.5em;
 }
 
 .faqs > header {
+  align-items: center;
   display: flex;
   gap: 1.5em;
   padding-inline: 0.25em;
@@ -79,10 +81,16 @@ header > h2 {
   color: inherit;
   cursor: pointer;
   font: inherit;
+  font-size: 1.1rem;
   font-weight: 600;
+  letter-spacing: -0.5px;
   padding: 0;
   text-align: start;
   width: 100%;
+}
+
+.list__q:is(:hover, :focus-visible) {
+  color: hsl(281, 85%, 45%);
 }
 
 .list__q:has(+ .show) {
@@ -106,4 +114,25 @@ header > h2 {
 hr {
   border-color: hsla(0, 0%, 0%, 0.1);
   margin-block: 1em;
+}
+
+@media (min-width: 700px) {
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+  }
+  .faqs {
+    min-height: 460px;
+  }
+
+  .faqs__header > img {
+    max-width: 80px;
+  }
+
+  .faqs__header > h2 {
+    font-size: 3rem;
+  }
+
+  .list__q {
+    font-weight: 700;
+  }
 }
