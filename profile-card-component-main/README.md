@@ -12,8 +12,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/profile-card-component-main](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/profile-card-component-main)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/profile-card-component-main/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/profile-card-component-main/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/profile-card-component-main](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/profile-card-component-main)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/profile-card-component-main/](https://leemander.github.io/Frontend-Mentor-Projects/profile-card-component-main/)
 
 ## My process
 

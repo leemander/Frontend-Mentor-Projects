@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/static-job-listings-master](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/static-job-listings-master)
-- Live Site URL: [https://crackerfactory64.github.io/fm-jobs-listing/](https://crackerfactory64.github.io/fm-jobs-listing/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/static-job-listings-master](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/static-job-listings-master)
+- Live Site URL: [https://leemander.github.io/fm-jobs-listing/](https://leemander.github.io/fm-jobs-listing/)
 
 ## My process
 

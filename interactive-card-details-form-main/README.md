@@ -20,8 +20,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/interactive-card-details-form-main)
-- Live Site URL: [GitHub Pages](https://crackerfactory64.github.io/Frontend-Mentor-Projects/interactive-card-details-form-main/)
+- Solution URL: [GitHub](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/interactive-card-details-form-main)
+- Live Site URL: [GitHub Pages](https://leemander.github.io/Frontend-Mentor-Projects/interactive-card-details-form-main/)
 
 ## My process
 

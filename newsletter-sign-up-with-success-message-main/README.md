@@ -21,8 +21,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/newsletter-sign-up-with-success-message-main)
-- Live Site URL: [GitHub Pages](https://crackerfactory64.github.io/Frontend-Mentor-Projects/newsletter-sign-up-with-success-message-main/)
+- Solution URL: [GitHub](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/newsletter-sign-up-with-success-message-main)
+- Live Site URL: [GitHub Pages](https://leemander.github.io/Frontend-Mentor-Projects/newsletter-sign-up-with-success-message-main/)
 
 ## My process
 

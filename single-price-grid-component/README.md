@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/single-price-grid-component/](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/single-price-grid-component)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/single-price-grid-component/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/single-price-grid-component/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/single-price-grid-component/](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/single-price-grid-component)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/single-price-grid-component/](https://leemander.github.io/Frontend-Mentor-Projects/single-price-grid-component/)
 
 ## My process
 

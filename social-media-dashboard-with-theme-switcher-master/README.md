@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/social-media-dashboard-with-theme-switcher-master)
-- Live Site URL: [GitHub Pages](https://crackerfactory64.github.io/fm-social-media-dashboard/)
+- Solution URL: [GitHub](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/social-media-dashboard-with-theme-switcher-master)
+- Live Site URL: [GitHub Pages](https://leemander.github.io/fm-social-media-dashboard/)
 
 ## My process
 

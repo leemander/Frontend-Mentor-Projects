@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/bookmark-landing-page](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/bookmark-landing-page)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/bookmark-landing-page/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/bookmark-landing-page/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/bookmark-landing-page](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/bookmark-landing-page)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/bookmark-landing-page/](https://leemander.github.io/Frontend-Mentor-Projects/bookmark-landing-page/)
 
 ## My process
 

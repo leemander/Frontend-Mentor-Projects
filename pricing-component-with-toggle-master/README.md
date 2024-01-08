@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/pricing-component-with-toggle-master](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/pricing-component-with-toggle-master)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/pricing-component-with-toggle-master/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/pricing-component-with-toggle-master/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/pricing-component-with-toggle-master](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/pricing-component-with-toggle-master)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/pricing-component-with-toggle-master/](https://leemander.github.io/Frontend-Mentor-Projects/pricing-component-with-toggle-master/)
 
 ## My process
 

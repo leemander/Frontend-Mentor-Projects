@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/advice-generator-app-main)
-- Live Site URL: [GitHub Pages](https://crackerfactory64.github.io/fm-advice-app/)
+- Solution URL: [GitHub](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/advice-generator-app-main)
+- Live Site URL: [GitHub Pages](https://leemander.github.io/fm-advice-app/)
 
 ## My process
 

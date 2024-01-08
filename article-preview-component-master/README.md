@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/article-preview-component-master)
-- Live Site URL: [GitHub Pages](https://crackerfactory64.github.io/Frontend-Mentor-Projects/article-preview-component-master/)
+- Solution URL: [GitHub](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/article-preview-component-master)
+- Live Site URL: [GitHub Pages](https://leemander.github.io/Frontend-Mentor-Projects/article-preview-component-master/)
 
 ## My process
 

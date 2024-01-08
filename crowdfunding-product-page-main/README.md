@@ -22,8 +22,8 @@ Users should be able to:
 
 # Links
 
-- Solution URL: [Add solution URL here](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/crowdfunding-product-page-main)
-- Live Site URL: [Add live site URL here](https://crackerfactory64.github.io/Frontend-Mentor-Projects/crowdfunding-product-page-main/)
+- Solution URL: [Add solution URL here](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/crowdfunding-product-page-main)
+- Live Site URL: [Add live site URL here](https://leemander.github.io/Frontend-Mentor-Projects/crowdfunding-product-page-main/)
 
 # Built with
 

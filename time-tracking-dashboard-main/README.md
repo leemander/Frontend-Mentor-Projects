@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/time-tracking-dashboard-main](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/time-tracking-dashboard-main)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/time-tracking-dashboard-main/e](https://crackerfactory64.github.io/Frontend-Mentor-Projects/time-tracking-dashboard-main/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/time-tracking-dashboard-main](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/time-tracking-dashboard-main)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/time-tracking-dashboard-main/e](https://leemander.github.io/Frontend-Mentor-Projects/time-tracking-dashboard-main/)
 
 ## My process
 

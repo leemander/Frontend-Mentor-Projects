@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/loopstudios-landing-page-main](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/loopstudios-landing-page-main)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/loopstudios-landing-page-main/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/loopstudios-landing-page-main/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/loopstudios-landing-page-main](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/loopstudios-landing-page-main)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/loopstudios-landing-page-main/](https://leemander.github.io/Frontend-Mentor-Projects/loopstudios-landing-page-main/)
 
 ## My process
 

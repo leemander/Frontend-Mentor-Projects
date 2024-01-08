@@ -15,8 +15,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/social-proof-section](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/social-proof-section)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/social-proof-section/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/social-proof-section/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/social-proof-section](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/social-proof-section)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/social-proof-section/](https://leemander.github.io/Frontend-Mentor-Projects/social-proof-section/)
 
 ## My process
 

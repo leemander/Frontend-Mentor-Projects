@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/base-apparel-coming-soon](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/base-apparel-coming-soon)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/base-apparel-coming-soon/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/base-apparel-coming-soon/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/base-apparel-coming-soon](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/base-apparel-coming-soon)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/base-apparel-coming-soon/](https://leemander.github.io/Frontend-Mentor-Projects/base-apparel-coming-soon/)
 
 ## My process
 

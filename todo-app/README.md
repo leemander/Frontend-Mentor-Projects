@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/todo-app](https://github.com/crackerFactory64/Frontend-Mentor-Projects/tree/main/todo-app)
-- Live Site URL: [https://crackerfactory64.github.io/Frontend-Mentor-Projects/todo-app/](https://crackerfactory64.github.io/Frontend-Mentor-Projects/todo-app/)
+- Solution URL: [https://github.com/leemander/Frontend-Mentor-Projects/tree/main/todo-app](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/todo-app)
+- Live Site URL: [https://leemander.github.io/Frontend-Mentor-Projects/todo-app/](https://leemander.github.io/Frontend-Mentor-Projects/todo-app/)
 
 ## My process
 
