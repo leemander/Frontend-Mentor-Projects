@@ -35,7 +35,7 @@ main {
 
 .card {
   background-color: var(--color-neutral-100);
-  border: 1px solid var(--color-neutral-900);
+  border: 2px solid var(--color-neutral-900);
   border-radius: 1.5em;
   box-shadow: 0.5em 0.5em black;
   margin: auto;
