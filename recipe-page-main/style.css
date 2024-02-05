@@ -1,0 +1,33 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  margin: 0;
+  place-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5em 1fr 1.5em;
+  margin-inline: auto;
+}
+
+.recipe {
+  max-width: 50em;
+}
+
+section {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+.intro__img {
+  grid-column: 1 / -1;
+}
+
+section > :not(.intro__img) {
+  grid-column: 2;
+}
