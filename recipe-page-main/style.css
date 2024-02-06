@@ -50,6 +50,7 @@ body {
 h1,
 h2:not(.intro__times > h2) {
   font-family: "Young Serif";
+  letter-spacing: 1px;
   margin: 0;
 }
 
@@ -79,11 +80,18 @@ section > :not(.intro__img) {
   grid-column: 2;
 }
 
+.intro__img {
+  margin-block-end: 2em;
+}
+
 h1 {
   color: var(--color-neutral-900);
-  font-size: 2rem;
+  font-size: 2.125rem;
   line-height: 1.2;
-  margin-block: 1.5em 1em;
+}
+
+h1 + p {
+  margin-block-start: 1em;
 }
 
 .intro__times {
@@ -179,4 +187,26 @@ h2 {
   font-weight: var(--font-weight-semibold);
   padding-inline-start: 0.875em;
   width: 50%;
+}
+
+@media (min-width: 50em) {
+  body {
+    font-size: 1.125rem;
+    margin-block: 7em;
+  }
+
+  .recipe {
+    border-radius: 1.5em;
+    box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.1);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro__img {
+    border-radius: 0.75em;
+    grid-column: 2;
+    margin-block-start: 2em;
+  }
 }
