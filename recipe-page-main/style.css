@@ -13,11 +13,11 @@
   --color-neutral-100: hsl(0, 0%, 100%);
   --color-neutral-300: hsl(322, 100%, 98%);
   --color-neutral-500: hsl(29, 53%, 90%);
-  --color-neutral-800: hsl(48, 3%, 37%);
+  --color-neutral-800: hsl(40, 4%, 16%);
   --color-neutral-900: hsl(20, 3%, 19%);
 
-  --color-brown: hsl(16, 46%, 35%);
-  --color-purple: hsl(335, 34%, 33%);
+  --color-brown: hsl(16, 47%, 38%);
+  --color-purple: hsl(332, 34%, 37%);
 
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
@@ -103,7 +103,7 @@ h1 + p {
 
 .intro__times > h2 {
   color: var(--color-purple);
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   margin: 0;
 }
 
@@ -115,7 +115,7 @@ ol {
 
 ul {
   list-style: none;
-  padding-left: 0.5em;
+  padding-inline-start: 0.5em;
 }
 
 ul > li {
@@ -139,12 +139,14 @@ ul > li::before {
 }
 
 section:not(:first-of-type, :last-of-type) > :last-child {
-  border-bottom: 1px solid hsl(0, 0%, 90%);
-  padding-bottom: 1em;
+  border-block-end: 1px solid hsl(0, 0%, 90%);
+  padding-block-end: 1em;
 }
 
 h2 {
   color: var(--color-brown);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .recipe__instructions > ol {
@@ -171,7 +173,7 @@ h2 {
 }
 
 .nutrition__table tr:not(:last-of-type) {
-  border-bottom: 1px solid hsl(0, 0%, 90%);
+  border-block-end: 1px solid hsl(0, 0%, 90%);
 }
 
 .nutrition__table th {
@@ -185,7 +187,6 @@ h2 {
 .nutrition__table td {
   color: var(--color-brown);
   font-weight: var(--font-weight-semibold);
-  padding-inline-start: 0.875em;
   width: 50%;
 }
 
@@ -201,11 +202,11 @@ h2 {
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.875rem;
   }
 
   .intro__img {
-    border-radius: 0.75em;
+    border-radius: 1em;
     grid-column: 2;
     margin-block-start: 2em;
   }
