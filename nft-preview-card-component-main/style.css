@@ -10,7 +10,7 @@
   --color-neutral-800: hsl(217, 54%, 11%);
 
   --color-blue: hsl(215, 51%, 70%);
-  --color-cyan: hsl(178, 100%, 50%);
+  --color-cyan: 178 100% 50%;
 
   --fw-300: 300;
   --fw-400: 400;
@@ -46,7 +46,19 @@ a {
 .justify-between {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 22em;
 }
 
 .white {
@@ -54,7 +66,7 @@ a {
 }
 
 .accent {
-  color: var(--color-cyan);
+  color: hsl(var(--color-cyan));
 }
 
 .fw-300 {
@@ -67,4 +79,104 @@ a {
 
 .fw-600 {
   font-weight: var(--fw-600);
+}
+
+body {
+  background-color: var(--color-neutral-800);
+  color: var(--color-blue);
+  display: grid;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  min-height: 100dvh;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--color-neutral-700);
+  border-radius: 1em;
+  box-shadow: 0 1em 1em 1em rgba(0, 0, 0, 0.1);
+  padding: 1.325em;
+  margin: 1em;
+}
+
+.card a:is(:hover, :focus-visible) {
+  color: hsl(var(--color-cyan));
+  & h1 {
+    color: hsl(var(--color-cyan));
+  }
+}
+
+.card__img-wrapper {
+  border-radius: 0.5rem;
+  position: relative;
+
+  &::after {
+    aspect-ratio: 1;
+    background-color: transparent;
+    background-position: center;
+    background-size: 5vw;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+    content: "";
+    cursor: pointer;
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &:hover::after,
+  &:has(a:focus-visible)::after {
+    background-color: hsl(var(--color-cyan) / 0.5);
+    background-image: url(./images/icon-view.svg);
+  }
+}
+
+.card__img {
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  z-index: 100000;
+}
+
+.card > .container {
+  display: grid;
+  gap: 1em;
+}
+
+.card__price,
+.card__time {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+
+  &::before {
+    aspect-ratio: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: 1.125rem;
+  }
+}
+
+.card__price::before {
+  background-image: url(./images/icon-ethereum.svg);
+}
+
+.card__time::before {
+  background-image: url(./images/icon-clock.svg);
+}
+
+hr {
+  border-color: var(--color-neutral-700);
+}
+
+.card footer > img {
+  aspect-ratio: 1;
+  border: 1px solid var(--color-neutral-100);
+  border-radius: 50%;
+  max-width: 2.25rem;
 }
