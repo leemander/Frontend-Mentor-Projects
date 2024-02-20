@@ -61,6 +61,13 @@ a {
   max-width: 22em;
 }
 
+.sr-only {
+  aspect-ratio: 1;
+  height: 1px;
+  position: absolute;
+  left: -4000vw;
+}
+
 .white {
   color: var(--color-neutral-100);
 }
