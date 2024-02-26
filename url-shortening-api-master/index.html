@@ -14,17 +14,17 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header>
-      <div class="container">
+    <header class="flex">
+      <div class="container flex">
         <img src="./assets/images/logo.svg" alt="Shortly" />
-        <nav class="header__nav">
+        <nav class="font-bold font-small header__nav">
           <ul class="header__nav-list">
-            <li><a class="text-dark" href="#">Features</a></li>
-            <li><a class="text-dark" href="#">Pricing</a></li>
-            <li><a class="text-dark" href="#">Resources</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Resources</a></li>
           </ul>
           <ul class="header__nav-list">
-            <li><a class="text-dark" href="#">Login</a></li>
+            <li><a href="#">Login</a></li>
             <li><a class="pill-link" href="#">Sign Up</a></li>
           </ul>
         </nav>
@@ -60,49 +60,51 @@
         </div>
       </section>
       <section class="bg-light stats text-center">
-        <h2 class="text-black">Advanced Statistics</h2>
-        <p>
-          Track how your links are performing across the web with our advanced
-          statistics dashboard.
-        </p>
-        <div class="stats__cards">
-          <div class="stats__card stats__card--brand">
-            <img
-              src="./assets/images/icon-brand-recognition.svg"
-              alt=""
-              class="stats__img"
-            />
-            <h3 class="text-black">Brand Recognition</h3>
-            <p>
-              Boost your brand recognition with each click. Generic links don't
-              mean a thing. Branded links help instil confidence in your
-              content.
-            </p>
-          </div>
-          <div class="stats__card stats__card--records">
-            <img
-              src="./assets/images/icon-detailed-records.svg"
-              alt=""
-              class="stats__img"
-            />
-            <h3 class="text-black">Detailed Records</h3>
-            <p>
-              Gain insights into who is clicking your links. Knowing when and
-              where people engage with your content helps inform better
-              decisions.
-            </p>
-          </div>
-          <div class="stats__card stats__card--custom">
-            <img
-              src="./assets/images/icon-fully-customizable.svg"
-              alt=""
-              class="stats__img"
-            />
-            <h3 class="text-black">Fully Customizable</h3>
-            <p>
-              Improve brand awareness and content discoverability through
-              customizable links, supercharging audience engagement.
-            </p>
+        <div class="container">
+          <h2 class="text-black">Advanced Statistics</h2>
+          <p>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+          <div class="stats__cards">
+            <div class="stats__card stats__card--brand">
+              <img
+                src="./assets/images/icon-brand-recognition.svg"
+                alt=""
+                class="stats__img"
+              />
+              <h3 class="text-black">Brand Recognition</h3>
+              <p>
+                Boost your brand recognition with each click. Generic links
+                don't mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </div>
+            <div class="stats__card stats__card--records">
+              <img
+                src="./assets/images/icon-detailed-records.svg"
+                alt=""
+                class="stats__img"
+              />
+              <h3 class="text-black">Detailed Records</h3>
+              <p>
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </p>
+            </div>
+            <div class="stats__card stats__card--custom">
+              <img
+                src="./assets/images/icon-fully-customizable.svg"
+                alt=""
+                class="stats__img"
+              />
+              <h3 class="text-black">Fully Customizable</h3>
+              <p>
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </div>
           </div>
         </div>
       </section>
