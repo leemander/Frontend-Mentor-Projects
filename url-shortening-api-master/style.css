@@ -171,15 +171,16 @@ a {
   color: var(--color-neutral-100);
   display: block;
   font-weight: var(--font-weight-700);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   width: fit-content;
 }
 
 body {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-600);
   font-family: var(--font-family-sans-serif);
   font-weight: var(--font-weight-600);
   font-size: 1.125rem;
+  line-height: 1.7;
 }
 
 nav > ul {
@@ -204,4 +205,63 @@ header {
   align-items: center;
   display: flex;
   gap: 2rem;
+}
+
+.hero {
+  background-image: url(./assets/images/illustration-working.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 right -6.5em;
+  padding-block: 4rem 3rem;
+}
+
+h1 {
+  line-height: 1.25;
+  padding-block-start: 4rem;
+  max-width: 15ch;
+}
+
+.hero p {
+  margin-block-start: 0;
+  max-width: 50ch;
+}
+
+.hero .pill-link {
+  margin-block-start: 2rem;
+}
+
+.hero__form {
+  background-color: var(--color-violet);
+  background-image: url(./assets/images/bg-shorten-desktop.svg);
+  background-size: cover;
+  border-radius: 0.5em;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr auto auto;
+  padding: 2.5rem 3rem;
+  transform: translateY(7rem);
+}
+
+.hero__form > label {
+  width: 100%;
+}
+
+.hero__input {
+  width: 100%;
+}
+
+.hero__input,
+.hero__button {
+  border: 0;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+}
+
+.hero__input::placeholder {
+  color: var(--color-neutral-600);
+}
+
+.hero__button {
+  background-color: var(--color-cyan);
+  color: var(--color-neutral-100);
+  font-size: var(--font-size-small);
 }
