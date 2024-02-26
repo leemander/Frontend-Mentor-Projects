@@ -13,5 +13,149 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="container">
+        <img src="./assets/images/logo.svg" alt="Shortly" />
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li><a class="text-dark" href="#">Features</a></li>
+            <li><a class="text-dark" href="#">Pricing</a></li>
+            <li><a class="text-dark" href="#">Resources</a></li>
+          </ul>
+          <ul class="header__nav-list">
+            <li><a class="text-dark" href="#">Login</a></li>
+            <li><a class="pill-link" href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <button
+          aria-label="toggle navigation menu"
+          class="header__hamburger mobile-only"
+        ></button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="text-black">More than just shorter links</h1>
+          <p>
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <a href="#" class="pill-link"> Get Started </a>
+
+          <form class="hero__form">
+            <label for="url">
+              <span class="sr-only">URL</span>
+              <input
+                class="hero__input"
+                type="text"
+                id="url"
+                name="url"
+                placeholder="Shorten a link here"
+              />
+              <button class="hero__button">Shorten it!</button>
+            </label>
+          </form>
+        </div>
+      </section>
+      <section class="bg-light stats text-center">
+        <h2 class="text-black">Advanced Statistics</h2>
+        <p>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+        <div class="stats__cards">
+          <div class="stats__card stats__card--brand">
+            <img
+              src="./assets/images/icon-brand-recognition.svg"
+              alt=""
+              class="stats__img"
+            />
+            <h3 class="text-black">Brand Recognition</h3>
+            <p>
+              Boost your brand recognition with each click. Generic links don't
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+          <div class="stats__card stats__card--records">
+            <img
+              src="./assets/images/icon-detailed-records.svg"
+              alt=""
+              class="stats__img"
+            />
+            <h3 class="text-black">Detailed Records</h3>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+          <div class="stats__card stats__card--custom">
+            <img
+              src="./assets/images/icon-fully-customizable.svg"
+              alt=""
+              class="stats__img"
+            />
+            <h3 class="text-black">Fully Customizable</h3>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="cta grid">
+        <div class="container">
+          <h2 class="text-white">Boost your links today</h2>
+          <a href="#" class="pill-link">Get Started</a>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark">
+      <div class="container">
+        <img src="./assets/images/logo-light.svg" alt="" />
+        <nav>
+          <ul class="grid">
+            <li class="text-white font-bold">Features</li>
+            <li><a class="text-white" href="#">Link Shortening</a></li>
+            <li><a class="text-white" href="#">Branded Links</a></li>
+            <li><a class="text-white" href="#">Analytics</a></li>
+          </ul>
+          <ul class="grid">
+            <li class="text-white font-bold">Resources</li>
+            <li><a class="text-white" href="#">Blog</a></li>
+            <li><a class="text-white" href="#">Developers</a></li>
+            <li><a class="text-white" href="#">Support</a></li>
+          </ul>
+          <ul class="grid">
+            <li class="text-white font-bold">Company</li>
+            <li><a class="text-white" href="#">About</a></li>
+            <li><a class="text-white" href="#">Our Team</a></li>
+            <li><a class="text-white" href="#">Careers</a></li>
+            <li><a class="text-white" href="#">Contact</a></li>
+          </ul>
+          <ul class="flex">
+            <a href="#">
+              <span class="sr-only">facebook</span>
+              <img src="./assets/images/icon-facebook.svg" alt=""
+            /></a>
+            <a href="#">
+              <span class="sr-only">twitter</span>
+              <img src="./assets/images/icon-twitter.svg" alt=""
+            /></a>
+            <a href="#">
+              <span class="sr-only">pinterest</span>
+              <img src="./assets/images/icon-pinterest.svg" alt=""
+            /></a>
+            <a href="#">
+              <span class="sr-only">instagram</span>
+              <img src="./assets/images/icon-instagram.svg" alt=""
+            /></a>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
