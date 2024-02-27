@@ -183,7 +183,7 @@ a {
   color: var(--color-neutral-100);
   display: block;
   font-weight: var(--font-weight-700);
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 2.5rem;
   width: fit-content;
 }
 
@@ -437,6 +437,13 @@ h1 {
   place-items: center;
 }
 
+@media (max-width: 40em) {
+  .cta {
+    background-image: url(./assets/images/bg-boost-mobile.svg);
+    padding-block: 5em;
+  }
+}
+
 footer {
   padding-block: 5em;
 }
@@ -453,8 +460,20 @@ footer nav {
   margin-inline-start: auto;
 }
 
+footer a:not(:has(> img)) {
+  opacity: 0.7;
+}
+
 @media (max-width: 40em) {
+  footer > .container {
+    display: grid;
+    gap: 4em;
+    place-items: center;
+  }
+
   footer nav {
     display: grid;
+    gap: 2em;
+    margin-inline-start: unset;
   }
 }
