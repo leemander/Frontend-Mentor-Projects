@@ -326,3 +326,15 @@ h1 {
   --bg-url: url(./assets/images/icon-fully-customizable.svg);
   transform: translateY(6em);
 }
+
+.cta {
+  background-color: var(--color-violet);
+  background-image: url(./assets/images/bg-boost-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 3em;
+}
+
+.cta > .grid {
+  place-items: center;
+}
