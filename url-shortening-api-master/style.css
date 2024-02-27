@@ -12,6 +12,7 @@
 
 :root {
   --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-200: hsl(230, 25%, 95%);
   --color-neutral-500: hsl(0, 0%, 75%);
   --color-neutral-600: hsl(257, 7%, 63%);
   --color-neutral-800: hsl(255, 11%, 22%);
@@ -27,7 +28,8 @@
   --font-size-small: 1rem;
   --font-size-medium: 1.125rem;
   --font-size-large: 1.5rem;
-  --font-size-x-large: 5rem;
+  --font-size-x-large: 2.25rem;
+  --font-size-xx-large: 5rem;
 }
 
 /*  RESET  */
@@ -117,7 +119,7 @@ a {
   background-color: var(--color-neutral-100);
 }
 .bg-light {
-  background-color: var(--color-neutral-500);
+  background-color: var(--color-neutral-200);
 }
 .bg-dark {
   background-color: var(--color-neutral-900);
@@ -146,17 +148,17 @@ a {
 .font-small {
   font-size: var(--font-size-small);
 }
-
 .font-medium {
   font-size: var(--font-size-medium);
 }
-
 .font-large {
   font-size: var(--font-size-large);
 }
-
 .font-x-large {
   font-size: var(--font-size-x-large);
+}
+.font-xx-large {
+  font-size: var(--font-size-xx-large);
 }
 
 .text-center {
@@ -264,4 +266,63 @@ h1 {
   background-color: var(--color-cyan);
   color: var(--color-neutral-100);
   font-size: var(--font-size-small);
+}
+
+.stats {
+  padding-block-start: 10em;
+}
+
+.stats__intro {
+  margin-block-start: 0.5rem;
+  margin-inline: auto;
+  max-width: 45ch;
+}
+
+.stats__cards {
+  display: flex;
+  gap: 1.5em;
+  padding-block: 4em 12em;
+  position: relative;
+}
+
+.stats__cards::after {
+  background-color: var(--color-cyan);
+  content: "";
+  height: 0.5em;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 0;
+}
+
+.stats__card {
+  border-radius: 0.5em;
+  padding: 4rem 2rem 2rem 2rem;
+  position: relative;
+  z-index: 100;
+}
+
+.stats__img {
+  aspect-ratio: 1;
+  background-color: var(--color-violet);
+  background-image: var(--bg-url);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 5em;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.stats__card--brand {
+  --bg-url: url(./assets/images/icon-brand-recognition.svg);
+}
+.stats__card--records {
+  --bg-url: url(./assets/images/icon-detailed-records.svg);
+  transform: translateY(3em);
+}
+.stats__card--custom {
+  --bg-url: url(./assets/images/icon-fully-customizable.svg);
+  transform: translateY(6em);
 }
