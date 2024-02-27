@@ -338,3 +338,19 @@ h1 {
 .cta > .grid {
   place-items: center;
 }
+
+footer {
+  padding-block: 5em;
+}
+
+footer > .container {
+  align-items: start;
+  display: flex;
+}
+
+footer nav {
+  align-items: start;
+  display: flex;
+  gap: 7em;
+  margin-inline-start: auto;
+}
