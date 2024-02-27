@@ -403,6 +403,26 @@ h1 {
   .stats__cards {
     display: grid;
   }
+
+  .stats__cards::after {
+    background-color: var(--color-cyan);
+    height: 80%;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    width: 0.5em;
+  }
+
+  .stats__card {
+    display: grid;
+    gap: 1rem;
+    margin-block-start: 0;
+  }
+
+  .stats__img {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 .cta {
