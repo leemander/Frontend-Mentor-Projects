@@ -192,6 +192,10 @@ a {
   font-weight: var(--font-weight-700);
   padding: 0.5rem 2.5rem;
   width: fit-content;
+
+  &:is(:hover, :focus-visible) {
+    background-color: hsl(179, 57%, 75%);
+  }
 }
 
 body {
@@ -224,6 +228,10 @@ header {
   align-items: center;
   display: flex;
   gap: 2rem;
+
+  & a:not(.pill-link):hover {
+    color: var(--color-neutral-900);
+  }
 }
 
 .header__hamburger {
@@ -362,6 +370,12 @@ h1 {
 .hero__button {
   background-color: var(--color-cyan);
   color: var(--color-neutral-100);
+  cursor: pointer;
+  padding: 0.5em 2em;
+}
+
+.hero__button:is(:hover, :focus-visible) {
+  background-color: hsl(179, 57%, 75%);
 }
 
 .hero__error {
@@ -542,15 +556,28 @@ footer > .container {
   display: flex;
 }
 
+footer a:not(:has(> svg)) {
+  opacity: 0.7;
+}
+
 footer nav {
   align-items: start;
   display: flex;
   gap: 7em;
   margin-inline-start: auto;
-}
 
-footer a:not(:has(> img)) {
-  opacity: 0.7;
+  & a:is(:focus-visible, :hover) {
+    color: var(--color-cyan);
+    opacity: 1;
+
+    & > svg {
+      fill: var(--color-cyan);
+    }
+  }
+
+  & svg {
+    fill: var(--color-neutral-100);
+  }
 }
 
 @media (max-width: 55em) {
