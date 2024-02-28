@@ -224,14 +224,15 @@ header {
   background-color: transparent;
   border: 0;
   display: grid;
+  padding: 0;
   place-items: center;
-  width: 3em;
+  width: 1.5em;
 }
 
 .hamburger__line {
   background-color: var(--color-neutral-600);
   display: block;
-  height: 0.3125em;
+  height: 0.2em;
   width: 100%;
   margin: 0;
 }
@@ -240,12 +241,44 @@ header {
   body {
     text-align: center;
   }
+
   header > .container {
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
+
   .header__nav {
+    background-color: var(--color-violet);
+    border-radius: 0.5em;
     display: none;
+    flex-direction: column;
+    padding: 2em 2em 1em 2em;
+    position: absolute;
+    bottom: -27em;
+  }
+
+  .header__nav.show {
+    display: flex;
+  }
+
+  .header__nav > ul {
+    color: var(--color-neutral-100);
+    display: grid;
+    padding-block-end: 2em;
+    width: 100%;
+
+    &:first-of-type {
+      border-block-end: 1px solid hsla(0, 0%, 100%, 0.33);
+    }
+
+    &:last-of-type {
+      padding-block-start: 2em;
+    }
+  }
+
+  .header__nav .pill-link {
+    width: 100%;
   }
 
   .header__hamburger {
@@ -309,7 +342,6 @@ h1 {
 .hero__button {
   background-color: var(--color-cyan);
   color: var(--color-neutral-100);
-  font-size: var(--font-size-small);
 }
 
 @media (max-width: 75em) {
@@ -345,6 +377,10 @@ h1 {
   .hero__form {
     grid-template-columns: unset;
     padding: 1.5em;
+  }
+
+  .hero__button {
+    width: 100%;
   }
 }
 
