@@ -3,6 +3,7 @@ const navMenu = document.getElementById("nav-menu");
 
 const form = document.getElementById("form");
 const input = document.getElementById("url");
+const results = document.getElementById("results");
 
 const urls = [];
 
@@ -11,11 +12,48 @@ function checkLocal() {
   if (localData) {
     localData.forEach((url) => {
       urls.push(url);
+      renderUrls();
     });
   }
 }
 
-function renderUrls() {}
+checkLocal();
+
+function copyLink(e) {
+  document
+    .querySelectorAll(".shortener__copy")
+    .forEach((button) => button.classList.remove("copied"));
+  e.target.innerText = "Copied!";
+  e.target.classList.add("copied");
+  navigator.clipboard.writeText(e.target.dataset.link);
+}
+
+function renderUrls() {
+  results.innerHTML = "";
+
+  urls.reverse().forEach((url) => {
+    const li = document.createElement("li");
+    li.classList.add("shortener__result", "bg-white");
+
+    const longLink = document.createElement("span");
+    longLink.classList.add("text-black");
+    longLink.innerText = url.long;
+    li.appendChild(longLink);
+
+    const shortLink = document.createElement("span");
+    shortLink.classList.add("text-cyan");
+    shortLink.innerText = url.short;
+    li.appendChild(shortLink);
+
+    const copyButton = document.createElement("button");
+    copyButton.dataset.link = url.short;
+    copyButton.classList.add("shortener__copy");
+    copyButton.innerText = "Copy";
+    li.appendChild(copyButton);
+
+    results.appendChild(li);
+  });
+}
 
 async function getShortUrl(url) {
   const data = {
@@ -33,9 +71,13 @@ async function getShortUrl(url) {
   })
     .then((response) => response.json())
     .then((json) => {
+      if (urls.length === 5) {
+        urls.pop();
+      }
       urls.push({ short: json.shrtlnk, long: json.url });
     });
   localStorage.setItem("savedUrls", JSON.stringify(urls));
+  renderUrls();
 }
 
 function isValidHttpUrl(str) {
@@ -70,4 +112,8 @@ hamburger.addEventListener("click", () => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   validateForm();
+});
+
+document.querySelectorAll(".shortener__copy").forEach((button) => {
+  button.addEventListener("click", (e) => copyLink(e));
 });

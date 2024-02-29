@@ -154,6 +154,9 @@ a {
 .text-white {
   color: var(--color-neutral-100);
 }
+.text-cyan {
+  color: var(--color-cyan);
+}
 
 .font-medium {
   font-weight: var(--font-weight-500);
@@ -323,72 +326,6 @@ h1 {
   margin-block-start: 2rem;
 }
 
-.hero__form {
-  --border-color: transparent;
-  background-color: var(--color-violet);
-  background-image: url(./assets/images/bg-shorten-desktop.svg);
-  background-size: cover;
-  border-radius: 0.5em;
-  color: var(--color-neutral-800);
-  display: grid;
-  gap: 0 1rem;
-  grid-template-columns: 1fr auto;
-  padding: 2.5rem 3rem 1rem 3rem;
-  transform: translateY(7rem);
-
-  &.error {
-    --border-color: var(--color-red);
-    color: var(--color-red);
-  }
-}
-
-.hero__form > label {
-  width: 100%;
-}
-
-.hero__input {
-  border: 2px solid var(--border-color);
-  color: inherit;
-  width: 100%;
-}
-
-.hero__input,
-.hero__button {
-  border-radius: 0.5em;
-  padding: 0.5em 1em;
-}
-
-.hero__button {
-  border: 2px solid transparent;
-}
-
-.hero__input::placeholder {
-  color: inherit;
-  opacity: 0.7;
-}
-
-.hero__button {
-  background-color: var(--color-cyan);
-  color: var(--color-neutral-100);
-  cursor: pointer;
-  padding: 0.5em 2em;
-}
-
-.hero__button:is(:hover, :focus-visible) {
-  background-color: hsl(179, 57%, 75%);
-}
-
-.hero__error {
-  color: var(--color-red);
-  font-size: var(--font-size-small);
-  font-style: italic;
-  visibility: hidden;
-}
-
-.error > .hero__error {
-  visibility: visible;
-}
-
 @media (max-width: 75em) {
   .hero {
     text-align: center;
@@ -406,11 +343,6 @@ h1 {
   .hero * {
     margin-inline: auto;
   }
-
-  .hero__error {
-    text-align: start;
-    margin-inline: unset;
-  }
 }
 
 @media (max-width: 40em) {
@@ -423,28 +355,163 @@ h1 {
   .hero__space {
     height: 20em;
   }
+}
 
-  .hero__form {
+.shortener {
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-neutral-100) 4em,
+    var(--color-neutral-200) 4em
+  );
+}
+
+.shortener__form {
+  --border-color: transparent;
+  background-color: var(--color-violet);
+  background-image: url(./assets/images/bg-shorten-desktop.svg);
+  background-size: cover;
+  border-radius: 0.5em;
+  color: var(--color-neutral-800);
+  display: grid;
+  gap: 0 1rem;
+  grid-template-columns: 1fr auto;
+  padding: 2.5rem 3rem 1rem 3rem;
+
+  &.error {
+    --border-color: var(--color-red);
+    color: var(--color-red);
+  }
+}
+
+.shortener__form > label {
+  width: 100%;
+}
+
+.shortener__input {
+  border: 2px solid var(--border-color);
+  color: inherit;
+  width: 100%;
+}
+
+.shortener__input,
+.shortener__button {
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+}
+
+.shortener__button {
+  border: 2px solid transparent;
+}
+
+.shortener__input::placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.shortener__button {
+  background-color: var(--color-cyan);
+  color: var(--color-neutral-100);
+  cursor: pointer;
+  padding: 0.5em 2em;
+}
+
+.shortener__button:is(:hover, :focus-visible) {
+  background-color: hsl(179, 57%, 75%);
+}
+
+.shortener__error {
+  color: var(--color-red);
+  font-size: var(--font-size-small);
+  font-style: italic;
+  visibility: hidden;
+}
+
+.error > .shortener__error {
+  visibility: visible;
+}
+
+.shortener__results {
+  padding-block: 1em;
+  padding-inline: 0;
+}
+
+.shortener__result {
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 1.5em;
+}
+
+.shortener__result > span {
+  max-width: 50ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.shortener__copy {
+  background-color: var(--color-cyan);
+  border: 0;
+  border-radius: 0.25em;
+  color: var(--color-neutral-100);
+  cursor: pointer;
+  min-width: 7em;
+  padding-block: 0.4em;
+
+  &.copied {
+    background-color: var(--color-violet);
+  }
+
+  &:not(.copied):is(:hover, :focus-visible) {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 75em) {
+  .shortener__error {
+    text-align: start;
+    margin-inline: unset;
+  }
+}
+
+@media (max-width: 40em) {
+  .shortener__form {
     background-image: url(./assets/images/bg-shorten-mobile.svg);
     background-size: unset;
     background-position: top right;
     background-repeat: no-repeat;
-    grid-template-columns: unset;
+    grid-template-columns: 1fr;
     padding: 1.5em;
   }
 
-  .hero__button {
+  .shortener__button {
     order: 2;
     width: 100%;
   }
 
-  .hero__error {
+  .shortener__error {
     order: 1;
+  }
+
+  .shortener__result {
+    align-items: unset;
+    grid-template-columns: 1fr;
+
+    > span {
+      margin-inline-end: auto;
+      max-width: 100% !important;
+    }
+
+    > button {
+      width: 100%;
+    }
   }
 }
 
 .stats {
-  padding-block-start: 10em;
+  padding-block-start: 5em;
 }
 
 .stats__intro {
