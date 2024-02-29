@@ -502,6 +502,7 @@ h1 {
     > span {
       margin-inline-end: auto;
       max-width: 100% !important;
+      text-align: start;
     }
 
     > button {

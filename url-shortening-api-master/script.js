@@ -20,9 +20,10 @@ function checkLocal() {
 checkLocal();
 
 function copyLink(e) {
-  document
-    .querySelectorAll(".shortener__copy")
-    .forEach((button) => button.classList.remove("copied"));
+  document.querySelectorAll(".shortener__copy").forEach((button) => {
+    button.classList.remove("copied");
+    button.innerText = "Copy";
+  });
   e.target.innerText = "Copied!";
   e.target.classList.add("copied");
   navigator.clipboard.writeText(e.target.dataset.link);
@@ -49,6 +50,7 @@ function renderUrls() {
     copyButton.dataset.link = url.short;
     copyButton.classList.add("shortener__copy");
     copyButton.innerText = "Copy";
+    copyButton.addEventListener("click", (e) => copyLink(e));
     li.appendChild(copyButton);
 
     results.appendChild(li);
@@ -112,8 +114,4 @@ hamburger.addEventListener("click", () => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   validateForm();
-});
-
-document.querySelectorAll(".shortener__copy").forEach((button) => {
-  button.addEventListener("click", (e) => copyLink(e));
 });
