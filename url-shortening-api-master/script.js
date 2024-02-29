@@ -4,6 +4,19 @@ const navMenu = document.getElementById("nav-menu");
 const form = document.getElementById("form");
 const input = document.getElementById("url");
 
+const urls = [];
+
+function checkLocal() {
+  const localData = JSON.parse(localStorage.getItem("savedUrls"));
+  if (localData) {
+    localData.forEach((url) => {
+      urls.push(url);
+    });
+  }
+}
+
+function renderUrls() {}
+
 async function getShortUrl(url) {
   const data = {
     url: url,
@@ -19,7 +32,10 @@ async function getShortUrl(url) {
     body: JSON.stringify(data),
   })
     .then((response) => response.json())
-    .then((json) => console.log(json));
+    .then((json) => {
+      urls.push({ short: json.shrtlnk, long: json.url });
+    });
+  localStorage.setItem("savedUrls", JSON.stringify(urls));
 }
 
 function isValidHttpUrl(str) {
