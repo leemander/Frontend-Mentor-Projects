@@ -4,6 +4,24 @@ const navMenu = document.getElementById("nav-menu");
 const form = document.getElementById("form");
 const input = document.getElementById("url");
 
+async function getShortUrl(url) {
+  const data = {
+    url: url,
+  };
+
+  const res = await fetch("https://shrtlnk.dev/api/v2/link", {
+    method: "POST",
+    headers: {
+      "api-key": "uCUmOutexRpV7uTIw7jFgUfTeHunTYz7bxFD0gY2Q7Snn",
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+}
+
 function isValidHttpUrl(str) {
   //https://www.freecodecamp.org/news/how-to-validate-urls-in-javascript/
 
@@ -25,7 +43,8 @@ function validateForm() {
     form.classList.add("error");
     return false;
   }
-  return true;
+  getShortUrl(input.value);
+  input.value = "";
 }
 
 hamburger.addEventListener("click", () => {
