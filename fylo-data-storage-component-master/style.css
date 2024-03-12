@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Raleway";
+  src: url(./Raleway-VariableFont_wght.ttf);
+}
+
+:root {
+  --color-gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+
+  --color-neutral-200: 243 100% 93%;
+  --color-neutral-500: 229 7% 55%;
+  --color-neutral-700: 228 56% 26;
+  --color-neutral-900: 229 57% 11;
+
+  --font-family: "Raleway", system-ui, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+}
