@@ -6,6 +6,7 @@
 :root {
   --color-gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
 
+  --color-neutral-100: 0 0% 100%;
   --color-neutral-200: 243 100% 93%;
   --color-neutral-500: 229 7% 55%;
   --color-neutral-700: 228 56% 26;
@@ -30,4 +31,49 @@ img {
 
 button {
   font: inherit;
+}
+
+.bg-dark {
+  background-color: hsl(var(--color-neutral-900));
+  color: hsl(var(--color-neutral-200));
+}
+
+.bg-medium {
+  background-color: hsl(var(--color-neutral-700));
+  color: hsl(var(--color-neutral-200));
+}
+
+.bg-light {
+  background-color: hsl(var(--color-neutral-100));
+  color: hsl(var(--color-neutral-500));
+}
+
+.text-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.text-grey {
+  color: hsl(var(--color-neutral-500));
+}
+
+.text-black {
+  color: hsl(var(--color-neutral-900));
+}
+
+.text-regular {
+  font-size: 1rem;
+}
+
+.text-large {
+  font-size: 2.5rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1em);
+}
+
+.rounded {
+  border-radius: var(--radius, 0.5em);
 }

@@ -16,24 +16,38 @@
   <body>
     <main>
       <div class="main-container">
-        <section class="controls">
+        <section class="bg-medium controls rounded">
           <img src="./images/logo.svg" alt="Fylo" />
           <div class="flex">
-            <button class="controls__button" data-function="new"></button>
-            <button class="controls__button" data-function="files"></button>
-            <button class="controls__button" data-function="download"></button>
+            <button
+              class="bg-dark controls__button rounded"
+              data-function="new"
+            ></button>
+            <button
+              class="bg-dark controls__button rounded"
+              data-function="files"
+            ></button>
+            <button
+              class="bg-dark controls__button rounded"
+              data-function="download"
+            ></button>
           </div>
         </section>
-        <section class="data">
-          <p>You've used <strong>815 GB</strong> of your storage</p>
+        <section class="bg-medium data rounded">
+          <p>
+            You've used <strong class="text-bold">815 GB</strong> of your
+            storage
+          </p>
           <div class="data__bar">
             <div><div></div></div>
           </div>
           <div class="data__labels">
-            <span>0 GB</span>
-            <span>1000 GB</span>
+            <span class="text-bold">0 GB</span>
+            <span class="text-bold">1000 GB</span>
           </div>
-          <p class="data__remaining">185 <span>GB LEFT</span></p>
+          <p class="bg-light data__remaining text-large text-black">
+            185 <span class="text-grey text-regular">GB LEFT</span>
+          </p>
         </section>
       </div>
     </main>
