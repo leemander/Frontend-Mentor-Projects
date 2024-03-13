@@ -171,7 +171,7 @@ body {
 
 .data__remaining {
   align-items: center;
-  border-radius: 0.5em 0.5em 0 0.5em;
+  border-radius: 1rem 1rem 0 1rem;
   display: flex;
   font-weight: var(--font-weight-bold);
   gap: 0.5rem;
@@ -195,5 +195,38 @@ body {
     position: absolute;
     right: 0;
     width: 0;
+  }
+}
+
+@media (max-width: 65em) {
+  body {
+    background-image: url(./images/bg-mobile.png);
+    background-size: cover;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .data__bar {
+    width: 100%;
+  }
+
+  .data__remaining {
+    border-radius: 1rem;
+    bottom: -30%;
+    left: 50%;
+    right: unset;
+    top: unset;
+    transform: translateX(-50%);
+
+    &::after {
+      display: none;
+    }
   }
 }
