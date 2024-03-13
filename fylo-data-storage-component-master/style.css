@@ -100,3 +100,29 @@ body {
   max-width: 60em;
   padding-inline: 1em;
 }
+
+.controls {
+  border-top-right-radius: 5em;
+  display: grid;
+  gap: 2em;
+  padding: 3em 10em 3em 3em;
+}
+
+.controls__button {
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  cursor: pointer;
+  height: 3em;
+
+  &[data-function="new"] {
+    background-image: url(./images/icon-document.svg);
+  }
+  &[data-function="files"] {
+    background-image: url(./images/icon-folder.svg);
+  }
+  &[data-function="upload"] {
+    background-image: url(./images/icon-upload.svg);
+  }
+}
