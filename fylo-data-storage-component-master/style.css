@@ -4,7 +4,7 @@
 }
 
 :root {
-  --color-gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+  --color-gradient: to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%);
 
   --color-neutral-100: 0 0% 100%;
   --color-neutral-200: 243 100% 93%;
@@ -97,8 +97,9 @@ body {
   gap: 2em;
   grid-template-columns: auto 1fr;
   margin-inline: auto;
-  max-width: 60em;
+  max-width: 70em;
   padding-inline: 1em;
+  place-items: end;
 }
 
 .controls {
@@ -124,5 +125,75 @@ body {
   }
   &[data-function="upload"] {
     background-image: url(./images/icon-upload.svg);
+  }
+}
+
+.data {
+  display: grid;
+  gap: 1em;
+  padding: 2.5em;
+  position: relative;
+
+  & > p {
+    margin: 0;
+  }
+}
+
+.data__bar {
+  background-color: hsl(var(--color-neutral-900));
+  border-radius: 10000em;
+  height: 1em;
+  padding: 2px;
+  width: 30em;
+
+  & > div {
+    background-image: linear-gradient(var(--color-gradient));
+    border-radius: 10000em;
+    height: 100%;
+    padding: 0.5px;
+    width: 81.5%;
+
+    & > div {
+      aspect-ratio: 1;
+      background-color: hsl(var(--color-neutral-100));
+      border-radius: 50%;
+      height: calc(1em - 5px);
+      margin-inline: auto 1px;
+    }
+  }
+}
+
+.data__labels {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data__remaining {
+  align-items: center;
+  border-radius: 0.5em 0.5em 0 0.5em;
+  display: flex;
+  font-weight: var(--font-weight-bold);
+  gap: 0.5rem;
+  padding: 1rem;
+  position: absolute;
+  right: 1em;
+  top: -1.25em;
+
+  & > span {
+    padding-block-start: 0.5ch;
+    z-index: 10;
+  }
+
+  &::after {
+    aspect-ratio: 1;
+    border-bottom: 2.5rem solid transparent;
+    border-right: 2.5rem solid #fff;
+    border-top: 2.5rem solid transparent;
+    bottom: -1.25rem;
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
   }
 }
