@@ -17,7 +17,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/leemander/Frontend-Mentor-Projects/tree/main/fylo-data-storage-component-master)
-- Live Site URL: [GitHub Pages](hhttps://leemander.github.io/Frontend-Mentor-Projects/fylo-data-storage-component-master/)
+- Live Site URL: [GitHub Pages](https://leemander.github.io/Frontend-Mentor-Projects/fylo-data-storage-component-master/)
 
 ## My process
 
