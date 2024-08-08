@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact form | Frontend Mentor</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form>
+          <h2>Contact Us</h2>
+          <label for="first-name">
+            First Name <span class="required">*</span>
+            <input type="text" id="first-name" />
+          </label>
+          <label for="Last-name">
+            Last Name <span class="required">*</span>
+            <input type="text" id="last-name" />
+          </label>
+          <label for="email">
+            Email Address <span class="required">*</span>
+            <input type="email" id="email" />
+          </label>
+          <div>
+            <p>Query Type <span class="required">*</span></p>
+            <label for="general">
+              <input type="radio" id="general" name="query" value="general" />
+              General Enquiry</label
+            ><label for="support">
+              <input type="radio" id="support" name="query" value="support" />
+              Support Request</label
+            >
+          </div>
+          <label for="message">
+            Message <span class="required">*</span>
+            <textarea id="message"></textarea>
+          </label>
+          <label for="consent">
+            <input type="checkbox" id="consent" />
+            I consent to being contacted by the team
+            <span class="required">*</span>
+          </label>
+          <button>Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
