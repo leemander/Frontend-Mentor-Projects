@@ -1,4 +1,16 @@
+@font-face {
+  font-family: "Karla";
+  src: url(./assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Karla";
+  font-style: italic;
+  src: url(./assets/fonts/Karla-Italic-VariableFont_wght.ttf);
+}
+
 body {
+  font-family: "Karla", sans-serif;
   display: grid;
   margin: 0;
   min-height: 100dvh;
