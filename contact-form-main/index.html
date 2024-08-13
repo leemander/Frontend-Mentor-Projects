@@ -20,14 +20,24 @@
           <label for="first-name">
             <span>First Name <span class="required">*</span></span>
             <input type="text" id="first-name" />
+            <span class="form__error" aria-hidden="true" id="first-name-error"
+              >This field is required</span
+            >
           </label>
           <label for="Last-name">
             <span>Last Name <span class="required">*</span></span>
             <input type="text" id="last-name" />
+            <span class="form__error" aria-hidden="true" id="last-name-error"
+              >This field is required</span
+            >
           </label>
           <label for="email">
             <span>Email Address <span class="required">*</span></span>
             <input type="email" id="email" />
+
+            <span class="form__error" aria-hidden="true" id="email-error"
+              >Please enter a valid email address</span
+            >
           </label>
           <div>
             <p>Query Type <span class="required">*</span></p>
@@ -38,10 +48,16 @@
               <input type="radio" id="support" name="query" value="support" />
               Support Request</label
             >
+            <span class="form__error" aria-hidden="true" id="fname-error"
+              >Please enter a query type</span
+            >
           </div>
           <label for="message">
             <span>Message <span class="required">*</span></span>
             <textarea id="message"></textarea>
+            <span class="form__error" aria-hidden="true" id="message-error"
+              >This field is required</span
+            >
           </label>
           <label for="consent">
             <input type="checkbox" id="consent" />
@@ -49,6 +65,9 @@
               I consent to being contacted by the team
               <span class="required">*</span>
             </span>
+            <span class="form__error" id="consent-error"
+              >To submit this form, please consent to being contacted</span
+            >
           </label>
           <button>Submit</button>
         </form>
