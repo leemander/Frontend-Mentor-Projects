@@ -23,6 +23,7 @@
 
 body {
   background-color: var(--color-green-200);
+  color: var(--color-neutral-900);
   font-family: "Karla", sans-serif;
   display: grid;
   margin: 0;
@@ -31,7 +32,9 @@ body {
 }
 
 h2 {
-  margin: 0;
+  font-size: 2rem;
+  font-weight: var(--font-weight-medium);
+  margin-block: 0 1rem;
 }
 
 form {
@@ -39,13 +42,47 @@ form {
   border-radius: 1em;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 2rem;
+
+  & .required {
+    color: var(--color-green-600);
+  }
+
+  & label > span,
+  .form__label {
+    font-size: 0.9rem;
+  }
+
+  & label:hover {
+    cursor: pointer;
+  }
 
   & label:has(:not(input[type="radio"])), /* selects every label that doesn't contain a radio input */
   div {
     display: grid;
-    gap: 0.5em;
+    gap: 0.5rem;
+  }
+
+  & input[type="text"],
+  input[type="email"],
+  textarea,
+  label:has(input[type="radio"]) {
+    border: 2px solid var(--color-neutral-500);
+    border-radius: 0.5rem;
+    font: inherit;
+    padding: 1rem;
+
+    &:is(:focus, :hover) {
+      border-color: var(--color-green-600);
+      cursor: pointer;
+      outline: transparent;
+    }
+
+    &:has(:checked) {
+      background-color: var(--color-green-200);
+      border-color: var(--color-green-600);
+    }
   }
 
   & p {
@@ -54,6 +91,28 @@ form {
 
   & .form__error {
     display: none;
+  }
+
+  & textarea {
+    height: 8ch;
+    line-height: 1.5rem;
+    padding-block: 0.5rem;
+    resize: none;
+  }
+
+  & > button {
+    border: 0;
+    border-radius: 0.5em;
+    background-color: var(--color-green-600);
+    color: var(--color-neutral-100);
+    cursor: pointer;
+    font: inherit;
+    font-weight: var(--font-weight-medium);
+    padding-block: 1rem;
+
+    &:is(:hover, :focus-visible) {
+      background-color: var(--color-neutral-900);
+    }
   }
 }
 
@@ -70,6 +129,7 @@ label[for="consent"] {
 @media (width > 800px) {
   .two-column {
     display: grid;
+    gap: 1rem;
     grid-template-columns: 1fr 1fr;
   }
 }
