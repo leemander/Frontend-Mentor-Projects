@@ -17,20 +17,22 @@
       <div class="container">
         <form>
           <h2>Contact Us</h2>
-          <label for="first-name">
-            <span>First Name <span class="required">*</span></span>
-            <input type="text" id="first-name" />
-            <span class="form__error" aria-hidden="true" id="first-name-error"
-              >This field is required</span
-            >
-          </label>
-          <label for="Last-name">
-            <span>Last Name <span class="required">*</span></span>
-            <input type="text" id="last-name" />
-            <span class="form__error" aria-hidden="true" id="last-name-error"
-              >This field is required</span
-            >
-          </label>
+          <div class="two-column">
+            <label for="first-name">
+              <span>First Name <span class="required">*</span></span>
+              <input type="text" id="first-name" />
+              <span class="form__error" aria-hidden="true" id="first-name-error"
+                >This field is required</span
+              >
+            </label>
+            <label for="last-name">
+              <span>Last Name <span class="required">*</span></span>
+              <input type="text" id="last-name" />
+              <span class="form__error" aria-hidden="true" id="last-name-error"
+                >This field is required</span
+              >
+            </label>
+          </div>
           <label for="email">
             <span>Email Address <span class="required">*</span></span>
             <input type="email" id="email" />
@@ -41,13 +43,15 @@
           </label>
           <div>
             <p>Query Type <span class="required">*</span></p>
-            <label for="general">
-              <input type="radio" id="general" name="query" value="general" />
-              General Enquiry</label
-            ><label for="support">
-              <input type="radio" id="support" name="query" value="support" />
-              Support Request</label
-            >
+            <div class="two-column">
+              <label for="general">
+                <input type="radio" id="general" name="query" value="general" />
+                General Enquiry</label
+              ><label for="support">
+                <input type="radio" id="support" name="query" value="support" />
+                Support Request</label
+              >
+            </div>
             <span class="form__error" aria-hidden="true" id="fname-error"
               >Please enter a query type</span
             >
