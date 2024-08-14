@@ -83,6 +83,10 @@ form {
       background-color: var(--color-green-200);
       border-color: var(--color-green-600);
     }
+
+    &[data-error="true"] {
+      border-color: var(--color-red);
+    }
   }
 
   & p {
@@ -90,7 +94,8 @@ form {
   }
 
   & .form__error {
-    display: none;
+    color: var(--color-red);
+    visibility: hidden;
   }
 
   & textarea {
