@@ -76,7 +76,7 @@ form {
     &:is(:focus, :hover) {
       border-color: var(--color-green-600);
       cursor: pointer;
-      outline: transparent;
+      outline: none;
     }
 
     &:has(:checked) {
@@ -102,6 +102,10 @@ form {
     align-items: center;
     display: flex;
     gap: 0.66rem;
+
+    &:has(> :focus-visible) {
+      border-color: var(--color-green-600);
+    }
   }
 
   & .radio {
@@ -134,7 +138,7 @@ form {
   & input[type="radio"] {
     left: -1000em;
     position: absolute;
-    visibility: hidden;
+    opacity: 0;
   }
 
   & textarea {
@@ -161,6 +165,10 @@ form {
       width: 80%;
     }
 
+    &:has(+ :focus-visible) {
+      border-color: var(--color-green-600);
+    }
+
     &:has(+ :checked) {
       background-color: var(--color-green-600);
       border-color: var(--color-green-600);
@@ -170,7 +178,7 @@ form {
   & input[type="checkbox"] {
     left: -1000em;
     position: absolute;
-    visibility: hidden;
+    opacity: 0;
   }
 
   & > button {
