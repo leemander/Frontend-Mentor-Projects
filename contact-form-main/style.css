@@ -144,6 +144,35 @@ form {
     resize: none;
   }
 
+  & .checkbox {
+    aspect-ratio: 1;
+    border: 2px solid var(--color-neutral-500);
+    content: "";
+    display: inline-flex;
+    position: relative;
+    width: 1em;
+
+    & > svg {
+      aspect-ratio: 1;
+      content: "";
+      display: block;
+      margin: auto;
+      position: relative;
+      width: 80%;
+    }
+
+    &:has(+ :checked) {
+      background-color: var(--color-green-600);
+      border-color: var(--color-green-600);
+    }
+  }
+
+  & input[type="checkbox"] {
+    left: -1000em;
+    position: absolute;
+    visibility: hidden;
+  }
+
   & > button {
     border: 0;
     border-radius: 0.5em;
