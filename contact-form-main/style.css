@@ -120,11 +120,14 @@ form {
       display: block;
       margin: auto;
       position: relative;
-      width: 80%;
+      width: 60%;
     }
 
-    &:has(+ :checked) > span {
-      background-color: var(--color-green-600);
+    &:has(+ :checked) {
+      border-color: var(--color-green-600);
+      & > span {
+        background-color: var(--color-green-600);
+      }
     }
   }
 
