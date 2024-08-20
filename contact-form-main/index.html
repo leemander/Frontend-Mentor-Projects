@@ -15,7 +15,7 @@
   </head>
   <body>
     <main>
-      <dialog class="message" id="message">
+      <dialog class="message" id="toast">
         <p class="message__title">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -34,14 +34,14 @@
           <div class="two-column">
             <label for="first-name">
               <span>First Name <span class="required">*</span></span>
-              <input type="text" id="first-name" />
+              <input required type="text" id="first-name" />
               <span class="form__error" aria-hidden="true" id="first-name-error"
                 >This field is required</span
               >
             </label>
             <label for="last-name">
               <span>Last Name <span class="required">*</span></span>
-              <input type="text" id="last-name" />
+              <input required type="text" id="last-name" />
               <span class="form__error" aria-hidden="true" id="last-name-error"
                 >This field is required</span
               >
@@ -49,7 +49,7 @@
           </div>
           <label for="email">
             <span>Email Address <span class="required">*</span></span>
-            <input type="email" id="email" />
+            <input required type="email" id="email" />
             <span class="form__error" aria-hidden="true" id="email-error"
               >Please enter a valid email address</span
             >
@@ -58,12 +58,18 @@
             <p class="form__label">
               Query Type <span class="required">*</span>
             </p>
-            <div class="two-column">
+            <fieldset class="two-column form__radios">
               <label for="general">
                 <span class="radio">
                   <span></span>
                 </span>
-                <input type="radio" id="general" name="query" value="general" />
+                <input
+                  required
+                  type="radio"
+                  id="general"
+                  name="query"
+                  value="general"
+                />
                 General Enquiry
               </label>
               <label for="support">
@@ -73,14 +79,14 @@
                 <input type="radio" id="support" name="query" value="support" />
                 Support Request
               </label>
-            </div>
-            <span class="form__error" aria-hidden="true" id="fname-error"
+            </fieldset>
+            <span class="form__error" aria-hidden="true" id="query-error"
               >Please enter a query type</span
             >
           </div>
           <label for="message">
             <span>Message <span class="required">*</span></span>
-            <textarea id="message"></textarea>
+            <textarea required id="message"></textarea>
             <span class="form__error" aria-hidden="true" id="message-error"
               >This field is required</span
             >
@@ -95,7 +101,7 @@
                 />
               </svg>
             </span>
-            <input type="checkbox" id="consent" />
+            <input required type="checkbox" id="consent" />
             <span>
               I consent to being contacted by the team
               <span class="required">*</span>
@@ -104,7 +110,7 @@
               >To submit this form, please consent to being contacted</span
             >
           </label>
-          <button>Submit</button>
+          <button id="submit">Submit</button>
         </form>
       </div>
     </main>
