@@ -37,6 +37,58 @@ h2 {
   margin-block: 0 1rem;
 }
 
+@keyframes fadein {
+  0% {
+    top: -100%;
+    opacity: 0%;
+  }
+  100% {
+    top: 0.5em;
+    opacity: 100%;
+  }
+}
+
+.message {
+  background-color: var(--color-neutral-900);
+  border-radius: 0.5em;
+  border: 0;
+  color: var(--color-neutral-100);
+  display: grid;
+  gap: 1em;
+  padding: 1.5em;
+  position: absolute;
+  top: -100%;
+
+  & > * {
+    margin: 0;
+  }
+
+  & > .message__title {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-medium);
+    display: flex;
+    gap: 0.75em;
+
+    & > span {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 2px solid var(--color-neutral-100);
+      display: inline-flex;
+      width: 1.125em;
+
+      & > svg {
+        margin: auto;
+        width: 60%;
+      }
+    }
+  }
+
+  &[open] {
+    animation: fadein 1s linear;
+    top: 0.25em;
+  }
+}
+
 form {
   background-color: var(--color-neutral-100);
   border-radius: 1em;
@@ -161,7 +213,6 @@ form {
       content: "";
       display: block;
       margin: auto;
-      position: relative;
       width: 80%;
     }
 
