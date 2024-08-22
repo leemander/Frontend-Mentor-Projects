@@ -50,12 +50,10 @@ h2 {
 
 @keyframes fadein {
   0% {
-    top: -100%;
-    opacity: 0%;
+    opacity: 0;
   }
   100% {
-    top: 0.5em;
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -68,7 +66,7 @@ h2 {
   gap: 1em;
   padding: 1.5em;
   position: absolute;
-  top: -100%;
+  top: -1000em;
 
   & > * {
     margin: 0;
@@ -95,7 +93,7 @@ h2 {
   }
 
   &[open] {
-    animation: fadein 1s linear;
+    animation: fadein 0.25s ease-in-out;
     top: 0.25em;
   }
 }
